@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Obsidian cache
+.obsidian/cache/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Community plugin caches
+.obsidian/plugins/*/data.json
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node / tooling
+node_modules/
+
+# AI / generated artifacts
+/generated/
+/exports/
+/tmp/
+
+# Large binary attachments (optional)
+# Uncomment if you don't want binaries in git
+# *.png
+# *.jpg
+# *.jpeg
+# *.pdf
+# *.mov
+# *.mp4
+
