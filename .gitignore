@@ -1,9 +1,10 @@
 # macOS
 **/.DS_Store
 
-# Obsidian cache
-.obsidian/*
-
+# Obsidian cache/runtime
+.obsidian/cache/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 
 # Logs
 *.log
