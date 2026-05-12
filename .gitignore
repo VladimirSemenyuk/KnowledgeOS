@@ -1,13 +1,9 @@
 # macOS
-.DS_Store
+*/.DS_Store
 
 # Obsidian cache
-.obsidian/cache/
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+.obsidian/*
 
-# Community plugin caches
-.obsidian/plugins/*/data.json
 
 # Logs
 *.log
