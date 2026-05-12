@@ -1,3 +1,8 @@
+---
+name: meeting-summary
+description: Подготовка краткого executive-style summary по transcript.md после встречи с клиентом или менти.
+---
+
 # Meeting Summary Skill
 
 ## Purpose
