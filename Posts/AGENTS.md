@@ -60,6 +60,24 @@ Prioritize topics that:
 - can be written without disclosing confidential information;
 - support long-term positioning, not only reach.
 
+## High-Performing Reference Corpus
+
+Before planning, drafting, or editing LinkedIn posts, consider:
+- `Posts/research/high-performing-posts.md`
+
+Use it to:
+- identify topics and formats that already generated reach, comments, and strategic signal;
+- reuse proven structural patterns for hooks, tension, systemic insight, and conclusions;
+- compare new ideas against posts that already worked;
+- plan content around repeatable patterns, not isolated lucky posts;
+- preserve advisory positioning while improving performance.
+
+When planning the content calendar:
+- include successful patterns from the reference corpus as one input into topic selection;
+- balance proven formats with new strategic themes;
+- do not optimize only for reach if the topic weakens positioning;
+- extract the pattern, not the wording.
+
 ## Confidentiality
 
 Do not reveal client names, sensitive details, private meeting content, commercial terms, legal content, or financial information unless explicitly approved.
