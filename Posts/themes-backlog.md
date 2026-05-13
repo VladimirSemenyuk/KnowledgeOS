@@ -12,7 +12,7 @@
 ## TOFU
 
 - Ручное управление не масштабируется, когда компания проходит следующий уровень сложности.
-- Heroics маскируют отсутствие architecture of manageability.
+- Heroics маскируют отсутствие архитектуры управления.
 - AI transformation не начинается с инструментов; она начинается с operating model.
 - Самая дорогая проблема engineering organization часто выглядит как "медленная разработка", но является проблемой decision systems.
 - Когда менеджер становится сильнее, его зона влияния выходит за пределы прямого подчинения.
@@ -75,7 +75,7 @@
 
 ## Series Ideas
 
-- Architecture of Manageability.
+- Архитектура управления.
 - AI-native Organization.
 - Decision Systems for CTOs.
 - Ownership Clarity.

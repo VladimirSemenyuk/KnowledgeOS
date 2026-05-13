@@ -22,7 +22,7 @@
 | 2026-05-18 | TOFU | Ручное управление не масштабируется | idea |  |
 | 2026-05-20 | MOFU | Как диагностировать ownership clarity | idea |  |
 | 2026-05-22 | BOFU | Разбор operating model для CTO/CEO | idea |  |
-| 2026-05-25 | TOFU | Heroics маскируют отсутствие architecture of manageability | idea |  |
+| 2026-05-25 | TOFU | Heroics маскируют отсутствие архитектуры управления | idea |  |
 | 2026-05-27 | MOFU | Decision system: централизованные и распределенные решения | idea |  |
 | 2026-05-29 | BOFU | Аудит decision systems для инженерной организации | idea |  |
 

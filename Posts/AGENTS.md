@@ -11,6 +11,71 @@ Use it to:
 - track performance;
 - keep LinkedIn content aligned with advisory positioning.
 
+## Editorial System
+
+Use files by role:
+- `Context.md` – positioning, audience, content logic, strategic constraints.
+- `themes-backlog.md` – raw observations, funnel topics, tensions, client-derived insights.
+- `series-map.md` – weekly series, funnel sequencing, anti-duplication logic.
+- `content-calendar.md` – dates, funnel type, topic, status, links.
+- `drafts/` – posts being prepared.
+- `published/` – posts already published.
+- `research/high-performing-posts.md` – proven patterns and reference corpus.
+
+Default workflow:
+1. Read `Context.md` for positioning and audience.
+2. Check `themes-backlog.md` for available topic raw material.
+3. Check `series-map.md` for current or future series.
+4. Check `content-calendar.md` for planned dates and status.
+5. Check `drafts/` and `published/` to avoid repeating posts.
+6. Use `research/high-performing-posts.md` for patterns, not for copying wording.
+
+Do not use `content-calendar.md` as a backlog.
+Do not use `themes-backlog.md` as a publishing plan.
+Do not put raw topic dumps into `AGENTS.md`.
+
+## Series Planning
+
+Plan posts in series by default.
+
+Minimum series:
+- 1 week;
+- 3 posts;
+- `TOFU`, `MOFU`, `BOFU`;
+- Monday, Wednesday, Friday rhythm.
+
+Before planning a week:
+- choose one primary series from `series-map.md`;
+- check whether an existing series should continue;
+- select one `TOFU`, one `MOFU`, and one `BOFU`;
+- update `content-calendar.md` only after the sequence is coherent;
+- keep unused topics in `series-map.md` or `themes-backlog.md`.
+
+Every planned week should answer:
+
+> What changes for the reader after these three posts?
+
+## Anti-Duplication
+
+Before adding or planning a topic, check:
+- `content-calendar.md`;
+- `series-map.md`;
+- `themes-backlog.md`;
+- `drafts/`;
+- `published/`.
+
+Acceptable reuse:
+- developing the same series on the next week;
+- moving from `TOFU` observation to `MOFU` framework;
+- moving from `MOFU` framework to `BOFU` advisory review;
+- returning to a theme through a different management object: CTO, EM, product, quality, data, AI adoption.
+
+Avoid:
+- same thesis with different wording;
+- same conflict without a new management conclusion;
+- repeated BOFU offer without a new diagnostic angle;
+- several posts in a row about the same pain without funnel progression.
+
 ## Language
 
 Russian is preferred unless explicitly requested otherwise.
@@ -55,7 +120,7 @@ Always classify posts as:
 ## Topic Selection
 
 Prioritize topics that:
-- connect to AI transformation, engineering management, organizational design, CTO/CEO advisory, decision systems, ownership clarity, architecture of manageability, operating model, quality and risks;
+- connect to AI transformation, engineering management, organizational design, CTO/CEO advisory, decision systems, ownership clarity, архитектура управления, operating model, quality and risks;
 - emerge from real client patterns or repeated leadership problems;
 - can be written without disclosing confidential information;
 - support long-term positioning, not only reach.
