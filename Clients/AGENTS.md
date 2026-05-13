@@ -40,7 +40,7 @@ Every meeting folder contains:
 Do not edit transcripts as source material.
 If a clean version is needed, create a separate file.
 
-For creating `summary.md`, use the `meeting-summary` skill:
+For creating `summary.md`, use the `summarize-meeting` skill:
 `.agents/skills/summarize-meeting/SKILL.md`
 
 ---
@@ -50,14 +50,7 @@ For creating `summary.md`, use the `meeting-summary` skill:
 Preferred language:
 Russian.
 
-Style:
-- concise
-- structured
-- analytical
-- executive-oriented
-- high signal-to-noise ratio
-
-Prefer:
+Use:
 - short sections
 - bullets
 - operational language
