@@ -51,6 +51,7 @@ Clients/.../{Менти}/Meetings/YYYY-MM-DD-meeting/transcript.md
 4. Быстро просмотреть начало `transcript.md`:
 - заголовок содержит менти и дату;
 - имена спикеров не имеют задвоенной первой буквы;
+- каждая реплика содержит timestamp в формате `**Speaker** *[MM:SS]*: text`;
 - Markdown читаемый, без HTML-мусора.
 
 ## Script Options
@@ -83,9 +84,9 @@ Use this output shape:
 ```markdown
 # Transcript встречи: {Менти} & Владимир {YYYY-MM-DD}
 
-**{Speaker}:** text
+**{Speaker}** *[MM:SS]*: text
 
-**{Speaker}:** text
+**{Speaker}** *[MM:SS]*: text
 ```
 
 Preserve transcript content. Do not summarize or rewrite meaning.

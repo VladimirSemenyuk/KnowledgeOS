@@ -99,10 +99,74 @@ class TextExtractor(HTMLParser):
         return "\n".join(lines)
 
 
+class StructuredTranscriptExtractor(HTMLParser):
+    """Extract Fireflies-style transcript paragraph blocks from exported HTML."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.turns: list[TranscriptTurn] = []
+        self.paragraph_depth = 0
+        self.in_name = False
+        self.sentence_depth = 0
+        self.speaker_parts: list[str] = []
+        self.timestamp: str | None = None
+        self.text_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attrs_dict = {key: value or "" for key, value in attrs}
+        classes = set(attrs_dict.get("class", "").split())
+        elem_id = attrs_dict.get("id", "")
+
+        if tag == "div" and elem_id.startswith("transcript-paragraph-"):
+            self.paragraph_depth = 1
+            self.speaker_parts = []
+            self.timestamp = None
+            self.text_parts = []
+            return
+
+        if self.paragraph_depth:
+            if tag == "div":
+                self.paragraph_depth += 1
+            if tag == "span" and "name" in classes:
+                self.in_name = True
+            if self.sentence_depth:
+                self.sentence_depth += 1
+            elif "transcript-sentence" in classes:
+                self.sentence_depth = 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if self.in_name and tag == "span":
+            self.in_name = False
+        if self.sentence_depth:
+            self.sentence_depth -= 1
+
+        if self.paragraph_depth and tag == "div":
+            self.paragraph_depth -= 1
+            if self.paragraph_depth == 0:
+                speaker = normalize_speaker(" ".join(self.speaker_parts))
+                text = re.sub(r"\s+", " ", " ".join(self.text_parts)).strip()
+                if speaker and text:
+                    self.turns.append(TranscriptTurn(speaker, text, self.timestamp))
+
+    def handle_data(self, data: str) -> None:
+        if not self.paragraph_depth:
+            return
+        clean = data.replace("\xa0", " ").strip()
+        if not clean:
+            return
+        if self.in_name:
+            self.speaker_parts.append(clean)
+        elif self.sentence_depth:
+            self.text_parts.append(clean)
+        elif self.timestamp is None and re.fullmatch(r"\d{1,2}:\d{2}(?::\d{2})?", clean):
+            self.timestamp = clean
+
+
 @dataclass
 class TranscriptTurn:
     speaker: str
     text: str
+    timestamp: str | None = None
 
 
 def normalize_speaker(name: str) -> str:
@@ -227,21 +291,46 @@ def parse_turns(text: str) -> list[TranscriptTurn]:
     lines = text.splitlines()
     turns: list[TranscriptTurn] = []
     current_speaker: str | None = None
+    current_timestamp: str | None = None
     current_text: list[str] = []
 
     speaker_re = re.compile(
         r"^(?P<speaker>[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё .'\-]{1,60})\s*[:\-–]\s*(?P<body>.*)$"
+    )
+    speaker_timestamp_re = re.compile(
+        r"^(?P<speaker>[A-Za-zА-Яа-яЁё][A-Za-zА-Яа-яЁё .'\-]{1,60})\s+"
+        r"(?P<timestamp>\d{1,2}:\d{2}(?::\d{2})?)\s+(?P<body>.*)$"
     )
 
     for line in lines:
         clean = line.strip()
         if not clean:
             continue
+        timestamp_match = speaker_timestamp_re.match(clean)
         match = speaker_re.match(clean)
-        if match:
+        if timestamp_match:
             if current_speaker and current_text:
-                turns.append(TranscriptTurn(current_speaker, " ".join(current_text).strip()))
+                turns.append(
+                    TranscriptTurn(
+                        current_speaker,
+                        " ".join(current_text).strip(),
+                        current_timestamp,
+                    )
+                )
+            current_speaker = normalize_speaker(timestamp_match.group("speaker"))
+            current_timestamp = timestamp_match.group("timestamp")
+            current_text = [timestamp_match.group("body").strip()]
+        elif match:
+            if current_speaker and current_text:
+                turns.append(
+                    TranscriptTurn(
+                        current_speaker,
+                        " ".join(current_text).strip(),
+                        current_timestamp,
+                    )
+                )
             current_speaker = normalize_speaker(match.group("speaker"))
+            current_timestamp = None
             body = match.group("body").strip()
             current_text = [body] if body else []
         elif current_speaker:
@@ -250,7 +339,7 @@ def parse_turns(text: str) -> list[TranscriptTurn]:
             turns.append(TranscriptTurn("Transcript", clean))
 
     if current_speaker and current_text:
-        turns.append(TranscriptTurn(current_speaker, " ".join(current_text).strip()))
+        turns.append(TranscriptTurn(current_speaker, " ".join(current_text).strip(), current_timestamp))
 
     return merge_turns(turns)
 
@@ -261,10 +350,10 @@ def merge_turns(turns: list[TranscriptTurn]) -> list[TranscriptTurn]:
         text = re.sub(r"\s+", " ", turn.text).strip()
         if not text:
             continue
-        if merged and merged[-1].speaker == turn.speaker:
+        if merged and merged[-1].speaker == turn.speaker and not merged[-1].timestamp and not turn.timestamp:
             merged[-1].text = f"{merged[-1].text} {text}"
         else:
-            merged.append(TranscriptTurn(turn.speaker, text))
+            merged.append(TranscriptTurn(turn.speaker, text, turn.timestamp))
     return merged
 
 
@@ -280,7 +369,8 @@ def render_markdown(mentee: str, date: str, turns: list[TranscriptTurn]) -> str:
         if speaker == "Transcript":
             lines.extend([body, ""])
         else:
-            lines.extend([f"**{speaker}:** {body}", ""])
+            timestamp = f" *[{markdown_escape(turn.timestamp)}]*" if turn.timestamp else ""
+            lines.extend([f"**{speaker}**{timestamp}: {body}", ""])
     return "\n".join(lines).rstrip() + "\n"
 
 
@@ -316,7 +406,9 @@ def main() -> int:
     if output_path.exists() and not args.force:
         raise SystemExit(f"Output already exists: {output_path}\nRe-run with --force to overwrite.")
 
-    turns = parse_turns(text)
+    structured_extractor = StructuredTranscriptExtractor()
+    structured_extractor.feed(raw_html)
+    turns = merge_turns(structured_extractor.turns) or parse_turns(text)
     markdown = render_markdown(mentee_dir.name, date, turns)
     meeting_dir.mkdir(parents=True, exist_ok=True)
     output_path.write_text(markdown, encoding="utf-8")
