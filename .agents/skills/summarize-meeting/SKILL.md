@@ -34,8 +34,8 @@ description: Подготовка краткого executive-style summary по 
 - client notes if available
 
 Референсы (всегда использовать):
-- **template/output-template.md** — обязательная структура output. Строго следовать разделам и их порядку.
-- **example/strong-summary.md** — эталон качества: тон, плотность, уровень конкретики. Не копировать содержание — использовать как планку.
+- [output-template.md](template/output-template.md) — обязательная структура output. Строго следовать разделам и их порядку.
+- [strong-summary.md](example/strong-summary.md) — эталон качества: тон, плотность, уровень конкретики. Не копировать содержание — использовать как планку.
 
 ---
 
