@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import html
-import os
 import re
 import sys
 from dataclasses import dataclass
