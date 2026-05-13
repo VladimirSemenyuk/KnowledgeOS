@@ -1,5 +1,5 @@
 ---
-name: meeting-summary
+name: summarize-meeting
 description: Подготовка краткого executive-style summary по transcript.md после встречи с клиентом или менти.
 ---
 

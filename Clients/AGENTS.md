@@ -14,9 +14,60 @@ When generating public content:
 ---
 
 # Client Folder Structure
+
 Every client should include:
 
 - Context.md
+
+For individual advisory participants / mentees, use:
+
+- Context.md
+- Meetings
+
+---
+
+# Meeting Notes
+
+Every meeting is a subfolder:
+
+- Meetings/YYYY-MM-DD-meeting
+
+Every meeting folder contains:
+
+- transcript.md
+- summary.md
+
+Do not edit transcripts as source material.
+If a clean version is needed, create a separate file.
+
+For creating `summary.md`, use the `meeting-summary` skill:
+`.agents/skills/summarize-meeting/SKILL.md`
+
+---
+
+# Writing Style
+
+Preferred language:
+Russian.
+
+Style:
+- concise
+- structured
+- analytical
+- executive-oriented
+- high signal-to-noise ratio
+
+Prefer:
+- short sections
+- bullets
+- operational language
+- observation / risk / position / action structure
+
+Avoid:
+- motivational tone
+- startup hype
+- generic consulting language
+- excessive explanations
 
 ---
 

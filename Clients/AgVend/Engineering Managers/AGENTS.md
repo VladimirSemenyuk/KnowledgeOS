@@ -16,7 +16,3 @@ Each Engineering Manager Folder contains subfolders:
 
 Essay naming templates is:
 YYYY-MM-essay.md
-
-Every meeting is a subfolder `Meetings/YYYY-MM-DD-meeting` containing files:
-- transcript.md
-- summary.md
