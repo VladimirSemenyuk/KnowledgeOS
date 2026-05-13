@@ -106,9 +106,34 @@ Punctuation:
 Preferred structure:
 - strong hook;
 - tension/problem;
-- systemic insight;
+- core insight;
 - practical conclusion;
 - soft CTA when appropriate.
+
+## Post Generation Workflow
+
+Default input:
+- voice note;
+- transcript;
+- summary;
+- source note.
+
+When generating a post from source material, produce the preparation layer first:
+- hook;
+- core insight;
+- tension;
+- practical conclusion;
+- CTA.
+
+Do not treat the first generated version as final copy.
+
+Human editing is expected after generation:
+- add personal position;
+- remove generic phrases;
+- sharpen the argument;
+- verify truthfulness.
+
+Final editorial pass will be added later.
 
 ## Funnel Logic
 

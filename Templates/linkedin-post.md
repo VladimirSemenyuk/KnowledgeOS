@@ -18,16 +18,22 @@ audience:
 ## Core Insight
 
 
-## Structure
+## Practical Conclusion
 
 - 
-
-## Draft
-
 
 ## CTA
 
 
-## Notes
+## Human Editing
 
+- [ ] Добавить личную позицию
+- [ ] Убрать generic фразы
+- [ ] Усилить резкость
+- [ ] Проверить правдивость
+
+## Draft
+
+
+## Notes
 
