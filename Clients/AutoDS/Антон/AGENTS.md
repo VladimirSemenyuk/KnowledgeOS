@@ -18,7 +18,7 @@
 
 Перед работой с материалами Антона читать:
 - [[Context]]
-- последнюю встречу в `Записи встреч`
+- последнюю встречу в `Meetings`
 - при необходимости — `summary.md` рядом с расшифровкой `transcript.md`
 
 ---
@@ -119,8 +119,8 @@ GDPR, security, audit и compliance — отдельная зона влияни
 
 Для новых встреч сохранять структуру:
 
-- `Записи встреч/YYYY-MM-DD/transcript.md`
-- `Записи встреч/YYYY-MM-DD/summary.md`
+- `Meetings/YYYY-MM-DD-meeting/transcript.md`
+- `Meetings/YYYY-MM-DD-meeting/summary.md`
 
 Summary делать коротким:
 - управленческие наблюдения
