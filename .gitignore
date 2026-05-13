@@ -30,3 +30,4 @@ node_modules/
 # *.mov
 # *.mp4
 
+.vscode/settings.json
