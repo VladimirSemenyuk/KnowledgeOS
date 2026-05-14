@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: TOFU
+funnel: BOFU
 status: published
 publish_date: 2022-07-06
 source: LinkedIn analytics import 2026-05-14
