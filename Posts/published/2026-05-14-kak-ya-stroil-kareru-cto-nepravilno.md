@@ -1,10 +1,11 @@
 ---
 type: linkedin-post
 funnel: TOFU
-status: ready
+status: published
 publish_date: 2026-05-14
 source: /Users/vladimir/Downloads/posts.md
 audience: CTO/VP Engineering/engineering managers
+linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BA%D0%BE%D0%B3%D0%BE-%D1%81%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B0%D1%8E%D1%82-%D0%B8-%D0%BD%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%8E%D1%82-%D0%B22026%D0%B3%D0%BE%D0%B4%D1%83-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E-share-7459673281109946368-f6KW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA8nDpgBmZtKKo4OaIMNbZ6JCzCNKusmkQQ
 ---
 
 # Как я строил карьеру CTO неправильно
@@ -62,4 +63,3 @@ audience: CTO/VP Engineering/engineering managers
 
 - Запланирован к публикации на 2026-05-14.
 - Тема: CTO role, незаменимость, architecture of manageability, mentoring.
-
