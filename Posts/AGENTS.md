@@ -34,6 +34,24 @@ Do not use `content-calendar.md` as a backlog.
 Do not use `themes-backlog.md` as a publishing plan.
 Do not put raw topic dumps into `AGENTS.md`.
 
+## Post Status Workflow
+
+When changing a post status, update all relevant editorial artifacts in one pass:
+
+1. Update `content-calendar.md`:
+   - find the row by `publish_date`, topic, or wikilink;
+   - change the `Status` column to the requested status.
+2. Move the post Markdown file between folders when status changes imply a folder change:
+   - `draft` or `ready` posts belong in `drafts/`;
+   - `published` posts belong in `published/`.
+3. Update the post Markdown frontmatter:
+   - set `status:` to the same value as in `content-calendar.md`;
+   - preserve existing `publish_date`, `funnel`, `source`, `audience`, and other metadata;
+   - if a published post has a known LinkedIn URL, add or update `linkedin_url:`.
+
+Do not leave calendar status, folder location, and post frontmatter out of sync.
+When moving files, preserve the filename and Obsidian wikilinks.
+
 ## Series Planning
 
 Plan posts in series by default.
