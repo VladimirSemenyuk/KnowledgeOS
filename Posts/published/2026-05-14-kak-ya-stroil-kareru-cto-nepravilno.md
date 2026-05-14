@@ -3,32 +3,24 @@ type: linkedin-post
 funnel: TOFU
 status: published
 publish_date: 2026-05-14
-source: /Users/vladimir/Downloads/posts.md
-audience: CTO/VP Engineering/engineering managers
-linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BA%D0%BE%D0%B3%D0%BE-%D1%81%D0%BE%D0%BA%D1%80%D0%B0%D1%89%D0%B0%D1%8E%D1%82-%D0%B8-%D0%BD%D0%B0%D0%BD%D0%B8%D0%BC%D0%B0%D1%8E%D1%82-%D0%B22026%D0%B3%D0%BE%D0%B4%D1%83-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E-share-7459673281109946368-f6KW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA8nDpgBmZtKKo4OaIMNbZ6JCzCNKusmkQQ
+source: LinkedIn analytics import 2026-05-14
+audience: CTO/CEO/founders/engineering leaders
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7460580924813107200/
+linkedin_activity_id: "7460580924813107200"
 ---
 
-# Как я строил карьеру CTO неправильно
+# Как я строил карьеру CTO неправильно.
 
 ## Hook
 
 Как я строил карьеру CTO неправильно.
 
-## Tension
-
-Технический лидер может путать силу с незаменимостью: знать каждый уголок системы, тащить операционку и считать это признаком зрелости.
-
-## Core Insight
-
-Роль CTO начинается не там, где человек становится главным инженером, а там, где он строит организацию, способную работать без него.
-
 ## Draft
 
-**Как я строил карьеру CTO неправильно.**
+Как я строил карьеру CTO неправильно.
 
-С 2013 по 2017 я работал в Mail.ru. Команда, которой я руководил, отвечала за фронтенд рекламной платформы.
+С 2013 по 2017 я работал в Mail_ru. Команда, которой я руководил, отвечала за фронтенд рекламной платформы.
 Помню, что я тащил планирование, отчетность, занимался архитектурой, ревью и прочей операционкой.
-Я гордился тем, что знаю каждый уголок системы. Думал, это и есть сильный технический лидер.
 
 В 2017 году мои амбиции стали требовать новой роли.
 Я ходил на разные собеседования на должности руководителя разработки или CTO в малый/средний бизнес.
@@ -55,11 +47,16 @@ linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BA%D0%BE%D0%B
 
 Был ли у вас такой момент, когда провал оказался важнее победы?
 
-## CTA
+## Analytics
 
-Был ли у вас такой момент, когда провал оказался важнее победы?
+- Period: last 365 days
+- Impressions: 695
+- Reactions: 10
+- Comments: 0
+- Source page: LinkedIn Creator Analytics / Top posts / Impressions
+- Captured at: 2026-05-14
 
 ## Notes
 
-- Запланирован к публикации на 2026-05-14.
-- Тема: CTO role, незаменимость, architecture of manageability, mentoring.
+- Imported from LinkedIn analytics page.
+- Relative date shown by LinkedIn: 2 ч.2 ч.

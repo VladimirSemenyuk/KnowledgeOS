@@ -3,9 +3,10 @@ type: linkedin-post
 funnel: TOFU
 status: published
 publish_date: 2026-05-12
-source: /Users/vladimir/Downloads/posts.md
-audience: CTO/CEO/founders
-linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BA%D0%B0%D0%BA-%D1%8F-%D1%81%D1%82%D1%80%D0%BE%D0%B8%D0%BB-%D0%BA%D0%B0%D1%80%D1%8C%D0%B5%D1%80%D1%83-cto-%D0%BD%D0%B5%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D0%BE-%D1%81-share-7460402986549379073-3SgF?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA8nDpgBmZtKKo4OaIMNbZ6JCzCNKusmkQQ
+source: LinkedIn analytics import 2026-05-14
+audience: CTO/CEO/founders/engineering leaders
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7459867475875139584/
+linkedin_activity_id: "7459867475875139584"
 ---
 
 # Кого сокращают и нанимают в 2026 году?
@@ -14,19 +15,11 @@ linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BA%D0%B0%D0%B
 
 Кого сокращают и нанимают в 2026 году?
 
-## Tension
-
-Компании внедряют агентов в производственный цикл, но кадровые решения различаются по ролям: часть сотрудников сокращают, часть активно нанимают.
-
-## Core Insight
-
-SMB не избавляется от сотрудников как класса. Компании перераспределяют бюджет в пользу ролей и людей, которые умеют работать в новой операционной реальности.
-
 ## Draft
 
-**Кого сокращают и нанимают в 2026 году?**
+Кого сокращают и нанимают в 2026 году?
 
-Работаю с несколькими компаниями из США и Израиля. SMB, 200–500 человек, из них 50–100 инженеров.
+Работаю с несколькими компаниями из США и Израиля. SMB, 200–500 человек, из них 50–100 инженеров. 
 Все внедряют агентов в производственный цикл. И все приходят к похожим кадровым решениям примерно одновременно.
 Делюсь с вами наблюдениями.
 
@@ -38,15 +31,19 @@ SRE. Их довольно активно нанимают. ФОТ на эксп
 
 Джуны. Парадокс: их снова рассматривают. Джун, который работает через модели и готов исследовать ИИ-инструменты, ценнее мидла, который всё ещё пишет «по-старому».
 
-Индустрия в разрезе SMB не избавляется от сотрудников. Увольняют тех, кто не меняется.
+Индустрия в разрезе SMB не избавляется от сотрудников. Увольняют тех, кто не меняется. 
 Что наблюдаете вы: у вас в компании ФОТ падает, растёт или перераспределяется?
 
-## CTA
+## Analytics
 
-Что наблюдаете вы: у вас в компании ФОТ падает, растёт или перераспределяется?
+- Period: last 365 days
+- Impressions: 1173
+- Reactions: 14
+- Comments: 4
+- Source page: LinkedIn Creator Analytics / Top posts / Impressions
+- Captured at: 2026-05-14
 
 ## Notes
 
-- Опубликован 2026-05-12.
-- Тема: AI transformation, engineering roles, workforce allocation.
-
+- Imported from LinkedIn analytics page.
+- Relative date shown by LinkedIn: 2 дн.2 дн.
