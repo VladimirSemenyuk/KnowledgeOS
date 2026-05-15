@@ -3,28 +3,35 @@
     "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
-    "emojiStyle": "twemoji",
+    "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiFileText",
-      "LiText",
+      "LiTextSelect",
       "LiSpeech",
-      "LiNotebookText",
-      "LiPersonStanding"
+      "LiFileText",
+      "LiHeart",
+      "LiLightbulb"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [
       {
         "rule": "AGENTS.md",
-        "icon": "LiInfo",
+        "icon": "LiCog",
         "for": "everything",
         "order": 0
       },
       {
-        "rule": "Context.md",
-        "icon": "LiBookOpen",
+        "rule": "(?<!AGENTS)\\.md$",
+        "icon": "LiFile",
         "for": "everything",
-        "order": 1
+        "order": 1,
+        "useFilePath": true
+      },
+      {
+        "rule": "Context.md",
+        "icon": "LiFileQuestionMark",
+        "for": "everything",
+        "order": 2
       }
     ],
     "extraMargin": {
@@ -33,7 +40,7 @@
       "bottom": 0,
       "left": 0
     },
-    "iconInTabsEnabled": true,
+    "iconInTabsEnabled": false,
     "iconInTitleEnabled": false,
     "iconInTitlePosition": "above",
     "iconInFrontmatterEnabled": false,
@@ -49,8 +56,8 @@
   },
   "Clients": "LiFolders",
   "Frameworks": "LiLightbulb",
-  "Personal": "LiPersonStanding",
-  "Posts": "LiNotebookText",
+  "Personal": "LiHeart",
+  "Posts": "LiFileText",
   "Talks": "LiSpeech",
-  "Templates": "LiFileText"
+  "Templates": "LiTextSelect"
 }
