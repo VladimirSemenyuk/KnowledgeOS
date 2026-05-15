@@ -47,7 +47,7 @@ Avoid:
 - Never rename folders unless explicitly instructed.
 - Prefer incremental edits over destructive rewrites.
 - Keep writing concise, structured, and executive-oriented.
-* Consider contex in Contex.md files
+* Consider contex in Context.md files
 
 ---
 
@@ -85,6 +85,7 @@ Main folders:
 - /Templates
 - /Posts
 - /Frameworks
+- /Talks — public talks, conference presentations, webinars, and speaking materials
 
 Do not create new top-level folders unless explicitly requested.
 
