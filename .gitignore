@@ -31,3 +31,5 @@ node_modules/
 # *.mp4
 
 .vscode/settings.json
+
+/.obsidian/graph.json
