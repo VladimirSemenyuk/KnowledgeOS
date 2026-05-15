@@ -1,0 +1,56 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "twemoji",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiFileText",
+      "LiText",
+      "LiSpeech",
+      "LiNotebookText",
+      "LiPersonStanding"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [
+      {
+        "rule": "AGENTS.md",
+        "icon": "LiInfo",
+        "for": "everything",
+        "order": 0
+      },
+      {
+        "rule": "Context.md",
+        "icon": "LiBookOpen",
+        "for": "everything",
+        "order": 1
+      }
+    ],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Clients": "LiFolders",
+  "Frameworks": "LiLightbulb",
+  "Personal": "LiPersonStanding",
+  "Posts": "LiNotebookText",
+  "Talks": "LiSpeech",
+  "Templates": "LiFileText"
+}
