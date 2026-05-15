@@ -80,12 +80,12 @@ Use:
 
 Main folders:
 
-- /Personal
-- /Clients
-- /Templates
-- /Posts
-- /Frameworks
-- /Talks — public talks, conference presentations, webinars, and speaking materials
+- /Personal — private working notes, personal operating system, reflections, goals, and non-client knowledge.
+- /Clients — client-specific advisory materials, meeting notes, transcripts, strategy documents, and engagement context.
+- /Templates — reusable structures for notes, meetings, summaries, posts, client work, and repeatable knowledge workflows.
+- /Posts — LinkedIn and public writing pipeline, including drafts, published posts, and post analytics.
+- /Frameworks — reusable intellectual property: models, concepts, decision systems, operating models, and advisory frameworks.
+- /Talks — public talks, conference presentations, webinars, speaking materials, and related preparation notes.
 
 Do not create new top-level folders unless explicitly requested.
 
