@@ -5,6 +5,7 @@
 .obsidian/cache/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+.obsidian/graph.json
 
 # Logs
 *.log
@@ -32,4 +33,3 @@ node_modules/
 
 .vscode/settings.json
 
-/.obsidian/graph.json
