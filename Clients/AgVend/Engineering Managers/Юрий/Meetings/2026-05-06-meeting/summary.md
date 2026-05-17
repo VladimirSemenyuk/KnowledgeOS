@@ -1,5 +1,9 @@
 # Summary встречи: Юрий & Владимир 2026-05-06
 
+Связи:
+- [[Clients/AgVend/Engineering Managers/Юрий/Context|Юрий Context]]
+- [[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-06-meeting/transcript|transcript]]
+
 ---
 
 ## 1. Наблюдения об управленческом росте

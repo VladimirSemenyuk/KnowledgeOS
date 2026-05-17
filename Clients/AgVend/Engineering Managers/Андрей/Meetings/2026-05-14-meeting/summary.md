@@ -1,5 +1,9 @@
 # Summary встречи: Андрей & Владимир 2026-05-14
 
+Связи:
+- [[Clients/AgVend/Engineering Managers/Андрей/Context|Андрей Context]]
+- [[Clients/AgVend/Engineering Managers/Андрей/Meetings/2026-05-14-meeting/transcript|transcript]]
+
 ---
 
 ## 1. Наблюдения об управленческом росте

@@ -47,6 +47,10 @@ AutoDS — продуктовая компания.
 и перейти в позицию:
 "я задаю рамку, при которой компании выгодно работать определенным образом".
 
+## Рабочие материалы
+
+- [[Clients/AutoDS/Антон/Meetings/2026-05-12-meeting/summary|2026-05-12 meeting summary]]
+
 ---
 
 # Key Organizational Interfaces

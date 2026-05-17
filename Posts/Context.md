@@ -95,6 +95,16 @@
 - Повторяющиеся вопросы CEO/CTO/founders.
 - Слабые места operating model, decision systems и ownership.
 
+## Рабочие артефакты
+
+- [[Posts/content-calendar|content calendar]]
+- [[Posts/themes-backlog|themes backlog]]
+- [[Posts/series-map|series map]]
+- [[Posts/metrics|metrics]]
+- [[Posts/linkedin-profile|LinkedIn profile]]
+- [[Posts/research/high-performing-posts|high-performing posts]]
+- [[Templates/linkedin-post|LinkedIn post template]]
+
 ## Критерии сильной темы
 
 - Есть управленческое напряжение.

@@ -16,9 +16,15 @@
 # Context Usage
 
 Перед работой с материалами Юрия читать:
-- [[Contex]]
+- [[Clients/AgVend/Context|AgVend Context]]
 - последнюю встречу в `Meetings`, если она есть
 - при необходимости — `summary.md` рядом с расшифровкой `transcript.md`
+
+## Рабочие материалы
+
+- [[Clients/AgVend/Engineering Managers/Юрий/Essays/2026-04-essay|2026-04 essay]]
+- [[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-06-meeting/summary|2026-05-06 meeting summary]]
+- [[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-13-meeting/summary|2026-05-13 meeting summary]]
 
 ---
 

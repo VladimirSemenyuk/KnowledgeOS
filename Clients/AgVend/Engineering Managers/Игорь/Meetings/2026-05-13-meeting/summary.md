@@ -1,5 +1,9 @@
 # Summary встречи: Игорь & Владимир 2026-05-13
 
+Связи:
+- [[Clients/AgVend/Engineering Managers/Игорь/Context|Игорь Context]]
+- [[Clients/AgVend/Engineering Managers/Игорь/Meetings/2026-05-13-meeting/transcript|transcript]]
+
 ---
 
 ## 1. Наблюдения об управленческом росте

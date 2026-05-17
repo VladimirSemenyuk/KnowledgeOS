@@ -52,10 +52,10 @@ Primary advisory focus:
 development of Engineering Managers.
 
 EM participants:
-- Andrey
-- Igor
-- Roman
-- Yury
+- [[Clients/AgVend/Engineering Managers/Андрей/Context|Andrey]]
+- [[Clients/AgVend/Engineering Managers/Игорь/Context|Igor]]
+- [[Clients/AgVend/Engineering Managers/Роман/Context|Roman]]
+- [[Clients/AgVend/Engineering Managers/Юрий/Context|Yury]]
 
 Each EM has a dedicated folder under 'Engineering Managers'
 
@@ -74,6 +74,10 @@ Program goals:
 
 Primary program document:
 [[2026-EM-development-plan]]
+
+Related planning materials:
+- [[Clients/AgVend/Plans/2026-engineering-transformation|2026 engineering transformation]]
+- [[Clients/AgVend/Plans/2026-03-27-mentoring-program-report|mentoring program report]]
 
 ---
 

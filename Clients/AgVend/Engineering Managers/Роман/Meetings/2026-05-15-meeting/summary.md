@@ -1,5 +1,9 @@
 # Summary встречи: Роман & Владимир 2026-05-15
 
+Связи:
+- [[Clients/AgVend/Engineering Managers/Роман/Context|Роман Context]]
+- [[Clients/AgVend/Engineering Managers/Роман/Meetings/2026-05-15-meeting/transcript|transcript]]
+
 ---
 
 ## 1. Наблюдения об управленческом росте

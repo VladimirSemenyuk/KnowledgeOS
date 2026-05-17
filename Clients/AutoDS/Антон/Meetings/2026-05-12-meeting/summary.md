@@ -1,5 +1,9 @@
 # Summary встречи: Антон & Владимир 2026-05-12
 
+Связи:
+- [[Clients/AutoDS/Антон/Context|Антон Context]]
+- [[Clients/AutoDS/Антон/Meetings/2026-05-12-meeting/transcript|transcript]]
+
 ---
 
 ## 1. Наблюдения об управленческом росте

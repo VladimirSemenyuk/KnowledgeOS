@@ -1,5 +1,8 @@
 # LinkedIn Content Calendar
 
+Контекст:
+[[Posts/Context|LinkedIn Context]]
+
 ## Rhythm
 
 - Monday: TOFU.
