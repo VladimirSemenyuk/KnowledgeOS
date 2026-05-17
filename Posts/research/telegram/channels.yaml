@@ -1,0 +1,102 @@
+period_days: 7
+min_views: 0
+max_messages_per_channel: 200
+
+channels: 
+  - title: "Сорока пишет | Об ИТ и менеджменте"
+    handle: "@sorokatn"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+      - engineering-management
+      - it-governance
+    include_keywords:
+      - "AI-native"
+      - "AI-transformation"
+      - "operating model"
+      - "CTO"
+      - "IT governance"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+  - title: "Дизраптор"
+    handle: "@disruptors_official"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+      - engineering-management
+    include_keywords:
+      - "AI-native"
+      - "AI-transformation"
+      - "operating model"
+      - "CEO"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+  - title: "Силиконовый Мешок"
+    handle: "@prompt_design"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+    include_keywords:
+      - "AI-native"
+      - "AI-transformation"
+      - "operating model"
+      - "CEO"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+  - title: "e/acc"
+    handle: "@cryptoEssay"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+    include_keywords:
+      - "AI-native"
+      - "AI-transformation"
+      - "operating model"
+      - "CEO"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+  - title: "Книжный куб"
+    handle: "@book_cube"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+      - engineering-management
+      - it-governance
+    include_keywords:
+      - "AI-native"
+      - "AI-transformation"
+      - "operating model"
+      - "CTO"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+
+preferences:
+  priority_topics:
+    - "AI-native organization"
+    - "architecture of manageability"
+    - "decision systems"
+    - "organizational operating model"
+    - "ownership clarity"
+    - "quality and risks"
+    - "systemic management"
+    - "CTO/CEO advisory"
+  avoid:
+    - "startup hype"
+    - "generic AI news"
+    - "motivational content"
+    - "tool announcements without management implications"

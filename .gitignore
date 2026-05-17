@@ -16,11 +16,16 @@
 
 # Node / tooling
 node_modules/
+**/node_modules/
 
 # AI / generated artifacts
 /generated/
 /exports/
 /tmp/
+
+# Telegram weekly digest secrets
+.telegram-weekly.env
+.telegram-weekly.session.txt
 
 # Large binary attachments (optional)
 # Uncomment if you don't want binaries in git
@@ -32,4 +37,3 @@ node_modules/
 # *.mp4
 
 .vscode/settings.json
-

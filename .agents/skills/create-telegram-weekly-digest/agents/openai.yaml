@@ -1,0 +1,3 @@
+display_name: Telegram Weekly Digest
+short_description: Weekly Telegram research digest from selected channels using GramJS.
+default_prompt: Собери недельную подборку из выбранных Telegram-каналов и сохрани digest в Posts/research/telegram.

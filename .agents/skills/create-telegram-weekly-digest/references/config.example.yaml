@@ -1,0 +1,33 @@
+period_days: 7
+min_views: 0
+max_messages_per_channel: 200
+
+channels:
+  - title: "Example Channel"
+    handle: "example_channel"
+    weight: 1.0
+    language: "ru"
+    themes:
+      - ai-transformation
+      - engineering-management
+    include_keywords:
+      - "AI-native"
+      - "operating model"
+      - "CTO"
+    exclude_keywords:
+      - "курс"
+      - "скидка"
+      - "вакансия"
+
+preferences:
+  priority_topics:
+    - "AI-native organization"
+    - "architecture of manageability"
+    - "decision systems"
+    - "ownership clarity"
+    - "quality and risks"
+  avoid:
+    - "startup hype"
+    - "generic AI news"
+    - "motivational content"
+    - "tool announcements without management implications"

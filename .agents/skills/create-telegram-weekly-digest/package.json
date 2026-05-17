@@ -1,0 +1,17 @@
+{
+  "name": "telegram-weekly-digest-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "auth": "node scripts/auth.mjs",
+    "fetch": "node scripts/fetch-week.mjs",
+    "normalize": "node scripts/normalize-messages.mjs",
+    "check": "node --check scripts/auth.mjs && node --check scripts/fetch-week.mjs && node --check scripts/normalize-messages.mjs"
+  },
+  "dependencies": {
+    "input": "^1.0.1",
+    "js-yaml": "^4.1.0",
+    "telegram": "^2.26.22"
+  }
+}
