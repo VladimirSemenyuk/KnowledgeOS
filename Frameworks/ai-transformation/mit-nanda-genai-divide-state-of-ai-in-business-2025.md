@@ -17,7 +17,7 @@ processed_date: 2026-05-17
 
 # MIT NANDA: The GenAI Divide. State of AI in Business 2025
 
-## Коротко
+## Executive Summary
 
 Отчет полезен как сильный аргумент против поверхностного AI adoption.
 
@@ -122,10 +122,10 @@ Enterprise-компании запускают больше пилотов и в
 
 ### Модель 1. AI pilot-to-production funnel
 
-| Категория | Investigated | Piloted | Successfully implemented |
-|---|---:|---:|---:|
-| General-purpose LLMs | 80% | 60% | 50% |
-| Embedded / task-specific GenAI | 60% | 20% | 5% |
+| Категория                      | Investigated | Piloted | Successfully implemented |
+| ------------------------------ | -----------: | ------: | -----------------------: |
+| General-purpose LLMs           |          80% |     60% |                      50% |
+| Embedded / task-specific GenAI |          60% |     20% |                       5% |
 
 Интерпретация:
 
@@ -135,16 +135,16 @@ Enterprise-компании запускают больше пилотов и в
 
 ### Модель 2. Disruption index by industry
 
-| Сектор | Оценка disruption | Сигнал |
-|---|---:|---|
-| Technology | выше остальных | AI-native challengers, изменения workflow |
-| Media & Telecom | 2.0 | AI-native content, changing ad dynamics |
-| Professional Services | 1.5 | efficiency gains, но delivery model в основном прежняя |
-| Healthcare & Pharma | 0.5 | documentation / transcription pilots |
-| Consumer & Retail | 0.5 | support automation, мало влияния на loyalty |
-| Financial Services | 0.5 | backend automation, устойчивые customer relationships |
-| Advanced Industries | 0.5 | maintenance pilots, мало supply chain shifts |
-| Energy & Materials | 0 | почти нет adoption |
+| Сектор                | Оценка disruption | Сигнал                                                 |
+| --------------------- | ----------------: | ------------------------------------------------------ |
+| Technology            |    выше остальных | AI-native challengers, изменения workflow              |
+| Media & Telecom       |               2.0 | AI-native content, changing ad dynamics                |
+| Professional Services |               1.5 | efficiency gains, но delivery model в основном прежняя |
+| Healthcare & Pharma   |               0.5 | documentation / transcription pilots                   |
+| Consumer & Retail     |               0.5 | support automation, мало влияния на loyalty            |
+| Financial Services    |               0.5 | backend automation, устойчивые customer relationships  |
+| Advanced Industries   |               0.5 | maintenance pilots, мало supply chain shifts           |
+| Energy & Materials    |                 0 | почти нет adoption                                     |
 
 Вывод:
 
@@ -152,9 +152,9 @@ Enterprise-компании запускают больше пилотов и в
 
 ### Модель 3. Learning capability matrix
 
-| | Low memory / learning | High memory / learning |
-|---|---|---|
-| Low customization | Copilot, GPT wrappers | ChatGPT with memory |
+|                    | Low memory / learning   | High memory / learning           |
+| ------------------ | ----------------------- | -------------------------------- |
+| Low customization  | Copilot, GPT wrappers   | ChatGPT with memory              |
 | High customization | fragile internal builds | agentic workflows, vertical SaaS |
 
 Управленческий смысл:
@@ -182,41 +182,41 @@ flowchart LR
 
 Успешные buyers действуют не как SaaS-покупатели, а как клиенты BPO / consulting:
 
-| Практика | Что это меняет |
-|---|---|
-| Deep customization под внутренний процесс | меньше gap между demo и work reality |
-| Operational metrics вместо model benchmarks | меньше vanity AI adoption |
-| Co-evolution с vendor | инструмент учится вместе с процессом |
-| Use cases от frontline managers | ближе к реальным bottlenecks |
-| Executive accountability | меньше бесхозных пилотов |
+| Практика                                    | Что это меняет                       |
+| ------------------------------------------- | ------------------------------------ |
+| Deep customization под внутренний процесс   | меньше gap между demo и work reality |
+| Operational metrics вместо model benchmarks | меньше vanity AI adoption            |
+| Co-evolution с vendor                       | инструмент учится вместе с процессом |
+| Use cases от frontline managers             | ближе к реальным bottlenecks         |
+| Executive accountability                    | меньше бесхозных пилотов             |
 
 ## Цифры и доказательная база
 
-| Показатель | Значение | Интерпретация |
-|---|---:|---|
-| Enterprise investment в GenAI | $30-40B | большой объем spending не конвертируется автоматически в P&L |
-| Integrated AI pilots с измеримой value | 5% | основной разрыв между experimentation и transformation |
-| Organizations explored / piloted general-purpose tools | >80% | adoption высокий |
-| Organizations reporting deployment of general-purpose tools | ~40% | deployment есть, но часто на уровне personal productivity |
-| Enterprise-grade systems evaluated | 60% | интерес высокий |
-| Enterprise-grade systems reached pilot | 20% | большой drop-off до пилота |
-| Enterprise-grade systems reached production | 5% | production остается редким |
-| Companies with official LLM subscription | 40% | формальный adoption отстает |
-| Employees regularly using personal AI tools | >90% | фактический adoption уже произошел |
-| AI preferred for quick tasks | 70% | AI выиграл simple work |
-| Human preferred for complex high-stakes work | 90% | memory, accountability и judgment остаются критичны |
-| Executives wanting systems that learn from feedback | 66% | learning capability становится procurement criterion |
-| Executives demanding context retention | 63% | memory важнее generic UX |
-| External partnerships deployment rate | ~66-67% | partner model в выборке сильнее internal build |
-| Internal build deployment rate | ~33% | build чаще застревает |
-| Lead qualification speed improvement | 40% faster | front-office measurable win |
-| Customer retention improvement | 10% | value через follow-up и messaging |
-| BPO elimination | $2-10M annually | back-office ROI часто сильнее |
-| Agency spend reduction | 30% | external spend reduction вместо layoffs |
-| Outsourced risk management savings | $1M annually | финансовый ROI в operational control |
-| Customer support / admin displacement | 5-20% | impact концентрируется в standardized outsourced functions |
-| Current U.S. labor value automation potential | 2.27% | текущая автоматизация ограничена |
-| Latent automation exposure | $2.3T / 39M positions | потенциал станет активным при memory + autonomous integration |
+| Показатель                                                  |              Значение | Интерпретация                                                 |
+| ----------------------------------------------------------- | --------------------: | ------------------------------------------------------------- |
+| Enterprise investment в GenAI                               |               $30-40B | большой объем spending не конвертируется автоматически в P&L  |
+| Integrated AI pilots с измеримой value                      |                    5% | основной разрыв между experimentation и transformation        |
+| Organizations explored / piloted general-purpose tools      |                  >80% | adoption высокий                                              |
+| Organizations reporting deployment of general-purpose tools |                  ~40% | deployment есть, но часто на уровне personal productivity     |
+| Enterprise-grade systems evaluated                          |                   60% | интерес высокий                                               |
+| Enterprise-grade systems reached pilot                      |                   20% | большой drop-off до пилота                                    |
+| Enterprise-grade systems reached production                 |                    5% | production остается редким                                    |
+| Companies with official LLM subscription                    |                   40% | формальный adoption отстает                                   |
+| Employees regularly using personal AI tools                 |                  >90% | фактический adoption уже произошел                            |
+| AI preferred for quick tasks                                |                   70% | AI выиграл simple work                                        |
+| Human preferred for complex high-stakes work                |                   90% | memory, accountability и judgment остаются критичны           |
+| Executives wanting systems that learn from feedback         |                   66% | learning capability становится procurement criterion          |
+| Executives demanding context retention                      |                   63% | memory важнее generic UX                                      |
+| External partnerships deployment rate                       |               ~66-67% | partner model в выборке сильнее internal build                |
+| Internal build deployment rate                              |                  ~33% | build чаще застревает                                         |
+| Lead qualification speed improvement                        |            40% faster | front-office measurable win                                   |
+| Customer retention improvement                              |                   10% | value через follow-up и messaging                             |
+| BPO elimination                                             |       $2-10M annually | back-office ROI часто сильнее                                 |
+| Agency spend reduction                                      |                   30% | external spend reduction вместо layoffs                       |
+| Outsourced risk management savings                          |          $1M annually | финансовый ROI в operational control                          |
+| Customer support / admin displacement                       |                 5-20% | impact концентрируется в standardized outsourced functions    |
+| Current U.S. labor value automation potential               |                 2.27% | текущая автоматизация ограничена                              |
+| Latent automation exposure                                  | $2.3T / 39M positions | потенциал станет активным при memory + autonomous integration |
 
 ## Advisory interpretation
 
@@ -306,24 +306,24 @@ flowchart TD
 
 ### 3. Build / Buy / Partner Decision
 
-| Вопрос | Если да | Если нет |
-|---|---|---|
-| Это core strategic capability? | рассмотреть build / hybrid | buy / partner |
-| У нас есть уникальные данные и process knowledge? | build может дать moat | vendor быстрее |
-| Процесс стабилен и описан? | можно автоматизировать глубже | сначала управлять процессом |
-| Vendor способен учиться на feedback? | partnership viable | риск статичного SaaS |
-| Есть clear business metric? | scale candidate | оставить как experiment |
+| Вопрос                                            | Если да                       | Если нет                    |
+| ------------------------------------------------- | ----------------------------- | --------------------------- |
+| Это core strategic capability?                    | рассмотреть build / hybrid    | buy / partner               |
+| У нас есть уникальные данные и process knowledge? | build может дать moat         | vendor быстрее              |
+| Процесс стабилен и описан?                        | можно автоматизировать глубже | сначала управлять процессом |
+| Vendor способен учиться на feedback?              | partnership viable            | риск статичного SaaS        |
+| Есть clear business metric?                       | scale candidate               | оставить как experiment     |
 
 ### 4. AI Value Map
 
-| Область | Тип value | Риск ошибки |
-|---|---|---|
-| Personal productivity | time saving | не конвертируется в P&L |
-| Sales / marketing | visible top-line metrics | overinvestment из-за visibility |
-| Back-office | cost reduction / cycle time | недооценка из-за слабой атрибуции |
-| Support / admin | BPO replacement | workforce / quality risk |
-| Engineering | repetitive task acceleration | verification tax и code quality |
-| Procurement / finance / risk | control and external spend reduction | data boundaries и auditability |
+| Область                      | Тип value                            | Риск ошибки                       |
+| ---------------------------- | ------------------------------------ | --------------------------------- |
+| Personal productivity        | time saving                          | не конвертируется в P&L           |
+| Sales / marketing            | visible top-line metrics             | overinvestment из-за visibility   |
+| Back-office                  | cost reduction / cycle time          | недооценка из-за слабой атрибуции |
+| Support / admin              | BPO replacement                      | workforce / quality risk          |
+| Engineering                  | repetitive task acceleration         | verification tax и code quality   |
+| Procurement / finance / risk | control and external spend reduction | data boundaries и auditability    |
 
 ## Идеи для постов
 

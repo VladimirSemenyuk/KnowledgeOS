@@ -96,12 +96,12 @@ The output must be concise, analytical, and useful for future advisory work.
 Required sections:
 - `Коротко`;
 - `Самое важное для моей базы знаний`;
-- key frameworks / models / formulas from the report;
-- practical interpretation for CEO / CTO / engineering leaders;
-- diagnostic questions;
-- possible frameworks or post ideas if relevant;
+- ключевые фреймворки, рамки и формулы из отчета;
+- практическая интерпретация для CEO / CTO / engineering leaders;
+- диагностические вопросы;
+- возможные модели или идеи для постов, если релевантно;
 - `Связанные заметки`;
-- `Source`.
+- `Источник`.
 
 Prefer:
 - Russian;
@@ -109,6 +109,13 @@ Prefer:
 - bullets and tables;
 - Mermaid for decision flows, operating models, risk systems, and ROI logic;
 - Obsidian wikilinks for reusable concepts.
+
+Russian language discipline:
+- write the final note in Russian by default;
+- translate source terms into precise Russian when possible;
+- keep English only for report titles, product names, company names, model names, direct quotes, metrics, and technical terms that lose precision in translation;
+- if an English source term is important, introduce it once in parentheses and then use the Russian term;
+- prefer `выводы`, `наблюдения`, `модель`, `рамка`, `процесс`, `зона ответственности`, `управленческий контур`, `операционная модель` over unnecessary English equivalents.
 
 Avoid:
 - raw OCR dumps;

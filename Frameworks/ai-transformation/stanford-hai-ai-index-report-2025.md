@@ -17,7 +17,7 @@ processed_date: 2026-05-17
 
 # Stanford HAI: AI Index Report 2025
 
-## Коротко
+## Executive Summary
 
 AI Index 2025 полезен как опорный отчет для board-level разговора об AI transformation.
 
@@ -148,21 +148,21 @@ SWE-bench:
 
 AI risks considered relevant vs actively mitigated:
 
-| Риск | Relevant | Actively mitigated | Gap |
-|---|---:|---:|---:|
-| Cybersecurity | 66% | 55% | 11 pp |
-| Regulatory compliance | 63% | 53% | 10 pp |
-| Personal privacy | 60% | 50% | 10 pp |
-| Inaccuracy | 60% | 46% | 14 pp |
-| Intellectual property infringement | 57% | 38% | 19 pp |
-| Organizational reputation | 45% | 29% | 16 pp |
-| Explainability | 40% | 31% | 9 pp |
-| Equity and fairness | 34% | 26% | 8 pp |
-| Workforce labor displacement | 20% | 12% | 8 pp |
-| Environmental impact | 16% | 9% | 7 pp |
-| National security | 11% | 7% | 4 pp |
-| Political stability | 6% | 4% | 2 pp |
-| Physical safety | 3% | 4% | -1 pp |
+| Риск                               | Relevant | Actively mitigated |   Gap |
+| ---------------------------------- | -------: | -----------------: | ----: |
+| Cybersecurity                      |      66% |                55% | 11 pp |
+| Regulatory комплаенс               |      63% |                53% | 10 pp |
+| Personal privacy                   |      60% |                50% | 10 pp |
+| Inaccuracy                         |      60% |                46% | 14 pp |
+| Intellectual property infringement |      57% |                38% | 19 pp |
+| Organizational reputation          |      45% |                29% | 16 pp |
+| Explainability                     |      40% |                31% |  9 pp |
+| Equity and fairness                |      34% |                26% |  8 pp |
+| Workforce labor displacement       |      20% |                12% |  8 pp |
+| Environmental impact               |      16% |                 9% |  7 pp |
+| National security                  |      11% |                 7% |  4 pp |
+| Political stability                |       6% |                 4% |  2 pp |
+| Physical safety                    |       3% |                 4% | -1 pp |
 
 Gap = `Relevant - Actively mitigated`. В строке physical safety mitigated share чуть выше relevant share; оставляю как в исходной диаграмме.
 
@@ -232,22 +232,22 @@ AI Incident Database зафиксировала:
 
 #### Карта рисков для AI transformation
 
-| Класс риска | Как проявляется | Управленческий контур |
-|---|---|---|
-| Accuracy / hallucination | неверные ответы, ложные выводы, unreliable automation | evals, human review, confidence thresholds, rollback |
-| Cybersecurity | prompt injection, jailbreaks, agent misuse, data exfiltration | threat modeling, red teaming, sandboxing, access control |
-| Privacy / data governance | leakage of personal data, consent violations, unclear data rights | data classification, retention policy, access logs, DPA / DPIA |
-| IP / copyright | training / output / reuse conflicts, unclear ownership | source tracking, licensing checks, vendor terms review |
-| Bias / fairness | implicit discrimination despite explicit debiasing | bias testing, segment metrics, appeal process |
-| Explainability | inability to justify outputs in high-stakes workflows | decision logs, rationale requirements, interpretable checks |
-| Reputation | public failure, offensive outputs, harmful automation | escalation path, incident response, comms protocol |
-| Regulatory compliance | EU AI Act, GDPR, sector rules, audit requirements | AI inventory, risk tiering, control evidence |
-| Workforce risk | deskilling, displacement anxiety, shadow AI | adoption policy, training, role redesign, manager enablement |
-| Environmental / infrastructure | rising power draw, carbon emissions, energy constraints | workload governance, model sizing, compute budgets |
-| Societal / misinformation | deepfakes, liar's dividend, manipulation | provenance, watermarking where useful, media policy |
-| National security / political stability | dual-use capabilities, export controls, influence operations | geopolitical risk review, vendor restrictions, policy monitoring |
-| Physical safety | autonomous systems, robotics, safety-critical environments | formal safety case, simulation, human override |
-| Agentic / multiagent risk | cascading failures, unauthorized actions, tool misuse | scoped autonomy, permissions, simulation, kill switches |
+| Класс риска                             | Как проявляется                                                   | Управленческий контур                                            |
+| --------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Accuracy / hallucination                | неверные ответы, ложные выводы, unreliable automation             | evals, human review, confidence thresholds, rollback             |
+| Cybersecurity                           | prompt injection, jailbreaks, agent misuse, data exfiltration     | threat modeling, red teaming, sandboxing, access control         |
+| Privacy / data governance               | leakage of personal data, consent violations, unclear data rights | data classification, retention policy, access logs, DPA / DPIA   |
+| IP / copyright                          | training / output / reuse conflicts, unclear ownership            | source tracking, licensing checks, vendor terms review           |
+| Bias / fairness                         | implicit discrimination despite explicit debiasing                | bias testing, segment metrics, appeal process                    |
+| Explainability                          | inability to justify outputs in high-stakes workflows             | decision logs, rationale requirements, interpretable checks      |
+| Reputation                              | public failure, offensive outputs, harmful automation             | escalation path, incident response, comms protocol               |
+| Regulatory комплаенс                    | EU AI Act, GDPR, sector rules, audit requirements                 | AI inventory, risk tiering, control evidence                     |
+| Workforce risk                          | deskilling, displacement anxiety, shadow AI                       | adoption policy, training, role redesign, manager enablement     |
+| Environmental / infrastructure          | rising power draw, carbon emissions, energy constraints           | workload governance, model sizing, compute budgets               |
+| Societal / misinformation               | deepfakes, liar's dividend, manipulation                          | provenance, watermarking where useful, media policy              |
+| National security / political stability | dual-use capabilities, export controls, influence operations      | geopolitical risk review, vendor restrictions, policy monitoring |
+| Physical safety                         | autonomous systems, robotics, safety-critical environments        | formal safety case, simulation, human override                   |
+| Agentic / multiagent risk               | cascading failures, unauthorized actions, tool misuse             | scoped autonomy, permissions, simulation, kill switches          |
 
 #### Почему agents требуют отдельного risk model
 
@@ -336,13 +336,13 @@ flowchart LR
 
 ### Модель 2. From model access to organizational advantage
 
-| Стадия | Что кажется главным | Что на самом деле ограничивает value |
-|---|---|---|
-| Access | Купить tools / API | Security, data access, procurement |
-| Adoption | Поднять usage | Workflow fit, training, manager adoption |
-| Integration | Встроить в процессы | Ownership, data quality, quality gates |
-| Scale | Расширить на функции | Governance, metrics, operating model |
-| Advantage | Получить стратегический эффект | Learning loops, proprietary context, decision systems |
+| Стадия      | Что кажется главным            | Что на самом деле ограничивает value                  |
+| ----------- | ------------------------------ | ----------------------------------------------------- |
+| Access      | Купить tools / API             | Security, data access, procurement                    |
+| Adoption    | Поднять usage                  | Workflow fit, training, manager adoption              |
+| Integration | Встроить в процессы            | Ownership, data quality, quality gates                |
+| Scale       | Расширить на функции           | Governance, metrics, operating model                  |
+| Advantage   | Получить стратегический эффект | Learning loops, proprietary context, decision systems |
 
 ### Модель 3. Responsible AI operating gap
 
@@ -359,47 +359,47 @@ flowchart TD
 
 ### Модель 4. Agent deployment boundary
 
-| Задача | AI agent fit | Управленческий контроль |
-|---|---|---|
-| Короткая, ограниченная, проверяемая | High | automated tests, review, rollback |
-| Повторяемая операционная задача | Medium / high | SOP, metrics, escalation path |
-| Длинная R&D-задача | Medium | milestones, human steering, audit trail |
-| High-stakes decision | Low / assisted | human accountability, explainability |
-| Cross-functional organizational change | Low | governance, ownership, decision forums |
+| Задача                                 | AI agent fit   | Управленческий контроль                 |
+| -------------------------------------- | -------------- | --------------------------------------- |
+| Короткая, ограниченная, проверяемая    | High           | automated tests, review, rollback       |
+| Повторяемая операционная задача        | Medium / high  | SOP, metrics, escalation path           |
+| Длинная R&D-задача                     | Medium         | milestones, human steering, audit trail |
+| High-stakes decision                   | Low / assisted | human accountability, explainability    |
+| Cross-functional organizational change | Low            | governance, ownership, decision forums  |
 
 ## Цифры и доказательная база
 
-| Показатель | Значение | Интерпретация |
-|---|---:|---|
-| Organizations using AI in at least one function | 78% | adoption стал массовым |
-| Organizations using AI in at least one function, 2023 | 55% | рост adoption ускорился после стагнации |
-| Organizations using GenAI in at least one function | 71% | GenAI перешел из эксперимента в рабочий слой |
-| Organizations using GenAI in at least one function, 2023 | 33% | GenAI usage более чем удвоился |
-| Global corporate AI investment, 2024 | $252.3B | рынок снова растет после замедления |
-| Global corporate AI investment growth, 2024 | +25.5% | рост total corporate investment |
-| Global private AI investment growth, 2024 | +44.5% | capital снова ускоряет AI ecosystem |
-| Generative AI private investment, 2024 | $33.9B | более 20% private AI investment |
-| Generative AI private investment growth, 2024 | +18.7% | GenAI funding продолжает расти |
-| Newly funded AI companies, 2024 | 2,049 | startup activity снова растет |
-| Newly funded GenAI companies, 2024 | 214 | почти 7x к 2019 году |
-| U.S. private AI investment, 2024 | $109.1B | сильное лидерство США по capital allocation |
-| Cost savings from AI in service operations | 49% respondents | самый частый reported cost-saving function |
-| Cost savings from AI in supply chain / inventory | 43% respondents | второй по частоте reported cost-saving function |
-| Cost savings from AI in software engineering | 41% respondents | engineering эффект уже виден, но чаще <10% |
-| Revenue gains from AI in marketing and sales | 71% respondents | самый частый reported revenue-gain function |
-| Revenue gains from AI in supply chain / inventory | 63% respondents | второй по частоте reported revenue-gain function |
-| Revenue gains from AI in service operations | 57% respondents | третий по частоте reported revenue-gain function |
-| Workplace productivity gains across studies | 10-45% | эффект зависит от контекста и интеграции |
-| High vs minimal AI integration productivity probability | 72% vs 3.4% | value зависит от workflow integration |
-| Inference cost drop for GPT-3.5-level MMLU | >280x | model access commoditizes |
-| Open-weight vs closed-weight gap | 8.0% to 1.7% | frontier access becomes less concentrated |
-| SWE-bench best score | 4.4% to 71.7% | coding capability быстро растет |
-| ToolEmu critical scenario failure rate | 23.9% | agents требуют отдельного risk model |
-| AI incidents reported in AI Incident Database, 2024 | 233 | risk surface растет |
-| Incident growth vs 2023 | +56.4% | governance должен масштабироваться быстрее |
-| Foundation Model Transparency Index average score | 37% to 58% | transparency улучшается, но остается неполной |
-| U.S. AI-related federal regulations, 2024 | 59 | governance pressure растет |
-| FDA-approved AI medical devices by 2023 | 223 | AI уже входит в regulated domains |
+| Показатель                                               |        Значение | Интерпретация                                    |
+| -------------------------------------------------------- | --------------: | ------------------------------------------------ |
+| Organizations using AI in at least one function          |             78% | adoption стал массовым                           |
+| Organizations using AI in at least one function, 2023    |             55% | рост adoption ускорился после стагнации          |
+| Organizations using GenAI in at least one function       |             71% | GenAI перешел из эксперимента в рабочий слой     |
+| Organizations using GenAI in at least one function, 2023 |             33% | GenAI usage более чем удвоился                   |
+| Global corporate AI investment, 2024                     |         $252.3B | рынок снова растет после замедления              |
+| Global corporate AI investment growth, 2024              |          +25.5% | рост total corporate investment                  |
+| Global private AI investment growth, 2024                |          +44.5% | capital снова ускоряет AI ecosystem              |
+| Generative AI private investment, 2024                   |          $33.9B | более 20% private AI investment                  |
+| Generative AI private investment growth, 2024            |          +18.7% | GenAI funding продолжает расти                   |
+| Newly funded AI companies, 2024                          |           2,049 | startup activity снова растет                    |
+| Newly funded GenAI companies, 2024                       |             214 | почти 7x к 2019 году                             |
+| U.S. private AI investment, 2024                         |         $109.1B | сильное лидерство США по capital allocation      |
+| Cost savings from AI in service operations               | 49% respondents | самый частый reported cost-saving function       |
+| Cost savings from AI in supply chain / inventory         | 43% respondents | второй по частоте reported cost-saving function  |
+| Cost savings from AI in software engineering             | 41% respondents | engineering эффект уже виден, но чаще <10%       |
+| Revenue gains from AI in marketing and sales             | 71% respondents | самый частый reported revenue-gain function      |
+| Revenue gains from AI in supply chain / inventory        | 63% respondents | второй по частоте reported revenue-gain function |
+| Revenue gains from AI in service operations              | 57% respondents | третий по частоте reported revenue-gain function |
+| Workplace productivity gains across studies              |          10-45% | эффект зависит от контекста и интеграции         |
+| High vs minimal AI integration productivity probability  |     72% vs 3.4% | value зависит от workflow integration            |
+| Inference cost drop for GPT-3.5-level MMLU               |           >280x | model access commoditizes                        |
+| Open-weight vs closed-weight gap                         |    8.0% to 1.7% | frontier access becomes less concentrated        |
+| SWE-bench best score                                     |   4.4% to 71.7% | coding capability быстро растет                  |
+| ToolEmu critical scenario failure rate                   |           23.9% | agents требуют отдельного risk model             |
+| AI incidents reported in AI Incident Database, 2024      |             233 | risk surface растет                              |
+| Incident growth vs 2023                                  |          +56.4% | governance должен масштабироваться быстрее       |
+| Foundation Model Transparency Index average score        |      37% to 58% | transparency улучшается, но остается неполной    |
+| U.S. AI-related federal regulations, 2024                |              59 | governance pressure растет                       |
+| FDA-approved AI medical devices by 2023                  |             223 | AI уже входит в regulated domains                |
 
 ## Advisory interpretation
 

@@ -53,7 +53,7 @@ Avoid:
 
 # Writing Style
 
-Russian is a preffered language.
+Russian is the default language for generated notes, summaries, posts, frameworks, and client materials.
 
 Preferred style:
 - clear
@@ -73,6 +73,36 @@ Use:
 - bullets
 - frameworks
 - operational language
+
+---
+
+# Russian Language Discipline
+
+For Russian-language files:
+- Use Russian for concepts, headings, explanations, summaries, and conclusions.
+- Avoid unnecessary English terms when a precise Russian equivalent exists.
+- English terms require a reason: product names, company names, role titles, direct quotes, technical terms without a good Russian equivalent, or intentionally preserved source terminology.
+- If an English term is important, introduce it once in parentheses, then continue in Russian.
+- Do not mix English and Russian casually inside one sentence.
+- Prefer mature Russian management language over consulting slang.
+
+Preferred replacements:
+- strategy → стратегия
+- execution → исполнение / реализация
+- ownership → владение / зона ответственности
+- accountability → ответственность
+- alignment → согласованность
+- governance → управление / управленческий контур
+- operating model → операционная модель
+- decision-making → принятие решений
+- stakeholders → участники / заинтересованные стороны / стейкхолдеры
+- roadmap → план развития / дорожная карта / роудмеп
+- insights → выводы / наблюдения
+- action items → действия / следующие шаги
+- framework → фреймворк / модель / рамка
+- workflow → процесс / порядок работы
+
+Keep English only when it improves precision.
 
 ---
 

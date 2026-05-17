@@ -96,6 +96,13 @@ Keep metadata factual and concise.
 
 Russian is preferred unless the talk context requires another language.
 
+For Russian talk materials:
+- write slide titles, theses, speaker notes, and conclusions in Russian by default;
+- avoid unnecessary English terms when a precise Russian equivalent exists;
+- keep English only for product names, company names, direct quotes, established technical terms, or event language;
+- if an English term is useful for the audience, introduce it once in parentheses and then use the Russian equivalent;
+- prefer Russian management vocabulary over consulting slang.
+
 Use:
 - short sections;
 - bullets;

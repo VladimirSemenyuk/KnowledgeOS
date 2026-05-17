@@ -1,30 +1,33 @@
-# KnowledgeOS PDF Source Note Pattern
+# Шаблон PDF-заметки KnowledgeOS
 
-Use this reference only when a report has to become a polished KnowledgeOS note.
+Использовать этот референс только когда отчет нужно превратить в готовую заметку KnowledgeOS.
 
-## Good Source Note
+## Хорошая заметка по источнику
 
-A good source note:
-- preserves the source;
-- removes PDF layout noise;
-- extracts reusable advisory IP;
-- links the report to operating models, decision systems, quality, risk, and AI transformation;
-- gives future writing angles.
+Хорошая заметка по источнику:
 
-## Useful Interpretive Lenses
+- сохраняет смысл источника;
+- убирает шум PDF-верстки;
+- извлекает переиспользуемую консультационную интеллектуальную собственность;
+- связывает отчет с операционными моделями, системами принятия решений, качеством, рисками и AI transformation;
+- дает углы для будущих текстов.
 
-For AI reports, actively look for:
-- where value is created;
-- where value is lost;
-- what operating model assumptions are hidden;
-- what governance is required;
-- what metrics connect engineering to business value;
-- what risks appear when adoption scales;
-- what changes for CEO, CTO, VP Engineering, and Engineering Managers.
+## Полезные рамки интерпретации
+
+Для AI-отчетов активно искать:
+
+- где создается ценность;
+- где теряется ценность;
+- какие предположения об операционной модели скрыты;
+- какой управленческий контур нужен;
+- какие метрики связывают инженерную работу с ценностью для бизнеса;
+- какие риски появляются при масштабировании внедрения;
+- что меняется для CEO, CTO, VP Engineering и Engineering Managers.
 
 ## Default Wikilinks
 
-Use only where relevant:
+Использовать только где релевантно:
+
 - `[[AI-native organization]]`
 - `[[architecture of manageability]]`
 - `[[decision systems]]`
@@ -33,16 +36,16 @@ Use only where relevant:
 - `[[quality and risks]]`
 - `[[systemic management]]`
 
-## Common Sections
+## Типовые секции
 
 ```markdown
-## Коротко
+## Executive Summary
 
 ## Самое важное для моей базы знаний
 
 ## Модели / фреймворки / формулы
 
-## Advisory interpretation
+## Управленческая интерпретация
 
 ## Диагностические вопросы
 
@@ -52,5 +55,5 @@ Use only where relevant:
 
 ## Связанные заметки
 
-## Source
+## Источник
 ```

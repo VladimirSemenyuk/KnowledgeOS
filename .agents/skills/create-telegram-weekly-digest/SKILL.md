@@ -8,6 +8,7 @@ description: Собирает через GramJS сообщения из выбр
 ## Purpose
 
 Собрать недельную подборку сильных Telegram-сигналов для тем:
+
 - AI transformation;
 - engineering management;
 - organizational design;
@@ -20,12 +21,14 @@ description: Собирает через GramJS сообщения из выбр
 ## Required Context
 
 Перед генерацией digest прочитать:
+
 - `AGENTS.md`;
 - `Posts/Context.md`;
 - `Posts/research/telegram/channels.yaml`, если существует;
 - последний digest из `Posts/research/telegram/weekly-digests`, если существует.
 
 Соблюдать стиль vault:
+
 - русский язык;
 - кратко;
 - системно;
@@ -33,6 +36,13 @@ description: Собирает через GramJS сообщения из выбр
 - без motivational tone;
 - без startup hype;
 - без generic consulting language.
+- без случайных английских слов внутри русских формулировок.
+
+Языковое правило:
+
+- переводить смысл источников на русский, если это не прямая цитата;
+- оставлять английский для названий компаний, продуктов, каналов, метрик, прямых цитат и технических терминов без точного русского эквивалента;
+- предпочитать `выводы`, `наблюдения`, `модель`, `рамка`, `процесс`, `зона ответственности`, `принятие решений`, `управленческий контур`.
 
 ## Data Locations
 
@@ -57,6 +67,7 @@ KnowledgeOS/
 Эти файлы должны быть в `.gitignore`.
 
 Никогда не коммитить:
+
 - `TELEGRAM_API_ID`;
 - `TELEGRAM_API_HASH`;
 - phone number;
@@ -67,6 +78,7 @@ KnowledgeOS/
 ## First Run
 
 Если `Posts/research/telegram/channels.yaml` отсутствует:
+
 1. Скопировать структуру из `references/config.example.yaml`.
 2. Попросить пользователя заполнить каналы.
 3. Не угадывать каналы самостоятельно.
@@ -123,19 +135,21 @@ node .agents/skills/telegram-weekly-digest/scripts/normalize-messages.mjs
 ## Filtering Logic
 
 Исключать:
+
 - рекламу;
 - вакансии;
 - анонсы без управленческого вывода;
-- чистые tool updates без organizational implications;
+- чистые обновления инструментов без организационных последствий;
 - повторяющиеся пересказы одной новости;
 - низкосигнальные motivational posts.
 
 Повышать приоритет:
-- системные сдвиги в AI adoption;
-- governance, quality, risks;
-- operating model implications;
+
+- системные сдвиги в AI adoption, если термин важен в источнике;
+- управление, качество, риски;
+- последствия для операционной модели;
 - изменения роли CTO / VP Engineering;
-- ownership и decision-making;
+- зоны ответственности и принятие решений;
 - AI в реальных процессах, а не в витринных демо;
 - признаки зрелости или деградации управления.
 
@@ -153,31 +167,31 @@ status: research
 
 ## Executive Summary
 
-- 3-5 bullets: что важно за неделю.
+- 3-5 пунктов: что важно за неделю.
 
-## Strong Signals
+## Сигналы
 
 ### 1. Короткий смысловой заголовок
 
 - Источник: [Channel Name](https://t.me/channel/123)
-- Почему это важно: 
-   управленческий смысл.
-- Смысл: 
-   что это меняет для CTO/CEO/engineering org.
-- Идеи для поста: 
-   как это развить в пост, framework или advisory insight.
+- Почему это важно:
+  управленческий смысл.
+- Смысл:
+  что это меняет для CTO/CEO/инженерной организации.
+- Идеи для поста:
+  как это развить в пост, framework или advisory-наблюдение.
 
-## Patterns
+## Паттерны
 
 - Повторяющийся паттерн 1.
 - Повторяющийся паттерн 2.
 
-## Content Opportunities
+## Возможности для контента
 
 - [[draft-topic-1]]
 - [[draft-topic-2]]
 
-## Raw Links
+## Ссылки на источники
 
 - https://t.me/...
 ```
@@ -185,6 +199,7 @@ status: research
 ## Verification
 
 Перед финальным ответом проверить:
+
 - raw JSON создан;
 - normalized JSON создан;
 - digest создан;
@@ -193,6 +208,7 @@ status: research
 - подборка не содержит generic news без управленческого вывода.
 
 В финальном ответе кратко указать:
+
 - период;
 - число прочитанных сообщений;
 - число кандидатов после нормализации;

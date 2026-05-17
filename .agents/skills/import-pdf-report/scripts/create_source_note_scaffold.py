@@ -84,7 +84,7 @@ processed_date: {today}
 
 # {title}
 
-## Коротко
+## Executive Summary
 
 - TODO: 3-7 bullets с главным выводом отчета.
 
@@ -114,7 +114,7 @@ TODO
 |---|---:|---|
 | TODO | TODO | TODO |
 
-## Advisory interpretation
+## Управленческая интерпретация
 
 ### Для CEO
 
@@ -160,10 +160,10 @@ Hook:
 - [[quality and risks]]
 - [[systemic management]]
 
-## Source
+## Источник
 
 - PDF: `{args.pdf}`
-- Extracted text: `{args.text}`
+- Извлеченный текст: `{args.text}`
 
 ## Raw extraction signals
 
