@@ -16,9 +16,10 @@
     "rules": [
       {
         "rule": "AGENTS.md",
-        "icon": "LiCog",
+        "icon": "LiFileCog",
         "for": "everything",
-        "order": 0
+        "order": 0,
+        "color": "#d17cf8"
       },
       {
         "rule": "(?<!AGENTS)\\.md$",
@@ -31,7 +32,15 @@
         "rule": "Context.md",
         "icon": "LiFileQuestionMark",
         "for": "everything",
-        "order": 2
+        "order": 2,
+        "color": "#0099ff"
+      },
+      {
+        "rule": ".pdf$",
+        "icon": "LiFileBadge",
+        "for": "files",
+        "order": 3,
+        "color": "#e94957"
       }
     ],
     "extraMargin": {
