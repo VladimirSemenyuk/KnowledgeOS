@@ -1,0 +1,4 @@
+interface:
+  display_name: "Import PDF Report"
+  short_description: "Turn PDF reports into KnowledgeOS notes."
+  default_prompt: "Use $import-pdf-report to convert this PDF report into a concise KnowledgeOS Markdown source note."
