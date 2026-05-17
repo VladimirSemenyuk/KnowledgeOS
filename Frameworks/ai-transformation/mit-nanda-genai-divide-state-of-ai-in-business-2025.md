@@ -17,39 +17,39 @@ processed_date: 2026-05-17
 
 # MIT NANDA: The GenAI Divide. State of AI in Business 2025
 
-## Executive Summary
+## Резюме
 
-Отчет полезен как сильный аргумент против поверхностного AI adoption.
+Отчет полезен как сильный аргумент против поверхностного внедрения AI.
 
-Главный тезис: компании массово покупают и пилотируют GenAI, но редко превращают его в управляемую операционную способность. Проблема не в моделях, не в бюджете и не только в regulation. Проблема в том, что большинство внедрений не встроены в реальные workflow, не накапливают контекст и не учатся от обратной связи.
+Главный тезис: компании массово покупают и пилотируют GenAI, но редко превращают его в управляемую операционную способность. Проблема не в моделях, не в бюджете и не только в регулировании. Проблема в том, что большинство внедрений не встроены в реальные процессы, не накапливают контекст и не учатся от обратной связи.
 
-Для advisory это источник под тезис:
+Для консультационной работы это источник под тезис:
 
 - AI transformation нельзя мерить количеством пилотов;
-- индивидуальная продуктивность не равна P&L impact;
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]] строится вокруг learning loops, ownership и workflow integration;
-- высокий ROI чаще находится в back-office и external spend, а не в видимых front-office use cases;
-- buy/partner часто практичнее, чем internal build, если vendor способен глубоко адаптироваться под процесс.
+- индивидуальная продуктивность не равна влиянию на P&L;
+- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]] строится вокруг контуров обучения, зон ответственности и интеграции в процессы;
+- высокий ROI чаще находится в back-office и внешних расходах, а не в видимых front-office use cases;
+- buy/partner часто практичнее, чем internal build, если поставщик способен глубоко адаптироваться под процесс.
 
 ## Самое важное для моей базы знаний
 
 ### 1. GenAI Divide: высокая активность, низкая трансформация
 
-Отчет описывает разрыв между adoption и transformation:
+Отчет описывает разрыв между внедрением и трансформацией:
 
-- $30-40B enterprise investment в GenAI;
+- $30-40B корпоративных инвестиций в GenAI;
 - более 80% организаций исследовали или пилотировали general-purpose tools;
 - около 40% сообщили о deployment general-purpose LLM tools;
-- только 5% integrated AI pilots дают измеримый P&L impact;
+- только 5% интегрированных AI-пилотов дают измеримый эффект на P&L;
 - 7 из 9 крупных секторов показывают мало структурных изменений.
 
 Практический вывод:
 
-> AI adoption без изменения operating model создает активность, но не управляемый бизнес-результат.
+> Внедрение AI без изменения операционной модели создает активность, но не управляемый бизнес-результат.
 
 Это поддерживает рамку [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]: AI должен быть встроен в систему принятия решений, ответственности, данных, контроля качества и обратной связи.
 
-### 2. Главный bottleneck — learning gap
+### 2. Главное узкое место — разрыв в обучении
 
 Отчет формулирует ключевую причину провала пилотов: инструменты не учатся.
 
@@ -57,36 +57,36 @@ processed_date: 2026-05-17
 
 - система требует каждый раз заново вводить контекст;
 - не помнит предпочтения, решения и исправления;
-- ломается на edge cases;
-- плохо встраивается в существующие workflow;
+- ломается на пограничных случаях;
+- плохо встраивается в существующие процессы;
 - выглядит полезной в demo, но не выдерживает операционную реальность.
 
-Это важнее, чем "качество модели" само по себе. Пользователи уже видят, как выглядит хороший personal AI experience, поэтому хуже терпят корпоративные статичные инструменты.
+Это важнее, чем "качество модели" само по себе. Пользователи уже видят, как выглядит хороший личный AI-опыт, поэтому хуже терпят корпоративные статичные инструменты.
 
-### 3. Shadow AI показывает реальную траекторию adoption
+### 3. Shadow AI показывает реальную траекторию внедрения
 
-Официальная закупка LLM subscription есть примерно у 40% компаний, но сотрудники из более чем 90% опрошенных компаний регулярно используют личные AI tools для работы.
+Официальная закупка LLM subscription есть примерно у 40% компаний, но сотрудники из более чем 90% опрошенных компаний регулярно используют личные AI-инструменты для работы.
 
-Это не просто security risk. Это диагностический сигнал:
+Это не просто риск безопасности. Это диагностический сигнал:
 
 - сотрудники уже нашли реальные use cases;
 - официальная AI-программа часто отстает от фактической практики;
-- ценность рождается ближе к work surface, а не в центральной лаборатории;
+- ценность рождается ближе к реальной рабочей поверхности, а не в центральной лаборатории;
 - запрет shadow AI без легального канала переводит практику в серую зону.
 
-Практический вывод для [[Frameworks/governance/organizational-operating-model|organizational operating model]]:
+Практический вывод для [[Frameworks/governance/organizational-operating-model|организационной операционной модели]]:
 
-> Shadow AI нужно не только контролировать, но и использовать как discovery-механизм: где люди сами применяют AI, там часто находится реальная операционная боль.
+> Shadow AI нужно не только контролировать, но и использовать как механизм discovery: где люди сами применяют AI, там часто находится реальная операционная боль.
 
-### 4. Enterprise paradox: больше ресурсов, хуже scale-up
+### 4. Enterprise paradox: больше ресурсов, хуже масштабирование
 
 Enterprise-компании запускают больше пилотов и выделяют больше людей, но хуже переводят инициативы в production. Mid-market действует быстрее: лучшие компании сообщали о пути от пилота до внедрения примерно за 90 дней, тогда как enterprise часто занимал 9 месяцев и больше.
 
 Интерпретация:
 
 - проблема не в "медленном принятии AI";
-- проблема в сложности governance, procurement, ownership и интеграции;
-- centralized AI program без полномочий у line managers часто производит portfolio of pilots, а не business capability.
+- проблема в сложности управления, закупок, зон ответственности и интеграции;
+- централизованная AI-программа без полномочий у линейных руководителей часто производит портфель пилотов, а не бизнес-способность.
 
 ### 5. ROI смещен не туда
 
@@ -94,213 +94,213 @@ Enterprise-компании запускают больше пилотов и в
 
 Но более устойчивый ROI часто лежит в back-office:
 
-- customer service и document processing;
+- клиентская поддержка и обработка документов;
 - finance / procurement;
-- risk checks;
-- agency spend;
+- проверки рисков;
+- расходы на агентства;
 - BPO replacement;
-- internal workflow orchestration.
+- внутренняя оркестрация процессов.
 
-Это хороший аргумент против AI portfolio, собранного только по visibility. Нужен контур выбора use cases по экономике процесса, а не по презентабельности.
+Это хороший аргумент против AI-портфеля, собранного только по видимости. Нужен контур выбора use cases по экономике процесса, а не по презентабельности.
 
 ### 6. Buy/partner часто сильнее internal build
 
-В выборке отчета strategic partnerships достигали deployment примерно в 2 раза чаще, чем internal builds:
+В выборке отчета стратегические партнерства достигали deployment примерно в 2 раза чаще, чем internal builds:
 
 - external partnership: около 66-67% deployments;
 - internal build: около 33% deployments.
 
-Ограничение: это self-reported sample, не строгая causal inference. Но управленческий сигнал сильный: internal build часто недооценивает сложность workflow fit, adoption, maintenance и continuous learning.
+Ограничение: это self-reported выборка, не строгий причинный вывод. Но управленческий сигнал сильный: internal build часто недооценивает сложность соответствия процессу, внедрения, сопровождения и непрерывного обучения.
 
 Для CTO это не означает "не строить". Это означает:
 
-- строить только там, где есть стратегический контекст, данные и ownership;
-- покупать/партнериться там, где vendor быстрее встроится в процесс;
-- оценивать не model benchmark, а operational outcome.
+- строить только там, где есть стратегический контекст, данные и зона ответственности;
+- покупать/партнериться там, где поставщик быстрее встроится в процесс;
+- оценивать не benchmark модели, а операционный результат.
 
 ## Модели / фреймворки / формулы
 
-### Модель 1. AI pilot-to-production funnel
+### Модель 1. Воронка от AI-пилота к production
 
-| Категория                      | Investigated | Piloted | Successfully implemented |
+| Категория                      | Исследовали | Пилотировали | Успешно внедрили |
 | ------------------------------ | -----------: | ------: | -----------------------: |
 | General-purpose LLMs           |          80% |     60% |                      50% |
 | Embedded / task-specific GenAI |          60% |     20% |                       5% |
 
 Интерпретация:
 
-- general-purpose tools выигрывают как personal productivity layer;
-- task-specific systems выигрывают только при workflow integration и learning capability;
-- procurement success нельзя считать по количеству пилотов.
+- general-purpose tools выигрывают как слой личной продуктивности;
+- task-specific systems выигрывают только при интеграции в процесс и способности к обучению;
+- успех закупки нельзя считать по количеству пилотов.
 
-### Модель 2. Disruption index by industry
+### Модель 2. Индекс изменений по отраслям
 
-| Сектор                | Оценка disruption | Сигнал                                                 |
+| Сектор                | Оценка изменений | Сигнал                                                 |
 | --------------------- | ----------------: | ------------------------------------------------------ |
-| Technology            |    выше остальных | AI-native challengers, изменения workflow              |
+| Technology            |    выше остальных | AI-native challengers, изменения процессов             |
 | Media & Telecom       |               2.0 | AI-native content, changing ad dynamics                |
-| Professional Services |               1.5 | efficiency gains, но delivery model в основном прежняя |
+| Professional Services |               1.5 | прирост эффективности, но модель поставки в основном прежняя |
 | Healthcare & Pharma   |               0.5 | documentation / transcription pilots                   |
-| Consumer & Retail     |               0.5 | support automation, мало влияния на loyalty            |
-| Financial Services    |               0.5 | backend automation, устойчивые customer relationships  |
-| Advanced Industries   |               0.5 | maintenance pilots, мало supply chain shifts           |
-| Energy & Materials    |                 0 | почти нет adoption                                     |
+| Consumer & Retail     |               0.5 | автоматизация поддержки, мало влияния на лояльность    |
+| Financial Services    |               0.5 | backend automation, устойчивые клиентские отношения    |
+| Advanced Industries   |               0.5 | пилоты в сопровождении, мало изменений цепочек поставок |
+| Energy & Materials    |                 0 | почти нет внедрения                                    |
 
 Вывод:
 
-> GenAI уже меняет отдельные workflow, но еще редко меняет отраслевую структуру.
+> GenAI уже меняет отдельные процессы, но еще редко меняет отраслевую структуру.
 
-### Модель 3. Learning capability matrix
+### Модель 3. Матрица способности к обучению
 
-|                    | Low memory / learning   | High memory / learning           |
+|                    | Низкая память / обучение | Высокая память / обучение        |
 | ------------------ | ----------------------- | -------------------------------- |
-| Low customization  | Copilot, GPT wrappers   | ChatGPT with memory              |
-| High customization | fragile internal builds | agentic workflows, vertical SaaS |
+| Низкая кастомизация | Copilot, GPT wrappers   | ChatGPT with memory              |
+| Высокая кастомизация | хрупкие внутренние разработки | agentic workflows, vertical SaaS |
 
 Управленческий смысл:
 
 - низкая кастомизация годится для ad-hoc work;
-- высокая кастомизация без learning превращается в brittle internal tool;
-- зона стратегической ценности: process-specific systems, которые помнят, адаптируются и улучшаются.
+- высокая кастомизация без обучения превращается в хрупкий внутренний инструмент;
+- зона стратегической ценности: системы под конкретный процесс, которые помнят, адаптируются и улучшаются.
 
-### Модель 4. Где ломается AI implementation
+### Модель 4. Где ломается внедрение AI
 
 ```mermaid
 flowchart LR
-    A["AI budget / pilot"] --> B["Demo value"]
-    B --> C{"Workflow fit?"}
-    C -- "No" --> D["Pilot stalls"]
-    C -- "Yes" --> E{"Memory and feedback loop?"}
-    E -- "No" --> F["Static tool, declining usage"]
-    E -- "Yes" --> G["Operational adoption"]
-    G --> H{"Business metric linked?"}
-    H -- "No" --> I["Productivity anecdote"]
-    H -- "Yes" --> J["P&L impact"]
+    A["AI-бюджет / пилот"] --> B["Ценность в demo"]
+    B --> C{"Соответствие процессу?"}
+    C -- "Нет" --> D["Пилот застревает"]
+    C -- "Да" --> E{"Память и контур обратной связи?"}
+    E -- "Нет" --> F["Статичный инструмент, падение использования"]
+    E -- "Да" --> G["Операционное внедрение"]
+    G --> H{"Есть связь с бизнес-метрикой?"}
+    H -- "Нет" --> I["История о продуктивности"]
+    H -- "Да" --> J["Эффект на P&L"]
 ```
 
-### Модель 5. Buyer operating model
+### Модель 5. Операционная модель покупателя
 
-Успешные buyers действуют не как SaaS-покупатели, а как клиенты BPO / consulting:
+Успешные покупатели действуют не как SaaS-покупатели, а как клиенты BPO / consulting:
 
 | Практика                                    | Что это меняет                       |
 | ------------------------------------------- | ------------------------------------ |
-| Deep customization под внутренний процесс   | меньше gap между demo и work reality |
-| Operational metrics вместо model benchmarks | меньше vanity AI adoption            |
-| Co-evolution с vendor                       | инструмент учится вместе с процессом |
-| Use cases от frontline managers             | ближе к реальным bottlenecks         |
-| Executive accountability                    | меньше бесхозных пилотов             |
+| Глубокая кастомизация под внутренний процесс | меньше разрыв между demo и рабочей реальностью |
+| Операционные метрики вместо benchmark модели | меньше показного внедрения AI         |
+| Совместная эволюция с поставщиком            | инструмент учится вместе с процессом |
+| Use cases от frontline managers              | ближе к реальным узким местам        |
+| Ответственность руководства                  | меньше бесхозных пилотов             |
 
 ## Цифры и доказательная база
 
 | Показатель                                                  |              Значение | Интерпретация                                                 |
 | ----------------------------------------------------------- | --------------------: | ------------------------------------------------------------- |
-| Enterprise investment в GenAI                               |               $30-40B | большой объем spending не конвертируется автоматически в P&L  |
-| Integrated AI pilots с измеримой value                      |                    5% | основной разрыв между experimentation и transformation        |
-| Organizations explored / piloted general-purpose tools      |                  >80% | adoption высокий                                              |
-| Organizations reporting deployment of general-purpose tools |                  ~40% | deployment есть, но часто на уровне personal productivity     |
+| Корпоративные инвестиции в GenAI                            |               $30-40B | большой объем расходов не конвертируется автоматически в P&L  |
+| Интегрированные AI-пилоты с измеримой ценностью             |                    5% | основной разрыв между экспериментами и трансформацией         |
+| Организации, исследовавшие / пилотировавшие general-purpose tools |             >80% | внедрение высокое                                             |
+| Организации, сообщившие о deployment general-purpose tools  |                  ~40% | deployment есть, но часто на уровне личной продуктивности     |
 | Enterprise-grade systems evaluated                          |                   60% | интерес высокий                                               |
-| Enterprise-grade systems reached pilot                      |                   20% | большой drop-off до пилота                                    |
+| Enterprise-grade systems reached pilot                      |                   20% | большой спад до пилота                                        |
 | Enterprise-grade systems reached production                 |                    5% | production остается редким                                    |
-| Companies with official LLM subscription                    |                   40% | формальный adoption отстает                                   |
-| Employees regularly using personal AI tools                 |                  >90% | фактический adoption уже произошел                            |
+| Компании с официальной LLM subscription                     |                   40% | формальное внедрение отстает                                  |
+| Сотрудники, регулярно использующие личные AI-инструменты    |                  >90% | фактическое внедрение уже произошло                           |
 | AI preferred for quick tasks                                |                   70% | AI выиграл simple work                                        |
-| Human preferred for complex high-stakes work                |                   90% | memory, accountability и judgment остаются критичны           |
-| Executives wanting systems that learn from feedback         |                   66% | learning capability становится procurement criterion          |
-| Executives demanding context retention                      |                   63% | memory важнее generic UX                                      |
-| External partnerships deployment rate                       |               ~66-67% | partner model в выборке сильнее internal build                |
+| Human preferred for complex high-stakes work                |                   90% | память, ответственность и суждение остаются критичны          |
+| Руководители, которым нужны системы, обучающиеся на обратной связи |          66% | способность к обучению становится критерием закупки           |
+| Руководители, требующие сохранения контекста                |                   63% | память важнее generic UX                                      |
+| Доля deployment через внешние партнерства                   |               ~66-67% | партнерская модель в выборке сильнее internal build           |
 | Internal build deployment rate                              |                  ~33% | build чаще застревает                                         |
-| Lead qualification speed improvement                        |            40% faster | front-office measurable win                                   |
-| Customer retention improvement                              |                   10% | value через follow-up и messaging                             |
+| Ускорение квалификации лидов                                |           на 40% быстрее | измеримый выигрыш front-office                              |
+| Улучшение удержания клиентов                                |                   10% | ценность через follow-up и messaging                          |
 | BPO elimination                                             |       $2-10M annually | back-office ROI часто сильнее                                 |
-| Agency spend reduction                                      |                   30% | external spend reduction вместо layoffs                       |
-| Outsourced risk management savings                          |          $1M annually | финансовый ROI в operational control                          |
-| Customer support / admin displacement                       |                 5-20% | impact концентрируется в standardized outsourced functions    |
+| Сокращение расходов на агентства                            |                   30% | снижение внешних расходов вместо layoffs                      |
+| Экономия на аутсорсинге управления рисками                  |          $1M annually | финансовый ROI в операционном контроле                        |
+| Смещение customer support / admin                           |                 5-20% | эффект концентрируется в стандартизированных outsourced functions |
 | Current U.S. labor value automation potential               |                 2.27% | текущая автоматизация ограничена                              |
 | Latent automation exposure                                  | $2.3T / 39M positions | потенциал станет активным при memory + autonomous integration |
 
-## Advisory interpretation
+## Консультационная интерпретация
 
 ### Для CEO
 
 - Не спрашивать "сколько AI-пилотов у нас запущено".
-- Спрашивать: какие процессы уже дают measurable P&L impact, кто owner, какая метрика, какой feedback loop.
-- Не строить AI strategy только вокруг sales / marketing visibility.
-- Проверить back-office, BPO, agency spend, procurement, support, finance и risk operations.
-- Считать AI не как software purchase, а как изменение operating model.
+- Спрашивать: какие процессы уже дают измеримый эффект на P&L, кто владелец, какая метрика, какой контур обратной связи.
+- Не строить AI-стратегию только вокруг видимости sales / marketing.
+- Проверить back-office, BPO, расходы на агентства, закупки, поддержку, финансы и операции управления рисками.
+- Считать AI не как покупку ПО, а как изменение операционной модели.
 
 ### Для CTO / CIO
 
-- Разделить AI use cases на ad-hoc productivity и workflow-critical systems.
-- Для workflow-critical systems требовать memory, context retention, feedback loop, integration и auditability.
-- Не пытаться строить все internally: build only where strategic context and data create durable advantage.
-- В procurement оценивать не model quality, а operational fit:
-  - plug-in в существующие systems;
-  - ownership за accuracy и exceptions;
-  - data boundaries;
-  - adaptation over time;
-  - cost of switching after learning.
+- Разделить AI use cases на разовую личную продуктивность и критичные для процесса системы.
+- Для критичных для процесса систем требовать память, сохранение контекста, контур обратной связи, интеграцию и аудитируемость.
+- Не пытаться строить все внутри: строить только там, где стратегический контекст и данные создают устойчивое преимущество.
+- В закупках оценивать не качество модели, а операционное соответствие:
+  - подключение к существующим системам;
+  - ответственность за точность и исключения;
+  - границы данных;
+  - адаптация со временем;
+  - стоимость смены решения после накопленного обучения.
 
 ### Для COO / функциональных лидеров
 
-- Использовать shadow AI как карту реальных pain points.
-- Давать line managers право инициировать use cases, но фиксировать business accountability.
-- Начинать с narrow workflows: visible pain, low setup burden, measurable outcome.
-- Не автоматизировать неуправляемый процесс: сначала прояснить ownership, входы, выходы, exceptions и quality criteria.
+- Использовать shadow AI как карту реальных болевых точек.
+- Давать линейным руководителям право инициировать use cases, но фиксировать бизнес-ответственность.
+- Начинать с узких процессов: видимая боль, низкая сложность запуска, измеримый результат.
+- Не автоматизировать неуправляемый процесс: сначала прояснить зоны ответственности, входы, выходы, исключения и критерии качества.
 
 ### Для Engineering Managers
 
-- Не сводить AI literacy к "умению писать prompts".
+- Не сводить AI-грамотность к "умению писать prompts".
 - Учить команду распознавать задачи, где AI подходит:
-  - drafting;
-  - summarization;
-  - routine analysis;
-  - repetitive engineering tasks.
+  - черновики;
+  - суммаризация;
+  - рутинный анализ;
+  - повторяемые инженерные задачи.
 - Отдельно фиксировать задачи, где нужен человек:
-  - multi-week projects;
-  - client management;
-  - high-stakes decisions;
-  - ambiguous ownership;
-  - work requiring accumulated context and accountability.
+  - многонедельные проекты;
+  - управление клиентами;
+  - решения с высокой ценой ошибки;
+  - неоднозначная зона ответственности;
+  - работа, требующая накопленного контекста и ответственности.
 
 ## Диагностические вопросы
 
 - Где у нас AI уже используется неофициально?
-- Какие shadow AI сценарии повторяются у разных людей?
-- Какие пилоты имеют owner, metric и decision date?
-- Какие pilots существуют только как activity report?
+- Какие сценарии shadow AI повторяются у разных людей?
+- Какие пилоты имеют владельца, метрику и дату решения?
+- Какие пилоты существуют только как отчет об активности?
 - Где AI требует каждый раз ручного ввода одного и того же контекста?
-- Какие инструменты не учатся на correction / feedback?
-- Какие use cases выбраны из-за board visibility, а не из-за process economics?
-- Где у нас самый большой external spend: BPO, agencies, consultants, outsourced processing?
+- Какие инструменты не учатся на исправлениях и обратной связи?
+- Какие use cases выбраны из-за видимости для совета директоров, а не из-за экономики процесса?
+- Где у нас самые большие внешние расходы: BPO, агентства, консультанты, outsourced processing?
 - Какие процессы достаточно стандартизированы, чтобы дать быстрый AI ROI?
-- Где internal build оправдан стратегически, а где это просто reflex контроля?
-- Кто владеет adoption: central AI team или business process owner?
-- Как мы измеряем value через 6 месяцев после пилота?
+- Где internal build оправдан стратегически, а где это просто рефлекс контроля?
+- Кто владеет внедрением: central AI team или владелец бизнес-процесса?
+- Как мы измеряем ценность через 6 месяцев после пилота?
 
 ## Возможные фреймворки на основе отчета
 
-### 1. AI Transformation Funnel
+### 1. Воронка AI-трансформации
 
 ```text
-Exploration -> Pilot -> Workflow Integration -> Learning Loop -> Business Metric -> Operating Model Change
+Исследование -> Пилот -> Интеграция в процесс -> Контур обучения -> Бизнес-метрика -> Изменение операционной модели
 ```
 
 Использование:
 
-- аудит AI portfolio;
-- разделение pilots на useful / stalled / vanity;
-- board-level разговор о transformation вместо adoption.
+- аудит AI-портфеля;
+- разделение пилотов на полезные / застрявшие / показные;
+- разговор с советом директоров о трансформации вместо внедрения.
 
-### 2. Shadow AI Governance Loop
+### 2. Контур управления shadow AI
 
 ```mermaid
 flowchart TD
-    A["Shadow AI usage"] --> B["Identify repeated use cases"]
-    B --> C["Classify risk and data sensitivity"]
-    C --> D["Select sanctioned tools / vendors"]
-    D --> E["Define workflow owner and metric"]
-    E --> F["Deploy with feedback loop"]
-    F --> G["Update policy and playbooks"]
+    A["Использование shadow AI"] --> B["Выявить повторяемые use cases"]
+    B --> C["Классифицировать риск и чувствительность данных"]
+    C --> D["Выбрать разрешенные инструменты / поставщиков"]
+    D --> E["Определить владельца процесса и метрику"]
+    E --> F["Развернуть с контуром обратной связи"]
+    F --> G["Обновить политику и рабочие инструкции"]
     G --> B
 ```
 
@@ -308,83 +308,83 @@ flowchart TD
 
 | Вопрос                                            | Если да                       | Если нет                    |
 | ------------------------------------------------- | ----------------------------- | --------------------------- |
-| Это core strategic capability?                    | рассмотреть build / hybrid    | buy / partner               |
-| У нас есть уникальные данные и process knowledge? | build может дать moat         | vendor быстрее              |
+| Это ключевая стратегическая способность?          | рассмотреть build / hybrid    | buy / partner               |
+| У нас есть уникальные данные и знание процесса?   | build может дать moat         | поставщик быстрее           |
 | Процесс стабилен и описан?                        | можно автоматизировать глубже | сначала управлять процессом |
-| Vendor способен учиться на feedback?              | partnership viable            | риск статичного SaaS        |
-| Есть clear business metric?                       | scale candidate               | оставить как experiment     |
+| Поставщик способен учиться на обратной связи?     | партнерство жизнеспособно     | риск статичного SaaS        |
+| Есть ясная бизнес-метрика?                        | кандидат на масштабирование   | оставить как эксперимент    |
 
-### 4. AI Value Map
+### 4. Карта ценности AI
 
-| Область                      | Тип value                            | Риск ошибки                       |
+| Область                      | Тип ценности                         | Риск ошибки                       |
 | ---------------------------- | ------------------------------------ | --------------------------------- |
-| Personal productivity        | time saving                          | не конвертируется в P&L           |
-| Sales / marketing            | visible top-line metrics             | overinvestment из-за visibility   |
-| Back-office                  | cost reduction / cycle time          | недооценка из-за слабой атрибуции |
-| Support / admin              | BPO replacement                      | workforce / quality risk          |
-| Engineering                  | repetitive task acceleration         | verification tax и code quality   |
-| Procurement / finance / risk | control and external spend reduction | data boundaries и auditability    |
+| Личная продуктивность        | экономия времени                     | не конвертируется в P&L           |
+| Sales / marketing            | видимые метрики верхнего уровня      | избыточные инвестиции из-за видимости |
+| Back-office                  | снижение затрат / cycle time         | недооценка из-за слабой атрибуции |
+| Support / admin              | замена BPO                           | риск для рабочей силы и качества  |
+| Engineering                  | ускорение повторяемых задач          | налог на проверку и качество кода |
+| Procurement / finance / risk | контроль и снижение внешних расходов | границы данных и аудитируемость   |
 
 ## Идеи для постов
 
 ### Пост 1: "95% AI pilots fail" — неправильный вывод
 
-Hook:
+Хук:
 
 > Проблема не в том, что AI не работает. Проблема в том, что компании внедряют AI как инструмент, а не как операционную способность.
 
 Тезисы:
 
-- adoption высокий, transformation низкая;
-- ChatGPT работает для людей, но enterprise tools ломаются в workflow;
-- ключевой дефицит — memory, learning, ownership;
-- AI transformation начинается не с лицензий, а с operating model.
+- внедрение высокое, трансформация низкая;
+- ChatGPT работает для людей, но корпоративные инструменты ломаются в процессе;
+- ключевой дефицит — память, обучение, зоны ответственности;
+- AI transformation начинается не с лицензий, а с операционной модели.
 
 ### Пост 2: Shadow AI как диагностика организации
 
-Hook:
+Хук:
 
-> Если сотрудники используют личный ChatGPT чаще, чем корпоративный AI-инструмент, это не только security problem. Это управленческий сигнал.
+> Если сотрудники используют личный ChatGPT чаще, чем корпоративный AI-инструмент, это не только проблема безопасности. Это управленческий сигнал.
 
 Тезисы:
 
-- shadow AI показывает реальные pain points;
+- shadow AI показывает реальные болевые точки;
 - запрет не создает управляемость;
-- нужен governance loop: observe, classify, sanction, integrate, measure;
-- power users могут стать источником AI portfolio.
+- нужен контур управления: наблюдать, классифицировать, разрешать, интегрировать, измерять;
+- power users могут стать источником AI-портфеля.
 
 ### Пост 3: AI ROI чаще лежит не там, где его ищет board
 
-Hook:
+Хук:
 
 > Самые видимые AI use cases не всегда самые прибыльные.
 
 Тезисы:
 
 - sales/marketing получают бюджет из-за понятных метрик;
-- back-office часто дает более прямой cost reduction;
-- external spend reduction реалистичнее broad layoffs;
-- AI portfolio надо строить по process economics.
+- back-office часто дает более прямое снижение затрат;
+- снижение внешних расходов реалистичнее широких сокращений;
+- AI-портфель надо строить по экономике процессов.
 
 ## Связанные заметки
 
 - [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
 - [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/decision-systems|decision systems]]
-- [[Frameworks/governance/organizational-operating-model|organizational operating model]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
-- [[Frameworks/governance/systemic-management|systemic management]]
+- [[Frameworks/governance/decision-systems|системы принятия решений]]
+- [[Frameworks/governance/organizational-operating-model|организационная операционная модель]]
+- [[Frameworks/governance/quality-and-risks|качество и риски]]
+- [[Frameworks/governance/systemic-management|системное управление]]
 - [[Frameworks/ai-transformation/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
 
-## Source
+## Источник
 
 - PDF: `Frameworks/ai-transformation/sources/v0.1_State_of_AI_in_Business_2025_Report.pdf`
-- Extracted text: `/private/tmp/state_ai_business_2025.txt`
-- Methodology in report: 300+ public AI initiatives, 52 structured interviews, survey responses from 153 senior leaders.
+- Извлеченный текст: `/private/tmp/state_ai_business_2025.txt`
+- Методология в отчете: 300+ публичных AI-инициатив, 52 структурированных интервью, ответы survey от 153 senior leaders.
 
-## Caveats
+## Оговорки
 
-- Report is marked as preliminary findings.
-- Success rates and ROI figures are based on interviews, surveys and public implementation analysis, not audited financial reporting.
-- Build-vs-buy comparison is directional: external partnerships may correlate with better organizational capabilities, not only with sourcing choice.
-- Industry disruption index is based on observable indicators and may miss private/internal transformation.
+- Отчет отмечен как preliminary findings.
+- Показатели успеха и ROI основаны на интервью, survey и анализе публичных внедрений, а не на аудированной финансовой отчетности.
+- Сравнение build-vs-buy является направленным: внешние партнерства могут коррелировать с более сильными организационными способностями, а не только с выбором sourcing.
+- Индекс отраслевых изменений основан на наблюдаемых индикаторах и может пропускать частную / внутреннюю трансформацию.

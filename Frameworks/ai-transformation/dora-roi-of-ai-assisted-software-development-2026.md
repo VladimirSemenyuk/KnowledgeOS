@@ -17,462 +17,462 @@ processed_date: 2026-05-17
 
 # DORA: The ROI of AI-assisted Software Development 2026
 
-## Executive Summary
+## Резюме
 
-Отчет полезен как финансово-операционная рамка для оценки AI-assisted software development.
+Отчет полезен как финансово-операционная рамка для оценки разработки ПО с поддержкой AI.
 
-Главный тезис: AI в разработке является усилителем инженерной системы. Он повышает отдачу зрелых команд и одновременно усиливает хаос там, где слабые платформы, неясные workflow, ручная проверка, плохие данные и нестабильный delivery process.
+Главный тезис: AI в разработке является усилителем инженерной системы. Он повышает отдачу зрелых команд и одновременно усиливает хаос там, где слабые платформы, неясные процессы, ручная проверка, плохие данные и нестабильный процесс поставки.
 
-Для advisory это источник под тезис:
+Для консультационной работы это источник под тезис:
 
 - ROI от AI нельзя считать по количеству купленных лицензий или строк кода;
-- базовая единица оценки - не индивидуальная продуктивность, а способность организации безопасно превращать возросший throughput в user value и business value;
-- AI adoption почти неизбежно проходит через J-Curve: временное падение продуктивности, verification tax и перестройку pipeline;
-- финансовая модель должна учитывать не только license cost, но и training, infrastructure, J-Curve cost, instability cost и governance cost;
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]] становится условием AI ROI: платформы, данные, guardrails, метрики и ownership важнее самой модели.
+- базовая единица оценки - не индивидуальная продуктивность, а способность организации безопасно превращать возросшую пропускную способность изменений в ценность для пользователей и бизнеса;
+- внедрение AI почти неизбежно проходит через J-Curve: временное падение продуктивности, налог на проверку и перестройку pipeline поставки;
+- финансовая модель должна учитывать не только стоимость лицензий, но и обучение, инфраструктуру, стоимость J-Curve, стоимость нестабильности и управленческого контура;
+- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]] становится условием AI ROI: платформы, данные, контрольные точки, метрики и зоны ответственности важнее самой модели.
 
 ## Самое важное для моей базы знаний
 
-### 1. AI is an amplifier
+### 1. AI как усилитель инженерной системы
 
-DORA формулирует AI не как standalone productivity tool, а как усилитель существующей инженерной системы.
+DORA формулирует AI не как отдельный инструмент продуктивности, а как усилитель существующей инженерной системы.
 
 Если система зрелая:
 
 - есть качественный [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]];
-- deployment pipeline способен переваривать рост throughput;
+- pipeline поставки способен переваривать рост пропускной способности изменений;
 - данные и документация пригодны для AI;
-- code review, testing и security gates автоматизированы;
-- команды ориентированы на user value;
+- code review, тестирование и контрольные точки безопасности автоматизированы;
+- команды ориентированы на ценность для пользователя;
 - метрики throughput и instability уже измеряются.
 
-Тогда AI быстрее превращается в delivery capacity и business value.
+Тогда AI быстрее превращается в способность поставки и ценность для бизнеса.
 
 Если система слабая:
 
-- AI ускоряет генерацию кода, но не ускоряет проверку, release и обратную связь;
-- растет verification tax;
+- AI ускоряет генерацию кода, но не ускоряет проверку, выпуск и обратную связь;
+- растет налог на проверку;
 - растет change failure rate;
-- локальная продуктивность теряется в downstream chaos;
-- больше кода становится не активом, а будущей maintenance liability.
+- локальная продуктивность теряется в последующем хаосе;
+- больше кода становится не активом, а будущим обязательством по сопровождению.
 
 Практический вывод:
 
-> AI-assisted development нужно внедрять как изменение [[Frameworks/governance/organizational-operating-model|organizational operating model]], а не как закупку developer tooling.
+> Разработку с поддержкой AI нужно внедрять как изменение [[Frameworks/governance/organizational-operating-model|организационной операционной модели]], а не как закупку инструментов для разработчиков.
 
-### 2. J-Curve: adoption сначала ухудшает систему, потом дает эффект
+### 2. J-Curve: внедрение сначала ухудшает систему, потом дает эффект
 
-Отчет предлагает J-Curve of AI value realization:
+Отчет предлагает J-Curve реализации ценности AI:
 
-- learning curve: команды учатся новым интерфейсам, prompt/context/specification practices;
-- verification tax: разработчики тратят время на проверку AI output, hallucinations и security/architecture комплаенс;
-- pipeline adaptation: testing, approvals и deployment process должны масштабироваться под больший поток изменений;
-- eventual growth: value появляется после перестройки системы, а не сразу после выдачи лицензий.
+- кривая обучения: команды осваивают новые интерфейсы, практики prompt, контекста и спецификаций;
+- налог на проверку: разработчики тратят время на проверку вывода AI, галлюцинаций и соблюдения требований безопасности и архитектуры;
+- адаптация pipeline: тестирование, согласования и процесс поставки должны масштабироваться под больший поток изменений;
+- последующий рост: ценность появляется после перестройки системы, а не сразу после выдачи лицензий.
 
 Это важный управленческий тезис:
 
-> ранний productivity dip не обязательно провал; провал начинается, когда leadership не заложил этот dip в budget, roadmap и expectations.
+> раннее падение продуктивности не обязательно провал; провал начинается, когда руководство не заложило это падение в бюджет, план развития и ожидания.
 
-Для C-level это означает: AI ROI должен планироваться как transformation curve, а не как немедленная экономия.
+Для C-level это означает: AI ROI должен планироваться как кривая трансформации, а не как немедленная экономия.
 
-### 3. Software delivery performance связывает engineering metrics с финансовым результатом
+### 3. Результативность поставки ПО связывает инженерные метрики с финансовым результатом
 
-DORA предлагает оценивать AI через две группы delivery metrics:
+DORA предлагает оценивать AI через две группы метрик поставки:
 
 | Группа      | Что показывает                       | Финансовый смысл                                    |
 | ----------- | ------------------------------------ | --------------------------------------------------- |
-| Throughput  | volume и velocity изменений          | быстрее time-to-market, раньше recognition of value |
-| Instability | reliability и success rate изменений | rework, downtime, reputational risk, lost revenue   |
+| Throughput  | объем и скорость изменений           | быстрее выход на рынок, раньше признание ценности   |
+| Instability | надежность и успешность изменений    | доработка, простой, репутационный риск, потеря выручки |
 
 Высокий ROI возможен не от "больше кода", а от комбинации:
 
-- high throughput;
-- low instability;
-- меньше rework;
+- высокий throughput;
+- низкая instability;
+- меньше доработок;
 - быстрее проверка гипотез;
-- больше capacity для innovation.
+- больше ресурса для инноваций.
 
-Это хорошо ложится на рамку [[Frameworks/governance/decision-systems|decision systems]]:
+Это хорошо ложится на рамку [[Frameworks/governance/decision-systems|систем принятия решений]]:
 
-> AI investment должен проходить через delivery dashboard, где velocity смотрят вместе с instability, cost и user value.
+> инвестиции в AI должны проходить через панель поставки, где скорость изменений смотрят вместе с нестабильностью, стоимостью и ценностью для пользователя.
 
-### 4. Productivity gains не равны headcount reduction
+### 4. Рост продуктивности не равен сокращению команды
 
-DORA явно не рекомендует строить AI case как сокращение headcount.
+DORA явно не рекомендует строить AI-кейс как сокращение численности команды.
 
 Логика отчета:
 
-- saved engineering time лучше считать как reinvestment capacity;
+- сохраненное инженерное время лучше считать как ресурс для переинвестирования;
 - освобожденная емкость может заменить необходимость нанимать дополнительных разработчиков;
-- retention и training дешевле, чем потеря институциональной памяти;
-- headcount-reduction strategy ухудшает morale, culture и стимулы к улучшению процессов.
+- удержание людей и обучение дешевле, чем потеря институциональной памяти;
+- стратегия сокращения команды ухудшает мораль, культуру и стимулы к улучшению процессов.
 
-Формулировка для advisory:
+Формулировка для консультационной работы:
 
-> правильный AI ROI narrative для engineering - не "заменим разработчиков", а "снимем systemic toil и переведем capacity в innovation, experiments и user value".
+> правильная логика AI ROI для инженерной организации - не "заменим разработчиков", а "снимем системную операционную нагрузку и переведем ресурс в инновации, эксперименты и ценность для пользователя".
 
-### 5. ROI model полезен как conversation model, не как точная финансовая истина
+### 5. Модель ROI полезна как модель обсуждения, а не как точная финансовая истина
 
-Отчет прямо предупреждает: calculator - high-uncertainty estimate, который должен запускать обсуждение, а не подменять финансовую верификацию.
+Отчет прямо предупреждает: калькулятор - оценка с высокой неопределенностью, которая должна запускать обсуждение, а не подменять финансовую верификацию.
 
 Особенно слабые места модели:
 
-- revenue impact от дополнительных features трудно доказать;
-- feature success rate требует локального baseline;
-- productivity savings легко double count;
-- downtime cost часто строится на грубых assumptions;
-- эффект AI на legacy brownfield code ниже, чем на simple greenfield tasks.
+- влияние дополнительных функций на выручку трудно доказать;
+- доля успешных функций требует локального baseline;
+- экономию продуктивности легко посчитать дважды;
+- стоимость простоя часто строится на грубых допущениях;
+- эффект AI на legacy brownfield code ниже, чем на простых greenfield-задачах.
 
 Практический вывод:
 
-> AI ROI model должен быть scenario-based и baseline-based. Без "before" организация будет спорить о мнениях, а не управлять investment case.
+> модель AI ROI должна опираться на сценарии и baseline. Без состояния "до" организация будет спорить о мнениях, а не управлять инвестиционным кейсом.
 
 ## Модели / фреймворки / формулы
 
-### Модель 1. J-Curve of AI value realization
+### Модель 1. J-Curve реализации ценности AI
 
 ```mermaid
 flowchart LR
-    A["Time zero: AI tools introduced"] --> B["Learning curve"]
-    B --> C["Verification tax"]
-    C --> D["Pipeline adaptation"]
-    D --> E["System absorbs higher throughput"]
-    E --> F["Compounded value realization"]
+    A["Старт: AI-инструменты внедрены"] --> B["Кривая обучения"]
+    B --> C["Налог на проверку"]
+    C --> D["Адаптация pipeline"]
+    D --> E["Система поглощает больший поток изменений"]
+    E --> F["Накопленная реализация ценности"]
 ```
 
 Управленческий смысл:
 
 - J-Curve нужно бюджетировать заранее;
-- dip зависит от technical maturity, learning culture и health of internal developer platforms;
-- automated testing и continuous integration помогают сократить глубину и длительность dip;
-- metrics должны показывать, что команда проходит через curve, а не просто пережидает хаос.
+- падение зависит от технической зрелости, культуры обучения и состояния IDP;
+- автоматизированное тестирование и continuous integration помогают сократить глубину и длительность падения;
+- метрики должны показывать, что команда проходит через кривую, а не просто пережидает хаос.
 
-### Модель 2. Google Cloud value framework для AI-assisted software development
+### Модель 2. Рамка ценности Google Cloud для разработки ПО с поддержкой AI
 
-| Value pillar         | Как проявляется                                                 | Комментарий для advisory                           |
+| Компонент ценности   | Как проявляется                                                 | Комментарий для консультационной работы            |
 | -------------------- | --------------------------------------------------------------- | -------------------------------------------------- |
-| Cost efficiency      | savings в development, IT infrastructure и broader IT processes | самый измеримый, но не единственный слой           |
-| Productivity         | больше useful work и faster delivery                            | нельзя считать без verification tax                |
-| Developer experience | меньше repetitive work, выше engagement, ниже attrition risk    | измерять survey и attrition, не только output      |
-| User experience      | лучше product performance, быстрее iteration                    | связь с AI менее прямая, нужна cohort / NPS логика |
-| Business growth      | leads, conversion, revenue                                      | самый важный, но самый сложный для attribution     |
+| Экономическая эффективность | экономия в разработке, IT-инфраструктуре и смежных IT-процессах | самый измеримый, но не единственный слой |
+| Продуктивность       | больше полезной работы и быстрее поставка                      | нельзя считать без налога на проверку              |
+| Опыт разработчика    | меньше повторяющейся работы, выше вовлеченность, ниже риск оттока | измерять опросы и отток, не только результат       |
+| Пользовательский опыт | лучше результативность продукта, быстрее итерации              | связь с AI менее прямая, нужна когортная / NPS-логика |
+| Рост бизнеса         | лиды, конверсия, выручка                                        | самый важный, но самый сложный для атрибуции       |
 
-Чем правее value pillar, тем слабее direct attribution к AI и тем сильнее нужна управленческая дисциплина измерения.
+Чем правее компонент ценности, тем слабее прямая атрибуция к AI и тем сильнее нужна управленческая дисциплина измерения.
 
-### Модель 3. From adoption to ROI
+### Модель 3. От внедрения к ROI
 
 ```mermaid
 flowchart LR
-    A["AI adoption in SDLC"] --> B["DORA AI capabilities"]
-    B --> C["DORA delivery metrics"]
-    C --> D["Leading indicators"]
-    D --> E["Cost savings / revenue"]
+    A["Внедрение AI в SDLC"] --> B["AI-способности по DORA"]
+    B --> C["Метрики поставки DORA"]
+    C --> D["Опережающие индикаторы"]
+    D --> E["Экономия / выручка"]
     E --> F["ROI"]
 
-    B --> B1["platform, data, trust, guardrails, user focus"]
+    B --> B1["платформа, данные, доверие, контрольные точки, фокус на пользователе"]
     C --> C1["throughput + instability"]
-    D --> D1["productivity, developer experience, user experience"]
+    D --> D1["продуктивность, опыт разработчика, пользовательский опыт"]
 ```
 
 Ключевой смысл Figure 5:
 
-- AI adoption сам по себе не равен value;
-- capabilities превращают локальную скорость в управляемую систему;
-- DORA metrics показывают, не покупается ли velocity ценой instability;
-- financial value появляется как lagging indicator.
+- внедрение AI само по себе не равно ценности;
+- способности превращают локальную скорость в управляемую систему;
+- метрики DORA показывают, не покупается ли скорость изменений ценой нестабильности;
+- финансовая ценность появляется как запаздывающий индикатор.
 
-### Модель 4. Landscape of AI impact
+### Модель 4. Карта влияния AI
 
-Figure 4 показывает, что AI adoption в DORA 2025 связан не только с положительными эффектами.
+Figure 4 показывает, что внедрение AI в DORA 2025 связано не только с положительными эффектами.
 
-| Outcome                       | Направление эффекта в отчете         | Advisory signal                                         |
+| Результат                     | Направление эффекта в отчете         | Сигнал для консультационной работы                      |
 | ----------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| Individual effectiveness      | positive, strongest effect           | главный прямой productivity signal                      |
-| Software delivery instability | positive, second-largest effect      | ускорение создает risk/verification burden              |
-| Organizational performance    | positive                             | эффект зависит от системы, не только от разработчика    |
-| Valuable work                 | positive                             | AI может освобождать людей от части routine work        |
-| Code quality                  | positive                             | качество может расти, если есть guardrails              |
-| Product performance           | positive                             | связь с user value есть, но требует attribution         |
-| Software delivery throughput  | positive                             | AI может увеличивать flow of changes                    |
-| Team performance              | positive                             | командный эффект важнее индивидуального output          |
-| Burnout                       | не подтверждено как простое снижение | technology alone не лечит burnout                       |
-| Friction                      | не исчезает автоматически            | friction often moves into verification and coordination |
+| Индивидуальная результативность | положительный, самый сильный эффект | главный прямой сигнал продуктивности                    |
+| Нестабильность поставки ПО    | положительный, второй по силе эффект | ускорение создает риск и нагрузку на проверку           |
+| Результативность организации  | положительный                        | эффект зависит от системы, не только от разработчика    |
+| Ценная работа                 | положительный                        | AI может освобождать людей от части рутинной работы     |
+| Качество кода                 | положительный                        | качество может расти, если есть контрольные точки       |
+| Результативность продукта     | положительный                        | связь с ценностью для пользователя есть, но требует атрибуции |
+| Пропускная способность поставки ПО | положительный                   | AI может увеличивать поток изменений                    |
+| Результативность команды      | положительный                        | командный эффект важнее индивидуального результата      |
+| Выгорание                     | не подтверждено как простое снижение | технология сама по себе не лечит выгорание              |
+| Трение                        | не исчезает автоматически            | трение часто переезжает в проверку и координацию        |
 
 Ключевой вывод:
 
-> AI может одновременно повышать productivity и instability. Поэтому AI ROI нельзя считать без stability metrics.
+> AI может одновременно повышать продуктивность и нестабильность. Поэтому AI ROI нельзя считать без метрик стабильности.
 
-### Модель 5. Five systemic keys of adoption
+### Модель 5. Пять системных ключей внедрения
 
-| Key                         | Что значит                                                              | Риск при отсутствии                            |
+| Ключ                        | Что значит                                                              | Риск при отсутствии                            |
 | --------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
-| Trust in AI                 | расчетная уверенность в AI output через правила, компетенции и проверку | deep J-Curve, ручное перепроверивание всего    |
-| Clear AI stance             | понятная позиция организации по использованию AI                        | shadow practices, страх, inconsistent adoption |
-| Quality internal platform   | IDP как context provider и risk mitigator для agents                    | AI генерирует bloat и архитектурные отклонения |
-| AI-accessible internal data | documentation, APIs, knowledge graph, healthy data ecosystem            | generic output без business context            |
-| Automated guardrails        | nonoptional quality/security gates, tests, CI, pre-commit checks        | рост incidents вместе с ростом throughput      |
+| Доверие к AI                | расчетная уверенность в выводе AI через правила, компетенции и проверку | глубокая J-Curve, ручное перепроверивание всего |
+| Понятная позиция по AI      | ясные правила организации по использованию AI                           | теневые практики, страх, несогласованное внедрение |
+| Качественная внутренняя платформа | IDP как поставщик контекста и слой снижения рисков для AI agents   | AI генерирует лишний код и архитектурные отклонения |
+| Внутренние данные, доступные для AI | документация, API, knowledge graph, здоровая экосистема данных | общий вывод без бизнес-контекста               |
+| Автоматизированные контрольные точки | обязательные quality/security gates, тесты, CI, pre-commit checks | рост инцидентов вместе с ростом throughput     |
 
-### Модель 6. AI investment roadmap
+### Модель 6. Дорожная карта инвестиций в AI
 
-| Этап                          | Primary investment                                                      | Метрики                                             |
+| Этап                          | Основная инвестиция                                                     | Метрики                                             |
 | ----------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------- |
-| Build the context layer       | quality IDP, healthy data ecosystems, machine-readable documentation    | friction, lead time, reuse, context quality         |
-| Empower the human in the loop | context engineering, verification training, trust in AI                 | verification tax, adoption, confidence, review load |
-| Validate progress             | experiment frequency, deployment frequency, change failure rate, rework | early proof that system absorbs AI safely           |
-| Scale financial value         | features, product outcomes, downtime reduction, reinvested capacity     | annual value, ROI, payback period                   |
+| Построить слой контекста      | качественная IDP, здоровые экосистемы данных, машиночитаемая документация | трение, lead time, повторное использование, качество контекста |
+| Усилить человека в контуре    | context engineering, обучение проверке, доверие к AI                   | налог на проверку, внедрение, уверенность, нагрузка на review |
+| Проверить прогресс            | частота экспериментов, частота поставок, change failure rate, доработки | раннее доказательство, что система безопасно поглощает AI |
+| Масштабировать финансовую ценность | функции, продуктовые результаты, снижение простоя, переинвестированный ресурс | годовая ценность, ROI, срок окупаемости |
 
 ### Формулы из отчета
 
 ```text
 ROI (%) =
-(Value - Investment) / Investment
+(Ценность - Инвестиции) / Инвестиции
 ```
 
 ```text
-First year benefit =
-First year return - First year investment
+Выгода первого года =
+Отдача первого года - Инвестиции первого года
 ```
 
 ```text
-Headcount reinvestment capacity =
-Staff size * Fully loaded salary * Net time saved per developer
+Ресурс для переинвестирования =
+Размер команды * Полная стоимость сотрудника * Чистая экономия времени на разработчика
 ```
 
 ```text
-Revenue from extra feature deployments =
-(Target features deployed - Current features deployed)
-* Idea success rate
-* Revenue impact
-* Portfolio revenue
+Выручка от дополнительных поставок функций =
+(Целевые поставленные функции - Текущие поставленные функции)
+* Доля успешных идей
+* Влияние на выручку
+* Выручка портфеля
 ```
 
 ```text
-Downtime impact =
-(Current deploys * Current CFR * FDRT * Cost of downtime per hour)
-- (Target deploys * Target CFR * FDRT * Cost of downtime per hour)
+Влияние простоя =
+(Текущие поставки * Текущий CFR * FDRT * Стоимость часа простоя)
+- (Целевые поставки * Целевой CFR * FDRT * Стоимость часа простоя)
 ```
 
 ```text
-Direct hard costs =
-((License cost + Additional AI costs + Training cost) * Staff size)
-+ Additional infrastructure costs
+Прямые затраты =
+((Стоимость лицензии + Дополнительные AI-затраты + Стоимость обучения) * Размер команды)
++ Дополнительные инфраструктурные затраты
 ```
 
 ```text
-J-Curve cost =
-Staff size * Salary * J-Curve productivity drop * J-Curve duration in months / 12
+Стоимость J-Curve =
+Размер команды * Зарплата * Падение продуктивности на J-Curve * Длительность J-Curve в месяцах / 12
 ```
 
 ```text
-First year investment =
-Direct hard costs + J-Curve cost
+Инвестиции первого года =
+Прямые затраты + Стоимость J-Curve
 ```
 
 ```text
-Payback period =
-First year investment / First year return
+Срок окупаемости =
+Инвестиции первого года / Отдача первого года
 ```
 
 ```text
-Adjusted scenario value = Baseline value * Value multiplier
-Adjusted scenario cost = Baseline cost * Cost multiplier
+Скорректированная ценность сценария = Baseline-ценность * Множитель ценности
+Скорректированная стоимость сценария = Baseline-стоимость * Множитель стоимости
 ```
 
 ## Цифры и доказательная база
 
-### Findings из DORA / связанных источников внутри отчета
+### Выводы из DORA / связанных источников внутри отчета
 
 | Показатель                                                   |                                    Значение | Интерпретация                                                             |
 | ------------------------------------------------------------ | ------------------------------------------: | ------------------------------------------------------------------------- |
-| Respondents reporting AI increased productivity in DORA 2025 |                               more than 80% | сильный сигнал perceived productivity, но не полный ROI                   |
-| AI productivity gain on simple greenfield tasks              |                                      35-40% | применимо к простым задачам, нельзя переносить на весь engineering        |
-| AI productivity gain on complex legacy brownfield code       |                           often 10% or less | legacy context ограничивает эффект AI                                     |
-| Raw inference cost decline                                   | factor of 280 between Nov 2022 and Oct 2024 | cost pressure смещается с inference к governance, verification, workflows |
-| Google Cloud AI customer ROI                                 |               average 727% over three years | market signal из Google Cloud research, не DORA calculator                |
-| Average AI payback period from Google Cloud global data      |                          about eight months | полезный benchmark, но зависит от контекста                               |
-| Target payback for agile teams                               |                                  6-9 months | ориентир для сильных adoption cases                                       |
-| Acceptable payback for larger enterprise rollouts            |                                12-18 months | governance-heavy transformations требуют длиннее horizon                  |
-| Executives reporting ROI from at least one gen AI use case   |                                         78% | из Google Cloud ROI research                                              |
-| Agentic AI early adopters seeing positive returns            |                                         88% | adoption depth коррелирует с value realization                            |
+| Респонденты DORA 2025, сообщившие о росте продуктивности от AI |                               более 80% | сильный сигнал воспринимаемой продуктивности, но не полный ROI |
+| Прирост продуктивности AI на простых greenfield-задачах      |                                      35-40% | применимо к простым задачам, нельзя переносить на всю инженерную организацию |
+| Прирост продуктивности AI на сложном legacy brownfield code   |                           часто 10% или меньше | legacy-контекст ограничивает эффект AI                    |
+| Снижение базовой стоимости inference                          | в 280 раз между ноябрем 2022 и октябрем 2024 | давление затрат смещается с inference к управлению, проверке и процессам |
+| ROI клиентов Google Cloud от AI                               |               в среднем 727% за три года | рыночный сигнал из исследования Google Cloud, не калькулятор DORA |
+| Средний срок окупаемости AI по глобальным данным Google Cloud |                          около восьми месяцев | полезный ориентир, но зависит от контекста                 |
+| Целевой срок окупаемости для agile-команд                     |                                  6-9 месяцев | ориентир для сильных кейсов внедрения                     |
+| Приемлемый срок окупаемости для крупных корпоративных внедрений |                                12-18 месяцев | трансформации с тяжелым управленческим контуром требуют более длинного горизонта |
+| Руководители, сообщившие о ROI хотя бы от одного gen AI use case |                                         78% | из исследования ROI Google Cloud                          |
+| Ранние пользователи agentic AI с положительной отдачей        |                                         88% | глубина внедрения коррелирует с реализацией ценности      |
 
-### Sample calculator inputs
+### Пример входных данных калькулятора
 
-| Input                                         | Sample value | Комментарий                                             |
-| --------------------------------------------- | -----------: | ------------------------------------------------------- |
-| Technical staff size                          |      500 FTE | includes SDLC roles, not only software engineers        |
-| Fully loaded technical staff salary           |     $176,000 | blended rate; loaded cost varies by region              |
-| Product portfolio revenue                     | $100,000,000 | annual revenue driven by software in scope              |
-| Cost of downtime per hour                     |     $100,000 | includes lost revenue and reputational cost assumptions |
-| Current deployments per year                  |           50 | about once per week                                     |
-| Target deployments per year                   |           56 | 12% increase                                            |
-| Current features per year                     |           50 | proxy based on deployments                              |
-| Target features per year                      |           56 | 12% increase                                            |
-| Idea success rate                             |          33% | about one-third of shipped features increase revenue    |
-| Average revenue impact per successful feature |         0.5% | report recommends conservative 0.01-1% range            |
-| Current change failure rate                   |           5% | baseline CFR                                            |
-| Target change failure rate                    |           6% | 20% increase, reflecting instability tax                |
-| Failed deployment recovery time               |      4 hours | kept constant in sample                                 |
-| Net time saved per developer                  |        12.5% | about one hour of an eight-hour day                     |
-| Annual AI license cost per user               |         $250 | slightly above $20/month                                |
-| Additional annual AI costs per user           |          $80 | API/token or similar variable costs                     |
-| Additional AI infrastructure costs            |     $100,000 | compute, networking, storage, monitoring                |
-| Annual training costs per user                |       $9,600 | enablement and change cost                              |
-| J-Curve productivity drop                     |          15% | temporary productivity decrease                         |
-| J-Curve duration                              |     3 months | sample disruption period                                |
+| Входной параметр                              | Пример значения | Комментарий                                             |
+| --------------------------------------------- | --------------: | ------------------------------------------------------- |
+| Размер технической команды                    |         500 FTE | включает роли SDLC, не только разработчиков             |
+| Полная стоимость технического сотрудника      |        $176,000 | смешанная ставка; полная стоимость зависит от региона   |
+| Выручка продуктового портфеля                 |    $100,000,000 | годовая выручка от ПО в выбранной рамке                 |
+| Стоимость часа простоя                        |        $100,000 | включает допущения о потере выручки и репутационных затратах |
+| Текущие поставки в год                        |              50 | примерно раз в неделю                                   |
+| Целевые поставки в год                        |              56 | рост на 12%                                             |
+| Текущие функции в год                         |              50 | proxy на основе поставок                                |
+| Целевые функции в год                         |              56 | рост на 12%                                             |
+| Доля успешных идей                            |             33% | примерно треть поставленных функций увеличивает выручку |
+| Среднее влияние успешной функции на выручку   |            0.5% | отчет рекомендует консервативный диапазон 0.01-1%       |
+| Текущий change failure rate                   |              5% | baseline CFR                                            |
+| Целевой change failure rate                   |              6% | рост на 20%, отражает налог нестабильности              |
+| Время восстановления после неудачной поставки |         4 часа | в примере сохраняется постоянным                        |
+| Чистая экономия времени на разработчика       |           12.5% | примерно один час из восьмичасового дня                 |
+| Годовая стоимость AI-лицензии на пользователя |            $250 | немного выше $20/месяц                                  |
+| Дополнительные годовые AI-затраты на пользователя |         $80 | API/токены или похожие переменные затраты               |
+| Дополнительные затраты на AI-инфраструктуру   |        $100,000 | вычисления, сеть, хранение, мониторинг                  |
+| Годовые затраты на обучение на пользователя   |          $9,600 | поддержка внедрения и стоимость изменений               |
+| Падение продуктивности на J-Curve             |             15% | временное снижение продуктивности                       |
+| Длительность J-Curve                          |        3 месяца | примерный период нарушения работы                       |
 
-### Sample calculator outputs
+### Пример результатов калькулятора
 
-| Output                                 |                   Sample value | Интерпретация                                           |
+| Результат                              |                Пример значения | Интерпретация                                           |
 | -------------------------------------- | -----------------------------: | ------------------------------------------------------- |
-| Total hard costs                       |                     $5,065,000 | tooling, AI costs, training, infrastructure             |
-| J-Curve cost                           |                     $3,300,000 | financial equivalent of temporary productivity drop     |
-| Total first-year investment            |                     $8,365,000 | hard costs plus J-Curve cost                            |
-| Headcount reinvestment capacity        |                    $11,000,000 | avoided hiring / freed capacity for higher-value work   |
-| Revenue from extra feature deployments |                       $990,000 | speculative, depends on success rate and revenue impact |
-| Downtime impact                        |                      -$344,000 | instability tax in sample                               |
-| Total first-year value                 |                    $11,646,000 | annual return in sample                                 |
-| First-year benefit                     |                     $3,281,000 | annual return minus first-year investment               |
-| ROI                                    |                            39% | sample only, not universal benchmark                    |
-| Payback period                         | 0.7 years / about eight months | first-year investment divided by annual return          |
+| Общие прямые затраты                   |                     $5,065,000 | инструменты, AI-затраты, обучение, инфраструктура       |
+| Стоимость J-Curve                      |                     $3,300,000 | финансовый эквивалент временного падения продуктивности |
+| Общая инвестиция первого года          |                     $8,365,000 | прямые затраты плюс стоимость J-Curve                   |
+| Ресурс для переинвестирования          |                    $11,000,000 | предотвращенный найм / высвобожденный ресурс для более ценной работы |
+| Выручка от дополнительных поставок функций |                    $990,000 | спекулятивно; зависит от доли успеха и влияния на выручку |
+| Влияние простоя                        |                      -$344,000 | налог нестабильности в примере                          |
+| Общая ценность первого года            |                    $11,646,000 | годовая отдача в примере                                |
+| Выгода первого года                    |                     $3,281,000 | годовая отдача минус инвестиция первого года            |
+| ROI                                    |                            39% | только пример, не универсальный ориентир                |
+| Срок окупаемости                       | 0.7 года / около восьми месяцев | инвестиция первого года, деленная на годовую отдачу     |
 
-## Advisory interpretation
+## Консультационная интерпретация
 
 ### Для CEO
 
-- AI-assisted software development должен рассматриваться как investment in operating capacity, а не как IT tooling line item.
-- Правильный вопрос: какая часть engineering bottlenecks будет снята и как это отразится на user value, revenue, downtime и optionality?
-- Финансовая модель должна включать J-Curve, training, verification tax и instability risk.
-- Не стоит обещать headcount reduction как основной ROI. Сильнее и безопаснее позиция: reinvested capacity и ускорение product learning.
-- Если компания не измеряет delivery baseline, у нее нет надежного способа доказать AI ROI.
+- Разработку ПО с поддержкой AI нужно рассматривать как инвестицию в операционную способность, а не как строку IT-инструментов.
+- Правильный вопрос: какая часть инженерных узких мест будет снята и как это отразится на ценности для пользователя, выручке, простое и стратегической опциональности?
+- Финансовая модель должна включать J-Curve, обучение, налог на проверку и риск нестабильности.
+- Не стоит обещать сокращение команды как основной ROI. Сильнее и безопаснее позиция: переинвестированный ресурс и ускорение продуктового обучения.
+- Если компания не измеряет baseline поставки, у нее нет надежного способа доказать AI ROI.
 
 ### Для CTO / VP Engineering
 
-- AI rollout нужно начинать с оценки платформы, CI/CD, тестов, documentation quality и guardrails.
-- Главный dashboard: throughput + instability + rework + experiment frequency.
-- Internal Developer Platform становится не только developer experience tool, но и context/risk layer для AI agents.
-- Verification tax должен быть отдельной метрикой или хотя бы управленческим объектом: review load, lead time, PR cycle time, defect escape, security review load.
-- На legacy brownfield системах эффект AI нужно считать консервативно: контекст и architecture constraints важнее raw model capability.
+- Внедрение AI нужно начинать с оценки платформы, CI/CD, тестов, качества документации и контрольных точек.
+- Главная панель управления: throughput + instability + доработки + частота экспериментов.
+- Internal Developer Platform становится не только инструментом для опыта разработчика, но и контекстным риск-контуром для AI agents.
+- Налог на проверку должен быть отдельной метрикой или хотя бы управленческим объектом: нагрузка на review, lead time, PR cycle time, утечки дефектов, нагрузка на security review.
+- На legacy brownfield системах эффект AI нужно считать консервативно: контекст и архитектурные ограничения важнее базовых возможностей модели.
 
 ### Для Engineering Managers
 
-- AI adoption нужно встраивать в team workflow, а не оставлять на уровне индивидуальных привычек.
-- Команды должны учиться писать context, intent и specifications, а не только prompts.
+- Внедрение AI нужно встраивать в командный процесс, а не оставлять на уровне индивидуальных привычек.
+- Команды должны учиться писать контекст, намерение и спецификации, а не только prompts.
 - Важно следить, не растет ли объем кода быстрее, чем способность команды его проверять и поддерживать.
-- Если AI освобождает время, это время должно быть явно переинвестировано: experiments, quality, customer problems, tech debt reduction.
-- Рост deployment frequency без контроля CFR и recovery time может ухудшить финансовый результат.
+- Если AI освобождает время, это время должно быть явно переинвестировано: эксперименты, качество, клиентские проблемы, снижение технического долга.
+- Рост deployment frequency без контроля CFR и времени восстановления может ухудшить финансовый результат.
 
 ## Диагностические вопросы
 
-- Есть ли baseline по lead time, deployment frequency, change failure rate, failed deployment recovery time и rework?
-- Где сейчас bottleneck: code generation, review, testing, approvals, deployment, discovery или user feedback?
-- Какой expected J-Curve: глубина productivity dip, длительность, affected teams, owner recovery plan?
-- Кто отвечает за AI stance: что разрешено, где human-in-the-loop обязателен, какие outputs нельзя принимать без проверки?
+- Есть ли baseline по lead time, deployment frequency, change failure rate, failed deployment recovery time и доработкам?
+- Где сейчас узкое место: генерация кода, review, тестирование, согласования, поставка, discovery или обратная связь от пользователей?
+- Какая ожидается J-Curve: глубина падения продуктивности, длительность, затронутые команды, владелец плана восстановления?
+- Кто отвечает за позицию по AI: что разрешено, где human-in-the-loop обязателен, какие результаты нельзя принимать без проверки?
 - Достаточно ли IDP стандартизирован, чтобы AI agents могли безопасно действовать внутри платформы?
-- Машиночитаема ли внутренняя документация: architecture decisions, APIs, service ownership, runbooks?
-- Как измеряется verification tax: review time, reviewer load, rejected AI code, security findings, rework?
-- Какой финансовый смысл у увеличения throughput: additional revenue, faster experiments, avoided hiring, reduced downtime?
-- Не double count ли модель: один и тот же saved hour нельзя одновременно полностью считать как avoided hiring и как full revenue uplift.
-- Что будет считаться evidence of ROI через 3, 6 и 12 месяцев?
+- Машиночитаема ли внутренняя документация: архитектурные решения, API, зоны ответственности сервисов, runbooks?
+- Как измеряется налог на проверку: время review, нагрузка на reviewer, отклоненный AI-код, выводы security review, доработки?
+- Какой финансовый смысл у увеличения throughput: дополнительная выручка, более быстрые эксперименты, предотвращенный найм, снижение простоя?
+- Не считает ли модель одно и то же дважды: один и тот же сохраненный час нельзя одновременно полностью считать как предотвращенный найм и как полный прирост выручки.
+- Что будет считаться доказательством ROI через 3, 6 и 12 месяцев?
 
 ## Возможные фреймворки на основе отчета
 
-### AI ROI readiness stack
+### Стек готовности к AI ROI
 
 ```mermaid
 flowchart TD
-    A["Business objective"] --> B["Delivery baseline"]
-    B --> C["Engineering system health"]
-    C --> D["AI capabilities and guardrails"]
-    D --> E["J-Curve plan"]
-    E --> F["AI-assisted workflow adoption"]
-    F --> G["Throughput + instability metrics"]
-    G --> H["Financial model"]
-    H --> I["Scaling decision"]
+    A["Бизнес-цель"] --> B["Baseline поставки"]
+    B --> C["Здоровье инженерной системы"]
+    C --> D["AI-способности и контрольные точки"]
+    D --> E["План J-Curve"]
+    E --> F["Внедрение процесса с поддержкой AI"]
+    F --> G["Метрики throughput + instability"]
+    G --> H["Финансовая модель"]
+    H --> I["Решение о масштабировании"]
 ```
 
-### AI-assisted engineering ROI equation
+### Уравнение ROI для инженерии с поддержкой AI
 
 ```text
-AI-assisted engineering ROI =
-reinvested engineering capacity
-+ revenue from faster validated features
-+ cost avoided through reduced downtime / rework
-- AI tooling and infrastructure cost
-- enablement cost
-- J-Curve cost
-- verification and governance cost
+ROI инженерии с поддержкой AI =
+переинвестированный инженерный ресурс
++ выручка от быстрее проверенных функций
++ затраты, предотвращенные за счет снижения простоя / доработок
+- стоимость AI-инструментов и инфраструктуры
+- стоимость поддержки внедрения
+- стоимость J-Curve
+- стоимость проверки и управленческого контура
 ```
 
-Это не прямая формула из отчета, а advisory-обобщение его логики.
+Это не прямая формула из отчета, а консультационное обобщение его логики.
 
-### Experiment frequency as option value
+### Частота экспериментов как опционная ценность
 
-DORA предлагает важную финансовую интерпретацию experiment frequency:
+DORA предлагает важную финансовую интерпретацию частоты экспериментов:
 
-- каждый experiment/prototype - это option;
-- AI снижает option premium, то есть стоимость создания варианта;
-- организация "exercises the option" только после validation;
-- высокая experiment frequency снижает риск большого upfront bet на неверную feature.
+- каждый эксперимент или прототип - это опцион;
+- AI снижает премию опциона, то есть стоимость создания варианта;
+- организация реализует опцион только после валидации;
+- высокая частота экспериментов снижает риск большой авансовой ставки на неверную функцию.
 
-Это сильная связка между AI, product discovery и financial governance:
+Это сильная связка между AI, product discovery и финансовым управлением:
 
-> AI повышает ROI не только через faster coding, но и через снижение стоимости управляемого поиска решений.
+> AI повышает ROI не только через более быстрое написание кода, но и через снижение стоимости управляемого поиска решений.
 
 ## Идеи для постов
 
 ### Пост 1: AI ROI нельзя считать по лицензиям
 
-Hook:
+Хук:
 
 > AI в разработке окупается не там, где купили Copilot всем инженерам. Он окупается там, где инженерная система умеет переварить рост скорости.
 
 Тезис:
 
 - AI увеличивает throughput;
-- без платформы, тестов, данных и guardrails растет instability;
-- ROI появляется, когда velocity превращается в user value, а не в больше rework.
+- без платформы, тестов, данных и контрольных точек растет instability;
+- ROI появляется, когда скорость изменений превращается в ценность для пользователя, а не в больший объем доработок.
 
 ### Пост 2: J-Curve как нормальная цена трансформации
 
-Hook:
+Хук:
 
 > Если после внедрения AI команда сначала стала медленнее, это не обязательно провал.
 
 Тезис:
 
 - есть learning curve;
-- есть verification tax;
-- есть adaptation of pipeline;
-- провал не в dip, а в отсутствии budget и management system для выхода из него.
+- есть налог на проверку;
+- есть адаптация pipeline;
+- провал не в падении, а в отсутствии бюджета и системы управления для выхода из него.
 
-### Пост 3: Почему AI не должен быть headcount reduction case
+### Пост 3: Почему AI не должен быть кейсом сокращения команды
 
-Hook:
+Хук:
 
 > Самая слабая версия AI ROI: "мы сократим разработчиков".
 
 Тезис:
 
-- DORA предлагает считать saved time как reinvestment capacity;
-- высвобожденная емкость должна уходить в innovation, quality и experiments;
-- сокращения ухудшают incentives и скрывают реальные bottlenecks.
+- DORA предлагает считать сохраненное время как ресурс для переинвестирования;
+- высвобожденная емкость должна уходить в инновации, качество и эксперименты;
+- сокращения ухудшают стимулы и скрывают реальные узкие места.
 
 ## Связанные заметки
 
 - [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
 - [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/decision-systems|decision systems]]
-- [[Frameworks/governance/organizational-operating-model|organizational operating model]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
-- [[Frameworks/governance/systemic-management|systemic management]]
+- [[Frameworks/governance/decision-systems|системы принятия решений]]
+- [[Frameworks/governance/organizational-operating-model|организационная операционная модель]]
+- [[Frameworks/governance/quality-and-risks|качество и риски]]
+- [[Frameworks/governance/systemic-management|системное управление]]
 - [[google-cloud-roi-of-ai-2025]]
 - [[mit-nanda-genai-divide-state-of-ai-in-business-2025]]
 - [[stanford-hai-ai-index-report-2025]]
 
-## Source
+## Источник
 
 - PDF: [[Frameworks/ai-transformation/sources/dora-roi-of-ai-assisted-software-development-2026.pdf|dora-roi-of-ai-assisted-software-development-2026.pdf]]
-- Local file: `Frameworks/ai-transformation/sources/dora-roi-of-ai-assisted-software-development-2026.pdf`
-- Extracted text: `/private/tmp/dora-roi-ai-2026.txt`
-- License note in PDF: CC BY-NC-SA 4.0
-- Citations in report retrieved: February 2026 unless otherwise noted
+- Локальный файл: `Frameworks/ai-transformation/sources/dora-roi-of-ai-assisted-software-development-2026.pdf`
+- Извлеченный текст: `/private/tmp/dora-roi-ai-2026.txt`
+- Лицензия в PDF: CC BY-NC-SA 4.0
+- Даты обращения к источникам в отчете: февраль 2026, если не указано иное
