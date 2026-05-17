@@ -96,14 +96,11 @@ Avoid:
 
 ## Language
 
-Russian is preferred unless explicitly requested otherwise.
+Russian is preferred unless explicitly requested otherwise. Use the canonical language policy and glossary from the root `AGENTS.md`.
 
 For Russian LinkedIn posts:
-- avoid casual English inside Russian sentences;
-- use Russian management vocabulary when there is a precise equivalent;
-- keep English only for product names, company names, direct quotes, metrics, or terms intentionally used as part of the author's positioning;
-- if an English term is necessary, introduce it once and then continue in Russian;
-- prefer `выводы`, `наблюдения`, `действия`, `рамка`, `процесс`, `зона ответственности` over unnecessary `insights`, `action items`, `framework`, `workflow`, `ownership`.
+- keep English terms only when they are intentionally used as part of the author's positioning, source fidelity, or public content format;
+- apply the glossary especially strictly to casual `insights`, `action items`, `framework`, `workflow`, and `ownership`.
 
 ## Style
 

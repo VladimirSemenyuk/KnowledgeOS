@@ -94,14 +94,11 @@ Keep metadata factual and concise.
 
 # Writing Style
 
-Russian is preferred unless the talk context requires another language.
+Russian is preferred unless the talk context requires another language. Use the canonical language policy and glossary from the root `AGENTS.md`.
 
 For Russian talk materials:
 - write slide titles, theses, speaker notes, and conclusions in Russian by default;
-- avoid unnecessary English terms when a precise Russian equivalent exists;
-- keep English only for product names, company names, direct quotes, established technical terms, or event language;
-- if an English term is useful for the audience, introduce it once in parentheses and then use the Russian equivalent;
-- prefer Russian management vocabulary over consulting slang.
+- keep English terms when they are event language, direct quotes, established technical terminology, or necessary for audience comprehension.
 
 Use:
 - short sections;

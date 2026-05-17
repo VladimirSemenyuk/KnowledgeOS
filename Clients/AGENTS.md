@@ -48,13 +48,11 @@ For creating `summary.md`, use the `summarize-meeting` skill:
 # Writing Style
 
 Preferred language:
-Russian.
+Russian. Use the canonical language policy and glossary from the root `AGENTS.md`.
 
 For Russian client materials:
 - use Russian as the default language for headings, diagnosis, risks, recommendations, and next steps;
-- avoid unnecessary English terms when a precise Russian equivalent exists;
-- keep English for role titles, company terminology, metrics, system names, direct quotes, or source terms that would lose precision in translation;
-- prefer `зона ответственности`, `согласованность`, `управленческий контур`, `операционная модель`, `следующие шаги`, `наблюдения` over casual English equivalents.
+- keep English for role titles, company terminology, metrics, system names, direct quotes, or source terms that would lose precision in translation.
 
 Use:
 - short sections
