@@ -1,0 +1,3 @@
+display_name: Post Ideas Digest
+short_description: Сводка идей для LinkedIn-постов
+default_prompt: Подготовь сводку идей для постов из последних summary клиентов и Telegram digest.

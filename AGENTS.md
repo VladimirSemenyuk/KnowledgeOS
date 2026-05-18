@@ -56,6 +56,28 @@ Avoid:
 - `Context.md` files contain working context, positioning, audience, and constraints for the relevant folder or client.
 - When rules conflict, prefer the more specific local instruction unless it weakens confidentiality, safety, or language quality.
 
+## Что агент умеет делать на основе skills
+
+В этом vault есть локальные skills в `.agents/skills/`. Если запрос пользователя совпадает с одной из возможностей ниже, агент должен использовать соответствующий skill и следовать его `SKILL.md`, а не придумывать процесс заново.
+
+Доступные рабочие процессы KnowledgeOS:
+
+- `transform-html-to-md` — преобразовать HTML-транскрипт встречи в `transcript.md`, создать правильную папку встречи, определить клиента или менти, если это возможно, сохранить содержание транскрипта и нормализовать имена спикеров.
+- `summarize-meeting` — создать краткий executive-style `summary.md` по `transcript.md`, используя клиентский контекст, наблюдения об управленческом росте, главные выводы, действия и следующие шаги.
+- `import-pdf-report` — превратить PDF-отчет в краткую русскоязычную source note для базы знаний: извлечь важные модели, цифры, графики, риски и advisory-выводы, затем проверить заметку против источника.
+- `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
+- `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
+- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки `TOFU`/`MOFU`/`BOFU` и готовность к добавлению в `Posts/themes-backlog.md`.
+
+Правила использования этих возможностей:
+
+- Если пользователь просит один из этих рабочих процессов, выполнить его end-to-end, когда это возможно.
+- Сначала прочитать файл skill, затем релевантные `AGENTS.md` и `Context.md`.
+- Сохранять исходные материалы: не переписывать транскрипты, raw notes или импортированные посты, если skill прямо не требует трансформации.
+- В финальном ответе указывать созданные или измененные файлы.
+- Не добавлять идеи в `Posts/themes-backlog.md` без явного решения пользователя.
+- Если skill требует credentials, browser login, Telegram authorization, network access или отсутствующий source file, останавливаться только в точке, где нужно действие пользователя, и объяснять точный следующий шаг.
+
 ---
 
 # Writing Style
