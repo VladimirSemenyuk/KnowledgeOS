@@ -26,6 +26,7 @@ node_modules/
 # Telegram weekly digest secrets
 .telegram-weekly.env
 .telegram-weekly.session.txt
+.agents/skills/create-telegram-weekly-digest/.private/
 
 # Large binary attachments (optional)
 # Uncomment if you don't want binaries in git

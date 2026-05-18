@@ -22,8 +22,33 @@ function findRepoRoot(startDir) {
 }
 
 const repoRoot = findRepoRoot(process.cwd());
-const envPath = path.join(repoRoot, ".telegram-weekly.env");
-const sessionPath = path.join(repoRoot, ".telegram-weekly.session.txt");
+const skillRoot = path.dirname(path.dirname(new URL(import.meta.url).pathname));
+
+function credentialRoots() {
+  return [
+    process.env.TELEGRAM_WEEKLY_CREDENTIAL_ROOT,
+    path.join(skillRoot, ".private"),
+    repoRoot,
+    "/Users/vladimir/Obsidian/KnowledgeOS"
+  ].filter(Boolean);
+}
+
+function findCredentialPaths() {
+  const candidates = credentialRoots().map((root) => ({
+    root,
+    envPath: path.join(root, ".telegram-weekly.env"),
+    sessionPath: path.join(root, ".telegram-weekly.session.txt")
+  }));
+  const fullMatch = candidates.find(
+    (candidate) => fs.existsSync(candidate.envPath) && fs.existsSync(candidate.sessionPath)
+  );
+  if (fullMatch) return fullMatch;
+  return candidates.find((candidate) => fs.existsSync(candidate.envPath)) || candidates[0];
+}
+
+const credentials = findCredentialPaths();
+const envPath = credentials.envPath;
+const sessionPath = credentials.sessionPath;
 
 function loadEnvFile(filePath) {
   if (!fs.existsSync(filePath)) return;
@@ -42,7 +67,10 @@ function loadEnvFile(filePath) {
 function requiredEnv(name) {
   const value = process.env[name];
   if (!value) {
-    throw new Error(`Missing ${name}. Add it to ${envPath}.`);
+    const checked = credentialRoots()
+      .map((root) => path.join(root, ".telegram-weekly.env"))
+      .join(", ");
+    throw new Error(`Missing ${name}. Add it to ${envPath}. Checked: ${checked}.`);
   }
   return value;
 }
@@ -65,6 +93,7 @@ const client = new TelegramClient(new StringSession(existingSession), apiId, api
   connectionRetries: 5
 });
 
+console.log(`Using Telegram credentials from ${credentials.root}`);
 await client.start({
   phoneNumber: async () => phoneNumber || input.text("Telegram phone: "),
   password: async () => input.password("Telegram 2FA password: "),

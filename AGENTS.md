@@ -47,7 +47,14 @@ Avoid:
 - Never rename folders unless explicitly instructed.
 - Prefer incremental edits over destructive rewrites.
 - Keep writing concise, structured, and executive-oriented.
-* Consider contex in Context.md files
+- Consider relevant `Context.md` files before creating, editing, or summarizing materials.
+
+## Instruction Hierarchy
+
+- Root `AGENTS.md` defines vault-wide rules.
+- Local `AGENTS.md` files add folder-specific rules and should be followed together with the root file.
+- `Context.md` files contain working context, positioning, audience, and constraints for the relevant folder or client.
+- When rules conflict, prefer the more specific local instruction unless it weakens confidentiality, safety, or language quality.
 
 ---
 
@@ -111,7 +118,7 @@ Translate these English terms by default:
 - scope → рамка / объем / зона
 - mandate → мандат
 - capability → способность / компетенция / возможность
-- capacity → пропускная способность / пропускная способность команды / ресурс
+- capacity → пропускная способность команды / доступный ресурс
 - business value → ценность для бизнеса
 - data → данные, except when referring to a named function, team, product, or established technical term
 - compliance → комплаенс / регуляторный контур / соблюдение требований
@@ -165,17 +172,14 @@ Do not create new top-level folders unless explicitly requested.
 
 # LinkedIn Post Format
 
-Preferred structure:
+Use `Posts/AGENTS.md` and `Posts/Context.md` as the source of truth for LinkedIn planning, drafting, status changes, funnel logic, and editorial constraints.
 
-- strong hook
-- tension/problem
-- systemic insight
-- practical conclusion
-
-Avoid:
-- emojis
-- engagement bait
-- generic inspiration
+Vault-wide baseline:
+- strong hook;
+- tension/problem;
+- systemic insight;
+- practical conclusion;
+- no emojis, engagement bait, or generic inspiration.
 
 ---
 

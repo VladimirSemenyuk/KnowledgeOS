@@ -56,10 +56,15 @@ Posts/research/telegram/
 └── weekly-digests/
 ```
 
-Credentials хранить в корне vault, но не коммитить:
+Credentials хранить в корне vault, но не коммитить. Скрипты ищут credentials в таком порядке:
+
+1. `TELEGRAM_WEEKLY_CREDENTIAL_ROOT`, если переменная задана.
+2. `.agents/skills/create-telegram-weekly-digest/.private/`.
+3. Текущий vault root.
+4. `/Users/vladimir/Obsidian/KnowledgeOS`.
 
 ```text
-KnowledgeOS/
+KnowledgeOS/.agents/skills/create-telegram-weekly-digest/.private/
 ├── .telegram-weekly.env
 └── .telegram-weekly.session.txt
 ```
@@ -86,7 +91,7 @@ KnowledgeOS/
 Если GramJS dependencies не установлены:
 
 ```bash
-cd .agents/skills/telegram-weekly-digest
+cd .agents/skills/create-telegram-weekly-digest
 npm install
 ```
 
@@ -101,7 +106,7 @@ TELEGRAM_PHONE=+10000000000
 Если session отсутствует:
 
 ```bash
-node scripts/auth.mjs
+node .agents/skills/create-telegram-weekly-digest/scripts/auth.mjs
 ```
 
 Если Telegram требует code / 2FA, пользователь вводит их локально. Не просить пользователя отправлять код или пароль в чат.
@@ -115,15 +120,17 @@ node scripts/auth.mjs
 3. Запустить сбор:
 
 ```bash
-node .agents/skills/telegram-weekly-digest/scripts/fetch-week.mjs
+node .agents/skills/create-telegram-weekly-digest/scripts/fetch-week.mjs
 ```
+
+Если сбор падает с `connect EPERM` или сообщением про sandbox network policy, повторить этот же fetch с `sandbox_permissions=require_escalated`. Это ожидаемый путь для прямого подключения GramJS к Telegram DC из Codex.
 
 4. Сохранить raw-файл:
    `Posts/research/telegram/raw/YYYY-Www.json`
 5. Запустить нормализацию:
 
 ```bash
-node .agents/skills/telegram-weekly-digest/scripts/normalize-messages.mjs
+node .agents/skills/create-telegram-weekly-digest/scripts/normalize-messages.mjs
 ```
 
 6. Сохранить normalized-файл:

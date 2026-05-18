@@ -22,10 +22,35 @@ function findRepoRoot(startDir) {
 }
 
 const repoRoot = findRepoRoot(process.cwd());
+const skillRoot = path.dirname(path.dirname(new URL(import.meta.url).pathname));
 const configPath = path.join(repoRoot, "Posts", "research", "telegram", "channels.yaml");
-const envPath = path.join(repoRoot, ".telegram-weekly.env");
-const sessionPath = path.join(repoRoot, ".telegram-weekly.session.txt");
 const rawDir = path.join(repoRoot, "Posts", "research", "telegram", "raw");
+
+function credentialRoots() {
+  return [
+    process.env.TELEGRAM_WEEKLY_CREDENTIAL_ROOT,
+    path.join(skillRoot, ".private"),
+    repoRoot,
+    "/Users/vladimir/Obsidian/KnowledgeOS"
+  ].filter(Boolean);
+}
+
+function findCredentialPaths() {
+  const candidates = credentialRoots().map((root) => ({
+    root,
+    envPath: path.join(root, ".telegram-weekly.env"),
+    sessionPath: path.join(root, ".telegram-weekly.session.txt")
+  }));
+  const fullMatch = candidates.find(
+    (candidate) => fs.existsSync(candidate.envPath) && fs.existsSync(candidate.sessionPath)
+  );
+  if (fullMatch) return fullMatch;
+  return candidates.find((candidate) => fs.existsSync(candidate.envPath)) || candidates[0];
+}
+
+const credentials = findCredentialPaths();
+const envPath = credentials.envPath;
+const sessionPath = credentials.sessionPath;
 
 function loadEnvFile(filePath) {
   if (!fs.existsSync(filePath)) return;
@@ -44,9 +69,21 @@ function loadEnvFile(filePath) {
 function requiredEnv(name) {
   const value = process.env[name];
   if (!value) {
-    throw new Error(`Missing ${name}. Add it to ${envPath}.`);
+    const checked = credentialRoots()
+      .map((root) => path.join(root, ".telegram-weekly.env"))
+      .join(", ");
+    throw new Error(`Missing ${name}. Add it to ${envPath}. Checked: ${checked}.`);
   }
   return value;
+}
+
+function isSandboxNetworkError(error) {
+  const message = String(error?.message || error || "");
+  return (
+    error?.code === "EPERM" ||
+    message.includes("connect EPERM") ||
+    message.includes("WebSocket connection failed")
+  );
 }
 
 function isoWeek(date) {
@@ -123,7 +160,18 @@ const client = new TelegramClient(new StringSession(session), apiId, apiHash, {
   connectionRetries: 5
 });
 
-await client.connect();
+console.log(`Using Telegram credentials from ${credentials.root}`);
+try {
+  await client.connect();
+} catch (error) {
+  if (isSandboxNetworkError(error)) {
+    throw new Error(
+      "Telegram connection was blocked by the Codex sandbox network policy. " +
+        "Re-run this fetch command with sandbox_permissions=require_escalated to allow direct Telegram DC access."
+    );
+  }
+  throw error;
+}
 
 const result = {
   period_id: periodId,
