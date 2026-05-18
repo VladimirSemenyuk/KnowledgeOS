@@ -22,3 +22,6 @@
 |---|---|---|---|---|
 | 2026-05-12 | TOFU | Кого сокращают и нанимают в 2026 году? | published | [[2026-05-12-kogo-sokrashchayut-i-nanimayut-v-2026]] |
 | 2026-05-14 | TOFU | Как я строил карьеру CTO неправильно | published | [[2026-05-14-kak-ya-stroil-kareru-cto-nepravilno]] |
+| 2026-05-19 | TOFU | AI-native инженер — это не тот, кто умеет пользоваться агентом | draft | [[2026-05-19-ai-native-inzhener-eto-ne-tot-kto-umeet-polzovatsya-agentom]] |
+| 2026-05-20 | MOFU | AI adoption нужно мерить не числом агентов, а изменением рабочего процесса | draft | [[2026-05-20-ai-adoption-nuzhno-merit-ne-chislom-agentov-a-izmeneniem-rabochego-protsessa]] |
+| 2026-05-21 | BOFU | Анонс TechRec про AI-native operating model | draft | [[2026-05-21-anons-techrec-pro-ai-native-operating-model]] |
