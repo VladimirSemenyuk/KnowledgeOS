@@ -16,6 +16,7 @@ description: "Готовит чатовую сводку идей для LinkedI
 Перед работой прочитать:
 
 - `AGENTS.md`;
+- `Personal/Context.md`, особенно разделы `ICP` и `LinkedIn`;
 - `Posts/AGENTS.md`;
 - `Posts/Context.md`;
 - `Posts/themes-backlog.md`;
@@ -70,6 +71,7 @@ description: "Готовит чатовую сводку идей для LinkedI
    - являются generic AI news без управленческого вывода;
    - повторяют уже существующую тему без нового угла;
    - звучат как мотивационный или консультационный шум.
+   - не попадают в ICP из `Personal/Context.md`: CEO / founder B2B tech или tech-enabled компании, где AI стал стратегической ставкой, но не превратился в управляемую способность бизнеса.
 6. Сгруппировать идеи по силе сигнала и стадии воронки.
 7. Показать результат в чат. Не изменять `Posts/themes-backlog.md`, пока пользователь явно не выбрал идеи для добавления.
 
@@ -81,6 +83,7 @@ description: "Готовит чатовую сводку идей для LinkedI
 - системный вывод;
 - практическую применимость;
 - связь с AI transformation, engineering management, organizational design, CTO/CEO advisory, decision systems, ownership clarity, quality and risks или architecture of manageability;
+- ясную связь с ICP: почему это важно для CEO / founder, который отвечает за AI как управляемую бизнес-способность;
 - безопасную степень обобщения для публичного поста.
 
 ## Funnel Classification
@@ -114,7 +117,8 @@ description: "Готовит чатовую сводку идей для LinkedI
   - ...
 - Смыслы:
   - управленческий вывод;
-  - почему это важно для CTO/CEO/engineering leader;
+  - почему это важно для CEO / founder из ICP;
+  - какую роль в системе играют CTO / VP Engineering / product / engineering leadership, если они важны для идеи;
   - что можно обобщить без раскрытия клиента.
 - Угол поста:
   краткая формулировка будущего поста.

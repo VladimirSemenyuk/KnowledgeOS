@@ -24,11 +24,12 @@ Use files by role:
 
 Default workflow:
 1. Read `Context.md` for positioning and audience.
-2. Check `themes-backlog.md` for available topic raw material.
-3. Check `series-map.md` for current or future series.
-4. Check `content-calendar.md` for planned dates and status.
-5. Check `drafts/` and `published/` to avoid repeating posts.
-6. Use `research/high-performing-posts.md` for patterns, not for copying wording.
+2. Read `../Personal/Context.md`, especially `ICP` and `LinkedIn`, to keep the buyer and positioning current.
+3. Check `themes-backlog.md` for available topic raw material.
+4. Check `series-map.md` for current or future series.
+5. Check `content-calendar.md` for planned dates and status.
+6. Check `drafts/` and `published/` to avoid repeating posts.
+7. Use `research/high-performing-posts.md` for patterns, not for copying wording.
 
 Do not use `content-calendar.md` as a backlog.
 Do not use `themes-backlog.md` as a publishing plan.
@@ -171,6 +172,24 @@ Prioritize topics that:
 - emerge from real client patterns or repeated leadership problems;
 - can be written without disclosing confidential information;
 - support long-term positioning, not only reach.
+
+## ICP Fit
+
+Future post ideas, calendar topics, drafts, and rewrites must pass the ICP filter from `../Personal/Context.md`.
+
+Default buyer:
+- CEO / founder of a B2B tech or tech-enabled company;
+- AI is already a strategic stake for the company;
+- AI work is still fragmented into pilots, tools, local experiments, or unmanaged initiatives;
+- the real constraint is the operating model: roles, accountability, decision systems, quality, risks, management cadence, and the link between business and engineering.
+
+Use CTO / VP Engineering, Product, Engineering Managers, and Quality as internal actors in the story, not as the default buyer. A post may speak about those roles, but the strategic conclusion should still be legible to a CEO / founder deciding how to make AI a managed business capability.
+
+Reject or reframe ideas that:
+- are mainly about individual productivity with AI tools;
+- optimize for reach while attracting a broad engineering audience outside the ICP;
+- frame the problem as "teams need better tools" instead of "the company needs a different operating model";
+- make CTO / EM career development the primary commercial angle without a clear CEO-level implication.
 
 ## High-Performing Reference Corpus
 
