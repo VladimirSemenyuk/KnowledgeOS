@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
-status: draft
+status: ready
 publish_date: 2026-05-20
 source:
   - "[[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-06-meeting/summary]]"
