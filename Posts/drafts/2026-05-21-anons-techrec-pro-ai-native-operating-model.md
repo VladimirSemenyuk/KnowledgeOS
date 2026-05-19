@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: BOFU
+funnel: "[[Posts/funnel/bofu|BOFU]]"
 status: draft
 publish_date: 2026-05-21
 source:
