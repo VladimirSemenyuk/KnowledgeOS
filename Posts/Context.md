@@ -83,7 +83,6 @@
 - [[Posts/themes-backlog|themes backlog]]
 - [[Posts/series-map|series map]]
 - [[Posts/metrics|metrics]]
-- [[Posts/linkedin-profile|LinkedIn profile]]
 - [[Posts/research/high-performing-posts|high-performing posts]]
 - [[Templates/linkedin-post|LinkedIn post template]]
 
