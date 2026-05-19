@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: TOFU
+funnel: "[[Posts/funnel/tofu|TOFU]]"
 status: published
 publish_date: 2025-04-10
 source: LinkedIn analytics import 2026-05-14
