@@ -1,11 +1,13 @@
 ---
 type: linkedin-post
-funnel: TOFU/MOFU/BOFU
+funnel:
 status: draft
 publish_date:
 source:
 audience:
 ---
+
+Справочник воронки: [[Posts/funnel/tofu|TOFU]] / [[Posts/funnel/mofu|MOFU]] / [[Posts/funnel/bofu|BOFU]]
 
 # Working Title
 
@@ -36,4 +38,3 @@ audience:
 
 
 ## Notes
-

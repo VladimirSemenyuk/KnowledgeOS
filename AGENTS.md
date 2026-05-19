@@ -67,7 +67,7 @@ Avoid:
 - `import-pdf-report` — превратить PDF-отчет в краткую русскоязычную source note для базы знаний: извлечь важные модели, цифры, графики, риски и advisory-выводы, затем проверить заметку против источника.
 - `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
 - `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
-- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки `TOFU`/`MOFU`/`BOFU` и готовность к добавлению в `Posts/themes-backlog.md`.
+- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[Posts/funnel/tofu|TOFU]]/[[Posts/funnel/mofu|MOFU]]/[[Posts/funnel/bofu|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
 
 Правила использования этих возможностей:
 
@@ -171,7 +171,7 @@ Keep English when translation would reduce precision, break source fidelity, or 
 - Technical and engineering abbreviations: `API`, `CI/CD`, `SLA`, `SLO`, `KPI`, `OKR`, `GDPR`.
 - AI and engineering terms without a stable Russian equivalent: `AI-native`, `agentic`, `prompt`, `LLM`, `RAG`.
 - Direct quotes, source terminology, and internal company language.
-- Public content funnel labels: `TOFU`, `MOFU`, `BOFU`.
+- Public content funnel labels: [[Posts/funnel/tofu|TOFU]], [[Posts/funnel/mofu|MOFU]], [[Posts/funnel/bofu|BOFU]].
 
 When keeping an English term, do it intentionally and consistently. Do not leave English in Russian text by inertia.
 

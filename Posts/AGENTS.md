@@ -59,13 +59,13 @@ Plan posts in series by default.
 Minimum series:
 - 1 week;
 - 3 posts;
-- `TOFU`, `MOFU`, `BOFU`;
+- [[Posts/funnel/tofu|TOFU]], [[Posts/funnel/mofu|MOFU]], [[Posts/funnel/bofu|BOFU]];
 - Monday, Wednesday, Friday rhythm.
 
 Before planning a week:
 - choose one primary series from `series-map.md`;
 - check whether an existing series should continue;
-- select one `TOFU`, one `MOFU`, and one `BOFU`;
+- select one [[Posts/funnel/tofu|TOFU]], one [[Posts/funnel/mofu|MOFU]], and one [[Posts/funnel/bofu|BOFU]];
 - update `content-calendar.md` only after the sequence is coherent;
 - keep unused topics in `series-map.md` or `themes-backlog.md`.
 
@@ -84,14 +84,14 @@ Before adding or planning a topic, check:
 
 Acceptable reuse:
 - developing the same series on the next week;
-- moving from `TOFU` observation to `MOFU` framework;
-- moving from `MOFU` framework to `BOFU` advisory review;
+- moving from [[Posts/funnel/tofu|TOFU]] observation to [[Posts/funnel/mofu|MOFU]] framework;
+- moving from [[Posts/funnel/mofu|MOFU]] framework to [[Posts/funnel/bofu|BOFU]] advisory review;
 - returning to a theme through a different management object: CTO, EM, product, quality, data, AI adoption.
 
 Avoid:
 - same thesis with different wording;
 - same conflict without a new management conclusion;
-- repeated BOFU offer without a new diagnostic angle;
+- repeated [[Posts/funnel/bofu|BOFU]] offer without a new diagnostic angle;
 - several posts in a row about the same pain without funnel progression.
 
 ## Language
@@ -159,10 +159,10 @@ Final editorial pass will be added later.
 
 ## Funnel Logic
 
-Always classify posts as:
-- `TOFU` – attention and market tension;
-- `MOFU` – expertise, frameworks, cases, checklists;
-- `BOFU` – invitation to dialogue, audit, advisory review.
+Always classify posts using the funnel notes:
+- [[Posts/funnel/tofu|TOFU]]
+- [[Posts/funnel/mofu|MOFU]]
+- [[Posts/funnel/bofu|BOFU]]
 
 ## Topic Selection
 
