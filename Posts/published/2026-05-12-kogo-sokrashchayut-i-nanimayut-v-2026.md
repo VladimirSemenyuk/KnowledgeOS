@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Posts/funnel/tofu|TOFU]]"
+funnel: "[[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
 status: published
 publish_date: 2026-05-12
 source: LinkedIn analytics import 2026-05-14

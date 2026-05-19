@@ -14,7 +14,7 @@
 
 ---
 
-## [[Posts/funnel/tofu|TOFU]]
+## [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
 
 - Вам нужен не AI-агент, а нормальный процесс
   - Угол: AI-агент — плохая замена процессу, который никто не спроектировал.
@@ -28,7 +28,7 @@
 
 ---
 
-## [[Posts/funnel/mofu|MOFU]]
+## [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
 
 - AI adoption нужно мерить не числом агентов, а изменением рабочего процесса
   - Угол: метрики внедрения AI должны показывать зрелость системы, а не заставлять людей имитировать использование инструментов.
@@ -37,7 +37,7 @@
 
 ---
 
-## [[Posts/funnel/bofu|BOFU]]
+## [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 - Анонс TechRec: AI-native operating model
   - Угол: AI-native организация — это не команда, где люди чаще используют AI-инструменты, а операционная модель с новыми ролями, quality gates, ownership и governance.

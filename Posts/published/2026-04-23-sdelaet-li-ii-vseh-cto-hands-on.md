@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Posts/funnel/mofu|MOFU]]"
+funnel: "[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
 status: published
 publish_date: 2026-04-23
 source: LinkedIn analytics import 2026-05-14

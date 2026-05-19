@@ -1,6 +1,6 @@
 ---
 name: prepare-post-ideas-digest
-description: "Готовит чатовую сводку идей для LinkedIn-постов на основе последних актуальных client summary, Telegram digest и пользовательских источников. Использовать, когда пользователь просит найти, собрать, подготовить или показать идеи/темы для постов, пополнения Posts/themes-backlog.md, контентной воронки [[Posts/funnel/tofu|TOFU]]/[[Posts/funnel/mofu|MOFU]]/[[Posts/funnel/bofu|BOFU]] или editorial planning без немедленного создания черновиков."
+description: "Готовит чатовую сводку идей для LinkedIn-постов на основе последних актуальных client summary, Telegram digest и пользовательских источников. Использовать, когда пользователь просит найти, собрать, подготовить или показать идеи/темы для постов, пополнения Posts/themes-backlog.md, контентной воронки [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] или editorial planning без немедленного создания черновиков."
 ---
 
 # Prepare Post Ideas Digest
@@ -87,9 +87,9 @@ description: "Готовит чатовую сводку идей для LinkedI
 
 Классифицировать каждую идею:
 
-- [[Posts/funnel/tofu|TOFU]] — наблюдение, напряжение, рыночная ошибка, конфликт между heroics и architecture.
-- [[Posts/funnel/mofu|MOFU]] — модель, фреймворк, чеклист, управленческий паттерн, decision flow, decomposition.
-- [[Posts/funnel/bofu|BOFU]] — повод для advisory-диалога, диагностики, аудита или разбора ситуации.
+- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] — наблюдение, напряжение, рыночная ошибка, конфликт между heroics и architecture.
+- [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] — модель, фреймворк, чеклист, управленческий паттерн, decision flow, decomposition.
+- [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] — повод для advisory-диалога, диагностики, аудита или разбора ситуации.
 
 Если идея может работать на нескольких стадиях, выбрать основную и кратко указать альтернативу.
 
@@ -106,7 +106,7 @@ description: "Готовит чатовую сводку идей для LinkedI
 ```markdown
 ## Идея N. {короткий рабочий заголовок}
 
-- Воронка: [[Posts/funnel/tofu|TOFU]] / [[Posts/funnel/mofu|MOFU]] / [[Posts/funnel/bofu|BOFU]]
+- Воронка: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 - Источники: `path/to/source.md`, `path/to/source.md`
 - Тезисы:
   - ...

@@ -46,15 +46,15 @@
 ## Контентная логика
 
 Описание этапов:
-- [[Posts/funnel/tofu|TOFU]]
-- [[Posts/funnel/mofu|MOFU]]
-- [[Posts/funnel/bofu|BOFU]]
+- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
+- [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
+- [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 ## Ритм публикаций
 
-- Понедельник: [[Posts/funnel/tofu|TOFU]].
-- Среда: [[Posts/funnel/mofu|MOFU]].
-- Пятница: [[Posts/funnel/bofu|BOFU]].
+- Понедельник: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]].
+- Среда: [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
+- Пятница: [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 Минимальный ритм: 3 поста в неделю.
 

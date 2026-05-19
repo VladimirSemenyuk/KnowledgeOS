@@ -67,7 +67,7 @@ Avoid:
 - `import-pdf-report` — превратить PDF-отчет в краткую русскоязычную source note для базы знаний: извлечь важные модели, цифры, графики, риски и advisory-выводы, затем проверить заметку против источника.
 - `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
 - `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
-- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[Posts/funnel/tofu|TOFU]]/[[Posts/funnel/mofu|MOFU]]/[[Posts/funnel/bofu|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
+- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
 
 Правила использования этих возможностей:
 
@@ -171,7 +171,7 @@ Keep English when translation would reduce precision, break source fidelity, or 
 - Technical and engineering abbreviations: `API`, `CI/CD`, `SLA`, `SLO`, `KPI`, `OKR`, `GDPR`.
 - AI and engineering terms without a stable Russian equivalent: `AI-native`, `agentic`, `prompt`, `LLM`, `RAG`.
 - Direct quotes, source terminology, and internal company language.
-- Public content funnel labels: [[Posts/funnel/tofu|TOFU]], [[Posts/funnel/mofu|MOFU]], [[Posts/funnel/bofu|BOFU]].
+- Public content funnel labels: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 When keeping an English term, do it intentionally and consistently. Do not leave English in Russian text by inertia.
 
@@ -189,6 +189,25 @@ Main folders:
 - /Talks — public talks, conference presentations, webinars, speaking materials, and related preparation notes.
 
 Do not create new top-level folders unless explicitly requested.
+
+## Frameworks Structure
+
+`/Frameworks` contains reusable intellectual property, source notes, and advisory models. Treat this folder as the system of record for repeatable concepts, not as a dumping ground for temporary research.
+
+Current framework areas:
+
+- `/Frameworks/ai-transformation` — AI transformation models, AI-native organization materials, internal developer platform notes, and source notes from AI/engineering reports. Keep original PDFs and source documents in `/Frameworks/ai-transformation/sources`.
+- `/Frameworks/governance` — management systems, decision systems, organizational operating models, architecture of manageability, quality and risks, systemic management, and related governance models. Use `/Frameworks/governance/sources` for source materials and `/Frameworks/governance/cobit` for COBIT-specific materials.
+- `/Frameworks/marketing` — public positioning and content strategy models that support advisory writing and LinkedIn planning.
+- `/Frameworks/marketing/linkedin-gtm-playbook` — LinkedIn GTM playbook and funnel-stage definitions for public content: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
+
+When creating or updating framework materials:
+
+- Put reusable advisory models in the most specific existing framework folder.
+- Put imported reports and source-based summaries near the topic they support, not in `/Posts` or `/Clients`.
+- Preserve links from source notes to related framework concepts using Obsidian wikilinks.
+- Do not create new framework subfolders unless the existing areas do not fit and the user intent is explicit.
+- Keep framework notes concise, durable, and reusable across clients.
 
 ---
 

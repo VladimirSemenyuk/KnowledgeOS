@@ -7,7 +7,7 @@ source:
 audience:
 ---
 
-Справочник воронки: [[Posts/funnel/tofu|TOFU]] / [[Posts/funnel/mofu|MOFU]] / [[Posts/funnel/bofu|BOFU]]
+Справочник воронки: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 # Working Title
 
