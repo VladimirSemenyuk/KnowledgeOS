@@ -190,6 +190,24 @@ Main folders:
 
 Do not create new top-level folders unless explicitly requested.
 
+## Personal Positioning
+
+Work about the user's personal positioning belongs in `/Personal`.
+
+This includes:
+- personal expert positioning;
+- professional role and advisory stance;
+- personal value proposition;
+- positioning hypotheses, revisions, and strategic self-description.
+
+Use `Frameworks/marketing` as the source of marketing logic, GTM models, funnel logic, and public positioning models.
+
+Do not put working materials about personal positioning in `/Posts` or `/Frameworks` unless the user explicitly asks to create:
+- a public LinkedIn draft or publication artifact, which belongs in `/Posts`;
+- a reusable marketing model or framework, which belongs in `/Frameworks/marketing`.
+
+When preparing LinkedIn themes or drafts, connect personal positioning from `/Personal` with the models from `Frameworks/marketing`, while keeping the publishing workflow in `/Posts`.
+
 ## Frameworks Structure
 
 `/Frameworks` contains reusable intellectual property, source notes, and advisory models. Treat this folder as the system of record for repeatable concepts, not as a dumping ground for temporary research.

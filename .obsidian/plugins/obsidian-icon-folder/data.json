@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiPersonStanding",
       "LiTextSelect",
       "LiSpeech",
       "LiFileText",
-      "LiHeart",
-      "LiLightbulb"
+      "LiHeart"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [
@@ -65,7 +65,7 @@
   },
   "Clients": "LiFolders",
   "Frameworks": "LiLightbulb",
-  "Personal": "LiHeart",
+  "Personal": "LiPersonStanding",
   "Posts": "LiFileText",
   "Talks": "LiSpeech",
   "Templates": "LiTextSelect"

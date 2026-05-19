@@ -1,7 +1,7 @@
 ![[Vladimir-Semenyuk-Moyo-delo-zhizni.pdf]]
 
 Связи:
-- [[Personal/Кто я|Кто я]]
+- [[Personal/Context|Context]]
 - [[Personal/Цели 2026|Цели 2026]]
 
 # 1. Владимир Семенюк · Моё дело жизни
