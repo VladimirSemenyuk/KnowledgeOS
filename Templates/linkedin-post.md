@@ -7,7 +7,7 @@ source:
 audience: CEO / founder B2B tech или tech-enabled компании
 ---
 
-Справочник воронки: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
+Справочник воронки: [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 # Working Title
 

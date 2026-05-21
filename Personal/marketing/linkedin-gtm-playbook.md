@@ -1,5 +1,5 @@
 ---
-type: framework
+type: personal-positioning-rule
 source_type: pdf-playbook
 topic:
   - marketing

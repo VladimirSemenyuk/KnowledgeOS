@@ -67,7 +67,7 @@ Avoid:
 - `import-pdf-report` — превратить PDF-отчет в краткую русскоязычную source note для базы знаний: извлечь важные модели, цифры, графики, риски и advisory-выводы, затем проверить заметку против источника.
 - `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
 - `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
-- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
+- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
 
 Правила использования этих возможностей:
 
@@ -171,7 +171,7 @@ Keep English when translation would reduce precision, break source fidelity, or 
 - Technical and engineering abbreviations: `API`, `CI/CD`, `SLA`, `SLO`, `KPI`, `OKR`, `GDPR`.
 - AI and engineering terms without a stable Russian equivalent: `AI-native`, `agentic`, `prompt`, `LLM`, `RAG`.
 - Direct quotes, source terminology, and internal company language.
-- Public content funnel labels: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
+- Public content funnel labels: [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 When keeping an English term, do it intentionally and consistently. Do not leave English in Russian text by inertia.
 
@@ -199,14 +199,16 @@ This includes:
 - professional role and advisory stance;
 - personal value proposition;
 - positioning hypotheses, revisions, and strategic self-description.
+- personal advisory cases and proof materials, which belong in `/Personal/cases`.
+- positioning, GTM, LinkedIn funnel logic, and public expert packaging, which belong in `/Personal/marketing`.
 
-Use `Frameworks/marketing` as the source of marketing logic, GTM models, funnel logic, and public positioning models.
+Use `Personal/marketing` as the source of marketing logic, GTM thinking, LinkedIn funnel logic, and public positioning rules.
 
 Do not put working materials about personal positioning in `/Posts` or `/Frameworks` unless the user explicitly asks to create:
 - a public LinkedIn draft or publication artifact, which belongs in `/Posts`;
-- a reusable marketing model or framework, which belongs in `/Frameworks/marketing`.
+- a reusable advisory model unrelated to personal positioning, which belongs in the most specific `/Frameworks` area.
 
-When preparing LinkedIn themes or drafts, connect personal positioning from `/Personal` with the models from `Frameworks/marketing`, while keeping the publishing workflow in `/Posts`.
+When preparing LinkedIn themes or drafts, connect personal positioning from `/Personal` with the rules from `Personal/marketing`, while keeping the publishing workflow in `/Posts`.
 
 ## Frameworks Structure
 
@@ -216,8 +218,8 @@ Current framework areas:
 
 - `/Frameworks/ai-transformation` — AI transformation models, AI-native organization materials, internal developer platform notes, and source notes from AI/engineering reports. Keep original PDFs and source documents in `/Frameworks/ai-transformation/sources`.
 - `/Frameworks/governance` — management systems, decision systems, organizational operating models, architecture of manageability, quality and risks, systemic management, and related governance models. Use `/Frameworks/governance/sources` for source materials and `/Frameworks/governance/cobit` for COBIT-specific materials.
-- `/Frameworks/marketing` — public positioning and content strategy models that support advisory writing and LinkedIn planning.
-- `/Frameworks/marketing/linkedin-gtm-playbook` — LinkedIn GTM playbook and funnel-stage definitions for public content: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
+
+Marketing, public positioning, LinkedIn GTM, and funnel-stage definitions live in `/Personal/marketing`, because they are rules of personal positioning rather than reusable advisory frameworks.
 
 When creating or updating framework materials:
 

@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
+funnel: "[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
 status: published
 publish_date: 2022-10-09
 source: LinkedIn analytics import 2026-05-14

@@ -55,16 +55,18 @@
 
 ## Контентная логика
 
+Источник правил: [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]].
+
 Описание этапов:
-- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
-- [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
-- [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
+- [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
+- [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
+- [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 ## Ритм публикаций
 
-- Вторник: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]].
-- Среда: [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
-- Четверг: [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
+- Вторник: [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]].
+- Среда: [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
+- Четверг: [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 Минимальный ритм: 3 поста в неделю.
 

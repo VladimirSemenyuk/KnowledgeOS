@@ -60,13 +60,13 @@ Plan posts in series by default.
 Minimum series:
 - 1 week;
 - 3 posts;
-- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]];
+- [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]];
 - Monday, Wednesday, Friday rhythm.
 
 Before planning a week:
 - choose one primary series from `series-map.md`;
 - check whether an existing series should continue;
-- select one [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], one [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], and one [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]];
+- select one [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], one [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], and one [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]];
 - update `content-calendar.md` only after the sequence is coherent;
 - keep unused topics in `series-map.md` or `themes-backlog.md`.
 
@@ -85,14 +85,14 @@ Before adding or planning a topic, check:
 
 Acceptable reuse:
 - developing the same series on the next week;
-- moving from [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] observation to [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] framework;
-- moving from [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] framework to [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] advisory review;
+- moving from [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] observation to [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] framework;
+- moving from [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] framework to [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] advisory review;
 - returning to a theme through a different management object: CTO, EM, product, quality, data, AI adoption.
 
 Avoid:
 - same thesis with different wording;
 - same conflict without a new management conclusion;
-- repeated [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] offer without a new diagnostic angle;
+- repeated [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] offer without a new diagnostic angle;
 - several posts in a row about the same pain without funnel progression.
 
 ## Language
@@ -160,10 +160,12 @@ Final editorial pass will be added later.
 
 ## Funnel Logic
 
+Use `../Personal/marketing/linkedin-gtm-playbook.md` as the source of truth for LinkedIn funnel definitions.
+
 Always classify posts using the funnel notes:
-- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
-- [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
-- [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
+- [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
+- [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
+- [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 
 ## Topic Selection
 

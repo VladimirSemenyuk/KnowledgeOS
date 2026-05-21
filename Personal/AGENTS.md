@@ -29,7 +29,7 @@ When developing or reviewing positioning, evaluate it through:
 - link between expertise, offer, and business outcome;
 - fit with the user's actual experience, values, and advisory themes.
 
-Use `Frameworks/marketing` as the main source for marketing logic, GTM thinking, LinkedIn funnel logic, and positioning models.
+Use `Personal/marketing` as the main source for marketing logic, GTM thinking, LinkedIn funnel logic, and positioning rules.
 
 Read `Personal/Context.md` before creating or editing personal positioning materials.
 
@@ -57,4 +57,6 @@ Keep personal positioning drafts, hypotheses, notes, and revisions in `/Personal
 
 Move work to `/Posts` only when the user explicitly asks for a LinkedIn post, content plan, publication draft, or post backlog item.
 
-Move work to `/Frameworks/marketing` only when the user explicitly asks to create a reusable model, framework, or marketing system.
+Keep marketing, GTM, LinkedIn funnel logic, and public expert packaging in `/Personal/marketing`.
+
+Move work to `/Frameworks` only when the user explicitly asks to create a reusable advisory model that is independent of personal positioning.
