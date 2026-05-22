@@ -1,45 +1,46 @@
 ---
 name: transform-html-to-md
-description: Преобразование HTML-файла с транскрибацией встречи в transcript.md, создание папки встречи с корректной датой у правильного клиента или менти, нормализация имен спикеров с задвоенной первой буквой.
+description: Преобразование HTML- или TXT-файла с транскрибацией встречи в transcript.md, создание папки встречи с корректной датой у правильного клиента или менти, нормализация имен спикеров с задвоенной первой буквой.
 ---
 
-# Transform HTML To MD
+# Transform Transcript To MD
 
 ## Purpose
 
-Преобразовать HTML-файл с транскрибацией в Markdown и положить результат в правильную папку встречи:
+Преобразовать HTML- или TXT-файл с транскрибацией в Markdown и положить результат в правильную папку встречи:
 
 `Clients/.../{Менти}/Meetings/YYYY-MM-DD-meeting/transcript.md`
 
 ## When To Use
 
 Использовать, когда пользователь просит:
-- сделать Markdown из HTML-транскрибации;
-- импортировать transcript из `.html`;
+- сделать Markdown из HTML- или TXT-транскрибации;
+- импортировать transcript из `.html` или `.txt`;
 - создать папку встречи по дате;
 - разложить транскрипт по правильному менти.
 
 ## Inputs
 
-Обычно нужен один HTML-файл.
+Обычно нужен один HTML- или TXT-файл.
 
 Если пользователь не указал менти явно:
-- определить менти по содержимому HTML;
+- определить менти по содержимому файла;
 - затем сверить с существующими папками в `Clients`;
 - учитывать `Context.md`, `Contex.md` и `AGENTS.md` на пути клиента/менти.
 
 Если дата не указана явно:
-- искать дату в HTML;
+- искать дату в содержимом файла;
 - затем в имени файла;
 - использовать дату файловой системы только как fallback и сообщить об этом.
 
 ## Default Workflow
 
-1. Найти HTML-файл, если путь не дан явно.
+1. Найти HTML- или TXT-файл, если путь не дан явно.
 2. Запустить скрипт:
 
 ```bash
 python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py path/to/transcript.html
+python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py path/to/transcript.txt
 ```
 
 3. Проверить, что создан файл:
@@ -58,9 +59,10 @@ Clients/.../{Менти}/Meetings/YYYY-MM-DD-meeting/transcript.md
 
 ```bash
 python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.html
-python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.html --mentee "Юрий"
-python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.html --date 2026-05-13
-python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.html --output-dir "Clients/AgVend/Engineering Managers/Юрий"
+python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.txt
+python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.txt --mentee "Юрий"
+python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.txt --date 2026-05-13
+python3 .agents/skills/transform-html-to-md/scripts/transform_html_to_md.py INPUT.txt --output-dir "Clients/AgVend/Engineering Managers/Юрий"
 ```
 
 Use `--output-dir` when the mentee name is ambiguous across clients.

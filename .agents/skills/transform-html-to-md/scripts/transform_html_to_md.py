@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert an HTML meeting transcript into the vault transcript.md layout."""
+"""Convert an HTML or TXT meeting transcript into the vault transcript.md layout."""
 
 from __future__ import annotations
 
@@ -374,9 +374,27 @@ def render_markdown(mentee: str, date: str, turns: list[TranscriptTurn]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def extract_input_text(input_path: Path) -> tuple[str, str]:
+    raw = input_path.read_text(encoding="utf-8", errors="ignore")
+    if input_path.suffix.casefold() in {".html", ".htm"}:
+        extractor = TextExtractor()
+        extractor.feed(raw)
+        text = extractor.text()
+        if not text:
+            raise SystemExit("No transcript text found in HTML.")
+        return text, raw
+
+    text = raw.replace("\ufeff", "").replace("\xa0", " ")
+    lines = [re.sub(r"[ \t]+", " ", line).strip() for line in text.splitlines()]
+    text = "\n".join(line for line in lines if line)
+    if not text:
+        raise SystemExit("No transcript text found in input file.")
+    return text, raw
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("input", help="HTML transcript file")
+    parser.add_argument("input", help="HTML or TXT transcript file")
     parser.add_argument("--mentee", help="Mentee name, if not obvious")
     parser.add_argument("--date", help="Meeting date, e.g. 2026-05-13")
     parser.add_argument("--output-dir", help="Existing mentee directory relative to vault root")
@@ -391,12 +409,7 @@ def main() -> int:
     if not input_path.exists():
         raise SystemExit(f"Input file does not exist: {input_path}")
 
-    raw_html = input_path.read_text(encoding="utf-8", errors="ignore")
-    extractor = TextExtractor()
-    extractor.feed(raw_html)
-    text = extractor.text()
-    if not text:
-        raise SystemExit("No transcript text found in HTML.")
+    text, raw_input = extract_input_text(input_path)
 
     date, date_source = find_date(text, input_path, args.date)
     mentee_dir = find_mentee_dir(vault_root, text, args.mentee, args.output_dir)
@@ -406,9 +419,12 @@ def main() -> int:
     if output_path.exists() and not args.force:
         raise SystemExit(f"Output already exists: {output_path}\nRe-run with --force to overwrite.")
 
-    structured_extractor = StructuredTranscriptExtractor()
-    structured_extractor.feed(raw_html)
-    turns = merge_turns(structured_extractor.turns) or parse_turns(text)
+    structured_turns: list[TranscriptTurn] = []
+    if input_path.suffix.casefold() in {".html", ".htm"}:
+        structured_extractor = StructuredTranscriptExtractor()
+        structured_extractor.feed(raw_input)
+        structured_turns = structured_extractor.turns
+    turns = merge_turns(structured_turns) or parse_turns(text)
     markdown = render_markdown(mentee_dir.name, date, turns)
     meeting_dir.mkdir(parents=True, exist_ok=True)
     output_path.write_text(markdown, encoding="utf-8")
