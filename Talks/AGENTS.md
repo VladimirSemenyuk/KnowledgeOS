@@ -19,23 +19,12 @@ Talks are part of the repository's intellectual property and should preserve the
 
 # Core Principles
 
-Prefer:
+Use the root writing style. Local additions for talks:
 - clear executive framing;
-- systemic insight;
 - practical management implications;
-- role, process, governance, and operating model language;
 - concise slide-level structure;
 - strong transitions between sections;
-- reusable intellectual assets.
-
-Avoid:
-- motivational keynote tone;
-- startup hype;
-- generic AI enthusiasm;
-- generic consulting claims;
-- over-explaining obvious context;
-- engagement-bait hooks;
-- ungrounded predictions.
+- no generic AI enthusiasm, engagement-bait hooks, or ungrounded predictions.
 
 ---
 
@@ -96,24 +85,9 @@ Keep metadata factual and concise.
 
 Russian is preferred unless the talk context requires another language. Use the canonical language policy and glossary from the root `AGENTS.md`.
 
-For Russian talk materials:
-- write slide titles, theses, speaker notes, and conclusions in Russian by default;
-- keep English terms when they are event language, direct quotes, established technical terminology, or necessary for audience comprehension.
-
-Use:
-- short sections;
-- bullets;
-- slide-level headings;
-- timing markers;
-- explicit key thought per slide;
-- operational conclusions.
-
-Avoid:
-- decorative phrasing;
-- excessive rhetorical questions;
-- long paragraphs;
-- unexplained buzzwords;
-- vague statements like "AI changes everything".
+Local additions for talk materials:
+- use slide-level headings, timing markers, and one explicit key thought per slide;
+- avoid decorative phrasing, excessive rhetorical questions, long paragraphs, unexplained buzzwords, and vague statements like "AI changes everything".
 
 Each slide or section should have:
 - one key thought;

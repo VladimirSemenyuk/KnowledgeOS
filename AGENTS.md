@@ -49,6 +49,25 @@ Avoid:
 - Keep writing concise, structured, and executive-oriented.
 - Consider relevant `Context.md` files before creating, editing, or summarizing materials.
 
+## Context Efficiency
+
+Use the smallest reliable context set for the task.
+
+Default exclusions unless explicitly needed:
+- `.obsidian/`
+- `.git/`
+- `node_modules/`
+- `.DS_Store`
+- `package-lock.json`
+- raw Telegram JSON files in `Posts/research/telegram/raw/` and `Posts/research/telegram/normalized/`
+- PDF binaries in `sources/` when a processed Markdown note already exists
+
+Prefer indexes and search before opening many files:
+- use `rg` for anti-duplication and source discovery;
+- use `Posts/content-index.md` before scanning `Posts/drafts/` or `Posts/published/`;
+- use `Posts/research/high-performing-posts-index.md` before opening the full reference corpus;
+- open full source files only when writing, fact-checking, updating status, or resolving ambiguity.
+
 ## Instruction Hierarchy
 
 - Root `AGENTS.md` defines vault-wide rules.

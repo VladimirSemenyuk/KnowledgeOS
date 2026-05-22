@@ -19,7 +19,7 @@ Use this skill for:
 Before writing the final note, read:
 - `AGENTS.md`;
 - relevant `Context.md` files if the destination is inside `Posts/`, `Clients/`, or another context-heavy area;
-- nearby notes in the destination folder to match naming and style.
+- nearby Markdown notes in the destination folder to match naming and style. Prefer `rg --files` and open only notes with overlapping topic, source type, or naming pattern; do not open PDF binaries unless verifying the current source.
 
 Default destination for AI transformation / engineering management reports:
 
@@ -103,26 +103,16 @@ Required sections:
 - `Связанные заметки`;
 - `Источник`.
 
-Prefer:
-- Russian;
-- short sections;
-- bullets and tables;
-- Mermaid for decision flows, operating models, risk systems, and ROI logic;
-- Obsidian wikilinks for reusable concepts.
+Follow the root writing style and language policy.
 
-Russian language discipline:
-- write the final note in Russian by default;
-- translate source terms into precise Russian when possible;
-- keep English only for report titles, product names, company names, model names, direct quotes, metrics, and technical terms that lose precision in translation;
-- if an English source term is important, introduce it once in parentheses and then use the Russian term;
-- prefer `выводы`, `наблюдения`, `модель`, `рамка`, `процесс`, `зона ответственности`, `управленческий контур`, `операционная модель` over unnecessary English equivalents.
+Local additions:
+- use tables and Mermaid when they clarify decision flows, operating models, risk systems, or ROI logic;
+- preserve Obsidian wikilinks for reusable concepts;
+- keep report titles, product names, company names, model names, direct quotes, metrics, and technical terms in English when translation would reduce precision.
 
 Avoid:
 - raw OCR dumps;
 - long quotations;
-- motivational tone;
-- startup hype;
-- generic consulting language;
 - copying the report structure mechanically.
 
 ## Extraction Notes

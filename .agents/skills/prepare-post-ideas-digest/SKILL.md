@@ -1,6 +1,6 @@
 ---
 name: prepare-post-ideas-digest
-description: "Готовит чатовую сводку идей для LinkedIn-постов на основе последних актуальных client summary, Telegram digest и пользовательских источников. Использовать, когда пользователь просит найти, собрать, подготовить или показать идеи/темы для постов, пополнения Posts/themes-backlog.md, контентной воронки [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] или editorial planning без немедленного создания черновиков."
+description: "Готовит чатовую сводку идей для LinkedIn-постов на основе последних актуальных client summary, Telegram digest и пользовательских источников. Использовать, когда пользователь просит найти, собрать, подготовить или показать идеи/темы для постов, пополнения Posts/themes-backlog.md, контентной воронки [[Personal/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[Personal/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] или editorial planning без немедленного создания черновиков."
 ---
 
 # Prepare Post Ideas Digest
@@ -20,16 +20,12 @@ description: "Готовит чатовую сводку идей для LinkedI
 - `Posts/AGENTS.md`;
 - `Posts/Context.md`;
 - `Posts/themes-backlog.md`;
-- при необходимости `Posts/series-map.md`, `Posts/content-calendar.md`, `Posts/drafts/`, `Posts/published/` для анти-дублирования.
+- `Posts/content-index.md`, если существует;
+- `Posts/research/high-performing-posts-index.md`, если нужен выбор формата;
+- при необходимости `Posts/series-map.md`, `Posts/content-calendar.md`;
+- `Posts/drafts/`, `Posts/published/` и полный `Posts/research/high-performing-posts.md` открывать только для конкретных вероятных дублей или глубокого разбора.
 
-Соблюдать стиль vault:
-
-- русский язык;
-- executive-oriented;
-- системное мышление;
-- без мотивационного тона;
-- без generic consulting language;
-- без раскрытия клиентских деталей.
+Соблюдать корневой стиль vault. Локальное дополнение: не раскрывать клиентские детали.
 
 ## Source Selection
 
@@ -65,7 +61,7 @@ description: "Готовит чатовую сводку идей для LinkedI
 1. Определить режим источников: default, additional или replacement.
 2. Собрать список файлов-источников.
 3. Прочитать источники выборочно: искать управленческие напряжения, повторяющиеся паттерны, практические выводы, формулировки будущих постов.
-4. Проверить `Posts/themes-backlog.md`, `Posts/series-map.md`, `Posts/content-calendar.md`, `Posts/drafts/`, `Posts/published/` на явные дубли.
+4. Проверить `Posts/themes-backlog.md`, `Posts/content-index.md`, `Posts/series-map.md`, `Posts/content-calendar.md` на явные дубли. Для папок `Posts/drafts/` и `Posts/published/` сначала использовать `rg` по ключевым формулировкам; открывать только релевантные файлы.
 5. Отфильтровать идеи, которые:
    - раскрывают клиента, человека, внутреннюю ситуацию или конфиденциальные детали;
    - являются generic AI news без управленческого вывода;
@@ -90,9 +86,9 @@ description: "Готовит чатовую сводку идей для LinkedI
 
 Классифицировать каждую идею:
 
-- [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] — наблюдение, напряжение, рыночная ошибка, конфликт между heroics и architecture.
-- [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] — модель, фреймворк, чеклист, управленческий паттерн, decision flow, decomposition.
-- [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] — повод для advisory-диалога, диагностики, аудита или разбора ситуации.
+- [[Personal/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] — наблюдение, напряжение, рыночная ошибка, конфликт между heroics и architecture.
+- [[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] — модель, фреймворк, чеклист, управленческий паттерн, decision flow, decomposition.
+- [[Personal/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] — повод для advisory-диалога, диагностики, аудита или разбора ситуации.
 
 Если идея может работать на нескольких стадиях, выбрать основную и кратко указать альтернативу.
 
@@ -109,7 +105,7 @@ description: "Готовит чатовую сводку идей для LinkedI
 ```markdown
 ## Идея N. {короткий рабочий заголовок}
 
-- Воронка: [[Frameworks/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[Frameworks/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
+- Воронка: [[Personal/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]] / [[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]] / [[Personal/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]
 - Источники: `path/to/source.md`, `path/to/source.md`
 - Тезисы:
   - ...

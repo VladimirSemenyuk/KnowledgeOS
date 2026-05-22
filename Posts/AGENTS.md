@@ -18,8 +18,10 @@ Use files by role:
 - `themes-backlog.md` – raw observations, funnel topics, tensions, client-derived insights.
 - `series-map.md` – weekly series, funnel sequencing, anti-duplication logic.
 - `content-calendar.md` – dates, funnel type, topic, status, links.
+- `content-index.md` – compact index of drafts and published posts for anti-duplication.
 - `drafts/` – posts being prepared.
 - `published/` – posts already published.
+- `research/high-performing-posts-index.md` – compact pattern index.
 - `research/high-performing-posts.md` – proven patterns and reference corpus.
 
 Default workflow:
@@ -28,8 +30,10 @@ Default workflow:
 3. Check `themes-backlog.md` for available topic raw material.
 4. Check `series-map.md` for current or future series.
 5. Check `content-calendar.md` for planned dates and status.
-6. Check `drafts/` and `published/` to avoid repeating posts.
-7. Use `research/high-performing-posts.md` for patterns, not for copying wording.
+6. Check `content-index.md` to avoid repeating posts.
+7. Use `research/high-performing-posts-index.md` for pattern selection.
+
+Open `drafts/`, `published/`, or the full `research/high-performing-posts.md` only when the compact indexes are insufficient, when updating a specific post, or when the user asks for deeper analysis.
 
 Do not use `content-calendar.md` as a backlog.
 Do not use `themes-backlog.md` as a publishing plan.
@@ -80,8 +84,8 @@ Before adding or planning a topic, check:
 - `content-calendar.md`;
 - `series-map.md`;
 - `themes-backlog.md`;
-- `drafts/`;
-- `published/`.
+- `content-index.md`;
+- `drafts/` or `published/` only for specific likely duplicates found through the index or `rg`.
 
 Acceptable reuse:
 - developing the same series on the next week;
@@ -99,27 +103,14 @@ Avoid:
 
 Russian is preferred unless explicitly requested otherwise. Use the canonical language policy and glossary from the root `AGENTS.md`.
 
-For Russian LinkedIn posts:
-- keep English terms only when they are intentionally used as part of the author's positioning, source fidelity, or public content format;
-- apply the glossary especially strictly to casual `insights`, `action items`, `framework`, `workflow`, and `ownership`.
+Local addition: apply the glossary especially strictly to casual `insights`, `action items`, `framework`, `workflow`, and `ownership`.
 
 ## Style
 
-Use:
-- clear systemic thinking;
-- concise executive language;
-- short paragraphs;
-- analytical tension;
-- operational conclusions.
-
-Avoid:
-- motivational tone;
-- startup hype;
-- engagement bait;
-- generic consulting language;
-- emojis;
-- excessive explanations.
-- the word "разрыв" in LinkedIn posts.
+Use the root writing style. Local additions for LinkedIn:
+- no engagement bait;
+- no emojis;
+- avoid the word "разрыв" in posts.
 
 Punctuation:
 - prefer "–" over the long dash in LinkedIn posts.
@@ -196,7 +187,7 @@ Reject or reframe ideas that:
 ## High-Performing Reference Corpus
 
 Before planning, drafting, or editing LinkedIn posts, consider:
-- `Posts/research/high-performing-posts.md`
+- `Posts/research/high-performing-posts-index.md`
 
 Use it to:
 - identify topics and formats that already generated reach, comments, and strategic signal;
@@ -204,6 +195,8 @@ Use it to:
 - compare new ideas against posts that already worked;
 - plan content around repeatable patterns, not isolated lucky posts;
 - preserve advisory positioning while improving performance.
+
+Open `Posts/research/high-performing-posts.md` only when a full example or detailed teardown is needed.
 
 When planning the content calendar:
 - include successful patterns from the reference corpus as one input into topic selection;
