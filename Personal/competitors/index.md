@@ -6,6 +6,9 @@
 - [[Personal/Context|Позиционирование]]
 - [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]]
 
+Карточки конкурентов:
+- [[Personal/competitors/jaymin-west-consulting|Jaymin West Consulting]]
+
 ## Зачем отслеживать
 
 - Понять, в какой категории меня считывает рынок.
@@ -94,4 +97,3 @@ Executive coaches, management consultants, product / engineering coaches, AI imp
 - Какие слова рынка стоит использовать, потому что они уже понятны покупателю?
 - Какие слова стоит избегать, потому что они делают позиционирование generic?
 - Где моя сильная территория: AI-инструменты, engineering coaching или архитектура управляемости?
-
