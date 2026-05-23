@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
-status: ready
+status: published
 publish_date: 2026-05-21
 source:
   - "[[Talks/2026-06-06-techrec/talk-outline]]"

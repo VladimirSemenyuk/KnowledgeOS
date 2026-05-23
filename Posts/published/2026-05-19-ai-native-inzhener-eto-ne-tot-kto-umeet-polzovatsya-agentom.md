@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
-status: ready
+status: published
 publish_date: 2026-05-19
 source:
   - "[[Clients/AgVend/Engineering Managers/Андрей/Meetings/2026-05-14-meeting/summary]]"
