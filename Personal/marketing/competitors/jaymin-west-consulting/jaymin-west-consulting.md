@@ -33,7 +33,7 @@
 
 ## Синтез источника
 
-- [[Personal/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
 - Книга подтверждает, что рынок уже формирует практическую дисциплину agentic engineering: контекст, спецификации, harness, инструменты, quality gates, evaluation, безопасность и multi-agent operations.
 - Использовать книгу не как источник собственных формулировок, а как карту нижнего технического слоя. Мой слой выше: операционная модель, роли, ответственность, качество, риски, decision systems и управленческий контур AI-native engineering.
 

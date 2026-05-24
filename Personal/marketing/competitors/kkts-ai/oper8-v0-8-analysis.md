@@ -10,8 +10,8 @@
 
 Источник:
 
-- [[Personal/competitors/kkts-ai/sources/Oper8_v0_8_AI_процессы_которые_учатся_с_каждым_клиентом.pdf|Oper8 v0.8: AI-процессы, которые учатся с каждым клиентом]]
-- [[Personal/competitors/kkts-ai/kkts-ai|Кактус.AI / KKTS.AI]]
+- [[Personal/marketing/competitors/kkts-ai/sources/Oper8_v0_8_AI_процессы_которые_учатся_с_каждым_клиентом.pdf|Oper8 v0.8: AI-процессы, которые учатся с каждым клиентом]]
+- [[Personal/marketing/competitors/kkts-ai/kkts-ai|Кактус.AI / KKTS.AI]]
 
 Правило использования:
 

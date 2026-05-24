@@ -14,17 +14,17 @@
 
 Источники:
 
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/README|Agentic Engineering Book]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/TABLE_OF_CONTENTS|Table of Contents]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/1-foundations/1-twelve-leverage-points|Twelve Leverage Points of Agentic Coding]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/6-harnesses/4-harness-as-control-system|Harness as Control System]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/6-harnesses/6-security-permissions-trust|Security, Permissions, and Trust]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/2-evaluation|Evaluation]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/5-workflow-coordination|Workflow Coordination for Agents]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/7-operating-agent-swarms|Operating Agent Swarms]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/3-specs-as-source-code|Specs as Source Code]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/4-context-as-code|Context as Code]]
-- [[Personal/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/6-design-as-bottleneck|Design as Bottleneck]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/README|Agentic Engineering Book]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/TABLE_OF_CONTENTS|Table of Contents]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/1-foundations/1-twelve-leverage-points|Twelve Leverage Points of Agentic Coding]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/6-harnesses/4-harness-as-control-system|Harness as Control System]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/6-harnesses/6-security-permissions-trust|Security, Permissions, and Trust]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/2-evaluation|Evaluation]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/5-workflow-coordination|Workflow Coordination for Agents]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/8-practices/7-operating-agent-swarms|Operating Agent Swarms]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/3-specs-as-source-code|Specs as Source Code]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/4-context-as-code|Context as Code]]
+- [[Personal/marketing/competitors/jaymin-west-consulting/sources/agentic-engineering-book-main/chapters/9-mental-models/6-design-as-bottleneck|Design as Bottleneck]]
 
 ## Главный вывод
 
