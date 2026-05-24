@@ -28,4 +28,5 @@
 
 ## Карточки лидов
 
+- [[sergey-polyakov-marfatech|Сергей Поляков — Marfatech]]
 - [[Templates/marketing/lead-card.template|шаблону карточки лида]]
