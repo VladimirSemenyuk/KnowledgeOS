@@ -1,0 +1,13 @@
+{
+  "name": "apply-typograf-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typograf": "node scripts/apply_typograf.mjs",
+    "check": "node --check scripts/apply_typograf.mjs"
+  },
+  "dependencies": {
+    "typograf": "7.7.0"
+  }
+}

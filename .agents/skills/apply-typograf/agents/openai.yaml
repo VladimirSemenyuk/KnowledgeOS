@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apply Typograf"
+  short_description: "Run Typograf on Markdown or text files"
+  default_prompt: "Use $apply-typograf to typographically clean up this Markdown file or folder."

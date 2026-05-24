@@ -87,6 +87,7 @@ Prefer indexes and search before opening many files:
 - `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
 - `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
 - `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
+- `apply-typograf` — запускать npm-пакет `typograf` по выбранному Markdown/TXT-файлу или папке, предварительно проверять dry-run и сохранять Markdown-разметку, Obsidian wikilinks, ссылки, кодовые блоки и frontmatter.
 
 Правила использования этих возможностей:
 
