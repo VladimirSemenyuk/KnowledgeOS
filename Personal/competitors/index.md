@@ -10,6 +10,8 @@
 - [[Personal/competitors/jaymin-west-consulting/jaymin-west-consulting|Jaymin West Consulting]]
   - [[Personal/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
 - [[Personal/competitors/kkts-ai/kkts-ai|Кактус.AI / KKTS.AI]]
+  - [[Personal/competitors/kkts-ai/oper8-v0-8-analysis|Oper8 v0.8 — разбор конкурентного лид-магнита]]
+  - [[Personal/competitors/kkts-ai/oper8-v0-8-book/index|Oper8 v0.8 — Markdown-версия книги]]
 
 ## Зачем отслеживать
 
