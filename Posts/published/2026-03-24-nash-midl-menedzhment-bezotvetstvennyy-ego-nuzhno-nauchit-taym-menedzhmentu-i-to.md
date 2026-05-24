@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: published
 publish_date: 2026-03-24
 source: LinkedIn analytics import 2026-05-14
@@ -45,12 +45,12 @@ Engineering Managers: «Не справляюсь. Пытаюсь решать �
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 2129
-- Reactions: 24
-- Comments: 9
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 25
+- Реакции: 24
+- Комментарии: 9
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

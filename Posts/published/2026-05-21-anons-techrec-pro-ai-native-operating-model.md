@@ -1,8 +1,10 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
 status: published
 publish_date: 2026-05-21
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7463175526611021824/
+linkedin_activity_id: "7463175526611021824"
 source:
   - "[[Talks/2026-06-06-techrec/talk-outline]]"
   - "[[Talks/2026-06-06-techrec/raw-info]]"
@@ -47,6 +49,15 @@ AI-native организация – это не сумма внедренных
 В качестве основы будет взят мой опыт работы с клиентами из США и Израиля. Рассмотрим как меняются роли руководителей, инженеров и даже целых отделов. И за счет чего удается перейти от использования AI-инструментария к AI-native работе.
 
 Если будете на TechRec – подключайтесь.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 306
+- Реакции: 5
+- Комментарии: 0
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

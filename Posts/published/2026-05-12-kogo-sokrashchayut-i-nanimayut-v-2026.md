@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-05-12
 source: LinkedIn analytics import 2026-05-14
@@ -36,12 +36,12 @@ SRE. Их довольно активно нанимают. ФОТ на эксп
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 1173
-- Reactions: 14
-- Comments: 4
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 3116
+- Реакции: 24
+- Комментарии: 10
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

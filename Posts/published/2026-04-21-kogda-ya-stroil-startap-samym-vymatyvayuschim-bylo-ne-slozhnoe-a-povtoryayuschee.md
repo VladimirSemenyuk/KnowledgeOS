@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
 status: published
 publish_date: 2026-04-21
 source: LinkedIn analytics import 2026-05-14
@@ -57,12 +57,12 @@ linkedin_activity_id: "7452244713530830849"
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 1689
-- Reactions: 20
-- Comments: 2
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 517
+- Реакции: 20
+- Комментарии: 2
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

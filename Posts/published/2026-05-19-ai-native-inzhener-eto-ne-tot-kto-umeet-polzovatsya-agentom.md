@@ -1,8 +1,10 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-05-19
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7462389134062444544/
+linkedin_activity_id: "7462389134062444544"
 source:
   - "[[Clients/AgVend/Engineering Managers/Андрей/Meetings/2026-05-14-meeting/summary]]"
   - "[[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-06-meeting/summary]]"
@@ -64,6 +66,15 @@ AI начал разворачивать процесс обратно.
 
 А вы уже задаёте этот вопрос своим кандидатам, или всё ещё нанимаете под конвейер?
 
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 708
+- Реакции: 4
+- Комментарии: 0
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

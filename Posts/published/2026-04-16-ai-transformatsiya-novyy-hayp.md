@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-04-16
 source: LinkedIn analytics import 2026-05-14
@@ -46,12 +46,12 @@ AI-трансформация – новый хайп?
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 1727
-- Reactions: 9
-- Comments: 8
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 308
+- Реакции: 9
+- Комментарии: 8
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

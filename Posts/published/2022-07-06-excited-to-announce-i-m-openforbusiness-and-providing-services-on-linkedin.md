@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
 status: published
 publish_date: 2022-07-06
 source: LinkedIn analytics import 2026-05-14
@@ -21,12 +21,12 @@ Excited to announce I’m #OpenForBusiness and providing services on LinkedIn. C
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 21
-- Reactions: 3
-- Comments: 0
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 2
+- Реакции: 3
+- Комментарии: 0
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

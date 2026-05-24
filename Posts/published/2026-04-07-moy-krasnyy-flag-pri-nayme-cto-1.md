@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: published
 publish_date: 2026-04-07
 source: LinkedIn analytics import 2026-05-14
@@ -46,12 +46,12 @@ CTO – потому что не фокусируется на том, что к
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 17258
-- Reactions: 75
-- Comments: 79
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 339
+- Реакции: 75
+- Комментарии: 79
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

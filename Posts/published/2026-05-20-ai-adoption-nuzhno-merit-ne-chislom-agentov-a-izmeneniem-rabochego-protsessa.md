@@ -1,8 +1,10 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: published
 publish_date: 2026-05-20
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7462751513547825152/
+linkedin_activity_id: "7462751513547825152"
 source:
   - "[[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-06-meeting/summary]]"
   - "[[Clients/AgVend/Engineering Managers/Юрий/Meetings/2026-05-13-meeting/summary]]"
@@ -79,8 +81,17 @@ Delivery и качество, при этом, никак не изменят�
 
 Какими метриками измеряете AI-внедрение вы?
 
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 1192
+- Реакции: 6
+- Комментарии: 10
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+
 ## Notes
 
-- Выкладка запланирована на 2026-05-20, среда, [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
+- Выкладка запланирована на 2026-05-20, среда, [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]].
 - Можно добавить мини-рамку: activity metrics / behavior metrics / system metrics.
 - Важно не раскрывать клиентские детали, оставить как обобщенный управленческий паттерн.

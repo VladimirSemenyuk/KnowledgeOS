@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: published
 publish_date: 2026-04-14
 source: LinkedIn analytics import 2026-05-14
@@ -46,12 +46,12 @@ linkedin_activity_id: "7449713290294837248"
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 2538
-- Reactions: 12
-- Comments: 9
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 173
+- Реакции: 12
+- Комментарии: 9
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

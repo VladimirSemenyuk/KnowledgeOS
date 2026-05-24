@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-03-12
 source: LinkedIn analytics import 2026-05-14
@@ -45,12 +45,12 @@ OpenAI меняет условия, поднимает цены, огранич�
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 3837
-- Reactions: 18
-- Comments: 37
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 38
+- Реакции: 18
+- Комментарии: 37
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 

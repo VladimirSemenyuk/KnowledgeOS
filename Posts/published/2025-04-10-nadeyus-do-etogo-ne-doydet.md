@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]"
+funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2025-04-10
 source: LinkedIn analytics import 2026-05-14
@@ -47,12 +47,12 @@ linkedin_activity_id: "7316037334024564736"
 
 ## Analytics
 
-- Period: last 365 days
-- Impressions: 288
-- Reactions: 56
-- Comments: 20
-- Source page: LinkedIn Creator Analytics / Top posts / Impressions
-- Captured at: 2026-05-14
+- Период: последние 28 дней
+- Дата сбора: 2026-05-24
+- Показы: 5
+- Реакции: 56
+- Комментарии: 20
+- Источник: LinkedIn Creator Analytics / Top posts / Impressions
 
 ## Notes
 
