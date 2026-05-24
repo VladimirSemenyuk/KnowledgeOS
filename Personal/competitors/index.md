@@ -7,7 +7,9 @@
 - [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]]
 
 Карточки конкурентов:
-- [[Personal/competitors/jaymin-west-consulting|Jaymin West Consulting]]
+- [[Personal/competitors/jaymin-west-consulting/jaymin-west-consulting|Jaymin West Consulting]]
+  - [[Personal/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
+- [[Personal/competitors/kkts-ai/kkts-ai|Кактус.AI / KKTS.AI]]
 
 ## Зачем отслеживать
 
@@ -41,7 +43,7 @@ Executive coaches, management consultants, product / engineering coaches, AI imp
 
 ### 1. Вести карточки конкурентов
 
-На каждого значимого игрока создавать отдельную заметку по шаблону [[Personal/competitors/template|Карточка конкурента]].
+На каждого значимого игрока создавать отдельную папку с карточкой конкурента по шаблону [[Templates/template|Карточка конкурента]] и подпапкой `sources`.
 
 Минимальный набор:
 - кто покупатель;

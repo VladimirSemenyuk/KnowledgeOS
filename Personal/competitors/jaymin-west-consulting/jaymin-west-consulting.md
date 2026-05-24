@@ -31,6 +31,12 @@
 - **Публичные артефакты:** личный сайт, GitHub-проекты, YouTube, free online book по agentic engineering.
 - **Сигналы доверия:** hands-on builder profile, acquired startup, open-source / tooling артефакты, конкретный язык про Claude Code и AI agents.
 
+## Синтез источника
+
+- [[Personal/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
+- Книга подтверждает, что рынок уже формирует практическую дисциплину agentic engineering: контекст, спецификации, harness, инструменты, quality gates, evaluation, безопасность и multi-agent operations.
+- Использовать книгу не как источник собственных формулировок, а как карту нижнего технического слоя. Мой слой выше: операционная модель, роли, ответственность, качество, риски, decision systems и управленческий контур AI-native engineering.
+
 ## Сильные стороны
 
 - Очень понятная инженерная категория: agentic engineering, AI agents, Claude Code, multi-agent workflows.
