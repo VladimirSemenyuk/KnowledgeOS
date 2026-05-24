@@ -86,7 +86,7 @@
 - [[Posts/series-map|series map]]
 - [[Posts/metrics|metrics]]
 - [[Posts/research/high-performing-posts|high-performing posts]]
-- [[Templates/linkedin-post|LinkedIn post template]]
+- [[Templates/posts/linkedin-post.template|LinkedIn post template]]
 
 ## Критерии сильной темы
 

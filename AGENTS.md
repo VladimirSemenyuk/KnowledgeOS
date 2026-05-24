@@ -224,6 +224,10 @@ This includes:
 
 Use `Personal/marketing` as the source of marketing logic, GTM thinking, LinkedIn funnel logic, and public positioning rules.
 
+Use `/Personal/marketing/competitors` for competitive analysis connected to positioning, category definition, offer language, GTM logic, and LinkedIn angles.
+
+Keep `/Personal/cases` as the place for personal advisory cases and proof materials.
+
 Do not put working materials about personal positioning in `/Posts` or `/Frameworks` unless the user explicitly asks to create:
 - a public LinkedIn draft or publication artifact, which belongs in `/Posts`;
 - a reusable advisory model unrelated to personal positioning, which belongs in the most specific `/Frameworks` area.
@@ -282,6 +286,10 @@ Use:
 - kebab-case filenames
 - concise note titles
 - atomic notes
+
+Navigation files for folders should be named `_index.md`.
+
+User-facing Obsidian templates should live in `/Templates` and use the suffix `.template.md`, for example `lead-card.template.md`. Technical templates inside `.agents/skills/...` belong to workflow automation and should not be moved for this rule alone.
 
 Avoid:
 - FINAL_v2_FINAL naming

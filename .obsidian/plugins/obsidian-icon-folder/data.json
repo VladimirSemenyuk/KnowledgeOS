@@ -15,32 +15,46 @@
     "recentlyUsedIconsSize": 5,
     "rules": [
       {
-        "rule": "AGENTS.md",
+        "rule": "AGENTS.md$",
         "icon": "LiFileCog",
-        "for": "everything",
+        "for": "files",
         "order": 0,
         "color": "#d17cf8"
       },
       {
         "rule": "(?<!AGENTS)\\.md$",
         "icon": "LiFile",
-        "for": "everything",
+        "for": "files",
         "order": 1,
-        "useFilePath": true
+        "useFilePath": false
       },
       {
-        "rule": "Context.md",
+        "rule": "_index.md$",
+        "icon": "LiFileText",
+        "for": "files",
+        "order": 2
+      },
+      {
+        "rule": "Context.md$",
         "icon": "LiFileQuestionMark",
-        "for": "everything",
-        "order": 2,
+        "for": "files",
+        "order": 3,
         "color": "#0099ff"
       },
       {
         "rule": ".pdf$",
         "icon": "LiFileBadge",
         "for": "files",
-        "order": 3,
+        "order": 4,
         "color": "#e94957"
+      },
+      {
+        "rule": ".template.md$",
+        "icon": "LiTextSelect",
+        "for": "files",
+        "order": 5,
+        "color": "#49bc7a",
+        "useFilePath": false
       }
     ],
     "extraMargin": {
