@@ -25,5 +25,5 @@
 | 2026-05-19 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | AI-native инженер – это не тот, кто умеет пользоваться агентом | published | [[2026-05-19-ai-native-inzhener-eto-ne-tot-kto-umeet-polzovatsya-agentom]] |
 | 2026-05-20 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | AI adoption нужно мерить не числом агентов, а изменением рабочего процесса | published | [[2026-05-20-ai-adoption-nuzhno-merit-ne-chislom-agentov-a-izmeneniem-rabochego-protsessa]] |
 | 2026-05-21 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Анонс TechRec про AI-native operating model | published | [[2026-05-21-anons-techrec-pro-ai-native-operating-model]] |
-| 2026-05-25 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Knowledge Layer – главный актив организации | ready | [[2026-05-25-knowledge-layer-glavnyy-aktiv]] |
+| 2026-05-25 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Knowledge Layer – главный актив организации | published | [[2026-05-25-knowledge-layer-glavnyy-aktiv]] |
 | 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Кейс: реорганизация RnD в E-Com | draft | [[2026-05-29-reorganizatsiya-rnd-v-ecom]] |

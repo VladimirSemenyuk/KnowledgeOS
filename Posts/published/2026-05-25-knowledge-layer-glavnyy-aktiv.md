@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
-status: ready
+status: published
 publish_date: 2026-05-25
 source:
   - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-analysis]]"
@@ -12,6 +12,8 @@ source:
   - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/10-pamyat-chto-reshili-pochemu-i-okazalos-li-vernym|Память: что решили, почему и оказалось ли верным]]"
   - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/15-roli-kto-za-chto-otvechaet|Роли: кто за что отвечает]]"
 audience: "[[Personal/Context#ICP]]"
+linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BB%D1%8E%D0%B4%D0%B8-%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5-%D0%BD%D0%B5%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%86%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-share-7464407429452300289-HjJ5/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA8nDpgBmZtKKo4OaIMNbZ6JCzCNKusmkQQ
+linkedin_activity_id: "7464574755766190083"
 ---
 
 # Knowledge Layer – главный актив организации
