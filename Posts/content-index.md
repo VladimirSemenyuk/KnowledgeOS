@@ -6,6 +6,7 @@
 
 | Date | Funnel | Status | Post |
 |---|---|---|---|
+| 2026-05-27 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | ready | [[2026-05-27-pochemu-ii-uskorit-haos-i-upravlencheskiy-dolg-v-vashey-organizatsii\|Почему ИИ ускорит хаос и управленческий долг в вашей организации]] |
 | 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | draft | [[2026-05-29-reorganizatsiya-rnd-v-ecom\|Кейс: реорганизация RnD в E-Com]] |
 
 ## Published Posts
