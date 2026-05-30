@@ -2,6 +2,10 @@
 
 Материалы про AI-трансформацию, AI-native organization, internal developer platform и управляемое внедрение AI в engineering и продукте.
 
+## Разделы
+
+- [[Frameworks/ai-transformation/ai-pdlc/_index|AI PDLC]]
+
 ## Основные заметки
 
 - [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
