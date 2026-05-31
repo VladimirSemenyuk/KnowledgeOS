@@ -58,11 +58,11 @@ Vladimir Semenyuk: Ah, no dream. cut with the cover in your road map. Mhm
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-05-24
-- Показы: 49
+- Дата сбора: 2026-05-31
+- Показы: 17
 - Реакции: 24
 - Комментарии: 26
-- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+- Источник: LinkedIn Creator Analytics
 
 ## Notes
 

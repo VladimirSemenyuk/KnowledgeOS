@@ -1,10 +1,12 @@
 ---
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
-status: ready
+status: published
 publish_date: 2026-05-29
 source: "[[Personal/cases/reorganizatsiya-rnd-v-ecom]]"
 audience: "[[Personal/Context#ICP]]"
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7466020751020580864/
+linkedin_activity_id: "7466020751020580864"
 ---
 
 # Кейс: реорганизация RnD в E-Com
@@ -84,3 +86,12 @@ Head of R&D в E-Com работал почти полностью в ручн
 - Перед публикацией решить, нужно ли усиливать CEO-level адресацию в CTA или оставить более широкий вариант «компаниям и лидерам».
 - Перед публикацией проверить новый факт из драфта: повышение до Director of RnD и переход QA / SRE в зону ответственности.
 - Пост не делает AI явной темой, но поддерживает базовый proof про управляемость инженерной организации.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-31
+- Показы: 424
+- Реакции: 3
+- Комментарии: 3
+- Источник: LinkedIn Creator Analytics

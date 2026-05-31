@@ -53,11 +53,11 @@ AI-native организация – это не сумма внедренных
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-05-24
-- Показы: 306
+- Дата сбора: 2026-05-31
+- Показы: 392
 - Реакции: 5
 - Комментарии: 0
-- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+- Источник: LinkedIn Creator Analytics
 
 ## Notes
 

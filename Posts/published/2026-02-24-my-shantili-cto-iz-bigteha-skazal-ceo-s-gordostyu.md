@@ -45,11 +45,11 @@ CTO – на вопрос «зачем и во что это обойдётся 
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-05-24
-- Показы: 40
+- Дата сбора: 2026-05-31
+- Показы: 23
 - Реакции: 252
 - Комментарии: 73
-- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+- Источник: LinkedIn Creator Analytics
 
 ## Notes
 

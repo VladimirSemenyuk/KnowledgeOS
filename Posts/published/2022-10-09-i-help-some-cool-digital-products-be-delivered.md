@@ -24,11 +24,11 @@ I help some cool digital products be delivered. So I'm looking for #Go, #Ruby, #
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-05-24
-- Показы: 2
+- Дата сбора: 2026-05-31
+- Показы: 1
 - Реакции: 26
 - Комментарии: 1
-- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+- Источник: LinkedIn Creator Analytics
 
 ## Notes
 

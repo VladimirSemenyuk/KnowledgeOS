@@ -26,5 +26,13 @@
 | 2026-05-20 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | AI adoption нужно мерить не числом агентов, а изменением рабочего процесса | published | [[2026-05-20-ai-adoption-nuzhno-merit-ne-chislom-agentov-a-izmeneniem-rabochego-protsessa]] |
 | 2026-05-21 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Анонс TechRec про AI-native operating model | published | [[2026-05-21-anons-techrec-pro-ai-native-operating-model]] |
 | 2026-05-25 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Knowledge Layer – главный актив организации | published | [[2026-05-25-knowledge-layer-glavnyy-aktiv]] |
-| 2026-05-27 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | Почему ИИ ускорит хаос и управленческий долг в вашей организации | ready | [[2026-05-27-pochemu-ii-uskorit-haos-i-upravlencheskiy-dolg-v-vashey-organizatsii]] |
-| 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Кейс: реорганизация RnD в E-Com | draft | [[2026-05-29-reorganizatsiya-rnd-v-ecom]] |
+| 2026-05-27 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | Почему ИИ ускорит хаос и управленческий долг в вашей организации | published | [[2026-05-27-pochemu-ii-uskorit-haos-i-upravlencheskiy-dolg-v-vashey-organizatsii]] |
+| 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Кейс: реорганизация RnD в E-Com | published | [[2026-05-29-reorganizatsiya-rnd-v-ecom]] |
+
+## June 2026
+
+| Date | Type | Topic | Status | Link |
+|---|---|---|---|---|
+| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Апокалипсис увольнений отменяется? | draft | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya]] |
+| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | Чеклист AI-native PDLC для CEO / CTO | draft | [[2026-06-03-cheklist-ai-native-pdlc-dlya-ceo-cto]] |
+| 2026-06-05 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Слабое место AI adoption остается управленческим | draft | [[2026-06-05-slaboe-mesto-ai-adoption-ostaetsya-upravlencheskim]] |

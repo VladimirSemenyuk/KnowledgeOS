@@ -12,7 +12,7 @@ source:
   - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/10-pamyat-chto-reshili-pochemu-i-okazalos-li-vernym|Память: что решили, почему и оказалось ли верным]]"
   - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/15-roli-kto-za-chto-otvechaet|Роли: кто за что отвечает]]"
 audience: "[[Personal/Context#ICP]]"
-linkedin_url: https://www.linkedin.com/posts/vladimir-semenyuk_%D0%BB%D1%8E%D0%B4%D0%B8-%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5-%D0%BD%D0%B5%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%86%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-share-7464407429452300289-HjJ5/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAA8nDpgBmZtKKo4OaIMNbZ6JCzCNKusmkQQ
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7464574755766190083/
 linkedin_activity_id: "7464574755766190083"
 ---
 
@@ -106,3 +106,12 @@ AI поменял это уравнение. Доступ к внешним з
 - Не копировать примеры «ФудПро», названия `Oper8`, структуру методики и фирменную механику подачи.
 - Риск: хук может прозвучать антигуманно. Черновик должен сразу переопределять тезис: люди остаются важны, но ценность смещается от информационной монополии к способности строить и обновлять систему знания.
 - Перед публикацией решить, нужна ли внешняя ссылка / цифра про увольнения или лучше оставить наблюдение без числовой привязки.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-31
+- Показы: 6930
+- Реакции: 19
+- Комментарии: 33
+- Источник: LinkedIn Creator Analytics

@@ -47,11 +47,11 @@ AI-трансформация – новый хайп?
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-05-24
-- Показы: 308
+- Дата сбора: 2026-05-31
+- Показы: 100
 - Реакции: 9
 - Комментарии: 8
-- Источник: LinkedIn Creator Analytics / Top posts / Impressions
+- Источник: LinkedIn Creator Analytics
 
 ## Notes
 

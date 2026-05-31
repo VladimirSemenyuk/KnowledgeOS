@@ -1,10 +1,12 @@
 ---
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
-status: ready
+status: published
 publish_date: 2026-05-27
 source: user тезисы, 2026-05-25
 audience: CEO / founder B2B tech или tech-enabled компании
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7465291975299321856/
+linkedin_activity_id: "7465291975299321856"
 ---
 
 # Почему ИИ ускорит хаос и управленческий долг в вашей организации
@@ -78,3 +80,12 @@ audience: CEO / founder B2B tech или tech-enabled компании
 - Запланировано как MOFU-пост на 2026-05-27.
 - Основная рамка: порог зрелости как ноль на координатной оси.
 - Риск: сделать пост слишком абстрактным. При редактуре можно добавить короткий пример из процесса: support, продуктовая спецификация, delivery или управленческая отчетность.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-05-31
+- Показы: 423
+- Реакции: 9
+- Комментарии: 3
+- Источник: LinkedIn Creator Analytics

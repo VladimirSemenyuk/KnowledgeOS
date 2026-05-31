@@ -6,8 +6,9 @@
 
 | Date | Funnel | Status | Post |
 |---|---|---|---|
-| 2026-05-27 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | ready | [[2026-05-27-pochemu-ii-uskorit-haos-i-upravlencheskiy-dolg-v-vashey-organizatsii\|Почему ИИ ускорит хаос и управленческий долг в вашей организации]] |
-| 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | draft | [[2026-05-29-reorganizatsiya-rnd-v-ecom\|Кейс: реорганизация RnD в E-Com]] |
+| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | draft | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya\|Апокалипсис увольнений отменяется?]] |
+| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | draft | [[2026-06-03-cheklist-ai-native-pdlc-dlya-ceo-cto\|Чеклист AI-native PDLC для CEO / CTO]] |
+| 2026-06-05 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | draft | [[2026-06-05-slaboe-mesto-ai-adoption-ostaetsya-upravlencheskim\|Слабое место AI adoption остается управленческим]] |
 
 ## Published Posts
 
@@ -48,6 +49,8 @@
 | 2026-05-20 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | [[2026-05-20-ai-adoption-nuzhno-merit-ne-chislom-agentov-a-izmeneniem-rabochego-protsessa\|AI adoption нужно мерить не числом агентов, а изменением рабочего процесса]] |
 | 2026-05-21 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-05-21-anons-techrec-pro-ai-native-operating-model\|Анонс TechRec про AI-native operating model]] |
 | 2026-05-25 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-05-25-knowledge-layer-glavnyy-aktiv\|Knowledge Layer – главный актив организации]] |
+| 2026-05-27 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | [[2026-05-27-pochemu-ii-uskorit-haos-i-upravlencheskiy-dolg-v-vashey-organizatsii\|Почему ИИ ускорит хаос и управленческий долг в вашей организации]] |
+| 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-05-29-reorganizatsiya-rnd-v-ecom\|Кейс: реорганизация RnD в E-Com]] |
 
 ## Topic Clusters
 
