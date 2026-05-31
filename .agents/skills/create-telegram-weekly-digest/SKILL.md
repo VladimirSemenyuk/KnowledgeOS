@@ -114,7 +114,14 @@ node .agents/skills/create-telegram-weekly-digest/scripts/auth.mjs
 node .agents/skills/create-telegram-weekly-digest/scripts/fetch-week.mjs
 ```
 
-Если сбор падает с `connect EPERM` или сообщением про sandbox network policy, повторить этот же fetch с `sandbox_permissions=require_escalated`. Это ожидаемый путь для прямого подключения GramJS к Telegram DC из Codex.
+Если сбор падает с `connect EPERM` или сообщением про sandbox network policy:
+
+- не использовать fallback через публичные `t.me/s/...`, web search, curl, browser scraping или старые raw/normalized файлы;
+- сразу повторить тот же fetch с `sandbox_permissions=require_escalated`;
+- в `justification` коротко спросить пользователя, разрешает ли он прямое подключение GramJS к Telegram DC для недельного дайджеста;
+- предложить persistable `prefix_rule`: `["node", ".agents/skills/create-telegram-weekly-digest/scripts/fetch-week.mjs"]`.
+
+Это ожидаемый путь для прямого подключения GramJS к Telegram DC из Codex. Digest должен создаваться только из свежего GramJS-сбора либо явно останавливаться с блокером, если пользователь не разрешил сетевой доступ.
 
 4. Сохранить raw-файл:
    `Posts/research/telegram/raw/YYYY-Www.json`
