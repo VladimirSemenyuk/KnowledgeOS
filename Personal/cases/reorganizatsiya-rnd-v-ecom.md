@@ -36,7 +36,7 @@
 Когда инженерная организация растет быстрее управленческой системы, проблема выглядит как перегрузка руководителя. На практике это часто дефицит границ, метрик, зон ответственности и ясной операционной модели.
 
 Связи:
-- [[Frameworks/governance/systemic-management|Systemic Management]]
-- [[Frameworks/governance/organizational-operating-model|Organizational Operating Model]]
-- [[Frameworks/governance/decision-systems|Decision Systems]]
+- [[Frameworks/models/systemic-management|Systemic Management]]
+- [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]
+- [[Frameworks/models/decision-systems|Decision Systems]]
 

@@ -11,7 +11,7 @@ status: processed
 source_title: The GenAI Divide. State of AI in Business 2025
 source_author: MIT NANDA / Project NANDA
 source_version: v0.1, July 2025
-source_file: "[[Frameworks/ai-transformation/sources/v0.1_State_of_AI_in_Business_2025_Report.pdf|v0.1_State_of_AI_in_Business_2025_Report.pdf]]"
+source_file: "[[Frameworks/sources/ai-transformation/v0.1_State_of_AI_in_Business_2025_Report.pdf|v0.1_State_of_AI_in_Business_2025_Report.pdf]]"
 processed_date: 2026-05-17
 ---
 
@@ -27,7 +27,7 @@ processed_date: 2026-05-17
 
 - AI transformation нельзя мерить количеством пилотов;
 - индивидуальная продуктивность не равна влиянию на P&L;
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]] строится вокруг контуров обучения, зон ответственности и интеграции в процессы;
+- [[Frameworks/models/ai-native-organization|AI-native organization]] строится вокруг контуров обучения, зон ответственности и интеграции в процессы;
 - высокий ROI чаще находится в back-office и внешних расходах, а не в видимых front-office use cases;
 - buy/partner часто практичнее, чем internal build, если поставщик способен глубоко адаптироваться под процесс.
 
@@ -47,7 +47,7 @@ processed_date: 2026-05-17
 
 > Внедрение AI без изменения операционной модели создает активность, но не управляемый бизнес-результат.
 
-Это поддерживает рамку [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]: AI должен быть встроен в систему принятия решений, ответственности, данных, контроля качества и обратной связи.
+Это поддерживает рамку [[Frameworks/models/architecture-of-manageability|architecture of manageability]]: AI должен быть встроен в систему принятия решений, ответственности, данных, контроля качества и обратной связи.
 
 ### 2. Главное узкое место — разрыв в обучении
 
@@ -74,7 +74,7 @@ processed_date: 2026-05-17
 - ценность рождается ближе к реальной рабочей поверхности, а не в центральной лаборатории;
 - запрет shadow AI без легального канала переводит практику в серую зону.
 
-Практический вывод для [[Frameworks/governance/organizational-operating-model|организационной операционной модели]]:
+Практический вывод для [[Frameworks/models/organizational-operating-model|организационной операционной модели]]:
 
 > Shadow AI нужно не только контролировать, но и использовать как механизм discovery: где люди сами применяют AI, там часто находится реальная операционная боль.
 
@@ -368,17 +368,17 @@ flowchart TD
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/decision-systems|системы принятия решений]]
-- [[Frameworks/governance/organizational-operating-model|организационная операционная модель]]
-- [[Frameworks/governance/quality-and-risks|качество и риски]]
-- [[Frameworks/governance/systemic-management|системное управление]]
-- [[Frameworks/ai-transformation/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
+- [[Frameworks/models/ai-native-organization|AI-native organization]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/decision-systems|системы принятия решений]]
+- [[Frameworks/models/organizational-operating-model|организационная операционная модель]]
+- [[Frameworks/models/quality-and-risks|качество и риски]]
+- [[Frameworks/models/systemic-management|системное управление]]
+- [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
 
 ## Источник
 
-- PDF: `Frameworks/ai-transformation/sources/v0.1_State_of_AI_in_Business_2025_Report.pdf`
+- PDF: `Frameworks/sources/ai-transformation/v0.1_State_of_AI_in_Business_2025_Report.pdf`
 - Извлеченный текст: `/private/tmp/state_ai_business_2025.txt`
 - Методология в отчете: 300+ публичных AI-инициатив, 52 структурированных интервью, ответы survey от 153 senior leaders.
 

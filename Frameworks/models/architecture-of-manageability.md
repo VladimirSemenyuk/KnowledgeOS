@@ -26,8 +26,8 @@ Architecture of manageability — дизайн организации, при к
 
 ## Связанные рамки
 
-- [[Frameworks/governance/organizational-operating-model|organizational operating model]]
-- [[Frameworks/governance/decision-systems|decision systems]]
-- [[Frameworks/governance/systemic-management|systemic management]]
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
+- [[Frameworks/models/organizational-operating-model|organizational operating model]]
+- [[Frameworks/models/decision-systems|decision systems]]
+- [[Frameworks/models/systemic-management|systemic management]]
+- [[Frameworks/models/ai-native-organization|AI-native organization]]
 

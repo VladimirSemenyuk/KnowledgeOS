@@ -235,7 +235,7 @@ flowchart LR
 - снижение участия человека без трассируемости решений может означать потерю контроля;
 - экономия без клиентского качества может разрушить ценность.
 
-Это можно использовать в материалах про [[Frameworks/governance/quality-and-risks|quality and risks]] и AI governance.
+Это можно использовать в материалах про [[Frameworks/models/quality-and-risks|quality and risks]] и AI governance.
 
 ### 4. Лестница автономии
 

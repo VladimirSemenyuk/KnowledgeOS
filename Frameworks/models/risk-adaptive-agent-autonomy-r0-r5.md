@@ -6,7 +6,7 @@ topic:
   - quality and risks
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
 ---
 
 # Risk-adaptive agent autonomy R0-R5
@@ -72,7 +72,7 @@ R3 - граница переключения режима. Поэтому R3 т�
 - обратимость действия;
 - покрытие тестами;
 - радиус воздействия;
-- статус [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]];
+- статус [[Frameworks/models/evidence-bundle|Evidence Bundle]];
 - длину task horizon.
 
 Результат определяет: разрешить, запросить подтверждение, заблокировать, откатить или эскалировать.
@@ -86,7 +86,7 @@ R3 - граница переключения режима. Поэтому R3 т�
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/ai-pdlc/agent-runtime|Agent Runtime]]
-- [[Frameworks/ai-transformation/ai-pdlc/specification-driven-development|Specification-Driven Development]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/models/agent-runtime|Agent Runtime]]
+- [[Frameworks/models/specification-driven-development|Specification-Driven Development]]
+- [[Frameworks/models/quality-and-risks|quality and risks]]

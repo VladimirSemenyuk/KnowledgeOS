@@ -6,8 +6,8 @@ topic:
   - agentic systems
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
-  - "[[Frameworks/ai-transformation/ai-pdlc/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/source-notes/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]"
 ---
 
 # Agent Runtime
@@ -66,11 +66,11 @@ flowchart LR
 - `init.sh` для восстановления среды;
 - `progress.md` для состояния выполнения;
 - `feature-list.json` для списка подзадач;
-- evidence pointer для накопления [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]].
+- evidence pointer для накопления [[Frameworks/models/evidence-bundle|Evidence Bundle]].
 
 ## Связь с IDP
 
-[[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]] - более широкий слой: спецификации, реестры, evals, политики, наблюдаемость, жизненный цикл агентов, экономику токенов и команды-владельцы.
+[[Frameworks/models/internal-developer-platform|Internal Developer Platform]] - более широкий слой: спецификации, реестры, evals, политики, наблюдаемость, жизненный цикл агентов, экономику токенов и команды-владельцы.
 
 Agent Runtime - центральный технический компонент IDP, где агент фактически действует.
 
@@ -91,8 +91,8 @@ Agent Runtime - центральный технический компонент
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]]
-- [[Frameworks/ai-transformation/ai-pdlc/ai-native-pdlc|AI-native PDLC]]
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/ai-pdlc/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
-- [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]]
+- [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
+- [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
+- [[Frameworks/models/evidence-bundle|Evidence Bundle]]

@@ -6,7 +6,7 @@ topic:
   - metrics
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
 ---
 
 # AI-native engineering metrics
@@ -109,8 +109,8 @@ Governance Effectiveness Metrics отвечают не на вопрос "пра
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/ai-native-pdlc|AI-native PDLC]]
-- [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]]
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
+- [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
+- [[Frameworks/models/evidence-bundle|Evidence Bundle]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
+- [[Frameworks/models/quality-and-risks|quality and risks]]

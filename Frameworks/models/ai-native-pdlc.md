@@ -6,8 +6,8 @@ topic:
   - software delivery
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
-  - "[[Frameworks/ai-transformation/ai-pdlc/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/source-notes/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]"
 ---
 
 # AI-native PDLC
@@ -21,7 +21,7 @@ AI-native PDLC - операционная модель разработки, в 
 - **Intent Loop**: формулирование возможности, Discovery, гипотеза результата, спецификация, карта участия человека.
 - **Implementation Loop**: агентное исполнение, тесты, исправления, проверки, пакет доказательств, передача сессии.
 
-Между ними нужен [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]], иначе две петли работают параллельно, но не становятся единой управляемой системой.
+Между ними нужен [[Frameworks/models/internal-developer-platform|Internal Developer Platform]], иначе две петли работают параллельно, но не становятся единой управляемой системой.
 
 ## Модель
 
@@ -45,10 +45,10 @@ flowchart LR
 
 ## Ключевые принципы
 
-- Среда работы агента важнее модели: модель можно заменить, а [[Frameworks/ai-transformation/ai-pdlc/agent-runtime|Agent Runtime]] накапливает организационный контекст, проверки и аудит.
+- Среда работы агента важнее модели: модель можно заменить, а [[Frameworks/models/agent-runtime|Agent Runtime]] накапливает организационный контекст, проверки и аудит.
 - Discovery важнее prompt: плохое намерение нельзя компенсировать длинной инструкцией агенту.
 - Validation важнее скорости поставки: ускорение реализации без ускорения проверки создает новое узкое место.
-- Управление в процессе важнее проверок постфактум: [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]] должен быть встроен в спецификацию, runtime и аудит.
+- Управление в процессе важнее проверок постфактум: [[Frameworks/models/governance-mesh|Governance Mesh]] должен быть встроен в спецификацию, runtime и аудит.
 
 ## Отличие от классического PDLC
 
@@ -65,9 +65,9 @@ flowchart LR
 Минимальный стартовый набор:
 
 - Discovery-ритуалы: PR/FAQ, Outcome Hypothesis, решение "адаптация или перепроектирование".
-- [[Frameworks/ai-transformation/ai-pdlc/specification-driven-development|SDD]] как контракт изменения.
+- [[Frameworks/models/specification-driven-development|SDD]] как контракт изменения.
 - Review-agent в теневом режиме.
-- Базовый [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]].
+- Базовый [[Frameworks/models/evidence-bundle|Evidence Bundle]].
 - Метрики: lead time, change failure rate, Outcome Validation Rate, Reallocation Rate.
 
 ## Advisory use
@@ -80,9 +80,9 @@ flowchart LR
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/specification-driven-development|Specification-Driven Development]]
-- [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]]
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/ai-pdlc/agent-runtime|Agent Runtime]]
-- [[Frameworks/ai-transformation/ai-pdlc/ai-native-engineering-metrics|AI-native engineering metrics]]
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/specification-driven-development|Specification-Driven Development]]
+- [[Frameworks/models/evidence-bundle|Evidence Bundle]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/models/agent-runtime|Agent Runtime]]
+- [[Frameworks/models/ai-native-engineering-metrics|AI-native engineering metrics]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]

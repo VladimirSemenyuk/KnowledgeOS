@@ -20,7 +20,7 @@ Decision systems — повторяемая система принятия ре
 
 ## Связанные рамки
 
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/organizational-operating-model|organizational operating model]]
-- [[Frameworks/governance/systemic-management|systemic management]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/organizational-operating-model|organizational operating model]]
+- [[Frameworks/models/systemic-management|systemic management]]
 

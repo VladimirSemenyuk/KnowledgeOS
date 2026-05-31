@@ -10,7 +10,7 @@ status: processed
 source_title: Hallucination Stations. On Some Basic Limitations of Transformer-Based Language Models
 source_author: Varin Sikka / Vishal Sikka
 source_version: arXiv 2507.07505v3
-source_file: "[[Frameworks/ai-transformation/sources/2507.07505v3.pdf|2507.07505v3.pdf]]"
+source_file: "[[Frameworks/sources/ai-transformation/2507.07505v3.pdf|2507.07505v3.pdf]]"
 processed_date: 2026-05-26
 ---
 
@@ -34,7 +34,7 @@ processed_date: 2026-05-26
 
 Самый ценный практический вывод: LLM-based agent не может считаться надежным валидатором другого LLM-based agent, если проверка требует строгой вычислительной или логической верификации.
 
-Это усиливает рамку [[Frameworks/governance/quality-and-risks|качества и рисков]]:
+Это усиливает рамку [[Frameworks/models/quality-and-risks|качества и рисков]]:
 
 > Для задач с высокой ценой ошибки нужен внешний проверяемый контур: алгоритмы, тесты, формальные ограничения, audit trail, human review и путь эскалации.
 
@@ -60,7 +60,7 @@ processed_date: 2026-05-26
 - совершать действия в реальном мире;
 - работать с финансами, юридическими документами, логистикой, бронированием, производством или software delivery;
 
-то его нужно проектировать как часть [[Frameworks/governance/architecture-of-manageability|architecture of manageability]], а не как автономного исполнителя.
+то его нужно проектировать как часть [[Frameworks/models/architecture-of-manageability|architecture of manageability]], а не как автономного исполнителя.
 
 ## Ключевые рамки и формулы из документа
 
@@ -107,7 +107,7 @@ flowchart LR
 - Для процессов с высокой ценой ошибки нужна карта задач, где явно разделены генерация, исполнение и проверка.
 - LLM может быть хорошим интерфейсом, планировщиком или генератором вариантов, но не должен быть единственным источником истины.
 - Чем выше автономия агента, тем важнее права доступа, журнал действий, откат, тестовый контур, мониторинг и владелец результата.
-- В software engineering AI-assisted development требует усиления [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]], CI, тестов, review и quality gates.
+- В software engineering AI-assisted development требует усиления [[Frameworks/models/internal-developer-platform|Internal Developer Platform]], CI, тестов, review и quality gates.
 
 ## Ограничения источника
 
@@ -162,19 +162,19 @@ flowchart LR
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
-- [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]]
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/decision-systems|системы принятия решений]]
-- [[Frameworks/governance/quality-and-risks|качество и риски]]
-- [[Frameworks/ai-transformation/google-cloud-roi-of-ai-2025|Google Cloud ROI of AI 2025]]
-- [[Frameworks/ai-transformation/stanford-hai-ai-index-report-2025|Stanford HAI AI Index Report 2025]]
-- [[Frameworks/ai-transformation/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
+- [[Frameworks/models/ai-native-organization|AI-native organization]]
+- [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/decision-systems|системы принятия решений]]
+- [[Frameworks/models/quality-and-risks|качество и риски]]
+- [[Frameworks/source-notes/google-cloud-roi-of-ai-2025|Google Cloud ROI of AI 2025]]
+- [[Frameworks/source-notes/stanford-hai-ai-index-report-2025|Stanford HAI AI Index Report 2025]]
+- [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
 
 ## Источник
 
-- PDF: [[Frameworks/ai-transformation/sources/2507.07505v3.pdf|2507.07505v3.pdf]]
-- Локальный файл: `Frameworks/ai-transformation/sources/2507.07505v3.pdf`
+- PDF: [[Frameworks/sources/ai-transformation/2507.07505v3.pdf|2507.07505v3.pdf]]
+- Локальный файл: `Frameworks/sources/ai-transformation/2507.07505v3.pdf`
 - Название: `Hallucination Stations. On Some Basic Limitations of Transformer-Based Language Models`
 - Авторы: Varin Sikka, Vishal Sikka
 - Версия: arXiv 2507.07505v3

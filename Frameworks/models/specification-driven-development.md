@@ -6,7 +6,7 @@ topic:
   - context engineering
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
 ---
 
 # Specification-Driven Development
@@ -86,8 +86,8 @@ SDD удобно использовать как диагностический 
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/ai-native-pdlc|AI-native PDLC]]
-- [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]]
-- [[Frameworks/ai-transformation/ai-pdlc/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]]
+- [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
+- [[Frameworks/models/evidence-bundle|Evidence Bundle]]
+- [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]

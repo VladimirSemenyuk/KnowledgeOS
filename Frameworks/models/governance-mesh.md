@@ -6,7 +6,7 @@ topic:
   - quality and risks
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
 ---
 
 # Governance Mesh
@@ -40,7 +40,7 @@ Governance Mesh отвечает на три вопроса одновремен
 - в Discovery фиксируются ограничения, гипотеза результата и карта участия человека;
 - в SDD ограничения становятся машиночитаемыми;
 - в runtime каждое действие агента проходит через policy hooks;
-- в проверке результата формируется [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]];
+- в проверке результата формируется [[Frameworks/models/evidence-bundle|Evidence Bundle]];
 - после деплоя telemetry возвращается в спецификацию.
 
 ## Governance Debt
@@ -89,9 +89,9 @@ Governance Mesh полезен как альтернатива двум слаб
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
-- [[Frameworks/ai-transformation/ai-pdlc/evidence-bundle|Evidence Bundle]]
-- [[Frameworks/ai-transformation/ai-pdlc/specification-driven-development|Specification-Driven Development]]
-- [[Frameworks/ai-transformation/ai-pdlc/agent-runtime|Agent Runtime]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
+- [[Frameworks/models/evidence-bundle|Evidence Bundle]]
+- [[Frameworks/models/specification-driven-development|Specification-Driven Development]]
+- [[Frameworks/models/agent-runtime|Agent Runtime]]
+- [[Frameworks/models/quality-and-risks|quality and risks]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]

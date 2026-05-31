@@ -238,19 +238,22 @@ When preparing LinkedIn themes or drafts, connect personal positioning from `/Pe
 
 `/Frameworks` contains reusable intellectual property, source notes, and advisory models. Treat this folder as the system of record for repeatable concepts, not as a dumping ground for temporary research.
 
-Current framework areas:
+Current framework structure:
 
-- `/Frameworks/ai-transformation` — AI transformation models, AI-native organization materials, internal developer platform notes, and source notes from AI/engineering reports. Keep original PDFs and source documents in `/Frameworks/ai-transformation/sources`.
-- `/Frameworks/governance` — management systems, decision systems, organizational operating models, architecture of manageability, quality and risks, systemic management, and related governance models. Use `/Frameworks/governance/sources` for source materials and `/Frameworks/governance/cobit` for COBIT-specific materials.
+- `/Frameworks/models` — reusable advisory models, management systems, decision systems, AI-native organization materials, internal developer platform notes, and related conceptual frameworks.
+- `/Frameworks/source-notes` — source-based notes from reports, research, whitepapers, and other imported knowledge sources.
+- `/Frameworks/sources` — original PDF/DOCX/source files, grouped by source domain when useful.
+- `/Frameworks/maps` — navigation maps for thematic areas such as AI transformation, AI PDLC, governance, and engineering management. Use maps for sensemaking instead of creating broad thematic top-level folders.
 
 Marketing, public positioning, LinkedIn GTM, and funnel-stage definitions live in `/Personal/marketing`, because they are rules of personal positioning rather than reusable advisory frameworks.
 
 When creating or updating framework materials:
 
-- Put reusable advisory models in the most specific existing framework folder.
-- Put imported reports and source-based summaries near the topic they support, not in `/Posts` or `/Clients`.
+- Put reusable advisory models in `/Frameworks/models`.
+- Put imported reports and source-based summaries in `/Frameworks/source-notes`, not in `/Posts` or `/Clients`.
+- Put original source files in `/Frameworks/sources`.
 - Preserve links from source notes to related framework concepts using Obsidian wikilinks.
-- Do not create new framework subfolders unless the existing areas do not fit and the user intent is explicit.
+- Prefer adding or updating a map in `/Frameworks/maps` before creating a new structural folder.
 - Keep framework notes concise, durable, and reusable across clients.
 
 ---

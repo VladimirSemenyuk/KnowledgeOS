@@ -26,7 +26,7 @@ Quality не должна быть отдельной функцией, кото
 
 ## Связанные рамки
 
-- [[Frameworks/governance/architecture-of-manageability|architecture of manageability]]
-- [[Frameworks/governance/organizational-operating-model|organizational operating model]]
-- [[Frameworks/ai-transformation/internal-developer-platform|Internal Developer Platform]]
+- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
+- [[Frameworks/models/organizational-operating-model|organizational operating model]]
+- [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
 

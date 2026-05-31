@@ -26,7 +26,7 @@ Daniil
 # Organizational State
 
 AgVend is currently experiencing
-the [[greiner-grouth-model]] control crisis.
+the [[Frameworks/models/greiner-growth-model|Greiner Growth Model]] control crisis.
 
 At the same time, the company is conducting a large-scale AI transformation.
 

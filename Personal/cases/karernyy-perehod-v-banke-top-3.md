@@ -33,5 +33,5 @@
 
 Связи:
 - [[Personal/Context|Позиционирование]]
-- [[Frameworks/governance/systemic-management|Systemic Management]]
+- [[Frameworks/models/systemic-management|Systemic Management]]
 

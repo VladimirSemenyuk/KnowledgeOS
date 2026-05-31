@@ -6,7 +6,7 @@ topic:
   - software delivery
 status: draft
 source:
-  - "[[Frameworks/ai-transformation/ai-pdlc/sources/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
+  - "[[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI_DISRUPT_PDLC_v3_7]]"
 ---
 
 # Evidence Bundle
@@ -82,7 +82,7 @@ Evidence Bundle можно использовать как executive-level кр�
 
 ## Связанные заметки
 
-- [[Frameworks/ai-transformation/ai-pdlc/specification-driven-development|Specification-Driven Development]]
-- [[Frameworks/ai-transformation/ai-pdlc/governance-mesh|Governance Mesh]]
-- [[Frameworks/ai-transformation/ai-pdlc/ai-native-engineering-metrics|AI-native engineering metrics]]
-- [[Frameworks/governance/quality-and-risks|quality and risks]]
+- [[Frameworks/models/specification-driven-development|Specification-Driven Development]]
+- [[Frameworks/models/governance-mesh|Governance Mesh]]
+- [[Frameworks/models/ai-native-engineering-metrics|AI-native engineering metrics]]
+- [[Frameworks/models/quality-and-risks|quality and risks]]

@@ -34,7 +34,7 @@
 AI-трансформация в engineering работает, когда меняется не только инструментальный слой, но и архитектура управляемости: роли, мандаты, принятие решений, ответственность и способность руководителей действовать без постоянного ручного контроля основателя.
 
 Связи:
-- [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]]
-- [[Frameworks/governance/architecture-of-manageability|Architecture of Manageability]]
-- [[Frameworks/governance/organizational-operating-model|Organizational Operating Model]]
+- [[Frameworks/models/ai-native-organization|AI-native organization]]
+- [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]
+- [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]
 

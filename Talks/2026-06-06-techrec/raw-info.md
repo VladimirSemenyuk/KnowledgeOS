@@ -497,7 +497,7 @@ DORA-добавление: DORA metrics дают язык для связи engi
 - ownership loop: Tech PM → Developer → QE → CI/CD → SRE;
 - governance decisions для AI Enablement Team.
 
-Это может стать базой для отдельного framework note про [[Frameworks/ai-transformation/ai-native-organization|AI-native organization]] и [[Frameworks/governance/architecture-of-manageability|architecture of manageability]].
+Это может стать базой для отдельного framework note про [[Frameworks/models/ai-native-organization|AI-native organization]] и [[Frameworks/models/architecture-of-manageability|architecture of manageability]].
 
 Связанный рабочий outline:
 [[Talks/2026-06-06-techrec/talk-outline|talk-outline]]
