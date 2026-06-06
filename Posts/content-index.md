@@ -6,8 +6,8 @@
 
 | Date | Funnel | Status | Post |
 |---|---|---|---|
-| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | draft | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya\|Апокалипсис увольнений отменяется?]] |
-| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | draft | [[2026-06-03-cheklist-ai-native-pdlc-dlya-ceo-cto\|Чеклист AI-native PDLC для CEO / CTO]] |
+| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | ready | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya\|Апокалипсис увольнений отменяется?]] |
+| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | draft | [[2026-06-03-ai-ne-okupaetsya-bez-operatsionnoy-modeli\|ИИ не окупается без операционной модели]] |
 | 2026-06-05 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | draft | [[2026-06-05-slaboe-mesto-ai-adoption-ostaetsya-upravlencheskim\|Слабое место AI adoption остается управленческим]] |
 
 ## Published Posts

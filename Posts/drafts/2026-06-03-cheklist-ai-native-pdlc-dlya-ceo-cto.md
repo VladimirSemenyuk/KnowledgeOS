@@ -2,7 +2,7 @@
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: draft
-publish_date: 2026-06-03
+publish_date:
 source:
   - "[[Frameworks/models/ai-native-pdlc|AI-native PDLC]]"
   - "[[Frameworks/models/ai-native-engineering-metrics|AI-native engineering metrics]]"
@@ -103,3 +103,4 @@ Implementation Loop – где агентная среда ускоряет ис
 - Основа: [[Frameworks/models/ai-native-pdlc|AI-native PDLC]], [[Frameworks/models/ai-native-engineering-metrics|AI-native engineering metrics]].
 - Можно сократить чеклист до 7 пунктов перед публикацией, если пост окажется слишком длинным.
 - Сохранить CEO-level угол: не "как разработчику пользоваться агентом", а "как руководству понять, изменился ли PDLC".
+- Был запланирован на 2026-06-03, но слот заменен на инфоповод про окупаемость AI.
