@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
-status: draft
+status: published
 publish_date: 2026-06-03
 source:
   - "https://isaiprofitable.com/"
@@ -94,3 +94,12 @@ audience: CEO / founder B2B tech или tech-enabled компании
 - Не делать точную «недополученную разницу» главным аргументом: в таких данных возможны двойной счёт, разные методики и обновления.
 - Не использовать утверждение «ИИ не окупится» как факт. Лучше рамка: «окупаемость не возникает без управляемой операционной модели».
 - Сохранить CEO-level вывод: не спор про пузырь, а диагностика операционной модели.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-06-07
+- Показы: 427
+- Реакции: 4
+- Комментарии: 0
+- Источник: LinkedIn Creator Analytics

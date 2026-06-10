@@ -33,6 +33,7 @@
 
 | Date | Type | Topic | Status | Link |
 |---|---|---|---|---|
-| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Апокалипсис увольнений отменяется? | ready | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya]] |
-| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | ИИ не окупается без операционной модели | draft | [[2026-06-03-ai-ne-okupaetsya-bez-operatsionnoy-modeli]] |
+| 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Апокалипсис увольнений отменяется? | published | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya]] |
+| 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | ИИ не окупается без операционной модели | published | [[2026-06-03-ai-ne-okupaetsya-bez-operatsionnoy-modeli]] |
 | 2026-06-05 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Слабое место AI adoption остается управленческим | draft | [[2026-06-05-slaboe-mesto-ai-adoption-ostaetsya-upravlencheskim]] |
+| 2026-06-09 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Почему 95% компаний лишь тратят деньги на AI, а не зарабатывают на нем | ready | [[2026-06-09-pochemu-95-protsentov-kompaniy-tratyat-dengi-na-ai]] |

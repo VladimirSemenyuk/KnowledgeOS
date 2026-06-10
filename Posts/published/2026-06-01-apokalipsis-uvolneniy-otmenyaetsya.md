@@ -1,7 +1,7 @@
 ---
 type: linkedin-post
 funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
-status: ready
+status: published
 publish_date: 2026-06-01
 source:
   - "Reuters / Investing.com, 2026-05-26: OpenAI’s Altman says AI unlikely to lead to jobs apocalypse"
@@ -82,3 +82,12 @@ AI конкурирует не с человеком как абстракт
 - Пример customer support лучше держать как рыночный паттерн, а не как утверждение про одну компанию.
 - Не утверждать, что увольнений из-за AI нет. Тезис тоньше: отсутствие мгновенного сценария массовых увольнений не отменяет управленческого сдвига.
 - Можно усилить примером из engineering: junior tasks, code review, specification quality, validation bottleneck.
+
+## Analytics
+
+- Период: последние 28 дней
+- Дата сбора: 2026-06-07
+- Показы: 4110
+- Реакции: 24
+- Комментарии: 4
+- Источник: LinkedIn Creator Analytics
