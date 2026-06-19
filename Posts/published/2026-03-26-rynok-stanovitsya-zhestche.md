@@ -34,13 +34,8 @@ linkedin_activity_id: "7442835233982320640"
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 91
+- Дата сбора: 2026-06-14
+- Показы: 87
 - Реакции: 115
 - Комментарии: 23
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 1 мес.1 мес.

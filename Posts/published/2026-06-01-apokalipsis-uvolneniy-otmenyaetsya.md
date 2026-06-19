@@ -7,6 +7,8 @@ source:
   - "Reuters / Investing.com, 2026-05-26: OpenAI’s Altman says AI unlikely to lead to jobs apocalypse"
   - "Axios, 2026-05-28: Companies cool on AI spending, tokenmaxxing"
 audience: CEO / founder B2B tech или tech-enabled компании
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7467107821692596224/
+linkedin_activity_id: "7467107821692596224"
 ---
 
 # Апокалипсис увольнений отменяется?
@@ -86,8 +88,8 @@ AI конкурирует не с человеком как абстракт
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 4110
-- Реакции: 24
+- Дата сбора: 2026-06-14
+- Показы: 4438
+- Реакции: 25
 - Комментарии: 4
 - Источник: LinkedIn Creator Analytics

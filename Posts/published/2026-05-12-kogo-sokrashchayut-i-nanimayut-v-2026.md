@@ -37,13 +37,8 @@ SRE. Их довольно активно нанимают. ФОТ на эксп
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 3409
+- Дата сбора: 2026-06-14
+- Показы: 1371
 - Реакции: 25
 - Комментарии: 11
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 2 дн.2 дн.

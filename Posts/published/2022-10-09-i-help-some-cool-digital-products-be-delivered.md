@@ -24,13 +24,8 @@ I help some cool digital products be delivered. So I'm looking for #Go, #Ruby, #
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
+- Дата сбора: 2026-06-14
 - Показы: 1
 - Реакции: 26
 - Комментарии: 1
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 3 г.3 г.

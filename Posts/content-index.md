@@ -7,7 +7,7 @@
 | Date | Funnel | Status | Post |
 |---|---|---|---|
 | 2026-06-05 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | draft | [[2026-06-05-slaboe-mesto-ai-adoption-ostaetsya-upravlencheskim\|Слабое место AI adoption остается управленческим]] |
-| 2026-06-09 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | ready | [[2026-06-09-pochemu-95-protsentov-kompaniy-tratyat-dengi-na-ai\|Почему 95% компаний лишь тратят деньги на AI, а не зарабатывают на нем]] |
+| 2026-06-16 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | ready | [[2026-06-16-fable-5-i-inzhenernaya-gigiena-ai-kontura\|Fable 5 и инженерная гигиена AI-контура]] |
 
 ## Published Posts
 
@@ -52,6 +52,8 @@
 | 2026-05-29 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-05-29-reorganizatsiya-rnd-v-ecom\|Кейс: реорганизация RnD в E-Com]] |
 | 2026-06-01 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-01-apokalipsis-uvolneniy-otmenyaetsya\|Апокалипсис увольнений отменяется?]] |
 | 2026-06-03 | [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU\|MOFU]] | [[2026-06-03-ai-ne-okupaetsya-bez-operatsionnoy-modeli\|ИИ не окупается без операционной модели]] |
+| 2026-06-09 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-09-pochemu-95-protsentov-kompaniy-tratyat-dengi-na-ai\|Почему 95% компаний лишь тратят деньги на AI, а не зарабатывают на нем]] |
+| 2026-06-12 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-12-chetyre-parallelnye-vselennye-v-it\|Четыре параллельных вселенных в IT]] |
 
 ## Topic Clusters
 

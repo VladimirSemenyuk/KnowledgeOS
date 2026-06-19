@@ -48,13 +48,8 @@ Big Tech туда же: Meta перевела часть менеджеров о
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 32
+- Дата сбора: 2026-06-14
+- Показы: 30
 - Реакции: 59
-- Комментарии: 85
+- Комментарии: 84
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 2 мес.2 мес.

@@ -7,6 +7,8 @@ source:
   - "https://isaiprofitable.com/"
   - "https://andrewbaker.ninja/2026/05/23/is-ai-profitable-the-1-4-trillion-scorecard-nobody-wants-to-talk-about/"
 audience: CEO / founder B2B tech или tech-enabled компании
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7467836238469804032/
+linkedin_activity_id: "7467836238469804032"
 ---
 
 # ИИ не окупается без операционной модели
@@ -98,8 +100,8 @@ audience: CEO / founder B2B tech или tech-enabled компании
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 427
+- Дата сбора: 2026-06-14
+- Показы: 468
 - Реакции: 4
 - Комментарии: 0
 - Источник: LinkedIn Creator Analytics

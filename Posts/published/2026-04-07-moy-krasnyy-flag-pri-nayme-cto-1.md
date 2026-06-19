@@ -47,13 +47,8 @@ CTO – потому что не фокусируется на том, что к
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
-- Показы: 27
+- Дата сбора: 2026-06-14
+- Показы: 22
 - Реакции: 75
 - Комментарии: 79
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 1 мес.1 мес.

@@ -45,13 +45,8 @@ CTO – на вопрос «зачем и во что это обойдётся 
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
+- Дата сбора: 2026-06-14
 - Показы: 35
 - Реакции: 252
 - Комментарии: 73
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 2 мес.2 мес.

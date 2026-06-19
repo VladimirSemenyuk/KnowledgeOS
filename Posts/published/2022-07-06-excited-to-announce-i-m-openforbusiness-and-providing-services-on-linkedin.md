@@ -22,13 +22,8 @@ Excited to announce I’m #OpenForBusiness and providing services on LinkedIn. C
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-07
+- Дата сбора: 2026-06-14
 - Показы: 1
 - Реакции: 3
 - Комментарии: 0
 - Источник: LinkedIn Creator Analytics
-
-## Notes
-
-- Imported from LinkedIn analytics page.
-- Relative date shown by LinkedIn: 4 г.4 г.
