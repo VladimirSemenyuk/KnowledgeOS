@@ -10,6 +10,7 @@
 - [[Frameworks/models/systemic-management|Systemic Management]]
 - [[Frameworks/models/quality-and-risks|Quality and Risks]]
 - [[Frameworks/models/greiner-growth-model|Greiner Growth Model]]
+- [[Frameworks/models/p3-express/_index|P3.express]]
 
 ## AI-native организация и разработка
 

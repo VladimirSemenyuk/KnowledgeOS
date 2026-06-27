@@ -2,6 +2,11 @@
 
 Исходные PDF/DOCX-файлы для source notes.
 
+## Project management
+
+- [[Frameworks/sources/p3-express/p3.express-manual-ru.pdf|P3.express manual RU]]
+- [[Frameworks/sources/p3-express/p3.express-diagram-ru.svg|P3.express diagram RU]]
+
 ## AI transformation
 
 - [[Frameworks/sources/ai-transformation/dora-roi-of-ai-assisted-software-development-2026.pdf|DORA ROI of AI-assisted Software Development 2026]]
