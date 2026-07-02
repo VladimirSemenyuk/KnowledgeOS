@@ -11,8 +11,14 @@
 ## Кейсы
 
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
+- [[upravlyaemaya-ai-transformatsiya-engineering|Управляемая AI-трансформация engineering]]
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Реорганизация RnD в E-Com]]
 - [[Personal/cases/karernyy-perehod-v-banke-top-3|Карьерный переход в банке ТОП-3]]
+
+## Закрытые материалы
+
+- [[Personal/cases/AgVend/board-level-proof|AgVend board-level proof]]
+- [[Personal/cases/AgVend/agvend-board-memo-ai-transformation-governance|AgVend board memo: управление AI-трансформацией]]
 
 ## Общая логика доказательства
 
@@ -21,4 +27,3 @@
 1. Найти системное ограничение, которое маскируется под личную перегрузку, сопротивление среды или технологическую задачу.
 2. Перевести проблему из режима ручного управления в управляемую архитектуру ролей, решений, метрик и ответственности.
 3. Помочь руководителям выдержать новую ролевую модель до появления измеримого результата.
-
