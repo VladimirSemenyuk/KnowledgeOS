@@ -10,4 +10,4 @@
 - [[Frameworks/models/quality-and-risks|Quality and Risks]]
 - [[Frameworks/models/systemic-management|Systemic Management]]
 - [[Frameworks/models/greiner-growth-model|Greiner Growth Model]]
-
+- [[Frameworks/models/kotter-8-step-change-model|Модель Коттера: 8 шагов управления изменениями]]
