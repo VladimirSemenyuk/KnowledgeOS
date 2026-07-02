@@ -11,7 +11,7 @@
 ## Кейсы
 
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
-- [[upravlyaemaya-ai-transformatsiya-engineering|Управляемая AI-трансформация engineering]]
+- [[Personal/cases/AgVend/Управляемая AI-трансформация engineering|Управляемая AI-трансформация engineering]]
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Реорганизация RnD в E-Com]]
 - [[Personal/cases/karernyy-perehod-v-banke-top-3|Карьерный переход в банке ТОП-3]]
 
@@ -19,6 +19,11 @@
 
 - [[Personal/cases/AgVend/board-level-proof|AgVend board-level proof]]
 - [[Personal/cases/AgVend/agvend-board-memo-ai-transformation-governance|AgVend board memo: управление AI-трансформацией]]
+
+## PDF-версии
+
+- [[Personal/cases/AgVend/exports/upravlyaemaya-ai-transformatsiya-razrabotki.pdf|Управляемая AI-трансформация разработки]]
+- [[Personal/cases/AgVend/exports/managed-ai-transformation-in-engineering.pdf|Managed AI Transformation in Engineering]]
 
 ## Общая логика доказательства
 
