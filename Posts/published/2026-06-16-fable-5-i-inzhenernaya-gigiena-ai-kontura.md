@@ -7,6 +7,8 @@ source:
   - "https://www.anthropic.com/news/claude-fable-5-mythos-5"
   - "https://www.anthropic.com/news/fable-mythos-access"
 audience: CEO / founder B2B tech или tech-enabled компании
+linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7472539734909841409/
+linkedin_activity_id: "7472539734909841409"
 ---
 
 # Fable 5 и инженерная гигиена AI-контура
@@ -75,8 +77,8 @@ Anthropic выполнила приказ и отключила модель д�
 ## Analytics
 
 - Период: последние 28 дней
-- Дата сбора: 2026-06-22
-- Показы: 836
+- Дата сбора: 2026-06-28
+- Показы: 980
 - Реакции: 5
 - Комментарии: 2
 - Источник: LinkedIn Creator Analytics
