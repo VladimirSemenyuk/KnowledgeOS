@@ -54,6 +54,7 @@
 | 2026-06-09 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-09-pochemu-95-protsentov-kompaniy-tratyat-dengi-na-ai\|Почему 95% компаний лишь тратят деньги на AI, а не зарабатывают на нем]] |
 | 2026-06-12 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-12-chetyre-parallelnye-vselennye-v-it\|Четыре параллельных вселенных в IT]] |
 | 2026-06-16 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-16-fable-5-i-inzhenernaya-gigiena-ai-kontura\|Fable 5 и инженерная гигиена AI-контура]] |
+| 2026-07-02 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-07-02-zakonchil-bolshoy-proekt-ai-transformatsii\|Закончил большой проект AI-трансформации]] |
 
 ## Topic Clusters
 
