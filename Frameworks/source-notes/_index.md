@@ -5,6 +5,7 @@
 ## AI transformation и engineering
 
 - [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
+- [[Frameworks/source-notes/gitlab-ai-accountability-report-2026|GitLab AI Accountability Report 2026]]
 - [[Frameworks/source-notes/google-cloud-roi-of-ai-2025|Google Cloud ROI of AI 2025]]
 - [[Frameworks/source-notes/hallucination-stations-limitations-of-transformer-based-language-models|Hallucination Stations: limitations of transformer-based language models]]
 - [[Frameworks/source-notes/mit-nanda-genai-divide-state-of-ai-in-business-2025|MIT NANDA GenAI Divide 2025]]
