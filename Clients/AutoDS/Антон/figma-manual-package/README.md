@@ -2,7 +2,7 @@
 
 Пакет для ручной сборки слайдов в Figma Slides по материалу:
 
-- [[Clients/AutoDS/Антон/ai-transformation-mini-deck|ai-transformation-mini-deck]]
+- [[ai-transformation-mini-deck|ai-transformation-mini-deck]]
 
 Цель:
 быстро собрать 12 слайдов в стиле референсной Figma-презентации без Figma MCP.
