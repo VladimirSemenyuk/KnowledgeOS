@@ -1,6 +1,6 @@
-# AI-Native PDLC for AutoDS
+# More Features. Less Time per Feature.
 
-> More validated features, delivered faster—without increasing rework or defects.
+> Accelerate the path from product intent to a validated feature in production—without increasing defects or rework.
 
 %%
 Internal links:
@@ -9,78 +9,63 @@ Internal links:
 - [[ai-transformation-mini-deck|AI-Native PDLC mini-deck]]
 %%
 
-## The Business Objective
+```mermaid
+flowchart LR
+    A["Measure where<br/>time is lost"] --> B["Accelerate one<br/>feature flow"] --> C["Prove impact<br/>with metrics"] --> D["Scale what<br/>works"]
+```
 
-AI can accelerate code, test, and documentation creation. But higher individual developer productivity does not necessarily mean faster product delivery.
+## Delivery Objective
 
-The goal is to reduce the time from product intent to a validated feature in production—without increasing rework or quality risk.
+The objective is measurable delivery acceleration: more validated features and less time per feature. Existing AI practices matter when they remove waiting, clarification, rework, review, testing, or release delays across the full product-to-production flow.
 
-The transformation covers the full feature flow: problem definition, requirements, AI-assisted delivery, validation, release, and product acceptance.
+The program quantifies the calendar days and engineering hours lost across 3–5 completed features and targets the constraint with the greatest impact on cycle time and throughput.
 
-## 90-Day Program
+## 90-Day Acceleration Program
 
-### 1. Diagnose the System
+### 1. Find Where Time Is Lost
 
-- review 3–5 completed features;
-- map time loss from problem definition to production;
-- establish a baseline for delivery time, throughput, defects, and rework;
-- select a team or feature type for the pilot.
+Map the current feature flow, establish baseline cycle time, throughput, defects, and rework, and select one team or feature type with the highest acceleration potential.
 
-### 2. Pilot an AI-Native PDLC
+### 2. Accelerate One Feature Flow
 
-- improve requirements and acceptance criteria;
-- define rules for AI-assisted delivery;
-- move quality control closer to definition and implementation;
-- update the Definition of Done;
-- establish change owners and an escalation path for blockers.
+Selected interventions may include:
 
-### 3. Decide on Scale
+- **agent-ready specifications:** machine-readable requirements, AI-generated acceptance criteria and edge cases, reviewed by Product;
+- **controlled agentic delivery:** agents generate code, tests, and documentation within defined context and architecture constraints;
+- **shift-left quality:** agentic review, automated quality and security checks, and an updated Definition of Done;
+- **operating model changes:** explicit roles, human decision gates, metrics, and escalation paths.
 
-- compare pilot results with the baseline;
-- assess impact on speed, quality, and rework;
-- clarify the roles of Product, Engineering, QA, Data, and Security;
-- create a plan to scale, adjust, or stop the approach.
+### 3. Prove Impact and Scale
 
-## Success Criteria
+Compare cycle time, throughput, deployment frequency, defects, and rework with the baseline. Identify repeatable practices and provide the CTO with a decision package: scale, adjust, or stop.
 
-The pilot should demonstrate that the selected flow:
+**Primary outcome:** lower cycle time and higher throughput. **Guardrails:** defects and rework do not increase. Exact targets are agreed after the baseline.
 
-- delivers features to production faster;
-- delivers more validated features over a comparable period;
-- does not increase defects or rework;
-- creates a repeatable process for other teams.
+## De-Risking the Decision
 
-Specific targets are agreed after the baseline is established.
-
-## What AutoDS Receives
-
-- a fact-based map of current PDLC constraints;
-- an AI-native process tested on real work;
-- before-and-after performance data;
-- roles, standards, metrics, and an escalation path;
-- a CTO decision package for the next stage of scale-up.
+This is a delivery acceleration pilot, not a test of AI tools. After the baseline, AutoDS agrees success and exit criteria and proceeds only with evidence-supported interventions. Commercial terms can be staged.
 
 ## Engagement Models and Pricing
 
-### Independent Advisory — from $40,000
+| Model                            | Base 90-day scope                                                                                                                                              | AutoDS role                       |    Fee from |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- | ----------: |
+| **Independent Advisory**         | One team or feature flow; baseline, acceleration design, weekly leadership advisory, metrics, and decision package                                             | Coordinates execution             | **$40,000** |
+| **Artel Transformation Support** | One or two connected workstreams; Independent Advisory plus project management, cross-functional coordination, and control of actions, dependencies, and risks | Owns decisions and implementation | **$70,000** |
 
-Vladimir leads the diagnosis, designs the pilot, works with the CTO and functional leaders, and supports decisions on metrics, quality, risk, and the operating model. AutoDS coordinates execution internally.
+Artel is Vladimir’s consulting team, combining executive advisory, project management, and targeted expertise. Data Science is available as a separate module. The final fixed fee depends on scope and engagement intensity.
 
-### Artel Transformation Support — from $70,000
+## Case Snapshot — 3× Faster Delivery
 
-Artel is a consulting team led by Vladimir that combines executive advisory with project management and targeted specialist expertise. This engagement includes Independent Advisory plus pilot project management, cross-functional coordination across Product, Engineering, and QA, and management of actions, dependencies, and risks. Targeted Data Science expertise can be added as a separate module once the technical scope is defined.
+|                           |                                                                                                                                                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Context**               | B2B marketplace with approximately 60 engineers; growth required more output without proportional headcount growth.                                                                                                                         |
+| **Starting point**        | Delivery speed was constrained by manual execution and uneven agentic adoption across teams.                                                                                                                                                |
+| **Transformation**        | Role redesign, agent-ready requirements, shift-left testing, CI/CD quality controls, adoption metrics, and a CTO-led enablement model.                                                                                                      |
+| **Acceleration evidence** | The delivery cycle was reduced 3×—from three weeks to one. Within five months, selected teams moved 50–75% of their tasks into the agentic delivery flow. The primary constraint then shifted from execution to test strategy and coverage. |
+| **Vladimir’s role**       | Advisor to Engineering Leadership as adoption owners: management cadence, adoption metrics, quality risks, accountability, and cross-functional change.                                                                                     |
 
-Pricing is for a 90-day program. The final fixed fee is confirmed after agreeing the pilot scope, number of teams, and leadership cadence. The external team does not replace AutoDS: ownership of decisions, implementation, and internal roles remains with AutoDS.
-
-The program is led by Vladimir Semenyuk, a former CTO and CIO with an MBA. Relevant experience includes an AI-native transformation of a marketplace company with 300+ employees and 80+ IT specialists, where the target transition to agentic development was achieved in five months.
-
-## Conditions for a Successful Start
-
-- an internal owner with a CTO mandate;
-- participation from Product, Engineering, QA, and other relevant functions as required by the pilot, such as Data and Security;
-- access to data and materials for 3–5 completed features;
-- readiness to change not only tools, but also delivery practices.
+**Vladimir Semenyuk — Former CTO & CIO | MBA**
 
 ## Next Step
 
-An alignment meeting with the CTO, Head of R&D, and Head of Product to agree success criteria, select the pilot scope, and confirm the engagement model.
+**A 60-minute acceleration scoping session** with the CTO and relevant functional leaders to select the feature flow with the highest time-saving potential and confirm success criteria and fixed fee.
