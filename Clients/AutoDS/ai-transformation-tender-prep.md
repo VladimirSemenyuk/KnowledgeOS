@@ -5,7 +5,8 @@
 - [[ai-transformation-mini-deck|Мини-презентация: AI-native PDLC]]
 - [[ai-transformation-one-pager|One-pager для AutoDS]]
 - [[ai-transformation-one-pager-en|One-pager for AutoDS — English]]
-- [[One Pager.pdf|One Pager for AutoDS — PDF]]
+- [[Personal/marketing/one-pager-en.pdf|Универсальный one-pager (English)]]
+- [[Personal/marketing/one-pager-ru.pdf|Универсальный one-pager (русский)]]
 - [[AI PDLC – Vladimir Semenyuk.pdf|AI PDLC — presentation]]
 - [[Case — Managed AI Transformation in Engineering.pdf|Managed AI Transformation in Engineering — case]]
 - [[Frameworks/maps/ai-transformation|AI Transformation]]
@@ -55,7 +56,7 @@
 - [x] В one-pager зафиксирована рекомендуемая 90-дневная программа: диагностика, пилот AI-native PDLC и решение о масштабировании.
 - [x] Подготовлена коммерческая упаковка двух сценариев: Independent Advisory от $40k и Artel Transformation Support от $70k за 90-дневную программу.
 - [x] В предложение добавлены условия старта и управленческий контур: внутренний владелец с мандатом CTO, межфункциональное участие, владельцы изменений и порядок эскалации блокеров.
-- [x] Подготовлен отправляемый англоязычный пакет: [[One Pager.pdf|one-pager]], [[AI PDLC – Vladimir Semenyuk.pdf|презентация AI PDLC]] и [[Case — Managed AI Transformation in Engineering.pdf|релевантный кейс]].
+- [x] Подготовлен отправляемый англоязычный пакет: [[Personal/marketing/one-pager-en.pdf|универсальный one-pager]], [[AI PDLC – Vladimir Semenyuk.pdf|презентация AI PDLC]] и [[Case — Managed AI Transformation in Engineering.pdf|релевантный кейс]].
 - [x] 2026-07-14 пакет отправлен Антону для выхода на обсуждение с Майклом.
 
 ### Уточнено по процессу
