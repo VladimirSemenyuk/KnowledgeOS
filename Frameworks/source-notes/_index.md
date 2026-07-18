@@ -12,3 +12,4 @@
 - [[Frameworks/source-notes/stanford-hai-ai-index-report-2025|Stanford HAI AI Index Report 2025]]
 - [[Frameworks/source-notes/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]
 - [[Frameworks/source-notes/agent-first-idp-platforms-for-agents-2026|Agent-first IDP: платформы для агентов]]
+- [[Frameworks/source-notes/boomdevs-ai-consulting-pricing-2026|Boomdevs: ценообразование AI-консалтинга в 2026 году]]
