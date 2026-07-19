@@ -20,3 +20,4 @@
 - [[Frameworks/source-notes/mit-nanda-genai-divide-state-of-ai-in-business-2025|MIT NANDA GenAI Divide 2025]]
 - [[Frameworks/source-notes/stanford-hai-ai-index-report-2025|Stanford HAI AI Index Report 2025]]
 - [[boomdevs-ai-consulting-pricing-2026|Boomdevs: ценообразование AI-консалтинга в 2026 году]]
+- [[krishang-ai-consulting-pricing-2026|Krishang Technolab: ценообразование AI-консалтинга в 2026 году]]

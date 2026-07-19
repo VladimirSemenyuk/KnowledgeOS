@@ -13,3 +13,4 @@
 - [[Frameworks/source-notes/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]
 - [[Frameworks/source-notes/agent-first-idp-platforms-for-agents-2026|Agent-first IDP: платформы для агентов]]
 - [[boomdevs-ai-consulting-pricing-2026|Boomdevs: ценообразование AI-консалтинга в 2026 году]]
+- [[krishang-ai-consulting-pricing-2026|Krishang Technolab: ценообразование AI-консалтинга в 2026 году]]
