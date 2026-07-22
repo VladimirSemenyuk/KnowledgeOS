@@ -8,6 +8,7 @@
 
 Карточки конкурентов:
 - [[Personal/marketing/competitors/ai-native-agency/ai-native-agency|AI-Native Agency]]
+- [[Personal/marketing/competitors/automation-transformation-consulting/automation-transformation-consulting|Automation Transformation Consulting]]
 - [[Personal/marketing/competitors/jaymin-west-consulting/jaymin-west-consulting|Jaymin West Consulting]]
   - [[Personal/marketing/competitors/jaymin-west-consulting/agentic-engineering-book-synthesis|Agentic Engineering Book — полезные паттерны без копирования]]
 - [[Personal/marketing/competitors/kkts-ai/kkts-ai|Кактус.AI / KKTS.AI]]

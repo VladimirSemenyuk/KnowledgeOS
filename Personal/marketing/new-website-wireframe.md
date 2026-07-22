@@ -120,16 +120,16 @@ Manual management loops     Roles, metrics and gates       in the agentic flow
 
 CTA: `Read the full case`.
 
-## Два способа работы
+## Три продукта, два пути
 
-### Choose the engagement that matches the situation
+### Choose the starting point that matches the situation
 
-| AI Transformation Partnership | Executive Technology Advisory |
-|---|---|
-| A defined transformation path with outcomes, metrics, and multiple change workstreams | Ongoing decision support during AI transformation, reorganization, growth, or operating-model change |
-| Starts with a 90-day program and may continue for 6–9 months | Retainer-based advisory, usually for six months or longer |
-| From **$40,000 / 90 days** | From **$8,000 / month** |
-| [Explore the transformation program] | [Explore executive advisory] |
+| AI Transformation Decision Sprint | AI Delivery Transformation Program | Executive Technology Advisory |
+|---|---|---|
+| A board-ready investment decision before committing to transformation | A defined transformation path with outcomes, metrics, and multiple change workstreams | Weekly decision support for one executive during transformation, reorganization, growth, or role change |
+| Four weeks | Starts with a 90-day proof stage and may continue through an optional post-program governance retainer | One executive, one 60-minute session per week, with unlimited asynchronous access between sessions |
+| From **$15,000** | From **$40,000 / 90 days** | From **$2,500 / month**, with a three-month minimum; additional executives require a separate contract |
+| [Explore the Decision Sprint] | [Explore the transformation program] | [Explore executive advisory] |
 
 ## Почему Владимир
 
@@ -549,7 +549,7 @@ What is changing in your organization? *
 [                                                    ]
 
 What kind of support are you considering? — optional
-[AI Transformation Program / Executive Advisory / Not sure yet]
+[AI Transformation Decision Sprint / AI Delivery Transformation Program / Executive Technology Advisory / Not sure yet]
 
 Engineering organization size — optional
 [                                                    ]
