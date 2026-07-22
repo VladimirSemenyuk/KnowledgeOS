@@ -1,13 +1,13 @@
 ---
 type: "публичный кейс"
-client: "анонимизированный B2B-маркетплейс"
+client: "обезличенная компания на рынке США"
 purpose: "доказательство для разговоров уровня CEO / founder про AI-трансформацию, операционную модель и управляемость engineering"
-visibility: "публичная версия без конфиденциальных деталей"
+visibility: "публичная обезличенная версия без endorsement клиента"
 ---
 
 # Контекст
 
-B2B-маркетплейс на рынке США проходил AI-трансформацию инженерной организации.
+Компания на рынке США с инженерной командой около 60 человек проходила AI-трансформацию engineering.
 
 Бизнес-цель стояла в увеличении результативности engineering без пропорционального роста команды. Для достижения этой цели компания переходила к agentic workflows, более раннему обнаружению дефектов и большему end-to-end ownership у инженерных команд.
 
@@ -111,7 +111,7 @@ AI-трансформация engineering становится управляе�
 — [[Personal/cases/AgVend/exports/managed-ai-transformation-in-engineering.pdf|Managed AI Transformation in Engineering]]
 
 Связи:
-— [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
+— [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация инженерной организации]]
 — [[Frameworks/models/ai-native-organization|AI-native organization]]
 — [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
 — [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]

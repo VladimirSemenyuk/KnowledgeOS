@@ -1,8 +1,8 @@
 ---
 type: "public case"
-client: "anonymized B2B marketplace"
+client: "anonymized US-based company"
 purpose: "proof for CEO / founder conversations about AI transformation, operating model, and engineering manageability"
-visibility: "public version without confidential details"
+visibility: "public anonymized version without client endorsement"
 ---
 
 # Managed AI Transformation in Engineering
@@ -11,7 +11,7 @@ visibility: "public version without confidential details"
 
 # Context
 
-A B2B marketplace in the US, with an engineering organization of approximately 60 engineers, was going through an AI transformation.
+A US-based company with an engineering organization of approximately 60 engineers was going through an AI transformation.
 
 The business goal was to increase engineering output without proportional headcount growth. To reach that goal, the company was moving toward agentic workflows, earlier defect detection, and stronger end-to-end ownership in engineering teams.
 
@@ -130,7 +130,7 @@ Main conclusion:
 - [[Personal/cases/AgVend/exports/upravlyaemaya-ai-transformatsiya-razrabotki.pdf|Управляемая AI-трансформация разработки]]
 
 Related:
-- [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
+- [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация инженерной организации]]
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
 - [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
 - [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]

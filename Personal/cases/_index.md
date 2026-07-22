@@ -10,7 +10,7 @@
 
 ## Кейсы
 
-- [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
+- [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация инженерной организации]]
 - [[Personal/cases/AgVend/Управляемая AI-трансформация engineering|Управляемая AI-трансформация engineering]]
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Реорганизация RnD в E-Com]]
 - [[Personal/cases/karernyy-perehod-v-banke-top-3|Карьерный переход в банке ТОП-3]]
