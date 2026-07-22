@@ -47,6 +47,7 @@ Avoid:
 - Never rename folders unless explicitly instructed.
 - Prefer incremental edits over destructive rewrites.
 - Keep writing concise, structured, and executive-oriented.
+- Keep one-pagers within 2,600 characters.
 - Consider relevant `Context.md` files before creating, editing, or summarizing materials.
 
 ## Context Efficiency
