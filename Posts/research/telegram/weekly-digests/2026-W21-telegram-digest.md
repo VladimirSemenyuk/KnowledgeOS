@@ -97,12 +97,12 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-native-without-universal-playbook]]
-- [[agent-vs-automation-decision-tree]]
-- [[validation-contract-for-ai-agents]]
-- [[consulting-after-ai-implementation]]
-- [[junior-to-senior-in-ai-native-organization]]
-- [[ai-governance-for-vertical-agents]]
+- ai-native-without-universal-playbook
+- agent-vs-automation-decision-tree
+- validation-contract-for-ai-agents
+- consulting-after-ai-implementation
+- junior-to-senior-in-ai-native-organization
+- ai-governance-for-vertical-agents
 
 ## Ссылки на источники
 

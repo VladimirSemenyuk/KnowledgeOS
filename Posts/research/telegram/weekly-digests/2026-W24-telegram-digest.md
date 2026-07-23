@@ -107,14 +107,14 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-pilots-need-diffusion-pipeline]]
-- [[agent-first-idp-operating-model]]
-- [[agent-sandbox-is-permission-boundary]]
-- [[ai-adoption-needs-sdlc-baseline]]
-- [[ai4sdlc-shifts-the-bottleneck]]
-- [[decision-records-for-humans-and-agents]]
-- [[workflow-governance-after-prompt-libraries]]
-- [[token-budget-as-ai-governance]]
+- ai-pilots-need-diffusion-pipeline
+- agent-first-idp-operating-model
+- agent-sandbox-is-permission-boundary
+- ai-adoption-needs-sdlc-baseline
+- ai4sdlc-shifts-the-bottleneck
+- decision-records-for-humans-and-agents
+- workflow-governance-after-prompt-libraries
+- token-budget-as-ai-governance
 
 ## Ссылки на источники
 

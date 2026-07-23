@@ -14,7 +14,7 @@
 Связанные материалы:
 
 - [[Personal/Context|Позиционирование Владимира]]
-- [[Personal/marketing/advisory-product-line|Advisory product line]]
+- [[Personal/marketing/offers/advisory-product-line|Advisory product line]]
 - [[Personal/marketing/competitors/ai-native-agency/ai-native-agency|AI-Native Agency]]
 
 ## Позиционирование
@@ -46,7 +46,7 @@
 
 ## Fractional CAIO как прямое пересечение
 
-Этот продукт ближе всего к [[Personal/marketing/advisory-product-line#Опциональный governance retainer после программы|post-program governance retainer внутри Transformation Program]]:
+Этот продукт ближе всего к [[Personal/marketing/offers/advisory-product-line#Опциональный governance retainer после программы|post-program governance retainer внутри Transformation Program]]:
 
 | Область | Automation Transformation Consulting | Владимир |
 | --- | --- | --- |

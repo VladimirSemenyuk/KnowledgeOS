@@ -108,14 +108,14 @@ status: research
 
 ## Возможности для контента
 
-- [[ai4sdlc-as-production-system]]
-- [[org-structure-as-ai-architecture]]
-- [[junior-to-senior-pipeline-in-agentic-world]]
-- [[production-ai-before-model-choice]]
-- [[token-burn-vs-proof-of-value]]
-- [[ai-roi-verification-tax]]
-- [[data-quality-as-ai-risk]]
-- [[metrics-as-management-action]]
+- ai4sdlc-as-production-system
+- org-structure-as-ai-architecture
+- junior-to-senior-pipeline-in-agentic-world
+- production-ai-before-model-choice
+- token-burn-vs-proof-of-value
+- ai-roi-verification-tax
+- data-quality-as-ai-risk
+- metrics-as-management-action
 
 ## Ссылки на источники
 

@@ -15,8 +15,8 @@
 Связанные материалы:
 
 - [[Personal/Context|Позиционирование Владимира]]
-- [[Clients/AutoDS/ai-transformation-tender-pricing|AutoDS: база предложения и ценообразование]]
-- [[Clients/AutoDS/ai-transformation-tender-prep|AutoDS: подготовка к тендеру]]
+- [[Clients/AutoDS/plans/ai-transformation-tender-pricing|AutoDS: база предложения и ценообразование]]
+- [[Clients/AutoDS/plans/ai-transformation-tender-prep|AutoDS: подготовка к тендеру]]
 
 ## Позиционирование
 
@@ -196,5 +196,5 @@ AI-Native Agency нельзя описывать как поставщика «�
 
 - [AI-Native Agency: Pricing](https://ai-native-agency.com/pricing) — пакеты, цены, сроки, гарантии, состав результата, исключения и критерии допуска.
 - [AI-Native Agency: главная страница](https://ai-native-agency.com/) — позиционирование, метод поставки, команда, governance, handover и публичные кейсы.
-- [[Clients/AutoDS/ai-transformation-tender-pricing|AutoDS: база предложения]] — текущий формат `$40k / $40k / от $20k`, границы ответственности и полная стоимость.
+- [[Clients/AutoDS/plans/ai-transformation-tender-pricing|AutoDS: база предложения]] — текущий формат `$40k / $40k / от $20k`, границы ответственности и полная стоимость.
 - [[Personal/Context|Позиционирование Владимира]] — покупатель, категория и дифференциация через архитектуру управляемости.

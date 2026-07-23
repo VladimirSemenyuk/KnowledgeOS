@@ -129,6 +129,6 @@ Featured должен работать как блок доказательст�
 [[Personal/cases/karernyy-perehod-v-banke-top-3|Карьерный переход в банке ТОП-3]] не ставить в Featured на первом этапе. Кейс сильный как подтверждение работы с senior-руководителями, но может размыть основной коммерческий сигнал в сторону карьерного менторинга. Использовать его как отдельный LinkedIn-пост о ролевом переходе руководителя, если нужно показать глубину работы с лидерской оптикой.
 
 Связи:
-- [[Personal/Life OS|Life OS]]
-- [[Personal/Цели 2026|Цели 2026]]
-- [[Personal/board-director-strategy|Стратегия входа в совет директоров]]
+- [[Personal/operating-system/Life OS|Life OS]]
+- [[Personal/operating-system/Цели 2026|Цели 2026]]
+- [[Personal/profile/board-director-strategy|Стратегия входа в совет директоров]]

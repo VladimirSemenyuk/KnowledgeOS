@@ -108,14 +108,14 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-transformation-as-deployment-layer]]
-- [[customer-iq-vs-ai-vendor-lock-in]]
-- [[autonomous-engineering-org-maturity-model]]
-- [[ai-dlc-as-delivery-architecture]]
-- [[review-capacity-as-ai-adoption-limit]]
-- [[human-in-the-loop-as-architecture]]
-- [[coding-agents-as-non-human-identities]]
-- [[shadow-ai-production-governance]]
+- ai-transformation-as-deployment-layer
+- customer-iq-vs-ai-vendor-lock-in
+- autonomous-engineering-org-maturity-model
+- ai-dlc-as-delivery-architecture
+- review-capacity-as-ai-adoption-limit
+- human-in-the-loop-as-architecture
+- coding-agents-as-non-human-identities
+- shadow-ai-production-governance
 
 ## Ссылки на источники
 

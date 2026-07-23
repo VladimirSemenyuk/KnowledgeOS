@@ -1,5 +1,12 @@
-# AutoDS Client Folder Structure
+# AutoDS Corporate Materials
 
-- Антон
+Эта папка содержит корпоративные материалы, связанные с обсуждением AI-трансформации AutoDS.
 
-Each folder is a manager who works with me as a mentee.
+Структура:
+
+- `Context.md` — рамка корпоративных материалов;
+- `_index.md` — навигация;
+- `deliverables/` — предложения, one-pager, презентации и экспортированные материалы;
+- `plans/` — подготовка, коммерческая модель и рабочее планирование.
+
+Личная advisory-работа с Антоном хранится отдельно в `Clients/Антон`.

@@ -109,14 +109,14 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-assisted-engineering-maturity-model]]
-- [[architecture-ai-needs-live-knowledge-base]]
-- [[agentic-stack-as-platform-governance]]
-- [[skills-as-agent-behavior-api]]
-- [[ai-readable-interfaces-and-content-governance]]
-- [[emergency-feature-as-operating-model-test]]
-- [[ai-transformation-as-zero-downtime-migration]]
-- [[because-we-can-is-not-ai-strategy]]
+- ai-assisted-engineering-maturity-model
+- architecture-ai-needs-live-knowledge-base
+- agentic-stack-as-platform-governance
+- skills-as-agent-behavior-api
+- ai-readable-interfaces-and-content-governance
+- emergency-feature-as-operating-model-test
+- ai-transformation-as-zero-downtime-migration
+- because-we-can-is-not-ai-strategy
 
 ## Ссылки на источники
 

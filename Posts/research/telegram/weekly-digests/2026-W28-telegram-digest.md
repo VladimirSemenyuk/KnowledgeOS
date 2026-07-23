@@ -128,16 +128,16 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-code-provenance-as-new-sdlc-control]]
-- [[agentic-sdlc-map-beyond-ai-adoption]]
-- [[power-user-gap-in-ai-productivity]]
-- [[user-correction-as-agent-trust-tax]]
-- [[expertise-moves-to-intent-and-verification]]
-- [[verified-success-is-not-production-outcome]]
-- [[agent-skills-as-behavior-api]]
-- [[evidence-gates-for-agentic-development]]
-- [[ai-slop-cleanup-economy]]
-- [[ai-governance-after-invisible-tools]]
+- ai-code-provenance-as-new-sdlc-control
+- agentic-sdlc-map-beyond-ai-adoption
+- power-user-gap-in-ai-productivity
+- user-correction-as-agent-trust-tax
+- expertise-moves-to-intent-and-verification
+- verified-success-is-not-production-outcome
+- agent-skills-as-behavior-api
+- evidence-gates-for-agentic-development
+- ai-slop-cleanup-economy
+- ai-governance-after-invisible-tools
 
 ## Ссылки на источники
 

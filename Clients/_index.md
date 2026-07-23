@@ -4,6 +4,9 @@
 
 ## Клиенты
 
-- [[Clients/AgVend/Context|AgVend]]
-- [[Clients/AutoDS/Антон/Context|AutoDS / Антон]]
+- [[Clients/AgVend/_index|AgVend]]
+- [[Clients/Антон/_index|Антон]]
 
+## Корпоративные материалы
+
+- [[Clients/AutoDS/_index|AutoDS — материалы AI-трансформации]]

@@ -107,14 +107,14 @@ status: research
 
 ## Возможности для контента
 
-- [[from-vibe-coding-to-agentic-engineering]]
-- [[agent-harness-as-operating-model]]
-- [[coding-agents-need-task-map]]
-- [[ai-code-review-trust-model]]
-- [[agent-ready-product-actions]]
-- [[attention-governance-for-ai-agents]]
-- [[tool-discipline-over-model-size]]
-- [[technical-debt-as-executive-signal]]
+- from-vibe-coding-to-agentic-engineering
+- agent-harness-as-operating-model
+- coding-agents-need-task-map
+- ai-code-review-trust-model
+- agent-ready-product-actions
+- attention-governance-for-ai-agents
+- tool-discipline-over-model-size
+- technical-debt-as-executive-signal
 
 ## Ссылки на источники
 

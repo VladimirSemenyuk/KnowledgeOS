@@ -9,7 +9,7 @@ visibility: "не публиковать; не пересказывать без
 
 Связи:
 - [[board-level-proof|AgVend board-level proof]]
-- [[Personal/board-director-strategy|Стратегия входа в совет директоров]]
+- [[Personal/profile/board-director-strategy|Стратегия входа в совет директоров]]
 - [[Clients/AgVend/Context|AgVend Context]]
 - [[Clients/AgVend/Plans/2026-engineering-transformation|AgVend Engineering Transformation Plan 2026]]
 - [[Clients/AgVend/Executive Reports/2026-05-em-development-report|Майский отчет по развитию EM]]

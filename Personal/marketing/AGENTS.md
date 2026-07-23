@@ -8,6 +8,19 @@ This folder is the source of truth for personal positioning rules, LinkedIn GTM 
 
 It is not a framework area. Do not move these materials to `/Frameworks` unless the user explicitly asks to create a reusable advisory model that is independent of personal positioning.
 
+## Folder Structure
+
+- `_index.md` — навигация;
+- `offers/` — продуктовая линейка и one-pager;
+- `website/` — структура содержания и план пересборки сайта;
+- `competitors/` — конкурентный контур;
+- `leads/` — потенциальные клиенты;
+- `linkedin-gtm-playbook.md` — источник правил LinkedIn-воронки.
+
+Исследования общего назначения по внешним источникам хранятся в `Frameworks/source-notes`.
+
+Исследования цен, конкурентов и GTM, которые непосредственно используются для формирования цены, предложения или позиционирования, хранятся в `Personal/marketing`.
+
 ## Usage
 
 Use these materials when working on:

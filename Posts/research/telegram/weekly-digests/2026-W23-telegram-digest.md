@@ -107,14 +107,14 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-adoption-is-operating-model-not-licenses]]
-- [[ai-agents-expose-infrastructure-debt]]
-- [[agent-access-is-management-risk]]
-- [[policy-as-evals-for-ai-native-compliance]]
-- [[jevons-paradox-of-ai-analytics]]
-- [[ai-security-as-trust-architecture]]
-- [[pass-rate-is-not-enterprise-quality]]
-- [[devsecops-control-plane-for-agents]]
+- ai-adoption-is-operating-model-not-licenses
+- ai-agents-expose-infrastructure-debt
+- agent-access-is-management-risk
+- policy-as-evals-for-ai-native-compliance
+- jevons-paradox-of-ai-analytics
+- ai-security-as-trust-architecture
+- pass-rate-is-not-enterprise-quality
+- devsecops-control-plane-for-agents
 
 ## Ссылки на источники
 

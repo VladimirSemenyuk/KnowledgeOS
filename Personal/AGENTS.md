@@ -6,6 +6,15 @@ These instructions apply to work inside `/Personal`.
 
 Follow the root `AGENTS.md` together with this file. When working on the user's personal positioning, this file is the local source of truth for stance and quality bar.
 
+## Folder Structure
+
+- `_index.md` — навигация по личной рабочей зоне;
+- `Context.md` — позиционирование и ICP;
+- `operating-system/` — Life OS и цели;
+- `profile/` — резюме и профессиональная стратегия;
+- `cases/` — доказательные материалы и кейсы;
+- `marketing/` — GTM, предложения, сайт, конкуренты и потенциальные клиенты.
+
 ---
 
 # Personal Positioning Standard

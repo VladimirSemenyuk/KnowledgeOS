@@ -18,6 +18,7 @@ When generating public content:
 Every client should include:
 
 - Context.md
+- _index.md
 
 For individual advisory participants / mentees, use:
 

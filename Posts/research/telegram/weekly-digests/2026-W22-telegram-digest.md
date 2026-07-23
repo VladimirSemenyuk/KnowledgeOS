@@ -107,15 +107,15 @@ status: research
 
 ## Возможности для контента
 
-- [[ai-shifts-bottleneck-from-coding-to-engineering-system]]
-- [[context-rich-work-graph-instead-of-ticket]]
-- [[ai-native-pdlc-as-management-architecture]]
-- [[five-automations-before-ai-strategy]]
-- [[vanity-metrics-in-ai-adoption]]
-- [[agentic-role-design-for-business-functions]]
-- [[agent-safety-is-not-compositional]]
-- [[visible-and-invisible-context-in-project-management]]
-- [[ai-capability-starts-before-ai-boom]]
+- ai-shifts-bottleneck-from-coding-to-engineering-system
+- context-rich-work-graph-instead-of-ticket
+- ai-native-pdlc-as-management-architecture
+- five-automations-before-ai-strategy
+- vanity-metrics-in-ai-adoption
+- agentic-role-design-for-business-functions
+- agent-safety-is-not-compositional
+- visible-and-invisible-context-in-project-management
+- ai-capability-starts-before-ai-boom
 
 ## Ссылки на источники
 
