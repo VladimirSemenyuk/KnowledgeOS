@@ -47,20 +47,21 @@ Posts/research/telegram/
 └── weekly-digests/
 ```
 
-Credentials хранить в корне vault, но не коммитить. Скрипты ищут credentials в таком порядке:
+Credentials хранить за пределами vault и не коммитить. Скрипты ищут credentials в таком порядке:
 
 1. `TELEGRAM_WEEKLY_CREDENTIAL_ROOT`, если переменная задана.
-2. `.agents/skills/create-telegram-weekly-digest/.private/`.
-3. Текущий vault root.
-4. `/Users/vladimir/Obsidian/KnowledgeOS`.
+2. `~/.config/knowledgeos/telegram-weekly/`.
+3. `.agents/skills/create-telegram-weekly-digest/.private/` как legacy fallback.
+4. Текущий vault root как legacy fallback.
+5. `/Users/vladimir/Obsidian/KnowledgeOS` как legacy fallback.
 
 ```text
-KnowledgeOS/.agents/skills/create-telegram-weekly-digest/.private/
+~/.config/knowledgeos/telegram-weekly/
 ├── .telegram-weekly.env
 └── .telegram-weekly.session.txt
 ```
 
-Эти файлы должны быть в `.gitignore`.
+Не создавать и не хранить новые credentials внутри vault.
 
 Никогда не коммитить:
 
@@ -86,7 +87,7 @@ cd .agents/skills/create-telegram-weekly-digest
 npm install
 ```
 
-Перед авторизацией создать `.telegram-weekly.env` в корне `KnowledgeOS`:
+Перед авторизацией создать `.telegram-weekly.env` в `~/.config/knowledgeos/telegram-weekly/`:
 
 ```bash
 TELEGRAM_API_ID=123456

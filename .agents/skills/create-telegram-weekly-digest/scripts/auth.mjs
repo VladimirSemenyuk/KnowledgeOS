@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import input from "input";
 import { TelegramClient } from "telegram";
@@ -27,6 +28,7 @@ const skillRoot = path.dirname(path.dirname(new URL(import.meta.url).pathname));
 function credentialRoots() {
   return [
     process.env.TELEGRAM_WEEKLY_CREDENTIAL_ROOT,
+    path.join(os.homedir(), ".config", "knowledgeos", "telegram-weekly"),
     path.join(skillRoot, ".private"),
     repoRoot,
     "/Users/vladimir/Obsidian/KnowledgeOS"
