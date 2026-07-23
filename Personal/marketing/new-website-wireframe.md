@@ -128,7 +128,7 @@ CTA: `Read the full case`.
 |---|---|---|
 | A board-ready investment decision before committing to transformation | A defined transformation path with outcomes, metrics, and multiple change workstreams | Weekly decision support for one executive during transformation, reorganization, growth, or role change |
 | Four weeks | Starts with a 90-day proof stage and may continue through an optional post-program governance retainer | One executive, one 60-minute session per week, with unlimited asynchronous access between sessions |
-| From **$15,000** | From **$40,000 / 90 days** | From **$2,500 / month**, with a three-month minimum; additional executives require a separate contract |
+| From **$15,000** | From **$40,000 / 90 days** | From **$1,500 / month**, with a three-month minimum; additional hours **$350 / hour**; additional executives require a separate contract |
 | [Explore the Decision Sprint] | [Explore the transformation program] | [Explore executive advisory] |
 
 ## Почему Владимир

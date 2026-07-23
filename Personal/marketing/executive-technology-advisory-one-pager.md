@@ -31,10 +31,10 @@ Each week, we work on the live decisions already on your agenda: technology, ope
 - One executive and one 60-minute session per week.
 - Preparation and document review within the mandate.
 - Unlimited asynchronous access between sessions.
-- Additional hours by agreement when needed; they do not automatically change the fee.
+- Additional hours by agreement at **$350 per hour**.
 
 **Minimum term:** 3 months  
-**Fee:** from **$2,500 per month**
+**Fee:** from **$1,500 per month**
 
 This is advisory for one executive—not generic coaching, team management, or organizational transformation. An additional executive requires a separate contract. Interviews, workshops, organizational diagnosis, and operating-model change require a corporate mandate.
 
