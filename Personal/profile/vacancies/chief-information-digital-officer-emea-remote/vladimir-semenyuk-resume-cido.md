@@ -5,24 +5,25 @@ vladimir.v.semenyuk@gmail.com | +381 62 147 31 08 | Serbia
 
 ## Chief Information & Digital Officer | AI & Enterprise Transformation Executive
 
-Technology executive with 17+ years of experience and 10+ years in CTO, CIO, and senior engineering leadership roles. Led technology organizations of up to 500 people and held group-level accountability for a portfolio of 12 digital products operated across multiple companies. Experience spans enterprise digital transformation, legacy modernization, cloud platforms, enterprise data management, AI/ML, agentic AI, cybersecurity, operating-model design, technology governance, and budget optimization.
+Technology executive with 17+ years of experience and 10+ years in CTO, CIO, and senior engineering leadership roles. Led technology organizations of up to 500 people and held group-level accountability for a portfolio of 12 digital products operated across multiple companies. Experience spans enterprise digital transformation, legacy modernization, cloud platforms, enterprise data governance and management, AI/ML, agentic AI, cybersecurity, operating-model design, technology governance, and budget optimization.
 
-Combines large-scale CIO leadership with hands-on AI-native transformation experience. Has worked directly with a Deputy Minister, company owners, group CEOs, founders, and technology executives to translate technology, AI, and risk decisions into measurable operational and commercial outcomes.
+Combines large-scale CIO leadership with hands-on AI-native transformation experience. Since 2024, independent advisory work has kept this expertise at the operational frontier of agentic AI, translating emerging capabilities into production delivery, governance, and organizational change. Has worked directly in owner-led group environments and with a Deputy Minister, company owners, group CEOs, founders, and technology executives to translate technology, AI, and risk decisions into measurable operational and commercial outcomes.
 
 ## Selected Enterprise Impact
 
 - Held group-level technology accountability for **12 digital products** operated by companies within a broader group, reporting to a Deputy Minister.
 - Within six months, unified fragmented engineering teams across **12 products—approximately 500 people** spanning in-house, staff-augmentation, and outsourced delivery—into a governed matrix organization with shared engineering standards and practices.
-- Owned annual technology budgets of **USD 40M+ at MOS.RU** and **USD 10M+ at Netology**.
+- Owned annual technology budgets of **USD 80M+ at MOS.RU** and **USD 10M+ at Netology**.
 - Reduced the delivery cycle **3×, from three weeks to one**, while selected teams moved **50–75% of their work into an agentic delivery flow**.
-- Built an Information Security function from the ground up, secured the company owner's backing, and successfully completed target-side IT due diligence during an M&A process.
+- Built an Information Security function from the ground up, completed **three consecutive security audits demonstrating an improving security posture**, established the first employee security policies and training, and successfully completed target-side IT due diligence during an M&A process.
 - Led a shared ML capability serving companies across a group; made the function self-funding and delivered **8–10% lower CAC and 20%+ higher LTV** than an external benchmark in a controlled test.
+- Implemented customer-data governance policies that, together with the broader technology and compliance program, contributed to securing technology-cluster residency and an exemption from VAT.
 - Reduced a technology operating budget by **7%** by eliminating non-value-adding spend, then delivered two successive **10% payroll reductions** without reducing delivery volume or quality. Established ROI measurement for every product team, brought the teams to profitability, and used the evidence to secure CEO support against further reductions.
 - Increased platform availability **from 97.8% to 99.9%**, reduced infrastructure costs by **12%**, and reduced incident resolution time by **20%**.
 
 ## Core Expertise
 
-Enterprise AI and digital transformation | Group technology leadership | AI-native and agentic operating models | Responsible-AI controls for agentic delivery | AI/ML products and shared capabilities | Enterprise data management and data warehouse operations | Technology modernization and cloud platforms | Enterprise architecture | Cybersecurity, resilience, and technology governance | Technology budgeting and cost optimization | Strategic vendor and partner management | Business value and transformation metrics | Organizational design and scaling | Executive and owner communication | Leadership and talent systems
+Enterprise AI and digital transformation | Group technology leadership | AI-native and agentic operating models | Responsible-AI controls for agentic delivery | AI/ML products and shared capabilities | Enterprise data governance, management, and data warehouse operations | Technology modernization and cloud platforms | Enterprise architecture | Cybersecurity, resilience, and technology governance | Technology budgeting and cost optimization | Strategic vendor and partner management | Business value and transformation metrics | Organizational design and scaling | Executive and owner communication | Leadership and talent systems
 
 ## Professional Experience
 
@@ -30,7 +31,7 @@ Enterprise AI and digital transformation | Group technology leadership | AI-nati
 
 **2024–Present**
 
-Founded and lead an independent advisory practice supporting founders, CEOs, CTOs, and engineering leaders through AI adoption, organizational scaling, reorganization, and operating-model transformation.
+Founded and lead an independent advisory practice supporting founders, CEOs, CTOs, and engineering leaders through AI adoption, organizational scaling, reorganization, and operating-model transformation. The practice serves as a hands-on environment for operationalizing agentic AI in production organizations while maintaining an executive focus on business outcomes, governance, and organizational capability.
 
 Selected achievements:
 
@@ -55,19 +56,22 @@ Selected achievements:
 - Reduced the technology operating budget by **7%** by eliminating non-value-adding spend, then delivered two successive **10% payroll reductions** without reducing delivery volume or quality.
 - Established ROI measurement for every product team, brought the teams to profitability, and used the evidence to secure CEO support against further reductions in delivery capacity.
 - Established a biweekly data-management governance cadence with the Head of Data Management and oversaw the operation of the group data warehouse, treating data as an enterprise IT asset.
+- Implemented customer-data governance policies that, together with the broader technology and compliance program, contributed to securing technology-cluster residency and an exemption from VAT.
 - Built the Information Security function from the ground up and secured the owner/Group CEO's backing for its mandate and operating model.
+- Completed **three consecutive Information Security audits**, each demonstrating improvement in the company's security posture.
+- Established the company's first employee Information Security policies and launched security-awareness training.
 - Applied COBIT to align Software Engineering, Data Management, Internal IT, and Information Security within a common technology-governance model.
 - Led two strategic data-center partner transitions. The first improved process maturity and SLA quality at the same cost; the second secured a **12-month free pilot for the core infrastructure** followed by long-term pricing equivalent to the incumbent provider.
 - Partnered with a video recording and content-management vendor to strengthen security and encryption capabilities in its product.
 - Successfully completed IT due diligence as the target company during an M&A process.
 
-### MOS.RU — Head of Engineering → CIO → Group CIO
+### MOS.RU — Head of Engineering → CIO
 
 **2019–2022**
 
 Joined as Head of Engineering and was promoted to CIO based on delivered results. Reported to a Deputy Minister and held group-level technology accountability for a portfolio of **12 digital products** operated by companies within the broader group. Led the digital transformation and engineering organization behind Moscow's digital-services ecosystem serving **20M+ residents**.
 
-Managed Software Engineering, QA, DevOps, Service Management, Information Security, and IT Support across three management layers with an annual technology budget of **USD 40M+**. Combined legacy modernization with the rapid delivery of new digital services.
+Managed Software Engineering, QA, DevOps, Service Management, Information Security, and IT Support across three management layers with an annual technology budget of **USD 80M+**. Combined legacy modernization with the rapid delivery of new digital services.
 
 Selected achievements:
 
