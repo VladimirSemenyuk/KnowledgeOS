@@ -6,6 +6,7 @@
 
 - [[Clients/AgVend/_index|AgVend]]
 - [[Clients/Антон/_index|Антон]]
+- [[Clients/Михаил/_index|Михаил]]
 
 ## Корпоративные материалы
 
