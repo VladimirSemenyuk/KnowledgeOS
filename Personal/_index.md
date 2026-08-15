@@ -16,6 +16,7 @@
 - [[Personal/profile/board-director-strategy|Стратегия входа в совет директоров]]
 - [[Personal/profile/vladimir-semenyuk-resume|Резюме]]
 - [[Personal/profile/vladimir-semenyuk-resume-sr-lat|Резюме — Senior Leadership]]
+- [[Personal/profile/vacancies/_index|Вакансии и статусы откликов]]
 
 ## Advisory-практика
 
