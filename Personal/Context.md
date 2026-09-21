@@ -1,6 +1,9 @@
 
 # Позиционирование
 
+> Актуальный приоритет развития практики с 2026-09-05: [[Personal/marketing/mentoring-practice/mentoring-practice-six-month-plan|План развития менторинга на шесть месяцев]]. Прежние advisory/board-планы и исторические финансовые отметки ниже не определяют текущий шестимесячный план; остальные личные цели сохраняются.
+
+
 Правила маркетинга, GTM-логики и LinkedIn-воронки для личного позиционирования хранятся в [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]].
 
 Конкурентный контур и рабочие карточки: [[Personal/marketing/competitors/_index|Конкуренты в позиционировании]].

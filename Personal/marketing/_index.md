@@ -1,5 +1,11 @@
 # Personal Marketing
 
+## Текущий план практики
+
+- [[Personal/marketing/mentoring-practice/_index|Практика менторинга — рабочая папка]].
+- [[Personal/marketing/mentoring-practice/mentoring-practice-six-month-plan|План развития менторинга на шесть месяцев]]
+- [[Personal/marketing/archive/2026-09-05/_index|Архив прежних планов]]
+
 Маркетинговая логика личного позиционирования, продуктовые предложения, конкурентный контур и работа с потенциальными клиентами.
 
 ## Основной контекст
@@ -10,6 +16,7 @@
 ## Рабочие разделы
 
 - [[Personal/marketing/offers/_index|Advisory-предложения]]
+- [[Personal/marketing/website/mentoring-one-page|Одностраничный сайт менторинга — структура и тексты]]
 - [[Personal/marketing/website/new-website-wireframe|Новый сайт — структура содержания]]
 - [[Personal/marketing/website/new-website-build-plan|Новый сайт — план пересборки]]
 - [[Personal/marketing/competitors/_index|Конкуренты]]

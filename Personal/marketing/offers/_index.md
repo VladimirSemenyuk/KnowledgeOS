@@ -1,5 +1,10 @@
 # Advisory Offers
 
+## Текущий план практики
+
+- [[Personal/marketing/mentoring-practice/mentoring-practice-six-month-plan|План развития менторинга на шесть месяцев]]
+- [[Personal/marketing/archive/2026-09-05/_index|Архив прежних планов]]
+
 Рабочая продуктовая линейка и материалы для упаковки advisory-предложений.
 
 ## Продуктовая архитектура

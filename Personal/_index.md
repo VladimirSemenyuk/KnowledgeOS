@@ -1,5 +1,10 @@
 # Personal
 
+## Текущий план практики
+
+- [[Personal/marketing/mentoring-practice/mentoring-practice-six-month-plan|План развития менторинга на шесть месяцев]]
+- [[Personal/marketing/archive/2026-09-05/_index|Архив прежних планов]]
+
 Личная рабочая зона: операционная система, профессиональный профиль, позиционирование и доказательная база advisory-практики.
 
 ## Контекст
