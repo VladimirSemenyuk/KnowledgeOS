@@ -48,7 +48,12 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .note{font-size:14px;color:var(--muted)}
 
 /* header */
-.header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(254,254,254,.97);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:transform .25s ease,border-color .25s ease}
+.topbar.is-scrolled{border-bottom-color:var(--line)}
+.topbar.is-hidden{transform:translateY(-100%)}
+.topbar:focus-within{transform:none}
+@media (prefers-reduced-motion:reduce){.topbar{transition:none}}
+.header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:6px;padding-bottom:6px}
 .logo{font-family:var(--head);font-size:18px;font-weight:600;letter-spacing:-0.04em;text-decoration:none}
 .nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center;font-size:14px;font-weight:600}
 .nav a{text-decoration:none}
@@ -147,13 +152,14 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 </head>
 <body>
 
+<div class="topbar">
 <header class="wrap header">
   <a class="logo" href="#top">Владимир Семенюк</a>
   <nav class="nav" aria-label="Связь">
-    <a href="https://www.linkedin.com/in/vladimir-semenyuk/">LinkedIn</a>
     <a class="btn btn--outline" href="https://t.me/vladimirsemenyuk">Написать</a>
   </nav>
 </header>
+</div>
 
 <main id="top">
 
@@ -366,5 +372,17 @@ ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 
 <footer class="wrap footer">©&nbsp;2026 Владимир Семенюк</footer>
 
+<script>
+(function(){
+  var bar=document.querySelector('.topbar'), last=window.scrollY;
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY;
+    bar.classList.toggle('is-scrolled',y>8);
+    if(Math.abs(y-last)<6) return;
+    bar.classList.toggle('is-hidden',y>last&&y>120);
+    last=y;
+  },{passive:true});
+})();
+</script>
 </body>
 </html>
