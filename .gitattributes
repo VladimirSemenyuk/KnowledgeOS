@@ -1,1 +1,4 @@
 *.pdf filter=lfs diff=lfs merge=lfs -text
+
+# Файлы сайта отдаются GitHub Pages напрямую, LFS там не работает
+Personal/marketing/website/site/**/*.pdf !filter !diff !merge -text
