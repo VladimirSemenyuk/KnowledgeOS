@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Владимир Семенюк&nbsp;— ментор, предприниматель, спикер</title>
+<meta name="description" content="Помогаю проходить личные и управленческие кризисы. Бывший CTO Нетологии и CIO mos.ru.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Владимир Семенюк — ментор, предприниматель, спикер">
+<meta property="og:description" content="Помогаю проходить личные и управленческие кризисы. Бывший CTO Нетологии и CIO mos.ru.">
+<meta property="og:image" content="https://semenyuk.pro/assets/img/vladimir-semenyuk.jpg">
+<meta property="og:url" content="https://semenyuk.pro/">
+<link rel="canonical" href="https://semenyuk.pro/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#FEFEFE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FEFEFE; --ink:#121212; --ink-2:#3A3A3A; --muted:#5C5C5C;
+  --line:#E6E6E6; --line-2:#D0D0D0; --soft:#F7F7F7;
+  --accent:#0099FF;
+  --head:Montserrat, system-ui, sans-serif;
+  --body:"Open Sans", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;letter-spacing:-0.02em;-webkit-font-smoothing:antialiased;font-kerning:normal}
+a{color:var(--ink)} a:hover{color:var(--accent)}
+img{display:block;max-width:100%}
+h1,h2,h3,.h{font-family:var(--head);font-weight:600;letter-spacing:-0.04em;margin:0;text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
+body{hyphens:manual;-webkit-hyphens:manual}
+p{margin:0}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.section{border-top:1px solid var(--line)}
+.section > .wrap{padding-top:64px;padding-bottom:64px;display:flex;flex-direction:column;gap:28px}
+.h2{font-size:clamp(26px,3vw,34px);line-height:1.2}
+.eyebrow{font-family:var(--head);font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)} .ink2{color:var(--ink-2)}
+.note{font-size:14px;color:var(--muted)}
+
+/* header */
+.header{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px}
+.logo{font-family:var(--head);font-size:18px;font-weight:600;letter-spacing:-0.04em;text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;gap:20px;align-items:center;font-size:14px;font-weight:600}
+.nav a{text-decoration:none}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;border:1px solid var(--line-2);text-decoration:none;font-weight:600;white-space:nowrap}
+.btn--dark{background:var(--ink);border-color:var(--ink);color:var(--bg)} .btn--dark:hover{color:var(--bg);background:#000}
+.btn--outline{border-color:var(--ink);min-height:44px;padding:0 18px}
+.btn--sm{min-height:44px;padding:0 16px;font-size:14px}
+.btn svg{flex-shrink:0}
+
+/* hero */
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding-top:40px;padding-bottom:72px}
+.hero__text{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.hero h1{font-size:clamp(34px,4.6vw,54px);line-height:1.1}
+.hero__lead{max-width:540px;font-size:18px;color:var(--ink-2)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:10px;padding-top:4px}
+.hero__photo{flex:0 1 300px;display:flex;justify-content:center}
+.hero__photo img{width:100%;max-width:300px;height:auto;aspect-ratio:1/1;border-radius:50%;object-fit:cover}
+
+/* trust */
+.trust{background:var(--soft)}
+.trust > .wrap{gap:32px}
+.trust__row{display:flex;flex-direction:column;gap:14px}
+.trust__row + .trust__row{border-top:1px solid #E0E0E0;padding-top:28px}
+.trust .eyebrow{color:var(--muted)}
+.trust__geo{display:flex;flex-wrap:wrap;gap:8px 36px}
+.trust__big{font-family:var(--head);font-weight:600;font-size:clamp(20px,2.4vw,26px);letter-spacing:-0.04em;line-height:1.25}
+.trust__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px 32px}
+.trust__grid div{display:flex;flex-direction:column;gap:2px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px 32px}
+.stat{display:flex;flex-direction:column;gap:4px}
+.stat__num{font-family:var(--head);font-weight:600;font-size:clamp(40px,5vw,56px);line-height:1;letter-spacing:-0.04em;color:var(--accent)}
+.stat__label{color:var(--ink-2);max-width:280px}
+
+/* cards */
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:24px 28px;display:flex;flex-direction:column;gap:12px}
+.card__title{font-size:19px;line-height:1.3}
+.card ul{color:var(--ink-2)}
+
+/* cases */
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.case{background:var(--bg);padding:24px 22px;display:flex;flex-direction:column;gap:14px}
+.case__result{display:flex;gap:8px;align-items:flex-start;font-weight:600}
+.case__result span:first-child{color:var(--accent)}
+
+/* dark */
+.dark{background:var(--ink);color:#F5F5F5;border-top:0}
+.dark > .wrap{padding-top:72px;padding-bottom:72px;gap:32px}
+.dark__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 40px}
+.dark__item{display:flex;flex-direction:column;gap:8px;border-top:1px solid #333;padding-top:20px}
+.dark__item h3{font-size:20px;color:var(--accent);line-height:1.3}
+.dark__item p{color:#C4C4C4}
+
+/* work */
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px 48px}
+.work div{display:flex;flex-direction:column;gap:8px}
+.work h3{font-size:18px}
+
+/* talks */
+.list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(110px,140px) minmax(0,1fr) auto;gap:8px 24px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.row__meta{font-size:14px;color:var(--muted)}
+.row__body{display:flex;flex-direction:column;gap:2px}
+.row__title{font-family:var(--head);font-weight:600;font-size:18px;line-height:1.3;letter-spacing:-0.04em;text-decoration:none;text-wrap:balance}
+.row__actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+@media (max-width:640px){
+  .row__actions{justify-content:flex-start;margin-top:8px}
+  .row{grid-template-columns:1fr;gap:6px}
+  .row .btn{justify-self:start;margin-top:8px}
+}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:40px 56px}
+.review{margin:0;display:flex;flex-direction:column;gap:16px}
+.review figcaption{display:flex;gap:14px;align-items:center}
+.review img{width:56px;height:56px;max-width:none;border-radius:50%;object-fit:cover;flex-shrink:0}
+.review__name{font-family:var(--head);font-weight:600;font-size:16px;letter-spacing:-0.04em}
+.review blockquote{margin:0;color:var(--ink-2)}
+@media (max-width:400px){.reviews,.grid-2{grid-template-columns:1fr}}
+
+/* contacts */
+.section > .wrap.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:32px 40px;align-items:start}
+.contacts__intro{display:flex;flex-direction:column;gap:10px}
+.contacts__list{display:flex;flex-direction:column;border-top:1px solid var(--ink)}
+.contacts__list a{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:4px 16px;min-height:54px;padding:8px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.contacts__list a span:first-child{font-weight:600}
+.contacts__list a span:last-child{color:var(--muted)}
+.contacts__list a:hover span{color:var(--accent)}
+
+.footer{padding-top:24px;padding-bottom:40px;font-size:13px;color:var(--muted)}
+
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<header class="wrap header">
+  <a class="logo" href="#top">Владимир Семенюк</a>
+  <nav class="nav" aria-label="Связь">
+    <a href="https://www.linkedin.com/in/vladimir-semenyuk/">LinkedIn</a>
+    <a class="btn btn--outline" href="https://t.me/vladimirsemenyuk">Написать</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="wrap hero">
+  <div class="hero__text">
+    <div class="eyebrow">Ментор · предприниматель · спикер</div>
+    <h1>Помогаю проходить личные и&nbsp;управленческие кризисы</h1>
+    <p class="hero__lead">Бывший CTO Нетологии и&nbsp;CIO mos.ru. 14+&nbsp;лет в&nbsp;управлении. Знаю кризисы как&nbsp;руководитель и&nbsp;как&nbsp;предприниматель.</p>
+    <div class="hero__actions">
+      <a class="btn btn--dark" href="https://t.me/vladimirsemenyuk">Telegram <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="btn" href="https://www.linkedin.com/in/vladimir-semenyuk/">LinkedIn</a>
+      <a class="btn" href="mailto:vladimir@semenyuk.pro">Email</a>
+    </div>
+  </div>
+  <div class="hero__photo">
+    <img src="assets/img/vladimir-semenyuk.jpg" width="640" height="640" alt="Владимир Семенюк">
+  </div>
+</section>
+
+<section class="section trust">
+  <div class="wrap">
+    <h2 class="h2">Мне доверяют</h2>
+    <div class="stats">
+      <div class="stat"><span class="stat__num">50+</span><span class="stat__label">подготовленных руководителей</span></div>
+      <div class="stat"><span class="stat__num">20+</span><span class="stat__label">выросли до&nbsp;VP и&nbsp;C-level ролей</span></div>
+    </div>
+    <div class="trust__row" style="border-top:1px solid #E0E0E0;padding-top:28px">
+      <div class="eyebrow">Клиенты</div>
+      <div class="trust__geo">
+        <span class="trust__big">Кремниевая долина</span>
+        <span class="trust__big">Израиль</span>
+        <span class="trust__big">ОАЭ</span>
+        <span class="trust__big">СНГ</span>
+      </div>
+    </div>
+    <div class="trust__row">
+      <div class="eyebrow">Руководил технологиями</div>
+      <div class="trust__grid">
+        <div><span class="trust__big">Нетология</span><span class="note">CTO</span></div>
+        <div><span class="trust__big">mos.ru</span><span class="note">CIO</span></div>
+        <div><span class="trust__big">IPONWEB</span><span class="note">Engineering Manager</span></div>
+        <div><span class="trust__big">Mail.Ru Group</span><span class="note">Team Lead</span></div>
+      </div>
+    </div>
+    <p class="note">Образование: МГТУ им.&nbsp;Баумана · MBA ВШЭ</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="h2">С&nbsp;чем приходят</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="eyebrow">Управленческое</div>
+        <h3 class="card__title">Перестало работать то, что работало</h3>
+        <ul>
+          <li>Реорганизация буксует</li>
+          <li>AI внедрили, а&nbsp;эффекта нет</li>
+          <li>Компания растёт или&nbsp;сжимается быстрее, чем успевает управление</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Личное</div>
+        <h3 class="card__title">Карьера и&nbsp;роль руководителя</h3>
+        <ul>
+          <li>Утонул в&nbsp;операционке</li>
+          <li>Нужен следующий уровень, а&nbsp;прежний опыт не&nbsp;помогает</li>
+          <li>Тупик, страх сокращения, долгий поиск работы</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Не&nbsp;психотерапия: личное только в&nbsp;связке с&nbsp;работой и&nbsp;карьерой.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="h2">Кейсы</h2>
+    <div class="cases">
+      <div class="case">
+        <p class="ink2">Реформа R&amp;D на&nbsp;40+&nbsp;человек стоит год. Руководитель проводит 10+&nbsp;встреч в&nbsp;день</p>
+        <p class="case__result"><span aria-hidden="true">→</span><span>Реформа завершена, руководитель повышен до&nbsp;директора</span></p>
+      </div>
+      <div class="case">
+        <p class="ink2">AI внедрили, поставка не&nbsp;ускорилась. Около 60&nbsp;инженеров, США</p>
+        <p class="case__result"><span aria-hidden="true">→</span><span>Цикл поставки сократился с&nbsp;3&nbsp;недель до&nbsp;1&nbsp;за&nbsp;5&nbsp;месяцев</span></p>
+      </div>
+      <div class="case">
+        <p class="ink2">Техлиды получили по&nbsp;несколько команд посреди AI&#8209;трансформации</p>
+        <p class="case__result"><span aria-hidden="true">→</span><span>Делегирование вместо ручного контроля</span></p>
+      </div>
+      <div class="case">
+        <p class="ink2">Руководитель проектного офиса в&nbsp;банке ТОП&#8209;3 полгода в&nbsp;тупике</p>
+        <p class="case__result"><span aria-hidden="true">→</span><span>План на&nbsp;год и&nbsp;повышение до&nbsp;исполнительного директора</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <h2 class="h2">Знаю кризисы изнутри</h2>
+    <div class="dark__grid">
+      <div class="dark__item">
+        <h3>Провал, который всё изменил</h3>
+        <p>В&nbsp;2017&nbsp;году меня разнесли на&nbsp;собеседовании на&nbsp;CTO в&nbsp;биг-техе. После этого перестал строить незаменимость и&nbsp;начал строить систему.</p>
+      </div>
+      <div class="dark__item">
+        <h3>Свой AI-стартап</h3>
+        <p>Ушёл с&nbsp;позиции CTO в&nbsp;своё дело. Продукт и&nbsp;клиенты были, а&nbsp;масштаба не&nbsp;случилось. Закрыл.</p>
+      </div>
+      <div class="dark__item">
+        <h3>Теннисный клуб в&nbsp;Белграде</h3>
+        <p>2,5&nbsp;года строил клуб и&nbsp;школу с&nbsp;нуля в&nbsp;новой стране и&nbsp;новой для&nbsp;себя отрасли. Закрыл.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="border-top:0">
+  <div class="wrap">
+    <h2 class="h2">Как&nbsp;работаю</h2>
+    <div class="work">
+      <div>
+        <h3>Менторинг руководителей</h3>
+        <p class="ink2">Встреча раз в&nbsp;неделю и&nbsp;связь между встречами. Разбираем вашу ситуацию, выбираем действие, проверяем результат.</p>
+      </div>
+      <div>
+        <h3>Advisory для&nbsp;CEO и&nbsp;фаундеров</h3>
+        <p class="ink2">Когда кризис охватил всю организацию: структура, роли, решения, AI&#8209;трансформация.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="talks">
+  <div class="wrap">
+    <h2 class="h2">Выступления и&nbsp;материалы</h2>
+    <div class="list">
+      <div class="row">
+        <span class="row__meta">12&nbsp;ноября 2026</span>
+        <span class="row__body">
+          <span class="eyebrow">pmclub · Upskill Week</span>
+          <a class="row__title" href="https://pmclub.pro/conference/upskill-week">Востребованность менеджера в&nbsp;кризис: метанавыки и&nbsp;личный стиль управления</a>
+        </span>
+        <span class="row__actions"><a class="btn btn--sm" href="assets/files/vostrebovannost-menedzhera-v-krizis.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Слайды, PDF</a><a class="btn btn--sm" href="assets/files/metanavyki-i-instrumenty.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Раздатка, PDF</a></span>
+      </div>
+      <div class="row">
+        <span class="row__meta">6&nbsp;июня 2026</span>
+        <span class="row__body">
+          <span class="eyebrow">TechRec</span>
+          <span class="row__title">Как&nbsp;IT-организации становятся AI-native</span>
+        </span>
+        <a class="btn btn--sm" href="assets/files/kak-it-organizacii-stanovyatsya-ai-native.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Слайды, PDF</a>
+      </div>
+      <div class="row">
+        <span class="row__meta">Для&nbsp;тимлидов, EM и&nbsp;CTO</span>
+        <span class="row__body">
+          <span class="eyebrow">Подборка книг</span>
+          <span class="row__title">7&nbsp;книг про&nbsp;мышление, а&nbsp;не&nbsp;про&nbsp;стек</span>
+        </span>
+        <a class="btn btn--sm" href="assets/files/7-knig-dlya-menedzherov.pdf" download><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 10l6 6 6-6M5 20h14"/></svg>Скачать, PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 class="h2">Отзывы</h2>
+    <div class="reviews">
+      <figure class="review">
+        <figcaption><img src="assets/img/reviews/olga.png" width="124" height="124" alt="Ольга Лончакова"><span><span class="review__name">Ольга Лончакова</span><br><span class="note">Исполнительный директор, Green Bank</span></span></figcaption>
+        <blockquote>«Полгода сомнений и&nbsp;внутренних разговоров были чётко структурированы и&nbsp;разложены по&nbsp;полочкам. После сессии у&nbsp;меня появился план горизонтом в&nbsp;год с&nbsp;конкретными шагами. Владимир сумел ухватить суть и&nbsp;дал конкретные реализуемые советы и&nbsp;рекомендации».</blockquote>
+      </figure>
+      <figure class="review">
+        <figcaption><img src="assets/img/reviews/nikolay.png" width="124" height="124" alt="Николай Смирницкий"><span><span class="review__name">Николай Смирницкий</span><br><span class="note">Founder &amp; CEO, MPFact.ru</span></span></figcaption>
+        <blockquote>«Владимир кратко и&nbsp;понятно объяснил, как&nbsp;работать с&nbsp;программистами. После этого изменился наш CTO: он стал думать как&nbsp;предприниматель. Это&nbsp;точно поможет нам быстрее достичь целей».</blockquote>
+      </figure>
+      <figure class="review">
+        <figcaption><img src="assets/img/reviews/vitaly.png" width="124" height="124" alt="Виталий Иванов"><span><span class="review__name">Виталий Иванов</span><br><span class="note">CIO, UKids Academy</span></span></figcaption>
+        <blockquote>«Владимир идёт в&nbsp;глубину и&nbsp;разбирает детали, не&nbsp;останавливаясь на&nbsp;общих вопросах. Консультация дала трезвую обратную связь по&nbsp;моим концепциям и&nbsp;массу идей для&nbsp;развития».</blockquote>
+      </figure>
+      <figure class="review">
+        <figcaption><img src="assets/img/reviews/anton.png" width="124" height="124" alt="Антон Тимофеев"><span><span class="review__name">Антон Тимофеев</span><br><span class="note">Director of R&amp;D, AutoDS</span></span></figcaption>
+        <blockquote>«Самым ценным стало трезвое заземление. Владимир помог стать эффективным фильтром между стратегией и&nbsp;реальностью, сохранив доверие в&nbsp;командах без&nbsp;потери требовательности».</blockquote>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacts">
+  <div class="wrap contacts">
+    <div class="contacts__intro">
+      <h2 class="h2">Давайте поговорим</h2>
+      <p class="ink2">Отвечаю лично, быстрее всего в&nbsp;Telegram.</p>
+    </div>
+    <nav class="contacts__list" aria-label="Контакты">
+      <a href="https://t.me/vladimirsemenyuk"><span>Telegram</span><span>@vladimirsemenyuk</span></a>
+      <a href="https://t.me/management_and_happiness"><span>Telegram-канал</span><span>«Управление и&nbsp;Счастье»</span></a>
+      <a href="https://www.threads.com/@vladimir.semenyuk"><span>Threads</span><span>@vladimir.semenyuk</span></a>
+      <a href="https://www.linkedin.com/in/vladimir-semenyuk/"><span>LinkedIn</span><span>in/vladimir-semenyuk</span></a>
+      <a href="mailto:vladimir@semenyuk.pro"><span>Email</span><span>vladimir@semenyuk.pro</span></a>
+    </nav>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap footer">©&nbsp;2026 Владимир Семенюк</footer>
+
+</body>
+</html>
