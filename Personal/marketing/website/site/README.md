@@ -18,7 +18,6 @@ visibility: private
 - `assets/img/reviews/` — фото авторов отзывов (вырезаны из скриншота, 124×124; заменить исходниками).
 - `assets/files/metanavyki-i-instrumenty.pdf` — раздатка к pmclub Upskill Week.
 - `assets/files/vostrebovannost-menedzhera-v-krizis.pdf` — слайды pmclub Upskill Week (из `Talks/2026-11-12-upskill-week/v3/slides.pdf`).
-- `assets/files/7-knig-dlya-menedzherov.pdf` — подборка книг, сжатая версия (1,7 МБ).
 - `assets/files/kak-it-organizacii-stanovyatsya-ai-native.pdf` — слайды выступления на TechRec, разрешение на публикацию есть.
 
 ## Типографика
