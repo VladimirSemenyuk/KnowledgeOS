@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="500" height="700">
+  <defs>
+    <clipPath id="top"><circle cx="250" cy="235" r="175"/></clipPath>
+  </defs>
+  <circle cx="250" cy="235" r="175" fill="#FEFEFE" fill-opacity="0.06" stroke="#FEFEFE" stroke-width="3"/>
+  <circle cx="250" cy="465" r="175" fill="#E94957" fill-opacity="0.10" stroke="#E94957" stroke-width="3"/>
+  <circle cx="250" cy="465" r="175" fill="#E94957" fill-opacity="0.45" clip-path="url(#top)"/>
+  <g font-family="Montserrat, 'Open Sans', 'Helvetica Neue', Arial, sans-serif" font-weight="600" text-anchor="middle">
+    <text x="250" y="180" font-size="34" fill="#FEFEFE">Склонности</text>
+    <text x="250" y="359" font-size="26" fill="#FEFEFE">Личный стиль</text>
+    <text x="250" y="545" font-size="34" fill="#E94957">Метанавыки</text>
+  </g>
+</svg>
