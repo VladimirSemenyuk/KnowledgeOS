@@ -45,3 +45,10 @@
 | Date | Type | Topic | Status | Link |
 |---|---|---|---|---|
 | 2026-07-02 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Закончил большой проект AI-трансформации | published | [[2026-07-02-zakonchil-bolshoy-proekt-ai-transformatsii]] |
+
+## September 2026
+
+| Date | Type | Topic | Status | Link |
+|---|---|---|---|---|
+| 2026-09-22 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | Навыки следующей роли | published | [[2026-09-22-navyki-sleduyushchey-roli]] |
+| 2026-09-24 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | Сильные стороны руководителя | published | [[2026-09-24-silnye-storony-rukovoditelya]] |

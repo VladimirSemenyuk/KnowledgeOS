@@ -55,6 +55,8 @@
 | 2026-06-12 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-12-chetyre-parallelnye-vselennye-v-it\|Четыре параллельных вселенных в IT]] |
 | 2026-06-16 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-06-16-fable-5-i-inzhenernaya-gigiena-ai-kontura\|Fable 5 и инженерная гигиена AI-контура]] |
 | 2026-07-02 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-07-02-zakonchil-bolshoy-proekt-ai-transformatsii\|Закончил большой проект AI-трансформации]] |
+| 2026-09-22 | [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU\|BOFU]] | [[2026-09-22-navyki-sleduyushchey-roli\|Навыки следующей роли]] |
+| 2026-09-24 | [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU\|TOFU]] | [[2026-09-24-silnye-storony-rukovoditelya\|Сильные стороны руководителя]] |
 
 ## Topic Clusters
 

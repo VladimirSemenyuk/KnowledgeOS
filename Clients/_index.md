@@ -11,3 +11,4 @@
 ## Корпоративные материалы
 
 - [[Clients/AutoDS/_index|AutoDS — материалы AI-трансформации]]
+- [[Clients/Ravex AI/_index|Ravex AI — предложение по запуску MVP]]

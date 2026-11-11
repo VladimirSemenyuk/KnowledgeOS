@@ -39,3 +39,9 @@ node_modules/
 # *.mp4
 
 .vscode/settings.json
+
+# Marp: библиотека, которую плагин скачивает сам
+.obsidian/plugins/marp-slides/lib*/
+
+# Служебные проверки QR-кодов
+**/.qrcheck.png

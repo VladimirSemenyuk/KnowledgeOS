@@ -19,6 +19,8 @@
 
 ## Материалы
 
+- [[application-update-2026-09-28|Обновление проверки и комплекта от 28 сентября 2026]]
+- [[contacts|Контакт и подтверждения]]
 - [[fit-assessment|Оценка соответствия]]
 - [[vladimir-semenyuk-resume-cto-alanbase-ru|Резюме]]
 - [[vladimir-semenyuk-resume-cto-alanbase-ru.pdf|PDF резюме]]

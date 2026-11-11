@@ -12,7 +12,9 @@
 
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация инженерной организации]]
 - [[Personal/cases/AgVend/Управляемая AI-трансформация engineering|Управляемая AI-трансформация engineering]]
+- [[Personal/cases/AgVend/tech-lead-to-engineering-manager|От техлида одной команды к Engineering Manager — версия кейса о развитии руководителей]]
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Реорганизация RnD в E-Com]]
+- [[Personal/cases/rnd-leadership-development|Развитие руководителя R&D — короткий кейс менторинга]]
 - [[Personal/cases/karernyy-perehod-v-banke-top-3|Карьерный переход в банке ТОП-3]]
 
 ## Закрытые материалы

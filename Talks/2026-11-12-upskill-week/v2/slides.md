@@ -108,7 +108,7 @@ style: |
 
 - 17 лет в управлении технологиями, 
   ex‑CTO Нетологии, MBA
-- Стратегический советник, ментор, IT‑предприниматель
+- Стратегический советник, ментор, предприниматель
 - **Лично пережил несколько кризисов**
 
 <!--
@@ -280,15 +280,14 @@ style: |
 
 # Вопросы
 
-![bg right:35% contain 70%](../img/taplink.png)
+![bg right:35% contain 70%](../img/qr-site.png)
 
 **Владимир Семенюк**
+*Стратегический советник, ментор, предприниматель*
 
 - Email: [vladimir@semenyuk.pro](mailto:vladimir@semenyuk.pro)
+- Web: [semenyuk.pro](https://semenyuk.pro)
 - Telegram: [@vladimirsemenyuk](https://t.me/vladimirsemenyuk)
-- Канал «Управление и Счастье»: [t.me/management_and_happiness](https://t.me/management_and_happiness)
-- Threads: [@vladimir.semenyuk](https://www.threads.com/@vladimir.semenyuk)
-- LinkedIn: [in/vladimir-semenyuk](https://www.linkedin.com/in/vladimir-semenyuk/)
 
 <!--
 6 минут. Заготовки:

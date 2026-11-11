@@ -114,7 +114,7 @@ style: |
 
 ## Владимир Семенюк
 
-17 лет в управлении технологиями, ex‑CTO Нетологии. Стратегический советник, ментор, IT‑предприниматель
+17 лет в управлении технологиями, ex‑CTO Нетологии. Стратегический советник, ментор, предприниматель
 
 ### Чем могу помочь
 
@@ -126,4 +126,5 @@ style: |
 ### Контакты
 
 - Email: [vladimir@semenyuk.pro](mailto:vladimir@semenyuk.pro)
+- Web: [semenyuk.pro](https://semenyuk.pro)
 - Telegram: [@vladimirsemenyuk](https://t.me/vladimirsemenyuk)
