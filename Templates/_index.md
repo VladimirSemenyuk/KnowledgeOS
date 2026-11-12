@@ -11,3 +11,6 @@
 
 - [[Templates/posts/linkedin-post.template|LinkedIn post]]
 
+## Talks
+
+- [[Templates/marp/marp-deck.template|Marp-презентация в стиле semenyuk.pro]] — тема `Templates/marp/themes/semenyuk.css`

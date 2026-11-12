@@ -166,6 +166,20 @@ Recommended slide block format:
 
 ---
 
+# Slide Design (Marp)
+
+Новые презентации в Marp оформляются в стиле сайта semenyuk.pro.
+
+- Начинать с шаблона `Templates/marp/marp-deck.template.md`.
+- Во frontmatter: `theme: semenyuk`. Не копировать стили в `style:` каждой презентации; локальные правки — только точечные классы для конкретного слайда.
+- Тема: `Templates/marp/themes/semenyuk.css`. Правила оформления описаны в комментарии в начале файла.
+- `*слово*` — красная обводка: только для кризиса или главного слова слайда, не больше одного раза на слайд.
+- `**факт**` — чёрное маркерное подчёркивание: цифры и факты.
+- Классы слайдов: `lead`, `statement`, `crisis`, `checks`, `split`, `compact`, `contacts`.
+- Экспорт из терминала: `npx @marp-team/marp-cli@4.1.2 --theme-set Templates/marp/themes/semenyuk.css --pdf --allow-local-files <slides.md>`.
+
+---
+
 # Source Handling
 
 Use `raw-info.md` as the primary local source when it exists.
