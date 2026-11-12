@@ -131,7 +131,8 @@ main > section + section{border-top:1px solid var(--line)}
 .pain:first-child{grid-column:1 / span 6}
 .pain + .pain{grid-column:7 / span 6;position:relative}
 .pain + .pain::before{content:"";position:absolute;left:calc(var(--gutter) / -2);top:0;bottom:0;border-left:1px solid var(--line)}
-.pain{display:flex;flex-direction:column;gap:22px;padding-right:clamp(0px,2vw,32px)}
+.pain{display:flex;flex-direction:column;gap:22px;padding-right:clamp(0px,2.4vw,36px)}
+.pain + .pain{padding-right:0;padding-left:clamp(0px,2.4vw,36px)}
 .pain h3{font-size:clamp(24px,2.4vw,34px);line-height:1.15}
 .pain__kind{font-size:16px;font-weight:500;color:var(--muted);margin-bottom:-14px}
 .pain ul{display:flex;flex-direction:column;gap:20px}
@@ -179,7 +180,7 @@ main > section + section{border-top:1px solid var(--line)}
 /* отзывы */
 #reviews{padding-top:clamp(48px,6vh,80px);padding-bottom:clamp(48px,6vh,80px)}
 #reviews .sec-head{margin-bottom:clamp(20px,3vh,36px)}
-#reviews .nudge{margin-top:clamp(16px,3vh,28px)}
+#reviews .nudge{margin-top:clamp(28px,4.5vh,44px);padding-top:clamp(20px,3vh,28px);border-top:1px solid var(--line)}
 .lead-quote{display:flex;flex-direction:column;gap:20px;margin:0 0 clamp(32px,5vh,52px)}
 .lead-wrap > .lead-quote{grid-column:1 / span 10}
 .lead-quote blockquote{margin:0;font-size:clamp(22px,2.4vw,33px);line-height:1.3;font-weight:500;letter-spacing:-0.02em}
@@ -220,6 +221,10 @@ main > section + section{border-top:1px solid var(--line)}
 .footer{grid-column:1 / -1;margin-top:clamp(32px,6vh,64px);color:var(--muted);font-size:14px}
 
 /* адаптив */
+@media (max-width:1100px){
+  .talk{grid-template-columns:150px minmax(0,1fr)}
+  .talk__actions{grid-column:2;justify-content:flex-start;margin-top:6px}
+}
 @media (max-width:960px){
   .hero__text,.hero__photo,.stories,.path,.close__text,.close__side{grid-column:1 / -1}
   .hero__photo{grid-column:1 / span 7}
@@ -235,7 +240,7 @@ main > section + section{border-top:1px solid var(--line)}
   .case__crisis,.case__result{grid-column:1 / -1}
   .case__arrow{display:none}
   .talk{grid-template-columns:1fr;gap:8px}
-  .talk__actions{justify-content:flex-start;margin-top:8px}
+  .talk__actions{grid-column:auto;justify-content:flex-start;margin-top:8px}
   .who span{display:none}
   .close__actions,.close__actions .btn{width:100%}
 }
