@@ -18,6 +18,7 @@ visibility: private
 - `assets/img/reviews/` — фото авторов отзывов (вырезаны из скриншота, 124×124; заменить исходниками).
 - `assets/files/metanavyki-i-instrumenty.pdf` — раздатка к pmclub Upskill Week.
 - `assets/files/vostrebovannost-menedzhera-v-krizis.pdf` — слайды pmclub Upskill Week (из `Talks/2026-11-12-upskill-week/v2/slides.pdf`).
+- `assets/files/kogda-komanda-rastyot.pdf` — слайды воркшопа в Стратоплане 31.03.2026 (из `Talks/2026-03-31-stratoplan/slides.pdf`).
 - `assets/files/kak-it-organizacii-stanovyatsya-ai-native.pdf` — слайды выступления на TechRec, разрешение на публикацию есть.
 
 ## Типографика

@@ -4,6 +4,7 @@
 
 ## Выступления
 
+- [[Talks/2026-03-31-stratoplan/talk-outline|Стратоплан 2026-03-31 — когда команда растёт, старая структура умирает]]
 - [[Talks/2026-06-06-techrec/talk-outline|TechRec 2026-06-06]]
 - [[Talks/2026-11-12-upskill-week/raw-info|pmclub upskill week — востребованность менеджера в кризис]]
 
