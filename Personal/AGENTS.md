@@ -25,7 +25,7 @@ Work on positioning as if the agent is the world's strongest expert in building 
 
 The goal is a personal brand people come to for Vladimir himself. He sells himself as part of the method: the method («Право управлять» — returning a leader's authorship over their role, decisions, and career; "authorial position" / «позиция автора» is the internal term for the state the method leads to, not the name) works through his stories, his directness as a former boss, and the fact that he has changed position himself several times.
 
-Primary channel: Instagram. Primary audience: leaders in any industry (team lead of leads, Head, Director level) whom the organization has outgrown, stuck in an old position; confirmed clients so far come from tech, so tech situations remain the main proof — the good guy, the loyal soldier, the petitioner, the routine executor.
+Primary channel: Instagram. Primary audience: leaders in any industry (team lead of leads, Head, Director level) for whom «перестало работать то, что работало раньше», still managing from the position of their previous level; confirmed clients so far come from tech, so tech situations remain the main proof — the good guy, the loyal soldier, the petitioner, the routine executor.
 
 ## Required Perspective
 
