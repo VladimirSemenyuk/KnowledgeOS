@@ -12,6 +12,7 @@ visibility: private
 Связи:
 - [[Personal/Context|Позиционирование и метод]]
 - [[Personal/BRAND|BRAND.md — бренд]]
+- [[Personal/marketing/instagram-plan|План Instagram на 90 дней]]
 - [[Personal/marketing/getmentor-profile|Профиль на getmentor.dev]]
 - [[Personal/marketing/brand-launch-checklist|Чеклист запуска]]
 
