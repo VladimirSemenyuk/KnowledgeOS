@@ -119,7 +119,7 @@ add(dict(name="p4", kind="thesis", label="Право управлять", counte
          title="Право управлять [[u:не выдают]] вместе с должностью",
          sub="Должность даёт ответственность. Право управлять руководитель берёт сам. Пока его нет, остаётся просить, тянуть на себе или подстраиваться."))
 add(dict(name="p5", kind="review", **REVIEWS[0]))
-add(dict(name="p6", kind="case", label="Кейс · без имён", counter=CASES[0]["sub"], foot="Результат — работа клиента", **{k: CASES[0][k] for k in ("title", "was", "now")}))
+add(dict(name="p6", kind="case", label="Кейс", counter=CASES[0]["sub"], foot="Результат — работа клиента", **{k: CASES[0][k] for k in ("title", "was", "now")}))
 
 # ---------- Обложки Reels ----------
 add(dict(name="r1-cover", kind="reel_cover", label="Кто я", title="Меня [[u:разнесли]] на собеседовании на CTO", size=100))
@@ -184,7 +184,7 @@ for i, r in enumerate(REVIEWS):
 
 # Актуальное «Кейсы»
 for i, c in enumerate(CASES):
-    st = dict(name=f"h-keysy-{i + 1}", kind="story", label="Кейс · без имён", title=c["title"], size=104,
+    st = dict(name=f"h-keysy-{i + 1}", kind="story", label="Кейс", title=c["title"], size=104,
               sub=c["sub"], case=c)
     if i == len(CASES) - 1:
         st["pill"] = "Напишите «разбор» в директ"
