@@ -43,5 +43,17 @@ node_modules/
 # Marp: библиотека, которую плагин скачивает сам
 .obsidian/plugins/marp-slides/lib*/
 
+# Сторонние навыки и служебные файлы инструментов
+.agents/skills/design-taste-frontend/
+.agents/skills/impeccable/
+skills-lock.json
+.codex/
+**/.impeccable/
+**/.taste-skill/
+.obsidian/plugins/marp-slides/data.json
+
+# Случайные фрагменты из буфера обмена macOS
+*.textClipping
+
 # Служебные проверки QR-кодов
 **/.qrcheck.png
