@@ -4,75 +4,13 @@ lang: ru
 size: 16:9
 paginate: true
 footer: Владимир Семенюк · pmclub Upskill Week · 12.11.2026
-style: |
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
-
-  /* Основа */
-  section {
-    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-    font-size: 28px;
-    color: #121212;
-    background: #FEFEFE;
-    padding: 76px;
-  }
-  strong { font-weight: 600; }
-  a { color: #E94957; text-decoration: none; }
-
-  /* Заголовки: размер зависит только от уровня */
-  h1, h2 {
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 600;
-    color: #E94957;
-    line-height: 1.2;
-  }
-  h1 { font-size: 44px; max-width: 85%; }
-  h2 { font-size: 40px; margin-bottom: 0.6em; }
-
-  /* Цитаты */
-  blockquote {
-    border-left: 6px solid #E94957;
-    padding-left: 24px;
-    color: #121212;
-    font-size: 34px;
-    font-style: italic;
-    margin: 1.2em 0;
-  }
-
-  /* Таблицы: прозрачный фон, тонкие границы */
-  table { font-size: 20px; border-collapse: collapse; }
-  section table :is(thead, tbody, tr, th, td) {
-    background: transparent !important;
-    color: #121212 !important;
-  }
-  th, td { border: 1px solid #d4d4d4; padding: 6px 12px; vertical-align: top; }
-  th { font-weight: 600; }
-
-  /* Подвал и номер слайда */
-  footer, section::after { font-size: 14px; color: #7a7a7a; bottom: 28px; }
-  footer { left: 76px; }
-  section::after { right: 76px; }
-
-  /* Классы слайдов */
-  section.lead { justify-content: center; }
-  section img { background: transparent !important; }
-  section.skills td:first-child { white-space: nowrap; }
-  section.tight, section.compact { padding-top: 48px; padding-bottom: 56px; }
-  section.tight h2 { margin-bottom: 0.4em; }
-  section.compact h2 { margin-bottom: 0.4em; }
-  section.compact table { font-size: 17px; }
-  section.compact :is(th, td) { padding: 4px 10px; }
-  section.contacts ul { list-style: none; padding-left: 0; }
-  section.contacts li { margin: 0.25em 0; }
-  section.tight blockquote { font-size: 30px; margin: 0.8em 0; }
-  .note { font-size: 18px; color: #7a7a7a; }
-  section.club table { font-size: 25px; width: 100%; }
-  section.club td:first-child { white-space: nowrap; }
+theme: semenyuk
 ---
 
 <!-- _class: lead -->
 <!-- _paginate: false -->
 
-# Востребованность менеджера в кризис: метанавыки и личный стиль управления
+# Востребованность менеджера в *кризис*: метанавыки и личный стиль управления
 
 Владимир Семенюк
 

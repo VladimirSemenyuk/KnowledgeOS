@@ -9,7 +9,7 @@ Follow the root `AGENTS.md` together with this file. When working on the user's 
 ## Folder Structure
 
 - `_index.md` — навигация по личной рабочей зоне;
-- `Context.md` — позиционирование и ICP;
+- `Context.md` — позиционирование и метод (единственный источник);
 - `operating-system/` — Life OS и цели;
 - `profile/` — резюме и профессиональная стратегия;
 - `cases/` — доказательные материалы и кейсы;
@@ -19,54 +19,49 @@ Follow the root `AGENTS.md` together with this file. When working on the user's 
 
 # Personal Positioning Standard
 
-Work on personal positioning as if the agent is the world's strongest expert in promoting independent consultants and advisory professionals.
+`Personal/Context.md` is the single source of truth for positioning and method. Read it before creating or editing any personal positioning, profile, site, talk, or content material. If any other file in the vault (marketing playbooks, website materials, older posts, archive) contradicts `Context.md`, `Context.md` wins; treat the other file as outdated and flag the conflict instead of blending the two.
 
-The goal is not self-description for its own sake, but a commercially usable expert position that can support:
-- advisory demand generation;
-- trust with CEOs, CTOs, founders, and senior engineering leaders;
-- clear differentiation from generic consultants, coaches, and fractional executives;
-- consistent public writing, offers, talks, and client conversations.
+Work on positioning as if the agent is the world's strongest expert in building a personal brand for a mentor whose method works through his own personality, experience, and directness.
+
+The goal is a personal brand people come to for Vladimir himself. He sells himself as part of the method: the method («Право управлять» — returning a leader's authorship over their role, decisions, and career; "authorial position" / «позиция автора» is the internal term for the state the method leads to, not the name) works through his stories, his directness as a former boss, and the fact that he has changed position himself several times.
+
+Primary channel: Instagram. Primary audience: leaders in any industry (team lead of leads, Head, Director level) whom the organization has outgrown, stuck in an old position; confirmed clients so far come from tech, so tech situations remain the main proof — the good guy, the loyal soldier, the petitioner, the routine executor.
 
 ## Required Perspective
 
-When developing or reviewing positioning, evaluate it through:
-- target buyer clarity;
-- urgency and cost of the problem;
-- credibility and proof;
-- category and differentiation;
-- language that senior decision-makers would recognize;
-- link between expertise, offer, and business outcome;
-- fit with the user's actual experience, values, and advisory themes.
-
-Use `Personal/marketing` as the main source for marketing logic, GTM thinking, LinkedIn funnel logic, and positioning rules.
-
-Read `Personal/Context.md` before creating or editing personal positioning materials.
+When developing or reviewing positioning or content, evaluate it through:
+- recognition: will a stuck leader see himself in it within the first line;
+- the psychological driver behind the situation (fear, over-empathy, loyalty instead of own strategy, a comfortable excuse), not only the management symptom;
+- proof through Vladimir's own experience and anonymized client situations;
+- the move from feeling to facts and consequences;
+- one concrete uncomfortable step the reader can take this week;
+- fit with how Vladimir actually works in client dialogues (`/Clients` transcripts are the reference for his real voice and method).
 
 ## Writing Rules
 
 Prefer:
-- precise advisory language;
-- strong but grounded claims;
-- structural differentiation;
-- concrete buyer situations;
-- sharp trade-offs and exclusions;
-- concise strategic formulations.
+- psychology in the hook, role and facts in the breakdown;
+- Vladimir's own stories and first-person voice;
+- direct, plain language a tired manager would use about himself;
+- specific situations from real work (meetings, delegation, hiring, feedback, career moves);
+- one idea per piece;
+- honest admission of his own failures and closed businesses, short and without drama.
 
 Avoid:
-- motivational self-branding;
-- generic "expert in transformation" language;
-- inflated guru tone;
-- vague consultant promises;
-- audience-agnostic positioning;
-- content ideas disconnected from commercial strategy.
+- abstract advisory and consulting language (operating model, management contour, governance) on the surface;
+- "positive energy" coaching tone and soothing without a step;
+- therapy framing: the personal matters only as it shows up in role and decisions;
+- guru claims: "expert", "unique", "top 1%";
+- leading with titles instead of situations;
+- identifiable client details: client stories are always anonymized.
 
 ## Output Rules
 
 Keep personal positioning drafts, hypotheses, notes, and revisions in `/Personal`.
 
-Move work to `/Posts` only when the user explicitly asks for a LinkedIn post, content plan, publication draft, or post backlog item.
+Move work to `/Posts` only when the user explicitly asks for an Instagram or LinkedIn post, content plan, publication draft, or post backlog item.
 
-Keep marketing, GTM, LinkedIn funnel logic, and public expert packaging in `/Personal/marketing`.
+Keep marketing, GTM, Instagram and LinkedIn funnel logic, and public packaging in `/Personal/marketing`.
 
 Move work to `/Frameworks` only when the user explicitly asks to create a reusable advisory model that is independent of personal positioning.
 

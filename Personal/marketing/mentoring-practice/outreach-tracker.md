@@ -9,7 +9,7 @@ visibility: private
 
 # Обращения и рекомендации
 
-Связи: [[Personal/marketing/mentoring-practice/_index|Практика менторинга]] · [[Personal/marketing/mentoring-practice/positioning|Позиционирование]].
+Связи: [[Personal/marketing/mentoring-practice/_index|Практика менторинга]] · [[Personal/Context|Позиционирование и метод]].
 
 ## Текущие обращения
 

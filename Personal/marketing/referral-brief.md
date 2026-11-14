@@ -1,5 +1,7 @@
 # Referral brief
 
+> Относится к отдельной линии — технологическому advisory для компаний. Не описывает метод «Право управлять» и работу с руководителями; для них источник — [[Personal/Context|Позиционирование и метод]].
+
 Связи:
 - [[Personal/Context|Позиционирование и ICP]]
 - [[Personal/marketing/offers/advisory-product-line|Advisory product line]]

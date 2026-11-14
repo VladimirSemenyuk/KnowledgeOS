@@ -9,7 +9,7 @@ visibility: private
 
 # Сайт-визитка: макет одностраничника
 
-Связи: [[Personal/marketing/personal-positioning|Личное позиционирование (утверждено)]] · [[Personal/profile/vladimir-semenyuk-resume-2026|Резюме 2026]] · [[Personal/cases/_index|Кейсы]] · [[Personal/marketing/website/new-website-wireframe|Wireframe advisory-сайта]] (другая задача).
+Связи: [[Personal/Context|Позиционирование и метод]] · [[Personal/profile/vladimir-semenyuk-resume-2026|Резюме 2026]] · [[Personal/cases/_index|Кейсы]] · [[Personal/marketing/website/new-website-wireframe|Wireframe advisory-сайта]] (другая задача).
 
 **Задача страницы:** за 30 секунд объяснить, кто такой Владимир и с чем к нему идти, показать, что он знает кризисы изнутри, и дать прямой способ связаться. Без прайса и воронки. Силу показываем фактами, а не эпитетами.
 

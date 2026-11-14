@@ -10,7 +10,7 @@ created: 2026-09-22
 
 Связи:
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Исходный кейс реорганизации R&D]]
-- [[Personal/marketing/mentoring-practice/positioning|Позиционирование менторинга]]
+- [[Personal/Context|Позиционирование и метод]]
 - [[Personal/marketing/mentoring-practice/_index|Практика менторинга]]
 
 ## Короткий текст для передачи

@@ -59,6 +59,10 @@ EM participants:
 
 Each EM has a dedicated folder under 'Engineering Managers'
 
+Buying decision (per Vladimir, 2026-11-14):
+the former VP Engineering decided to engage Vladimir; Eli ratified it.
+Source: the former VP Engineering found Vladimir on LinkedIn; details not recorded.
+
 ---
 
 # EM Development Program

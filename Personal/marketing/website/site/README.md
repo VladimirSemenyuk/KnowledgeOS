@@ -8,7 +8,7 @@ visibility: private
 
 # Сайт-визитка — сборка RU
 
-Статический одностраничник по [[Personal/marketing/website/personal-card-wireframe|макету]] и [[Personal/marketing/personal-positioning|позиционированию]]. Только русская версия.
+Статический одностраничник по [[Personal/marketing/website/personal-card-wireframe|макету]] и [[Personal/Context|Позиционирование и метод]]. Только русская версия.
 
 ## Состав
 
