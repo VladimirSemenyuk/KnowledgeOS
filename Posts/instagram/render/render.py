@@ -1,0 +1,306 @@
+#!/usr/bin/env python3
+"""Рендер слайдов Instagram в PNG по визуальной системе «Доска после разбора».
+
+Запуск из корня KnowledgeOS:
+    python3 Posts/instagram/render/render.py Posts/instagram/2026-11-16-launch/slides.py
+
+Файл данных объявляет список SLIDES: каждый элемент — dict с ключами
+`name` (имя PNG без расширения), `kind` (шаблон) и полями шаблона.
+PNG пишутся в папку `img/` рядом с файлом данных, плюс `img/_contact.png` —
+сводный лист для проверки.
+
+Разметка в тексте:
+    [[o:текст]] — красный обвод, [[u:текст]] — красное подчёркивание,
+    [[s:текст]] — зачёркивание чёрным, [[b:текст]] — полужирный.
+На поверхность — одна красная пометка.
+"""
+import html
+import importlib.util
+import os
+import re
+import subprocess
+import sys
+import tempfile
+
+CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+IMG = os.path.join(ROOT, "Personal/marketing/website/site/assets/img")
+
+FONT = '<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">'
+
+CSS = """
+*{box-sizing:border-box}
+body{margin:0;font-family:Onest,system-ui,sans-serif;color:#16181A;-webkit-font-smoothing:antialiased}
+.f{display:flex;flex-direction:column;justify-content:space-between;padding:96px 96px 88px;background:#F3F4F1}
+.paper{background:#FAFAF8}
+.dark{background:#16181A;color:#F3F4F1}
+.top{display:flex;justify-content:space-between;align-items:baseline;border-top:3px solid currentColor;padding-top:22px;font-size:26px}
+.lab{font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.mut{color:#5E6469}
+.dark .mut{color:#A9AFB3}
+.bot{display:flex;justify-content:space-between;align-items:center;font-size:26px}
+.bot.rule{border-top:1px solid #BFC4C6;padding-top:22px}
+h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02}
+.sub{margin:0;font-size:44px;font-weight:500;line-height:1.3;letter-spacing:-.02em;color:#3A3E42}
+.dark .sub{color:#D8DBD8}
+.body p{margin:0 0 28px;font-size:54px;font-weight:500;line-height:1.24;letter-spacing:-.03em}
+.rows{display:flex;flex-direction:column;border-top:3px solid currentColor}
+.row{display:grid;gap:32px;padding:28px 0;border-bottom:1px solid #D8DBD8}
+.row .k{font-size:24px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5E6469;padding-top:8px}
+.row .v{font-size:36px;line-height:1.3;letter-spacing:-.02em}
+.row.big .k{font-size:40px;letter-spacing:-.02em;text-transform:none;color:#16181A;padding-top:0}
+.pill{height:120px;width:100%;border-radius:999px;background:#16181A;color:#F3F4F1;font-size:40px;font-weight:600;display:flex;align-items:center;justify-content:center;gap:20px}
+.dark .pill{background:#F3F4F1;color:#16181A}
+.m{position:relative;white-space:nowrap}
+.m svg{position:absolute;overflow:visible}
+.s{text-decoration:line-through;text-decoration-thickness:3px;color:#5E6469}
+.panel{background:#F3F4F1;border-radius:6px;box-shadow:0 0 0 1px #D8DBD8,0 36px 80px -56px rgba(22,24,26,.35)}
+.st{display:flex;flex-direction:column;justify-content:space-between;padding:260px 88px 360px;background:#FAFAF8}
+.ava{border-radius:50%;object-fit:cover;filter:grayscale(1)}
+"""
+
+ARROW = '<svg width="44" height="20" viewBox="0 0 44 20" aria-hidden="true"><path d="M2 10 H38 M30 3 L40 10 L30 17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+CIRCLE = '<svg viewBox="0 0 100 40" preserveAspectRatio="none" style="left:-9%;top:-30%;width:118%;height:162%" aria-hidden="true"><path d="M7 24 C 4 9, 38 3, 68 5 C 96 7, 100 31, 70 36 C 40 41, 5 37, 9 17" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
+UNDER = '<svg viewBox="0 0 600 24" preserveAspectRatio="none" style="left:-1%;bottom:-0.06em;width:102%;height:0.14em" aria-hidden="true"><path d="M6 14 C 140 6, 320 20, 594 8" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
+CHECK = '<svg width="{s}" height="{h}" viewBox="0 0 14 10" aria-hidden="true"><path d="M1.5 6.5 L5 9 L12.5 1.5" fill="none" stroke="#D2302C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+
+SHORT = r"(?:в|и|с|к|о|у|а|я|не|на|по|за|из|до|от|без|для|при|что|как|но|во|со|об|их|его|её|мы|вы|он|это|или|ли|же|бы|ни|раз)"
+
+
+def typo(t):
+    t = re.sub(r"(?i)(^|[\s(«])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
+    t = re.sub(r"(?i)(^|[\s(«])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
+    t = t.replace(" —", "\u00a0—")
+    t = re.sub(r"(\d) (?=\S)", "\\1\u00a0", t)
+    return t
+
+
+def md(t, w=5):
+    """Текст с разметкой пометок → HTML."""
+    t = html.escape(typo(t), quote=False)
+
+    def rep(m):
+        kind, inner = m.group(1), m.group(2)
+        if kind == "o":
+            c = CIRCLE.format(w=w)
+            if w >= 7:  # в крупных заголовках обвод ниже, чтобы не задевать соседние строки
+                c = c.replace("left:-9%;top:-30%;width:118%;height:162%", "left:-5%;top:-8%;width:110%;height:118%")
+            return f'<span class="m">{inner}{c}</span>'
+        if kind == "u":
+            return f'<span class="m">{inner}{UNDER.format(w=w + 2)}</span>'
+        if kind == "s":
+            return f'<span class="s">{inner}</span>'
+        if kind == "b":
+            return f"<b style=\"font-weight:600\">{inner}</b>"
+        return inner
+
+    inner_re = re.compile(r"\[\[([ousb]):((?:(?!\[\[).)+?)\]\]")
+    while True:  # раскрываем изнутри наружу: допускается [[b:… [[o:…]] …]]
+        t2 = inner_re.sub(rep, t)
+        if t2 == t:
+            break
+        t = t2
+    return t.replace("\n", "<br>")
+
+
+def img(name):
+    return "file://" + os.path.join(IMG, name)
+
+
+SIGN = '<span style="font-weight:600">Владимир Семенюк <span class="mut" style="font-weight:400">· Трезвый взгляд</span></span>'
+
+
+def top(label, right):
+    return f'<div class="top"><span class="lab">{md(label)}</span><span class="mut">{md(right)}</span></div>'
+
+
+def bottom(right="semenyuk.pro", rule=False, arrow=False):
+    r = f'<span style="display:flex;align-items:center;gap:14px;font-weight:600">{md(right)}{ARROW}</span>' if arrow else f'<span class="mut">{md(right)}</span>'
+    return f'<div class="bot{" rule" if rule else ""}">{SIGN}{r}</div>'
+
+
+def rows_html(rows, kw=280, big=False, vsize=None):
+    out = ['<div class="rows">']
+    for k, v in rows:
+        vs = f' style="font-size:{vsize}px"' if vsize else ""
+        out.append(f'<div class="row{" big" if big else ""}" style="grid-template-columns:{kw}px 1fr"><span class="k">{md(k)}</span><span class="v"{vs}>{md(v)}</span></div>')
+    out.append("</div>")
+    return "".join(out)
+
+
+# ---------- шаблоны ленты 1080×1350 ----------
+
+def t_cover(s):
+    """Обложка карусели или пост-заявление: крупный заголовок."""
+    cls = "f dark" if s.get("dark") else "f"
+    sub = f'<p class="sub" style="margin-top:44px">{md(s["sub"])}</p>' if s.get("sub") else ""
+    table = ""
+    if s.get("table"):
+        table = '<div class="rows">' + "".join(
+            f'<div class="row" style="grid-template-columns:90px 1fr auto;padding:20px 0;align-items:baseline"><span class="k" style="padding:0">{n}</span><span style="font-size:42px;font-weight:600;letter-spacing:-.03em">{md(a)}</span><span style="font-size:26px;color:#3A3E42">{md(b)}</span></div>'
+            for n, a, b in s["table"]) + "</div>"
+    return (f'<div class="{cls}" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
+            f'<div><h1 style="font-size:{s.get("size", 112)}px">{md(s["title"], 7)}</h1>{sub}</div>{table}'
+            f'{bottom(s.get("foot", "Листайте"), arrow=s.get("arrow", True))}</div>')
+
+
+def t_text(s):
+    """Слайд: заголовок, абзацы, опционально строки и кнопка."""
+    paras = "".join(f"<p>{md(p)}</p>" for p in s.get("body", []))
+    rows = rows_html(s["rows"], s.get("kw", 280), vsize=s.get("vsize")) if s.get("rows") else ""
+    pill = f'<div class="pill">{md(s["pill"])}{ARROW}</div>' if s.get("pill") else ""
+    after = f'<p class="sub" style="margin-top:36px;color:#16181A;font-weight:600">{md(s["after"])}</p>' if s.get("after") else ""
+    return (f'<div class="f" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
+            f'<div style="display:flex;flex-direction:column;gap:44px"><h1 style="font-size:{s.get("size", 92)}px">{md(s["title"], 7)}</h1>'
+            f'<div class="body">{paras}</div></div>'
+            f'<div style="display:flex;flex-direction:column;gap:40px">{rows}{after}{pill}</div>'
+            f'{bottom(s.get("foot", "semenyuk.pro"))}</div>')
+
+
+def t_position(s):
+    rows = rows_html([("Как видно", s["see"]), ("Цена", s["cost"]), ("Шаг", "[[b:" + s["step"] + "]]" if "[[" not in s["step"] else s["step"])])
+    return (f'<div class="f" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
+            f'<div style="display:flex;flex-direction:column;gap:28px"><h1 style="font-size:{s.get("size", 140)}px;letter-spacing:-.05em;line-height:1">{md(s["title"])}</h1>'
+            f'<p class="sub">{md(s["quote"])}</p></div>{rows}{bottom(s["foot"])}</div>')
+
+
+def t_thesis(s):
+    return (f'<div class="f" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
+            f'<div style="display:flex;flex-direction:column;gap:56px"><h1 style="font-size:{s.get("size", 116)}px">{md(s["title"], 7)}</h1>'
+            f'<p class="sub" style="max-width:820px;font-size:38px;line-height:1.32">{md(s["sub"])}</p></div>'
+            f'{bottom(rule=True)}</div>')
+
+
+def t_review(s, story=False):
+    w, h = (1080, 1920) if story else (1080, 1350)
+    cls = "st" if story else "f"
+    head = (f'<div style="display:flex;flex-direction:column;gap:24px"><span class="lab mut" style="font-size:28px">Голос клиента</span></div>'
+            if story else top("Голос клиента", "с согласия автора"))
+    foot = "" if story else bottom()
+    return (f'<div class="{cls}" style="width:{w}px;height:{h}px">{head}'
+            f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 6)}</blockquote>'
+            f'<div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;align-items:center;gap:28px;border-top:1px solid #BFC4C6;padding-top:32px">'
+            f'<img class="ava" src="{img("reviews/" + s["photo"])}" style="width:120px;height:120px">'
+            f'<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:36px;font-weight:600;letter-spacing:-.02em">{md(s["who"])}</span>'
+            f'<span style="font-size:28px;color:#3A3E42">{md(s["role"])}</span></div></div>{foot}</div></div>')
+
+
+def case_panel(s, fs=34):
+    was = "".join(f'<span style="font-size:{fs}px;line-height:1.3" class="s">{md(x)}</span>' for x in s["was"])
+    now = "".join(f'<span style="font-size:{fs}px;font-weight:600;line-height:1.3">{md(x)}</span>' for x in s["now"])
+    arrow = '<svg width="72" height="40" viewBox="0 0 72 40" style="margin-top:120px" aria-hidden="true"><path d="M4 21 C 24 18, 44 22, 62 20 M50 9 L64 20 L50 31" fill="none" stroke="#16181A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    lab = '<span style="font-size:24px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#5E6469">{}</span>'
+    return (f'<div class="panel" style="padding:56px;display:grid;grid-template-columns:1fr 72px 1fr;gap:24px;align-items:start">'
+            f'<div style="display:flex;flex-direction:column;gap:26px">{lab.format("Было")}{was}</div>{arrow}'
+            f'<div style="display:flex;flex-direction:column;gap:26px">{lab.format("Стало")}{now}</div></div>')
+
+
+def t_case(s):
+    return (f'<div class="f paper" style="width:1080px;height:1350px;padding:96px 80px 88px;gap:56px;justify-content:flex-start">'
+            f'<div style="margin:0 16px">{top(s["label"], s["counter"])}</div>'
+            f'<h1 style="margin:0 16px;font-size:80px;line-height:1.04;letter-spacing:-.04em">{md(s["title"])}</h1>'
+            f'<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:center">{case_panel(s)}</div>'
+            f'<div style="margin:0 16px">{bottom(s["foot"])}</div></div>')
+
+
+# ---------- сторис 1080×1920 ----------
+
+def t_story(s):
+    head = [f'<span class="lab mut" style="font-size:28px">{md(s["label"])}</span>'] if s.get("label") else []
+    if s.get("photo"):
+        head.insert(0, f'<img class="ava" src="{img(s["photo"])}" style="width:300px;height:300px;object-position:50% 22%">')
+    head.append(f'<h1 style="font-size:{s.get("size", 120)}px;letter-spacing:-.05em;line-height:1">{md(s["title"], 7)}</h1>')
+    if s.get("sub"):
+        head.append(f'<p class="sub" style="font-size:40px">{md(s["sub"])}</p>')
+    mid = ""
+    if s.get("rows"):
+        mid = f'<div class="panel" style="padding:20px 52px">{rows_html(s["rows"], s.get("kw", 220), vsize=s.get("vsize", 38)).replace("border-top:3px", "border-top:0px")}</div>'
+        mid = mid.replace('class="rows"', 'class="rows" style="border-top:0"')
+    if s.get("case"):
+        mid = case_panel(s["case"], 32)
+    foot = (f'<div style="display:flex;flex-direction:column;align-items:center;gap:24px"><div class="pill">{md(s["pill"])}{ARROW}</div>'
+            f'<span style="font-size:26px;color:#5E6469">Владимир Семенюк · был CTO Нетологии и CIO mos.ru</span></div>'
+            if s.get("pill") else f'<div style="font-size:26px">{SIGN}</div>')
+    return (f'<div class="st" style="width:1080px;height:1920px"><div style="display:flex;flex-direction:column;gap:32px">{"".join(head)}</div>'
+            f'{mid}{foot}</div>')
+
+
+def t_story_review(s):
+    return t_review(s, story=True)
+
+
+def t_highlight(s):
+    """Обложка Актуального: Instagram вырезает круг по центру."""
+    check = CHECK.format(s=84, h=60)
+    return (f'<div style="width:1080px;height:1920px;background:#F3F4F1;display:flex;align-items:center;justify-content:center">'
+            f'<div style="position:relative;width:640px;height:640px;display:flex;align-items:center;justify-content:center">'
+            f'<span style="font-size:{s.get("size", 120)}px;font-weight:600;letter-spacing:-.04em">{html.escape(s["word"])}</span>'
+            f'<span style="position:absolute;top:92px;right:84px">{check}</span></div></div>')
+
+
+def t_reel_cover(s):
+    """Обложка Reels: смысловая зона — центр 1080×1350, сетка режет края."""
+    return (f'<div style="width:1080px;height:1920px;background:#F3F4F1;padding:285px 96px">'
+            f'<div style="height:1350px;display:flex;flex-direction:column;justify-content:space-between;padding:60px 0 50px">'
+            f'{top(s["label"], "Reels")}'
+            f'<h1 style="font-size:{s.get("size", 118)}px">{md(s["title"], 7)}</h1>'
+            f'{bottom()}</div></div>')
+
+
+KINDS = {
+    "cover": (t_cover, 1080, 1350), "text": (t_text, 1080, 1350), "position": (t_position, 1080, 1350),
+    "thesis": (t_thesis, 1080, 1350), "review": (t_review, 1080, 1350), "case": (t_case, 1080, 1350),
+    "story": (t_story, 1080, 1920), "story_review": (t_story_review, 1080, 1920),
+    "highlight": (t_highlight, 1080, 1920), "reel_cover": (t_reel_cover, 1080, 1920),
+}
+
+
+def page(body):
+    return f'<!doctype html><html lang="ru"><head><meta charset="utf-8">{FONT}<style>{CSS}</style></head><body>{body}</body></html>'
+
+
+def shot(html_path, png, w, h, tries=3):
+    for i in range(tries):  # Chrome изредка падает на старте — повторяем
+        try:
+            return _shot(html_path, png, w, h)
+        except subprocess.CalledProcessError:
+            if i == tries - 1:
+                raise
+
+
+def _shot(html_path, png, w, h):
+    subprocess.run([CHROME, "--headless=new", "--hide-scrollbars", "--force-device-scale-factor=1",
+                    f"--window-size={w},{h}", "--virtual-time-budget=6000", "--allow-file-access-from-files",
+                    f"--screenshot={png}", "file://" + html_path],
+                   check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+
+def main(data_path, only=None):
+    spec = importlib.util.spec_from_file_location("slides", data_path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    out = os.path.join(os.path.dirname(os.path.abspath(data_path)), "img")
+    os.makedirs(out, exist_ok=True)
+    tmp = tempfile.mkdtemp(prefix="ig-render-")
+    names = []
+    for s in mod.SLIDES:
+        if only and not s["name"].startswith(only):
+            continue
+        fn, w, h = KINDS[s["kind"]]
+        hp = os.path.join(tmp, s["name"] + ".html")
+        with open(hp, "w") as f:
+            f.write(page(fn(s)))
+        shot(hp, os.path.join(out, s["name"] + ".png"), w, h)
+        names.append((s["name"], h))
+        print("ok", s["name"])
+    # сводный лист для проверки
+    cells = "".join(f'<figure style="margin:0"><img src="file://{out}/{n}.png" style="width:270px;height:{h // 4}px;display:block;box-shadow:0 0 0 1px #ccc"><figcaption style="font:12px system-ui">{n}</figcaption></figure>' for n, h in names)
+    hp = os.path.join(tmp, "_contact.html")
+    with open(hp, "w") as f:
+        f.write(f'<!doctype html><body style="margin:0;padding:16px;background:#fff;display:flex;flex-wrap:wrap;gap:16px;width:1800px">{cells}</body>')
+    rows = (len(names) + 5) // 6
+    shot(hp, os.path.join(out, "_contact.png"), 1832, rows * 520 + 40)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else None)

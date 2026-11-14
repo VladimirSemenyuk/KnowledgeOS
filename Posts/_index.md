@@ -9,6 +9,12 @@
 - [[Posts/series-map|Карта серий]]
 - [[Posts/content-calendar|Контентный календарь]]
 
+## Instagram
+
+- [[Personal/marketing/instagram-plan|План Instagram на 90 дней]]
+- [[Posts/instagram/2026-11-16-launch/_index|Неделя запуска, 16–22 ноября]]
+- Рендер картинок: `Posts/instagram/render/render.py`
+
 ## Контроль контента
 
 - [[Posts/content-index|Индекс черновиков и публикаций]]
