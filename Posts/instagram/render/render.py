@@ -60,7 +60,6 @@ h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02}
 """
 
 ARROW = '<svg width="44" height="20" viewBox="0 0 44 20" aria-hidden="true"><path d="M2 10 H38 M30 3 L40 10 L30 17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-CIRCLE = '<svg viewBox="0 0 100 40" preserveAspectRatio="none" style="left:-9%;top:-30%;width:118%;height:162%" aria-hidden="true"><path d="M7 24 C 4 9, 38 3, 68 5 C 96 7, 100 31, 70 36 C 40 41, 5 37, 9 17" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
 UNDER = '<svg viewBox="0 0 600 24" preserveAspectRatio="none" style="left:-1%;bottom:-0.06em;width:102%;height:0.14em" aria-hidden="true"><path d="M6 14 C 140 6, 320 20, 594 8" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
 CHECK = '<svg width="{s}" height="{h}" viewBox="0 0 14 10" aria-hidden="true"><path d="M1.5 6.5 L5 9 L12.5 1.5" fill="none" stroke="#D2302C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
@@ -82,10 +81,7 @@ def md(t, w=5):
     def rep(m):
         kind, inner = m.group(1), m.group(2)
         if kind == "o":
-            c = CIRCLE.format(w=w)
-            if w >= 7:  # в крупных заголовках обвод ниже, чтобы не задевать соседние строки
-                c = c.replace("left:-9%;top:-30%;width:118%;height:162%", "left:-5%;top:-8%;width:110%;height:118%")
-            return f'<span class="m">{inner}{c}</span>'
+            return f'<span class="m o" data-w="{w}">{inner}</span>'  # контур рисует OVAL_JS
         if kind == "u":
             return f'<span class="m">{inner}{UNDER.format(w=w + 2)}</span>'
         if kind == "s":
@@ -181,7 +177,7 @@ def t_review(s, story=False):
             if story else top("Голос клиента", "с согласия автора"))
     foot = "" if story else bottom(handle=True)
     return (f'<div class="{cls}" style="width:{w}px;height:{h}px">{head}'
-            f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 6)}</blockquote>'
+            f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 7)}</blockquote>'
             f'<div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;align-items:center;gap:28px;border-top:1px solid #BFC4C6;padding-top:32px">'
             f'<img class="ava" src="{img("reviews/" + s["photo"])}" style="width:120px;height:120px">'
             f'<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:36px;font-weight:600;letter-spacing:-.02em">{md(s["who"])}</span>'
@@ -258,8 +254,42 @@ KINDS = {
 }
 
 
+# Красный обвод: «стадион» по реальному размеру текста — скруглённые концы
+# не режут крайние буквы, высота считается от базовой линии и не лезет на соседние строки.
+OVAL_JS = """
+<script>
+document.fonts.ready.then(function () {
+  document.querySelectorAll('.m.o').forEach(function (el) {
+    var fs = parseFloat(getComputedStyle(el).fontSize), w = +el.dataset.w;
+    var probe = document.createElement('span');
+    probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
+    el.insertBefore(probe, el.firstChild);
+    var r = el.getBoundingClientRect(), bl = probe.getBoundingClientRect().top;
+    probe.remove();
+    var pv = (fs < 50 ? 0.18 : 0.1) * fs, top = bl - 0.76 * fs - pv, H = 0.9 * fs + 2 * pv, R = H / 2;
+    var ph = 0.75 * R, W = r.width + 2 * ph, k = 0.5523 * R, sx = R * 1.5;
+    var d = 'M' + sx + ',' + (2) +
+      ' C' + (sx + (W - R - sx) / 3) + ',-1 ' + (W - R - (W - R - sx) / 3) + ',1.5 ' + (W - R) + ',0.8' +
+      ' C' + (W - R + k) + ',0.8 ' + W + ',' + (R - k) + ' ' + W + ',' + R +
+      ' C' + W + ',' + (R + k) + ' ' + (W - R + k) + ',' + H + ' ' + (W - R) + ',' + (H - 0.5) +
+      ' C' + (W - R - (W - 2 * R) / 3) + ',' + (H + 1) + ' ' + (R + (W - 2 * R) / 3) + ',' + (H - 1.5) + ' ' + R + ',' + (H - 0.8) +
+      ' C' + (R - k) + ',' + (H - 0.8) + ' 0,' + (R + k) + ' 0,' + R +
+      ' C0,' + (R - k) + ' ' + (R - k) + ',2.5 ' + R + ',3' +
+      ' C' + (R + (sx - R) * 0.6) + ',3.5 ' + (sx + 0.06 * W) + ',4 ' + (sx + 0.12 * W) + ',' + (0.12 * H);
+    var ns = 'http://www.w3.org/2000/svg', svg = document.createElementNS(ns, 'svg'), path = document.createElementNS(ns, 'path');
+    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('aria-hidden', 'true');
+    svg.style.cssText = 'position:absolute;overflow:visible;left:' + (-ph) + 'px;top:' + (top - r.top) + 'px';
+    path.setAttribute('d', d); path.setAttribute('fill', 'none'); path.setAttribute('stroke', '#D2302C');
+    path.setAttribute('stroke-width', w * 0.9); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
+    svg.appendChild(path); el.appendChild(svg);
+  });
+});
+</script>
+"""
+
+
 def page(body):
-    return f'<!doctype html><html lang="ru"><head><meta charset="utf-8">{FONT}<style>{CSS}</style></head><body>{body}</body></html>'
+    return f'<!doctype html><html lang="ru"><head><meta charset="utf-8">{FONT}<style>{CSS}</style></head><body>{body}{OVAL_JS}</body></html>'
 
 
 def shot(html_path, png, w, h, tries=3):
