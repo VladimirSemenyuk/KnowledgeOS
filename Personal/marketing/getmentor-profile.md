@@ -1,8 +1,10 @@
 ---
 type: channel-profile
 channel: getmentor.dev
-status: draft
+status: published
 created: 2026-11-14
+published: 2026-11-14
+url: https://getmentor.dev/mentor/vladimir-semeniuk-983
 language: ru
 visibility: private
 ---
@@ -15,7 +17,7 @@ visibility: private
 - [[Personal/marketing/instagram-profile|Профиль в Instagram]]
 - [[Personal/marketing/brand-launch-checklist|Чеклист запуска]]
 
-Черновик 2026-11-14. Тексты под поля анкеты https://getmentor.dev/bementor — поля сверены с формой в тот же день.
+Опубликован 2026-11-14: https://getmentor.dev/mentor/vladimir-semeniuk-983. Цена 15 000 ₽, теги Team Lead/Management, Предпринимательство, Карьера, Другое; на карточке счётчик «помог 17 людям». Тексты ниже — то, что стоит в профиле. Поля сверены с формой https://getmentor.dev/bementor.
 
 ## Почему это первый канал
 
@@ -99,8 +101,8 @@ visibility: private
 Предлагаю начать с 15 минут знакомства: проверим, подходит ли задача для разбора «Трезвый взгляд». Это не консультация, а проверка, смогу ли я помочь. Удобно {два слота}?
 ```
 
-## Что сделать Владимиру
+## Что дальше
 
-1. Войти в старый профиль или написать в поддержку площадки о восстановлении. Если восстановить нельзя — подать анкету заново.
-2. Вставить тексты, выбрать теги, загрузить фото.
-3. Отметить пункт в [[Personal/marketing/brand-launch-checklist|чеклисте]].
+- Отвечать на заявки в течение дня по шаблону выше.
+- Отзывов на площадке не видно. Попросить Ольгу, Антона и Виталия оставить отзыв именно на getmentor: они пришли отсюда.
+- Тег «Другое» убрать, если площадка позволяет: он размывает фильтр «Management».
