@@ -107,16 +107,19 @@ def img(name):
     return "file://" + os.path.join(IMG, name)
 
 
-SIGN = '<span style="font-weight:600">Владимир Семенюк <span class="mut" style="font-weight:400">· Трезвый взгляд</span></span>'
+HANDLE = "@vladimir.semenyuk"
+SIGN = '<span style="font-weight:600">Владимир Семенюк</span>'
+SIGN_HANDLE = f'<span style="font-weight:600">Владимир Семенюк <span class="mut" style="font-weight:400">· {HANDLE}</span></span>'
 
 
 def top(label, right):
     return f'<div class="top"><span class="lab">{md(label)}</span><span class="mut">{md(right)}</span></div>'
 
 
-def bottom(right="semenyuk.pro", rule=False, arrow=False):
+def bottom(right="", rule=False, arrow=False, handle=False):
+    """Подпись внизу: имя; имя аккаунта — на первом и последнем слайде карусели и на одиночных постах."""
     r = f'<span style="display:flex;align-items:center;gap:14px;font-weight:600">{md(right)}{ARROW}</span>' if arrow else f'<span class="mut">{md(right)}</span>'
-    return f'<div class="bot{" rule" if rule else ""}">{SIGN}{r}</div>'
+    return f'<div class="bot{" rule" if rule else ""}">{SIGN_HANDLE if handle else SIGN}{r}</div>'
 
 
 def rows_html(rows, kw=280, big=False, vsize=None):
@@ -141,7 +144,7 @@ def t_cover(s):
             for n, a, b in s["table"]) + "</div>"
     return (f'<div class="{cls}" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
             f'<div><h1 style="font-size:{s.get("size", 112)}px">{md(s["title"], 7)}</h1>{sub}</div>{table}'
-            f'{bottom(s.get("foot", "Листайте"), arrow=s.get("arrow", True))}</div>')
+            f'{bottom(s.get("foot", "Листайте"), arrow=s.get("arrow", True), handle=s.get("handle"))}</div>')
 
 
 def t_text(s):
@@ -154,21 +157,21 @@ def t_text(s):
             f'<div style="display:flex;flex-direction:column;gap:44px"><h1 style="font-size:{s.get("size", 92)}px">{md(s["title"], 7)}</h1>'
             f'<div class="body">{paras}</div></div>'
             f'<div style="display:flex;flex-direction:column;gap:40px">{rows}{after}{pill}</div>'
-            f'{bottom(s.get("foot", "semenyuk.pro"))}</div>')
+            f'{bottom(s.get("foot", ""), handle=s.get("handle"))}</div>')
 
 
 def t_position(s):
     rows = rows_html([("Как видно", s["see"]), ("Цена", s["cost"]), ("Шаг", "[[b:" + s["step"] + "]]" if "[[" not in s["step"] else s["step"])])
     return (f'<div class="f" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
             f'<div style="display:flex;flex-direction:column;gap:28px"><h1 style="font-size:{s.get("size", 140)}px;letter-spacing:-.05em;line-height:1">{md(s["title"])}</h1>'
-            f'<p class="sub">{md(s["quote"])}</p></div>{rows}{bottom(s["foot"])}</div>')
+            f'<p class="sub">{md(s["quote"])}</p></div>{rows}{bottom(s["foot"], handle=s.get("handle"))}</div>')
 
 
 def t_thesis(s):
     return (f'<div class="f" style="width:1080px;height:1350px">{top(s["label"], s["counter"])}'
             f'<div style="display:flex;flex-direction:column;gap:56px"><h1 style="font-size:{s.get("size", 116)}px">{md(s["title"], 7)}</h1>'
             f'<p class="sub" style="max-width:820px;font-size:38px;line-height:1.32">{md(s["sub"])}</p></div>'
-            f'{bottom(rule=True)}</div>')
+            f'{bottom(rule=True, handle=True)}</div>')
 
 
 def t_review(s, story=False):
@@ -176,7 +179,7 @@ def t_review(s, story=False):
     cls = "st" if story else "f"
     head = (f'<div style="display:flex;flex-direction:column;gap:24px"><span class="lab mut" style="font-size:28px">Голос клиента</span></div>'
             if story else top("Голос клиента", "с согласия автора"))
-    foot = "" if story else bottom()
+    foot = "" if story else bottom(handle=True)
     return (f'<div class="{cls}" style="width:{w}px;height:{h}px">{head}'
             f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 6)}</blockquote>'
             f'<div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;align-items:center;gap:28px;border-top:1px solid #BFC4C6;padding-top:32px">'
@@ -200,7 +203,7 @@ def t_case(s):
             f'<div style="margin:0 16px">{top(s["label"], s["counter"])}</div>'
             f'<h1 style="margin:0 16px;font-size:80px;line-height:1.04;letter-spacing:-.04em">{md(s["title"])}</h1>'
             f'<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:center">{case_panel(s)}</div>'
-            f'<div style="margin:0 16px">{bottom(s["foot"])}</div></div>')
+            f'<div style="margin:0 16px">{bottom(s["foot"], handle=True)}</div></div>')
 
 
 # ---------- сторис 1080×1920 ----------
@@ -244,7 +247,7 @@ def t_reel_cover(s):
             f'<div style="height:1350px;display:flex;flex-direction:column;justify-content:space-between;padding:60px 0 50px">'
             f'{top(s["label"], "Reels")}'
             f'<h1 style="font-size:{s.get("size", 118)}px">{md(s["title"], 7)}</h1>'
-            f'{bottom()}</div></div>')
+            f'{bottom(handle=True)}</div></div>')
 
 
 KINDS = {
