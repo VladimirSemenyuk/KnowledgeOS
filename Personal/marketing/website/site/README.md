@@ -6,27 +6,28 @@ language: ru
 visibility: private
 ---
 
-# Сайт-визитка — сборка RU
+# Сайт — сборка RU
 
-Статический одностраничник по [[Personal/marketing/website/personal-card-wireframe|макету]] и [[Personal/Context|Позиционирование и метод]]. Только русская версия.
+Статический одностраничник по [[Personal/Context|Позиционирование и метод]] и [[Personal/BRAND|BRAND.md]]; описание — в [[Personal/marketing/website/PRODUCT|PRODUCT.md]]. Пересобран 2026-11-14 под метод «Право управлять»: компактная версия на 7 экранов в визуальной территории «Доска после разбора» ([DESIGN.md](../DESIGN.md)). Только русская версия.
 
 ## Состав
 
-- `index.html` — вся страница: разметка и стили в одном файле, без JS.
+- `index.html` — вся страница: разметка и стили в одном файле, немного JS для шапки и маркерных пометок.
+- `assets/img/og-cover.jpg` — обложка для ссылок, 1200×630.
 - `favicon.ico`, `site.webmanifest`, `assets/icons/` — фавикон «ВС» (Montserrat SemiBold, белое на #121212), иконки 32, 180, 192, 512.
-- `assets/img/vladimir-semenyuk.jpg` — фото, 640×640.
+- `assets/img/vladimir-semenyuk.jpg` — чёрно-белый портрет 880×1100 (из `Talks/2026-11-12-upskill-week/img/me.jpeg`).
 - `assets/img/reviews/` — фото авторов отзывов (вырезаны из скриншота, 124×124; заменить исходниками).
 - `assets/files/metanavyki-i-instrumenty.pdf` — раздатка к pmclub Upskill Week.
 - `assets/files/vostrebovannost-menedzhera-v-krizis.pdf` — слайды pmclub Upskill Week (из `Talks/2026-11-12-upskill-week/v2/slides.pdf`).
 - `assets/files/kogda-komanda-rastyot.pdf` — слайды воркшопа в Стратоплане 31.03.2026 (из `Talks/2026-03-31-stratoplan/slides.pdf`).
-- `assets/files/kak-it-organizacii-stanovyatsya-ai-native.pdf` — слайды выступления на TechRec, разрешение на публикацию есть.
+- `assets/files/kak-it-organizacii-stanovyatsya-ai-native.pdf` — слайды выступления на TechRec, разрешение на публикацию есть. С 2026-11-14 на странице не показываются: тема относится к технологическому консалтингу.
 
 ## Типографика
 
 - Неразрывные пробелы после предлогов, союзов и частиц, между числом и словом, перед тире, в «им. Баумана».
 - Кавычки «ёлочки», неразрывный дефис в «ТОП‑3».
-- `lang="ru"` и `hyphens: auto` для переносов в абзацах, `text-wrap: balance` для заголовков.
-- Шрифты: Open Sans — текст, Montserrat SemiBold — заголовки (Google Fonts, кириллица). Трекинг: заголовки −4%, текст −2%.
+- `lang="ru"`, `text-wrap: balance` для заголовков и `pretty` для абзацев; автоматические переносы выключены.
+- Шрифт: Onest (Google Fonts, кириллица). Трекинг: заголовки −3…−4%, текст −1%.
 
 ## Публикация: GitHub Pages + домен GoDaddy
 
