@@ -15,6 +15,9 @@
 
 ## Рабочие разделы
 
+- [[Personal/marketing/brand-launch-checklist|Чеклист запуска бренда]]
+- [[Personal/marketing/getmentor-profile|Профиль на getmentor.dev]]
+- [[Personal/marketing/instagram-profile|Профиль в Instagram]]
 - [[Personal/marketing/offers/_index|Advisory-предложения]]
 - [[Personal/marketing/website/mentoring-one-page|Одностраничный сайт менторинга — структура и тексты]]
 - [[Personal/marketing/website/new-website-wireframe|Новый сайт — структура содержания]]
