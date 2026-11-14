@@ -199,7 +199,7 @@ def t_case(s):
             f'<div style="margin:0 16px">{top(s["label"], s["counter"])}</div>'
             f'<h1 style="margin:0 16px;font-size:80px;line-height:1.04;letter-spacing:-.04em">{md(s["title"])}</h1>'
             f'<div style="flex-grow:1;display:flex;flex-direction:column;justify-content:center">{case_panel(s)}</div>'
-            f'<div style="margin:0 16px">{bottom(s["foot"], handle=True)}</div></div>')
+            f'<div style="margin:0 16px">{bottom(s.get("foot", ""), handle=True)}</div></div>')
 
 
 # ---------- сторис 1080×1920 ----------

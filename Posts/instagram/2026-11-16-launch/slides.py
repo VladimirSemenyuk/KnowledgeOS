@@ -119,7 +119,7 @@ add(dict(name="p4", kind="thesis", label="Право управлять", counte
          title="Право управлять [[u:не выдают]] вместе с должностью",
          sub="Должность даёт ответственность. Право управлять руководитель берёт сам. Пока его нет, остаётся просить, тянуть на себе или подстраиваться."))
 add(dict(name="p5", kind="review", **REVIEWS[0]))
-add(dict(name="p6", kind="case", label="Кейс", counter=CASES[0]["sub"], foot="Результат — работа клиента", **{k: CASES[0][k] for k in ("title", "was", "now")}))
+add(dict(name="p6", kind="case", label="Кейс", counter=CASES[0]["sub"], **{k: CASES[0][k] for k in ("title", "was", "now")}))
 
 # ---------- Обложки Reels ----------
 add(dict(name="r1-cover", kind="reel_cover", label="Кто я", title="Меня [[u:разнесли]] на собеседовании на CTO", size=100))
