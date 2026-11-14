@@ -2,6 +2,16 @@
 
 > Ментор для руководителей. Автор метода «Право управлять» — для руководителей, которые хотят управлять результатом и карьерой. Бывший CTO Нетологии и CIO mos.ru, вёл организацию через рост с 80 до 500 человек, 14+ лет в управлении. Первый шаг — разбор «Трезвый взгляд». Сайт: https://semenyuk.pro/
 
+## Разделы сайта
+
+- [Главная](https://semenyuk.pro/): кто такой Владимир Семенюк и с чем к нему приходят
+- [Для кого](https://semenyuk.pro/#situation): ситуации, в которых руководитель застревает
+- [Метод «Право управлять»](https://semenyuk.pro/#method): пять позиций и пять шагов
+- [Было — стало](https://semenyuk.pro/#cases): обезличенные результаты руководителей
+- [Отзывы](https://semenyuk.pro/#reviews): отзывы клиентов
+- [Опыт](https://semenyuk.pro/#about): карьера, цифры, образование
+- [Как начать](https://semenyuk.pro/#start): знакомство, разбор «Трезвый взгляд», программа
+
 ## Для кого
 
 Руководители, у которых после роста компании, новой роли, поглощения или реорганизации перестало работать то, что работало раньше. Обычно 8–15 лет в управлении, уровень от руководителя нескольких команд до директора.
@@ -51,15 +61,17 @@
 
 ## Выступления
 
-- pmclub, Upskill Week, 12.11.2026: «Востребованность менеджера в кризис: метанавыки и личный стиль управления».
-- Стратоплан, онлайн-воркшоп, 31.03.2026: «Когда команда растёт — старая структура умирает».
+- [pmclub, Upskill Week, 12.11.2026 — слайды](https://semenyuk.pro/assets/files/vostrebovannost-menedzhera-v-krizis.pdf): «Востребованность менеджера в кризис: метанавыки и личный стиль управления».
+- [Раздатка к Upskill Week](https://semenyuk.pro/assets/files/metanavyki-i-instrumenty.pdf): метанавыки и инструменты руководителя.
+- [Стратоплан, онлайн-воркшоп, 31.03.2026 — слайды](https://semenyuk.pro/assets/files/kogda-komanda-rastyot.pdf): «Когда команда растёт — старая структура умирает».
 
 ## Контакты
 
-- Telegram: https://t.me/vladimirsemenyuk (быстрее всего)
-- Telegram-канал «Управление и Счастье»: https://t.me/management_and_happiness
-- LinkedIn: https://www.linkedin.com/in/vladimir-semenyuk/
-- Email: vladimir@semenyuk.pro
+- [Telegram](https://t.me/vladimirsemenyuk): личные сообщения, быстрее всего
+- [Telegram-канал «Управление и Счастье»](https://t.me/management_and_happiness): заметки об управлении
+- [LinkedIn](https://www.linkedin.com/in/vladimir-semenyuk/): профиль и публикации
+- [Instagram](https://www.instagram.com/vladimir.semenyuk/): короткие заметки об управлении
+- [Email](mailto:vladimir@semenyuk.pro): vladimir@semenyuk.pro
 
 ## In English
 
