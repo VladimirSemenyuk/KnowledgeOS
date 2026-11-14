@@ -254,33 +254,49 @@ KINDS = {
 }
 
 
-# Красный обвод: «стадион» по реальному размеру текста — скруглённые концы
-# не режут крайние буквы, высота считается от базовой линии и не лезет на соседние строки.
+# Красный обвод — рукописный овал трёх форм по длине обводимого:
+#   короткое слово (ширина < 2,5 высоты) — почти круглый эллипс;
+#   среднее (до 6 высот) — овал чуть полнее эллипса;
+#   длинная фраза — «мягкий» овал (суперэллипс), чтобы не уходить далеко в стороны.
+# Размер считается так, чтобы буквы целиком оставались внутри. Конец линии заходит за начало, как от руки.
 OVAL_JS = """
 <script>
 document.fonts.ready.then(function () {
-  document.querySelectorAll('.m.o').forEach(function (el) {
-    var fs = parseFloat(getComputedStyle(el).fontSize), w = +el.dataset.w;
+  document.querySelectorAll('.m.o').forEach(function (el, idx) {
+    var fs = parseFloat(getComputedStyle(el).fontSize), sw = +el.dataset.w * 0.9;
     var probe = document.createElement('span');
     probe.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline';
     el.insertBefore(probe, el.firstChild);
     var r = el.getBoundingClientRect(), bl = probe.getBoundingClientRect().top;
     probe.remove();
-    var pv = (fs < 50 ? 0.18 : 0.1) * fs, top = bl - 0.76 * fs - pv, H = 0.9 * fs + 2 * pv, R = H / 2;
-    var ph = 0.75 * R, W = r.width + 2 * ph, k = 0.5523 * R, sx = R * 1.5;
-    var d = 'M' + sx + ',' + (2) +
-      ' C' + (sx + (W - R - sx) / 3) + ',-1 ' + (W - R - (W - R - sx) / 3) + ',1.5 ' + (W - R) + ',0.8' +
-      ' C' + (W - R + k) + ',0.8 ' + W + ',' + (R - k) + ' ' + W + ',' + R +
-      ' C' + W + ',' + (R + k) + ' ' + (W - R + k) + ',' + H + ' ' + (W - R) + ',' + (H - 0.5) +
-      ' C' + (W - R - (W - 2 * R) / 3) + ',' + (H + 1) + ' ' + (R + (W - 2 * R) / 3) + ',' + (H - 1.5) + ' ' + R + ',' + (H - 0.8) +
-      ' C' + (R - k) + ',' + (H - 0.8) + ' 0,' + (R + k) + ' 0,' + R +
-      ' C0,' + (R - k) + ' ' + (R - k) + ',2.5 ' + R + ',3' +
-      ' C' + (R + (sx - R) * 0.6) + ',3.5 ' + (sx + 0.06 * W) + ',4 ' + (sx + 0.12 * W) + ',' + (0.12 * H);
+    var tw = r.width, th = 0.88 * fs, cy = bl - 0.74 * fs + th / 2 - r.top, cx = tw / 2;
+    var ratio = tw / th, n, k;
+    var tilt = 0;
+    if (ratio < 2.5) { n = 2; k = 1.7; tilt = -0.03; }  // короткое слово: эллипс с лёгким наклоном
+    else if (ratio < 6) { n = 2.6; k = 1.6; }  // среднее: овал полнее эллипса
+    else { n = 3.2; k = 1.5; }                  // длинная фраза: мягкий овал без наклона
+    var b = k * th / 2;
+    var a = (tw / 2) / Math.pow(1 - Math.pow(th / 2 / b, n), 1 / n) + 0.06 * fs;
+    var ph = idx * 1.7, pts = [], N = 90, t0 = Math.PI * 0.82, span = Math.PI * 2 + 0.45;
+    for (var i = 0; i <= N; i++) {
+      var t = t0 + span * i / N, c = Math.cos(t), s = Math.sin(t);
+      var rr = 1 + 0.018 * Math.sin(3 * t + ph) + (i / N - 0.5) * 0.035;
+      var x = a * rr * Math.sign(c) * Math.pow(Math.abs(c), 2 / n);
+      var y = b * rr * Math.sign(s) * Math.pow(Math.abs(s), 2 / n);
+      pts.push([cx + x * Math.cos(tilt) - y * Math.sin(tilt), cy + x * Math.sin(tilt) + y * Math.cos(tilt)]);
+    }
+    var d = 'M' + pts[0][0].toFixed(1) + ',' + pts[0][1].toFixed(1);
+    for (var j = 0; j < pts.length - 1; j++) {
+      var p0 = pts[Math.max(j - 1, 0)], p1 = pts[j], p2 = pts[j + 1], p3 = pts[Math.min(j + 2, pts.length - 1)];
+      d += ' C' + (p1[0] + (p2[0] - p0[0]) / 6).toFixed(1) + ',' + (p1[1] + (p2[1] - p0[1]) / 6).toFixed(1) + ' ' +
+           (p2[0] - (p3[0] - p1[0]) / 6).toFixed(1) + ',' + (p2[1] - (p3[1] - p1[1]) / 6).toFixed(1) + ' ' +
+           p2[0].toFixed(1) + ',' + p2[1].toFixed(1);
+    }
     var ns = 'http://www.w3.org/2000/svg', svg = document.createElementNS(ns, 'svg'), path = document.createElementNS(ns, 'path');
-    svg.setAttribute('width', W); svg.setAttribute('height', H); svg.setAttribute('aria-hidden', 'true');
-    svg.style.cssText = 'position:absolute;overflow:visible;left:' + (-ph) + 'px;top:' + (top - r.top) + 'px';
+    svg.setAttribute('width', tw); svg.setAttribute('height', r.height); svg.setAttribute('aria-hidden', 'true');
+    svg.style.cssText = 'position:absolute;overflow:visible;left:0;top:0';
     path.setAttribute('d', d); path.setAttribute('fill', 'none'); path.setAttribute('stroke', '#D2302C');
-    path.setAttribute('stroke-width', w * 0.9); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
+    path.setAttribute('stroke-width', sw); path.setAttribute('stroke-linecap', 'round'); path.setAttribute('stroke-linejoin', 'round');
     svg.appendChild(path); el.appendChild(svg);
   });
 });
