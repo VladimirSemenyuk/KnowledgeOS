@@ -46,7 +46,6 @@ node_modules/
 # Сторонние навыки и служебные файлы инструментов
 .agents/skills/design-taste-frontend/
 .agents/skills/impeccable/
-skills-lock.json
 .codex/
 **/.impeccable/
 **/.taste-skill/
