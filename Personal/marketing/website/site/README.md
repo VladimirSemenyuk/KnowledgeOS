@@ -1,6 +1,7 @@
 ---
 type: website-build
-status: ready-ru
+status: published
+published: 2026-11-14
 created: 2026-11-11
 language: ru
 visibility: private
@@ -32,6 +33,8 @@ visibility: private
 
 ## Публикация: GitHub Pages + домен GoDaddy
 
+Опубликован на https://semenyuk.pro 2026-11-14. Обновление: закоммитить изменения в KnowledgeOS и запустить `Personal/marketing/website/deploy-site.sh` — он выкладывает папку `site/` в репозиторий `semenyuk.pro`. Настройка ниже нужна только при переносе на новый репозиторий или домен.
+
 Домен: `semenyuk.pro` (заменяет прежний advisory-сайт). В папке уже есть `CNAME` и `.nojekyll`.
 
 ### GitHub
@@ -61,5 +64,4 @@ visibility: private
 
 ## Открытые вопросы
 
-- Согласие авторов на публикацию отзывов с фото.
 - EN-версия — позже.
