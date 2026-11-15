@@ -179,7 +179,7 @@ def t_review(s, story=False):
     return (f'<div class="{cls}" style="width:{w}px;height:{h}px">{head}'
             f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 7)}</blockquote>'
             f'<div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;align-items:center;gap:28px;border-top:1px solid #BFC4C6;padding-top:32px">'
-            f'<img class="ava" src="{img("reviews/" + s["photo"])}" style="width:120px;height:120px">'
+            + (f'<img class="ava" src="{img("reviews/" + s["photo"])}" style="width:120px;height:120px">' if s.get("photo") else '') +
             f'<div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:36px;font-weight:600;letter-spacing:-.02em">{md(s["who"])}</span>'
             f'<span style="font-size:28px;color:#3A3E42">{md(s["role"])}</span></div></div>{foot}</div></div>')
 
