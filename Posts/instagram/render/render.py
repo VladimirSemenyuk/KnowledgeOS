@@ -240,11 +240,12 @@ def t_story_review(s):
 
 def t_highlight(s):
     """Обложка Актуального: Instagram вырезает круг по центру."""
-    check = CHECK.format(s=84, h=60)
+    check = CHECK.format(s=160, h=114).replace('stroke-width="1.6"', 'stroke-width="2"')  # в кружке 64 px мелкая галочка теряется
     return (f'<div style="width:1080px;height:1920px;background:#F3F4F1;display:flex;align-items:center;justify-content:center">'
-            f'<div style="position:relative;width:640px;height:640px;display:flex;align-items:center;justify-content:center">'
-            f'<span style="font-size:{s.get("size", 120)}px;font-weight:600;letter-spacing:-.04em">{html.escape(s["word"])}</span>'
-            f'<span style="position:absolute;top:92px;right:84px">{check}</span></div></div>')
+            f'<div style="position:relative;width:1080px;height:1080px;display:flex;align-items:center;justify-content:center">'
+            f'<span style="white-space:nowrap;font-size:{s.get("size", 120)}px;font-weight:600;letter-spacing:-.04em;line-height:1">{html.escape(s["word"])}</span>'
+            # галочка в одном месте на всех обложках: над правым краем слова, не задевая букв
+            f'<span style="position:absolute;top:300px;left:740px">{check}</span></div></div>')
 
 
 def t_reel_cover(s):

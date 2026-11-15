@@ -129,8 +129,8 @@ add(dict(name="r2-cover", kind="reel_cover", label="Позиции", title="Из
 add(dict(name="r3-cover", kind="reel_cover", label="Право управлять", title="Вам [[u:не нужен]] ещё один курс по менеджменту", size=108))
 
 # ---------- Актуальное: обложки ----------
-for slug, word, size in [("kto-ya", "Кто я", 132), ("pozicii", "Позиции", 118), ("razbor", "Разбор", 124),
-                         ("otzyvy", "Отзывы", 124), ("keysy", "Кейсы", 128)]:
+for slug, word, size in [("kto-ya", "Кто я", 190), ("pozicii", "Позиции", 172), ("razbor", "Разбор", 180),
+                         ("otzyvy", "Отзывы", 180), ("keysy", "Кейсы", 185)]:
     add(dict(name=f"h-{slug}-0", kind="highlight", word=word, size=size))
 
 # Актуальное «Кто я»
