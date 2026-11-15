@@ -55,7 +55,7 @@ h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02}
 .m svg{position:absolute;overflow:visible}
 .s{text-decoration:line-through;text-decoration-thickness:3px;color:#5E6469}
 .panel{background:#F3F4F1;border-radius:6px;box-shadow:0 0 0 1px #D8DBD8,0 36px 80px -56px rgba(22,24,26,.35)}
-.st{display:flex;flex-direction:column;justify-content:space-between;padding:260px 88px 360px;background:#FAFAF8}
+.st{display:flex;flex-direction:column;justify-content:space-between;gap:56px;padding:260px 88px 360px;background:#FAFAF8}
 .ava{border-radius:50%;object-fit:cover;filter:grayscale(1)}
 """
 
@@ -113,9 +113,9 @@ def top(label, right):
 
 
 def bottom(right="", rule=False, arrow=False, handle=False):
-    """Подпись внизу: имя; имя аккаунта — на первом и последнем слайде карусели и на одиночных постах."""
+    """Подпись внизу: имя и ник в Instagram — на всех слайдах (решение 2026-11-15)."""
     r = f'<span style="display:flex;align-items:center;gap:14px;font-weight:600">{md(right)}{ARROW}</span>' if arrow else f'<span class="mut">{md(right)}</span>'
-    return f'<div class="bot{" rule" if rule else ""}">{SIGN_HANDLE if handle else SIGN}{r}</div>'
+    return f'<div class="bot{" rule" if rule else ""}">{SIGN_HANDLE}{r}</div>'
 
 
 def rows_html(rows, kw=280, big=False, vsize=None):
@@ -175,7 +175,7 @@ def t_review(s, story=False):
     cls = "st" if story else "f"
     head = (f'<div style="display:flex;flex-direction:column;gap:24px"><span class="lab mut" style="font-size:28px">Голос клиента</span></div>'
             if story else top("Голос клиента", "с согласия автора"))
-    foot = "" if story else bottom(handle=True)
+    foot = f'<div style="font-size:26px">{SIGN_HANDLE}</div>' if story else bottom(handle=True)
     return (f'<div class="{cls}" style="width:{w}px;height:{h}px">{head}'
             f'<blockquote style="margin:0;font-size:{s.get("size", 64)}px;font-weight:500;line-height:1.22;letter-spacing:-.03em">{md(s["quote"], 7)}</blockquote>'
             f'<div style="display:flex;flex-direction:column;gap:40px"><div style="display:flex;align-items:center;gap:28px;border-top:1px solid #BFC4C6;padding-top:32px">'
@@ -212,14 +212,24 @@ def t_story(s):
     if s.get("sub"):
         head.append(f'<p class="sub" style="font-size:40px">{md(s["sub"])}</p>')
     mid = ""
+    if s.get("lines"):  # регалии одна под другой
+        mid = '<div class="rows">' + "".join(
+            f'<div style="font-size:44px;font-weight:500;letter-spacing:-.02em;line-height:1.2;padding:22px 0;border-bottom:1px solid #D8DBD8">{md(x)}</div>'
+            for x in s["lines"]) + "</div>"
+    if s.get("stats"):  # крупные цифры
+        mid = '<div style="display:flex;flex-direction:column;gap:36px">' + "".join(
+            f'<div style="display:flex;flex-direction:column;gap:4px;border-top:3px solid #16181A;padding-top:18px">'
+            f'<span style="font-size:{st.get("size", 150)}px;font-weight:600;letter-spacing:-.05em;line-height:.95">{md(st["n"])}</span>'
+            f'<span style="font-size:38px;font-weight:500;letter-spacing:-.02em;color:#3A3E42">{md(st["t"])}</span></div>'
+            for st in s["stats"]) + (f'<p class="sub" style="font-size:34px;margin-top:8px">{md(s["note"])}</p>' if s.get("note") else "") + "</div>"
     if s.get("rows"):
         mid = f'<div class="panel" style="padding:20px 52px">{rows_html(s["rows"], s.get("kw", 220), vsize=s.get("vsize", 38)).replace("border-top:3px", "border-top:0px")}</div>'
         mid = mid.replace('class="rows"', 'class="rows" style="border-top:0"')
     if s.get("case"):
         mid = case_panel(s["case"], 32)
     foot = (f'<div style="display:flex;flex-direction:column;align-items:center;gap:24px"><div class="pill">{md(s["pill"])}{ARROW}</div>'
-            f'<span style="font-size:26px;color:#5E6469">Владимир Семенюк · был CTO Нетологии и CIO mos.ru</span></div>'
-            if s.get("pill") else f'<div style="font-size:26px">{SIGN}</div>')
+            f'<span style="font-size:26px;color:#5E6469">Владимир Семенюк · {HANDLE}</span></div>'
+            if s.get("pill") else f'<div style="font-size:26px">{SIGN_HANDLE}</div>')
     return (f'<div class="st" style="width:1080px;height:1920px"><div style="display:flex;flex-direction:column;gap:32px">{"".join(head)}</div>'
             f'{mid}{foot}</div>')
 
@@ -269,6 +279,16 @@ document.fonts.ready.then(function () {
     el.insertBefore(probe, el.firstChild);
     var r = el.getBoundingClientRect(), bl = probe.getBoundingClientRect().top;
     probe.remove();
+    var ns0 = 'http://www.w3.org/2000/svg';
+    if (fs < 60) {  // мелкий текст: вместо овала — подчёркивание от руки
+      var uy = bl - r.top + 0.17 * fs, uw = r.width, sv = document.createElementNS(ns0, 'svg'), up = document.createElementNS(ns0, 'path');
+      var ud = 'M' + (-0.02 * uw) + ',' + (uy + 0.04 * fs) + ' C' + (0.3 * uw) + ',' + (uy - 0.05 * fs) + ' ' + (0.6 * uw) + ',' + (uy + 0.07 * fs) + ' ' + (1.02 * uw) + ',' + (uy - 0.02 * fs);
+      sv.setAttribute('width', uw); sv.setAttribute('height', r.height); sv.setAttribute('aria-hidden', 'true');
+      sv.style.cssText = 'position:absolute;overflow:visible;left:0;top:0';
+      up.setAttribute('d', ud); up.setAttribute('fill', 'none'); up.setAttribute('stroke', '#D2302C');
+      up.setAttribute('stroke-width', Math.max(3.5, 0.11 * fs)); up.setAttribute('stroke-linecap', 'round');
+      sv.appendChild(up); el.appendChild(sv); return;
+    }
     var tw = r.width, th = 0.88 * fs, cy = bl - 0.74 * fs + th / 2 - r.top, cx = tw / 2;
     var ratio = tw / th, n, k;
     var tilt = 0;
