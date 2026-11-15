@@ -214,13 +214,13 @@ def t_story(s):
     mid = ""
     if s.get("lines"):  # регалии одна под другой
         mid = '<div class="rows">' + "".join(
-            f'<div style="font-size:44px;font-weight:500;letter-spacing:-.02em;line-height:1.2;padding:22px 0;border-bottom:1px solid #D8DBD8">{md(x)}</div>'
+            f'<div style="font-size:38px;font-weight:500;letter-spacing:-.02em;line-height:1.2;padding:20px 0;border-bottom:1px solid #D8DBD8">{md(x)}</div>'
             for x in s["lines"]) + "</div>"
     if s.get("stats"):  # крупные цифры
         mid = '<div style="display:flex;flex-direction:column;gap:36px">' + "".join(
             f'<div style="display:flex;flex-direction:column;gap:4px;border-top:3px solid #16181A;padding-top:18px">'
-            f'<span style="font-size:{st.get("size", 150)}px;font-weight:600;letter-spacing:-.05em;line-height:.95">{md(st["n"])}</span>'
-            f'<span style="font-size:38px;font-weight:500;letter-spacing:-.02em;color:#3A3E42">{md(st["t"])}</span></div>'
+            f'<span style="font-size:{st.get("size", 120)}px;font-weight:600;letter-spacing:-.05em;line-height:.95">{md(st["n"])}</span>'
+            f'<span style="font-size:34px;font-weight:500;letter-spacing:-.02em;color:#3A3E42">{md(st["t"])}</span></div>'
             for st in s["stats"]) + (f'<p class="sub" style="font-size:34px;margin-top:8px">{md(s["note"])}</p>' if s.get("note") else "") + "</div>"
     if s.get("rows"):
         mid = f'<div class="panel" style="padding:20px 52px">{rows_html(s["rows"], s.get("kw", 220), vsize=s.get("vsize", 38)).replace("border-top:3px", "border-top:0px")}</div>'
@@ -280,13 +280,16 @@ document.fonts.ready.then(function () {
     var r = el.getBoundingClientRect(), bl = probe.getBoundingClientRect().top;
     probe.remove();
     var ns0 = 'http://www.w3.org/2000/svg';
-    if (fs < 60) {  // мелкий текст: вместо овала — подчёркивание от руки
+    // Обвод выделяет понятие — одно-два слова. Мысль из трёх и больше слов — подчёркивание:
+    // овал вокруг длинной фразы становится плоским и задевает соседние строки.
+    var words = el.textContent.trim().split(/\s+/).length;
+    if (words >= 3) {
       var uy = bl - r.top + 0.17 * fs, uw = r.width, sv = document.createElementNS(ns0, 'svg'), up = document.createElementNS(ns0, 'path');
       var ud = 'M' + (-0.02 * uw) + ',' + (uy + 0.04 * fs) + ' C' + (0.3 * uw) + ',' + (uy - 0.05 * fs) + ' ' + (0.6 * uw) + ',' + (uy + 0.07 * fs) + ' ' + (1.02 * uw) + ',' + (uy - 0.02 * fs);
       sv.setAttribute('width', uw); sv.setAttribute('height', r.height); sv.setAttribute('aria-hidden', 'true');
       sv.style.cssText = 'position:absolute;overflow:visible;left:0;top:0';
       up.setAttribute('d', ud); up.setAttribute('fill', 'none'); up.setAttribute('stroke', '#D2302C');
-      up.setAttribute('stroke-width', Math.max(3.5, 0.11 * fs)); up.setAttribute('stroke-linecap', 'round');
+      up.setAttribute('stroke-width', Math.max(5, 0.12 * fs)); up.setAttribute('stroke-linecap', 'round');
       sv.appendChild(up); el.appendChild(sv); return;
     }
     var tw = r.width, th = 0.88 * fs, cy = bl - 0.74 * fs + th / 2 - r.top, cx = tw / 2;

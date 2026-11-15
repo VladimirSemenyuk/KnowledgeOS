@@ -135,7 +135,7 @@ for slug, word, size in [("kto-ya", "Кто я", 132), ("pozicii", "Позици
 add(dict(name="h-kto-ya-1", kind="story", photo="vladimir-semenyuk.jpg", label="Кто я", size=112,
          title="Владимир Семенюк",
          lines=["Ментор руководителей", "Автор метода «Право управлять»", "Экс‑CTO Нетологии", "Экс‑CIO mos.ru",
-                "Вырастил организацию с 80 до 500 человек", "14+ лет в управлении", "МГТУ им. Баумана, MBA ВШЭ"]))
+                "Управлял командами более 500 человек", "14+ лет в управлении", "МГТУ им. Баумана, MBA ВШЭ"]))
 add(dict(name="h-kto-ya-2", kind="story", label="Путь", title="От верстальщика до [[o:CTO]]", size=110,
          rows=[("2009", "Верстальщик, потом разработчик и тимлид"), ("2013", "Team Lead, Mail.Ru Group"),
                ("2018", "Engineering Manager, IPONWEB"), ("2019", "CIO, mos.ru: рост с 80 до 500 человек"),
