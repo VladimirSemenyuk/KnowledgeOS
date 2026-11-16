@@ -5,11 +5,10 @@
 ## Marketing
 
 - [[Templates/marketing/lead-card.template|Lead card]]
-- [[Templates/marketing/competitor-card.template|Competitor card]]
 
 ## Posts
 
-- [[Templates/posts/linkedin-post.template|LinkedIn post]]
+- [[Templates/posts/post.template|Опубликованный пост]] — заметка для архива: Instagram, LinkedIn, Threads, Telegram
 
 ## Talks
 

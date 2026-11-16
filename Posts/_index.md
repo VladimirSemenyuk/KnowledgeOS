@@ -1,13 +1,18 @@
 # Posts
 
-Рабочий контур LinkedIn: стратегия, планирование, подготовка, публикации и исследовательские источники.
+Публикации: основные каналы — Instagram и LinkedIn, вспомогательные — Threads и Telegram. Посты пишутся вручную; правила для агента — в [[Posts/AGENTS|Posts/AGENTS.md]].
 
-## Контекст и планирование
+## Контекст
 
-- [[Posts/Context|Контекст LinkedIn]]
-- [[Posts/themes-backlog|Backlog тем]]
-- [[Posts/series-map|Карта серий]]
-- [[Posts/content-calendar|Контентный календарь]]
+- [[Posts/Context|Контекст и каналы]]
+- [[Posts/ideas|Блокнот идей]]
+
+## Публикации
+
+- [[Posts/content-index|Индекс публикаций]]
+- `published/` — опубликованные посты.
+- `drafts/` — черновики.
+- Шаблон: [[Templates/posts/post.template|post.template]]
 
 ## Instagram
 
@@ -15,17 +20,6 @@
 - [[Posts/instagram/2026-11-16-launch/_index|Неделя запуска, 16–22 ноября]]
 - Рендер картинок: `Posts/instagram/render/render.py`
 
-## Контроль контента
+## Архив
 
-- [[Posts/content-index|Индекс черновиков и публикаций]]
-- [[Posts/metrics|Метрики]]
-
-## Исследования
-
-- [[Posts/research/high-performing-posts-index|Паттерны сильных публикаций]]
-- [[Posts/research/telegram/weekly-digests/2026-W29-telegram-digest|Последний Telegram digest]]
-
-## Материалы
-
-- `drafts/` — черновики и готовящиеся публикации.
-- `published/` — опубликованные посты.
+- `research/telegram/weekly-digests/` — Telegram digest по AI-трансформации, W22–W41 2026. Сбор остановлен 16 ноября 2026.

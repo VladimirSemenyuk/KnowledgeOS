@@ -110,7 +110,6 @@ Preferred talk structure:
 
 For business and leadership audiences, frame AI transformation through:
 - organizational operating model;
-- architecture of manageability;
 - decision systems;
 - ownership;
 - quality and risks;

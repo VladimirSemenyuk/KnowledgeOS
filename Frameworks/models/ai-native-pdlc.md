@@ -85,4 +85,3 @@ flowchart LR
 - [[Frameworks/models/governance-mesh|Governance Mesh]]
 - [[Frameworks/models/agent-runtime|Agent Runtime]]
 - [[Frameworks/models/ai-native-engineering-metrics|AI-native engineering metrics]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]

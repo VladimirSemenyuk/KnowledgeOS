@@ -19,7 +19,6 @@ Systemic management — управление через механизмы, ри
 
 ## Связанные рамки
 
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|decision systems]]
 - [[Frameworks/models/organizational-operating-model|organizational operating model]]
 

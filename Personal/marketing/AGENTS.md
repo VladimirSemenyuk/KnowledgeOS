@@ -4,31 +4,29 @@
 
 These instructions apply to work inside `/Personal/marketing`.
 
-This folder is the source of truth for personal positioning rules, LinkedIn GTM logic, public expert packaging, funnel definitions, and content-system constraints.
+This folder holds the marketing of the mentoring practice: brand launch, channel profiles, website, mentoring practice plan, and leads. Positioning and method live only in `Personal/Context.md`; if a file here contradicts it, `Context.md` wins.
 
-It is not a framework area. Do not move these materials to `/Frameworks` unless the user explicitly asks to create a reusable advisory model that is independent of personal positioning.
+It is not a framework area. Do not move these materials to `/Frameworks`.
 
 ## Folder Structure
 
 - `_index.md` — навигация;
-- `offers/` — продуктовая линейка и one-pager;
-- `website/` — структура содержания и план пересборки сайта;
-- `competitors/` — конкурентный контур;
+- `mentoring-practice/` — план развития практики, обращения, акселераторы;
+- `website/` — сайт semenyuk.pro: структура, тексты, исходники, публикация;
 - `leads/` — потенциальные клиенты;
-- `linkedin-gtm-playbook.md` — источник правил LinkedIn-воронки.
+- профили каналов и бренда — `*-profile.md`, `brand-launch-checklist.md`, `linkedin-banner/`;
+- `archive/` — прежние планы, LinkedIn GTM Playbook, advisory-предложения.
+
+Материалы из `archive/` не использовать как действующие правила.
 
 Исследования общего назначения по внешним источникам хранятся в `Frameworks/source-notes`.
-
-Исследования цен, конкурентов и GTM, которые непосредственно используются для формирования цены, предложения или позиционирования, хранятся в `Personal/marketing`.
 
 ## Usage
 
 Use these materials when working on:
-- LinkedIn funnel logic;
-- profile positioning;
-- advisory demand generation;
-- public expert packaging;
-- content rhythm and GTM mechanics;
-- positioning constraints for posts, talks, and offers.
+- profile positioning on platforms;
+- mentoring practice demand generation;
+- website content;
+- lead tracking.
 
-Keep generated notes concise, operational, and connected to `Personal/Context.md`.
+Публикации и правила работы с постами — в `Posts/AGENTS.md`. Keep generated notes concise, operational, and connected to `Personal/Context.md`.

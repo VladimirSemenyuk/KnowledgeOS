@@ -4,7 +4,6 @@
 
 ## Основные заметки
 
-- [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]
 - [[Frameworks/models/decision-systems|Decision Systems]]
 - [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]
 - [[Frameworks/models/quality-and-risks|Quality and Risks]]

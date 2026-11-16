@@ -31,7 +31,7 @@ language: ru
 ## Внутренние основания — не пересылать
 
 - [[Personal/profile/vladimir-semenyuk-consulting-resume-ru|Развёрнутое резюме для передачи партнёрам]] — отдельный документ с профессиональным опытом и образованием.
-- [[Personal/profile/vladimir-semenyuk-resume-2026|Резюме]] — роли, масштаб управления, образование.
+- [[Personal/profile/archive/2026-11-16/vladimir-semenyuk-resume-2026|Резюме]] — роли, масштаб управления, образование.
 - [[Personal/cases/rnd-leadership-development|Кейс развития руководителя R&D]] — личный клиент; компания не была заказчиком.
 - [[Clients/AgVend/Plans/2026-03-27-mentoring-program-report|Отчёт о развитии EM]] — работа с менеджерами, не доказательство продажи полной корпоративной программы.
 - [[Personal/marketing/mentoring-practice/outreach-tracker|Следующие шаги с Олей]]. Профиль компании и конкретные направления пока неизвестны; адаптация возможна после уточнения. Материалы подготовлены, отправка не подтверждена.

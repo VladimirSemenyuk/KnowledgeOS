@@ -1,16 +1,9 @@
 ---
 type: linkedin-post
-funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
+funnel: "[[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-05-25
 source:
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-analysis]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/02-chetyre-sdviga-chto-stanovitsya-vozmozhnym|Четыре сдвига: что становится возможным]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/04-protsess-kotoryy-uchitsya|Процесс, который учится]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/05-vladelets-protsessa-i-znanie|Владелец процесса и знание]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/08-baza-znaniy-otkuda-ai-znaet-kak-rabotat|База знаний: откуда ИИ знает, как работать]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/10-pamyat-chto-reshili-pochemu-i-okazalos-li-vernym|Память: что решили, почему и оказалось ли верным]]"
-  - "[[Personal/marketing/competitors/kkts-ai/oper8-v0-8-book/15-roli-kto-za-chto-otvechaet|Роли: кто за что отвечает]]"
 audience: "[[Personal/Context#ICP]]"
 linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7464574755766190083/
 linkedin_activity_id: "7464574755766190083"
@@ -100,7 +93,7 @@ AI поменял это уравнение. Доступ к внешним з
 
 ## Notes
 
-- Формат: [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]], рыночный тренд → скрытая цена → AI-парадокс.
+- Формат: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#1 — TOFU|TOFU]], рыночный тренд → скрытая цена → AI-парадокс.
 - Угол: не повторять пост [[2026-05-12-kogo-sokrashchayut-i-nanimayut-v-2026|Кого сокращают и нанимают в 2026 году?]], где фокус был на ролях и рынке найма. Здесь фокус на управленческом активе компании.
 - Идеи из Oper8 переупакованы в язык личного позиционирования: операционная модель, управляемый слой знания, владелец процесса, качество решений, память решений.
 - Не копировать примеры «ФудПро», названия `Oper8`, структуру методики и фирменную механику подачи.

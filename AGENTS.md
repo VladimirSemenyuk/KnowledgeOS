@@ -2,13 +2,18 @@
 
 ## Purpose
 
-This repository is a strategic advisory knowledge system focused on:
-- AI transformation
-- engineering management
-- organizational design
-- CTO/CEO advisory
-- decision systems
-- architecture of manageability
+This repository is the working system of Vladimir's mentoring practice and advisory work.
+
+Main line — mentoring leaders by the method «Право управлять» (see `Personal/Context.md`):
+- client and mentee work: meetings, transcripts, summaries, growth observations;
+- positioning, brand, website, and leads;
+- public writing: Instagram and LinkedIn as primary channels, Threads and Telegram as supporting — written by the author manually.
+
+Second line — technology advisory (fractional CTO, AI transformation, delivery). It is a separate product, not part of the personal brand:
+- engineering management;
+- organizational design;
+- AI transformation;
+- decision systems.
 
 The repository is an intellectual property asset.
 
@@ -60,13 +65,12 @@ Default exclusions unless explicitly needed:
 - `node_modules/`
 - `.DS_Store`
 - `package-lock.json`
-- raw Telegram JSON files in `Posts/research/telegram/raw/` and `Posts/research/telegram/normalized/`
+- archive folders (`Personal/marketing/archive/`, `Personal/profile/archive/`, `Posts/research/telegram/weekly-digests/`)
 - PDF binaries in `sources/` when a processed Markdown note already exists
 
 Prefer indexes and search before opening many files:
 - use `rg` for anti-duplication and source discovery;
 - use `Posts/content-index.md` before scanning `Posts/drafts/` or `Posts/published/`;
-- use `Posts/research/high-performing-posts-index.md` before opening the full reference corpus;
 - open full source files only when writing, fact-checking, updating status, or resolving ambiguity.
 
 ## Instruction Hierarchy
@@ -85,9 +89,6 @@ Prefer indexes and search before opening many files:
 - `transform-html-to-md` — преобразовать HTML-транскрипт встречи в `transcript.md`, создать правильную папку встречи, определить клиента или менти, если это возможно, сохранить содержание транскрипта и нормализовать имена спикеров.
 - `summarize-meeting` — создать краткий executive-style `summary.md` по `transcript.md`, используя клиентский контекст, наблюдения об управленческом росте, главные выводы, действия и следующие шаги.
 - `import-pdf-report` — превратить PDF-отчет в краткую русскоязычную source note для базы знаний: извлечь важные модели, цифры, графики, риски и advisory-выводы, затем проверить заметку против источника.
-- `create-telegram-weekly-digest` — собрать недельные сигналы из настроенных Telegram-каналов, отфильтровать их через advisory-позиционирование и создать Markdown digest в `Posts/research/telegram/weekly-digests/`.
-- `import-linkedin-posts` — импортировать или обновить опубликованные LinkedIn-посты и аналитику в `Posts/published`, избежать дублей и обновить `Posts/metrics.md`.
-- `prepare-post-ideas-digest` — подготовить в чат сводку идей для LinkedIn-постов на основе последних клиентских `summary.md`, Telegram digest и/или указанных пользователем источников; по каждой идее показать тезисы, смыслы, стадию воронки [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]/[[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]/[[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]] и готовность к добавлению в `Posts/themes-backlog.md`.
 - `apply-typograf` — запускать npm-пакет `typograf` по выбранному Markdown/TXT-файлу или папке, предварительно проверять dry-run и сохранять Markdown-разметку, Obsidian wikilinks, ссылки, кодовые блоки и frontmatter.
 
 Правила использования этих возможностей:
@@ -96,7 +97,7 @@ Prefer indexes and search before opening many files:
 - Сначала прочитать файл skill, затем релевантные `AGENTS.md` и `Context.md`.
 - Сохранять исходные материалы: не переписывать транскрипты, raw notes или импортированные посты, если skill прямо не требует трансформации.
 - В финальном ответе указывать созданные или измененные файлы.
-- Не добавлять идеи в `Posts/themes-backlog.md` без явного решения пользователя.
+- Не писать и не переписывать тексты постов: посты пишет автор вручную, роль агента описана в `Posts/AGENTS.md`.
 - Если skill требует credentials, browser login, Telegram authorization, network access или отсутствующий source file, останавливаться только в точке, где нужно действие пользователя, и объяснять точный следующий шаг.
 
 ---
@@ -192,7 +193,6 @@ Keep English when translation would reduce precision, break source fidelity, or 
 - Technical and engineering abbreviations: `API`, `CI/CD`, `SLA`, `SLO`, `KPI`, `OKR`, `GDPR`.
 - AI and engineering terms without a stable Russian equivalent: `AI-native`, `agentic`, `prompt`, `LLM`, `RAG`.
 - Direct quotes, source terminology, and internal company language.
-- Public content funnel labels: [[linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]], [[linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]], [[linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 When keeping an English term, do it intentionally and consistently. Do not leave English in Russian text by inertia.
 
@@ -205,7 +205,7 @@ Main folders:
 - /Personal — private working notes, personal operating system, reflections, goals, and non-client knowledge.
 - /Clients — client-specific advisory materials, meeting notes, transcripts, strategy documents, and engagement context.
 - /Templates — reusable structures for notes, meetings, summaries, posts, client work, and repeatable knowledge workflows.
-- /Posts — LinkedIn and public writing pipeline, including drafts, published posts, and post analytics.
+- /Posts — public writing in Instagram, LinkedIn, Threads, and Telegram: author's ideas, drafts, and the archive of published posts.
 - /Frameworks — reusable intellectual property: models, concepts, decision systems, operating models, and advisory frameworks.
 - /Talks — public talks, conference presentations, webinars, speaking materials, and related preparation notes.
 
@@ -221,19 +221,16 @@ This includes:
 - personal value proposition;
 - positioning hypotheses, revisions, and strategic self-description.
 - personal advisory cases and proof materials, which belong in `/Personal/cases`.
-- positioning, GTM, LinkedIn funnel logic, and public expert packaging, which belong in `/Personal/marketing`.
+- brand, channel profiles, website, mentoring practice plan, and leads, which belong in `/Personal/marketing`.
 
-Use `Personal/marketing` as the source of marketing logic, GTM thinking, LinkedIn funnel logic, and public positioning rules.
+`Personal/Context.md` is the single source of truth for positioning and method.
 
-Use `/Personal/marketing/competitors` for competitive analysis connected to positioning, category definition, offer language, GTM logic, and LinkedIn angles.
 
 Keep `/Personal/cases` as the place for personal advisory cases and proof materials.
 
 Do not put working materials about personal positioning in `/Posts` or `/Frameworks` unless the user explicitly asks to create:
-- a public LinkedIn draft or publication artifact, which belongs in `/Posts`;
+- an archive record of a published post, which belongs in `/Posts`;
 - a reusable advisory model unrelated to personal positioning, which belongs in the most specific `/Frameworks` area.
-
-When preparing LinkedIn themes or drafts, connect personal positioning from `/Personal` with the rules from `Personal/marketing`, while keeping the publishing workflow in `/Posts`.
 
 ## Frameworks Structure
 
@@ -246,7 +243,7 @@ Current framework structure:
 - `/Frameworks/sources` — original PDF/DOCX/source files, grouped by source domain when useful.
 - `/Frameworks/maps` — navigation maps for thematic areas such as AI transformation, AI PDLC, governance, and engineering management. Use maps for sensemaking instead of creating broad thematic top-level folders.
 
-Marketing, public positioning, LinkedIn GTM, and funnel-stage definitions live in `/Personal/marketing`, because they are rules of personal positioning rather than reusable advisory frameworks.
+Marketing and public positioning live in `/Personal`, because they are rules of personal positioning rather than reusable advisory frameworks.
 
 When creating or updating framework materials:
 
@@ -259,16 +256,9 @@ When creating or updating framework materials:
 
 ---
 
-# LinkedIn Post Format
+# Posts
 
-Use `Posts/AGENTS.md` and `Posts/Context.md` as the source of truth for LinkedIn planning, drafting, status changes, funnel logic, and editorial constraints.
-
-Vault-wide baseline:
-- strong hook;
-- tension/problem;
-- systemic insight;
-- practical conclusion;
-- no emojis, engagement bait, or generic inspiration.
+Posts are written by the author manually. The agent does not generate, draft, or rewrite post texts. Allowed agent work — material from meetings, the archive of published posts, and checks on request — is defined in `Posts/AGENTS.md`.
 
 ---
 
@@ -306,7 +296,6 @@ Avoid:
 
 Preferred terms:
 - AI-native organization
-- architecture of manageability
 - decision systems
 - organizational operating model
 - quality and risks

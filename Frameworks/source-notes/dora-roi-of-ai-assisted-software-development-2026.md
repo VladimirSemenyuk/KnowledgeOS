@@ -29,7 +29,7 @@ processed_date: 2026-05-17
 - базовая единица оценки - не индивидуальная продуктивность, а способность организации безопасно превращать возросшую пропускную способность изменений в ценность для пользователей и бизнеса;
 - внедрение AI почти неизбежно проходит через J-Curve: временное падение продуктивности, налог на проверку и перестройку pipeline поставки;
 - финансовая модель должна учитывать не только стоимость лицензий, но и обучение, инфраструктуру, стоимость J-Curve, стоимость нестабильности и управленческого контура;
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]] становится условием AI ROI: платформы, данные, контрольные точки, метрики и зоны ответственности важнее самой модели.
+- architecture of manageability становится условием AI ROI: платформы, данные, контрольные точки, метрики и зоны ответственности важнее самой модели.
 
 ## Самое важное для моей базы знаний
 
@@ -460,7 +460,6 @@ DORA предлагает важную финансовую интерпрета
 ## Связанные заметки
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|системы принятия решений]]
 - [[Frameworks/models/organizational-operating-model|организационная операционная модель]]
 - [[Frameworks/models/quality-and-risks|качество и риски]]

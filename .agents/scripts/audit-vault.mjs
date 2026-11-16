@@ -15,8 +15,6 @@ const excludedEverywhere = new Set([
 const excludedFromLinkScan = new Set([
   "raw",
   "normalized",
-  "agentic-engineering-book-main",
-  "oper8-v0-8-book",
 ]);
 
 function walk(directory, exclusions) {

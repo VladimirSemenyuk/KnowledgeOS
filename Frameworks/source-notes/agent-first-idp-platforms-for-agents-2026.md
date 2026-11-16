@@ -24,7 +24,7 @@ processed_date: 2026-06-14
 
 Главный тезис: задача платформенной команды - не "прикрутить MCP", а превратить платформу в управляемую среду для агентного потребления. Для этого нужны достоверное состояние платформы, семантические модели, безопасные инструменты, реестр возможностей, доменные агенты для рискованных областей и новые метрики успеха.
 
-Для моей базы знаний статья особенно полезна как связка между [[Frameworks/models/internal-developer-platform|Internal Developer Platform]], [[Frameworks/models/agent-runtime|Agent Runtime]], [[Frameworks/models/architecture-of-manageability|architecture of manageability]] и [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]].
+Для моей базы знаний статья особенно полезна как связка между [[Frameworks/models/internal-developer-platform|Internal Developer Platform]], [[Frameworks/models/agent-runtime|Agent Runtime]], architecture of manageability и [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]].
 
 ## Статус источника
 
@@ -293,7 +293,6 @@ flowchart LR
 - [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
 - [[Frameworks/models/agent-runtime|Agent Runtime]]
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]
 - [[Frameworks/models/risk-adaptive-agent-autonomy-r0-r5|Risk-adaptive agent autonomy R0-R5]]
 - [[Frameworks/models/quality-and-risks|Quality and Risks]]
 - [[Frameworks/models/governance-mesh|Governance Mesh]]

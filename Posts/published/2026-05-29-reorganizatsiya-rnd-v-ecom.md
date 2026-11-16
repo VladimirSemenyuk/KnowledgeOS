@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
+funnel: "[[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
 status: published
 publish_date: 2026-05-29
 source: "[[Personal/cases/reorganizatsiya-rnd-v-ecom]]"
@@ -81,7 +81,7 @@ Head of R&D в E-Com работал почти полностью в ручн
 
 ## Notes
 
-- Пост закрывает воронку как [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]] через конкретный advisory-кейс.
+- Пост закрывает воронку как [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#3 — BOFU|BOFU]] через конкретный advisory-кейс.
 - Угол: доказательство архитектуры управляемости через переход от ручного режима к организационной модели.
 - Перед публикацией решить, нужно ли усиливать CEO-level адресацию в CTA или оставить более широкий вариант «компаниям и лидерам».
 - Перед публикацией проверить новый факт из драфта: повышение до Director of RnD и переход QA / SRE в зону ответственности.

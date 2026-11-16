@@ -18,7 +18,7 @@ Internal Developer Platform — управляемый слой инженерн
 - дает AI-инструментам контекст, границы и повторяемые workflows;
 - поддерживает [[Frameworks/models/agent-runtime|Agent Runtime]] как исполняемый слой для агентных задач;
 - связывает [[Frameworks/models/specification-driven-development|Specification-Driven Development]], evals, policy hooks и [[Frameworks/models/evidence-bundle|Evidence Bundle]] в единый маршрут;
-- превращает platform engineering в элемент [[Frameworks/models/architecture-of-manageability|architecture of manageability]].
+- превращает platform engineering в элемент architecture of manageability.
 
 ## Связанные рамки
 

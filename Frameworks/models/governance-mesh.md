@@ -94,4 +94,3 @@ Governance Mesh полезен как альтернатива двум слаб
 - [[Frameworks/models/specification-driven-development|Specification-Driven Development]]
 - [[Frameworks/models/agent-runtime|Agent Runtime]]
 - [[Frameworks/models/quality-and-risks|quality and risks]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]

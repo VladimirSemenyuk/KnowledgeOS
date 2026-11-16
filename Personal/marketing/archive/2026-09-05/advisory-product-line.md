@@ -515,7 +515,7 @@ Decision Sprint + Transformation Program + двенадцать месяцев I
 
 - [[Personal/Context|Позиционирование]]
 - [[Personal/marketing/website/new-website-wireframe|Content wireframe сайта]]
-- [[Personal/marketing/offers/post-program-governance-retainer|Post-Program Governance Retainer]]
+- [[Personal/marketing/archive/2026-11-16/offers/post-program-governance-retainer|Post-Program Governance Retainer]]
 - [[Clients/AutoDS/deliverables/ai-transformation-one-pager|AutoDS: 90-дневная программа]]
 - [[Clients/AutoDS/deliverables/ai-transformation-proposal-for-discussion|AutoDS: полная программа]]
 - [[Personal/cases/_index|Кейсы]]

@@ -8,7 +8,7 @@ visibility: "не публиковать без отдельной версии 
 # AgVend board-level proof
 
 Связи:
-- [[Personal/profile/board-director-strategy|Стратегия входа в совет директоров]]
+- [[Personal/profile/archive/2026-11-16/board-director-strategy|Стратегия входа в совет директоров]]
 - [[Personal/operating-system/Цели 2026|Цели 2026]]
 - [[agvend-board-memo-ai-transformation-governance|AgVend board memo: управление AI-трансформацией]]
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]

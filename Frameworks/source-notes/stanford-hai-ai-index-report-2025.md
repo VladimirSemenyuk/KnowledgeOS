@@ -115,7 +115,7 @@ AI Index 2025 полезен как опорный отчет для разго�
 
 > AI agents уже полезны как ускоритель исполнения на коротких, хорошо ограниченных задачах. Но длинные, контекстные, конфликтные и управленческие задачи требуют операционной модели, а не только автономии агента.
 
-Для [[Frameworks/models/architecture-of-manageability|architecture of manageability]] это означает: агентов нужно встраивать в систему контроля, передачи работы, эскалации, audit trail и человеческого суждения.
+Для architecture of manageability это означает: агентов нужно встраивать в систему контроля, передачи работы, эскалации, audit trail и человеческого суждения.
 
 ### 5. Способность AI в software engineering быстро растет, но это увеличивает нагрузку на управление качеством
 
@@ -518,7 +518,6 @@ flowchart TD
 ## Связанные заметки
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|системы принятия решений]]
 - [[Frameworks/models/organizational-operating-model|организационная операционная модель]]
 - [[Frameworks/models/quality-and-risks|качество и риски]]

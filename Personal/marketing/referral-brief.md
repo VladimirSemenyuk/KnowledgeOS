@@ -4,7 +4,7 @@
 
 Связи:
 - [[Personal/Context|Позиционирование и ICP]]
-- [[Personal/marketing/offers/advisory-product-line|Advisory product line]]
+- [[Personal/marketing/archive/2026-11-16/offers/advisory-product-line|Advisory product line]]
 - [[Personal/cases/AgVend/board-level-proof|AgVend board-level proof]]
 - [[Personal/operating-system/Цели 2026|Цели 2026]]
 

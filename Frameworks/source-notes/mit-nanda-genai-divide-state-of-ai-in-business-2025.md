@@ -47,7 +47,7 @@ processed_date: 2026-05-17
 
 > Внедрение AI без изменения операционной модели создает активность, но не управляемый бизнес-результат.
 
-Это поддерживает рамку [[Frameworks/models/architecture-of-manageability|architecture of manageability]]: AI должен быть встроен в систему принятия решений, ответственности, данных, контроля качества и обратной связи.
+Это поддерживает рамку architecture of manageability: AI должен быть встроен в систему принятия решений, ответственности, данных, контроля качества и обратной связи.
 
 ### 2. Главное узкое место — разрыв в обучении
 
@@ -369,7 +369,6 @@ flowchart TD
 ## Связанные заметки
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|системы принятия решений]]
 - [[Frameworks/models/organizational-operating-model|организационная операционная модель]]
 - [[Frameworks/models/quality-and-risks|качество и риски]]

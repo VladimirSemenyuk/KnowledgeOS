@@ -10,10 +10,10 @@ Follow the root `AGENTS.md` together with this file. When working on the user's 
 
 - `_index.md` — навигация по личной рабочей зоне;
 - `Context.md` — позиционирование и метод (единственный источник);
-- `operating-system/` — Life OS и цели;
-- `profile/` — резюме и профессиональная стратегия;
+- `operating-system/` — цели;
+- `profile/` — резюме для менторской практики; `archive/` — поиск работы;
 - `cases/` — доказательные материалы и кейсы;
-- `marketing/` — GTM, предложения, сайт, конкуренты и потенциальные клиенты.
+- `marketing/` — бренд, каналы, сайт, менторская практика и потенциальные клиенты.
 
 ---
 
@@ -25,7 +25,7 @@ Work on positioning as if the agent is the world's strongest expert in building 
 
 The goal is a personal brand people come to for Vladimir himself. He sells himself as part of the method: the method («Право управлять» — returning a leader's authorship over their role, decisions, and career; "authorial position" / «позиция автора» is the internal term for the state the method leads to, not the name) works through his stories, his directness as a former boss, and the fact that he has changed position himself several times.
 
-Primary channel: Instagram. Primary audience: leaders in any industry (team lead of leads, Head, Director level) for whom «перестало работать то, что работало раньше», still managing from the position of their previous level; confirmed clients so far come from tech, so tech situations remain the main proof — the good guy, the loyal soldier, the petitioner, the routine executor.
+Primary channels: Instagram and LinkedIn; supporting: Threads and Telegram. Posts are written by Vladimir manually. Primary audience: leaders in any industry (team lead of leads, Head, Director level) for whom «перестало работать то, что работало раньше», still managing from the position of their previous level; confirmed clients so far come from tech, so tech situations remain the main proof — the good guy, the loyal soldier, the petitioner, the routine executor.
 
 ## Required Perspective
 
@@ -59,9 +59,9 @@ Avoid:
 
 Keep personal positioning drafts, hypotheses, notes, and revisions in `/Personal`.
 
-Move work to `/Posts` only when the user explicitly asks for an Instagram or LinkedIn post, content plan, publication draft, or post backlog item.
+Move work to `/Posts` only when it is an archive record of a published post or a check requested under `Posts/AGENTS.md`. Do not draft posts.
 
-Keep marketing, GTM, Instagram and LinkedIn funnel logic, and public packaging in `/Personal/marketing`.
+Keep marketing, channel profiles, and public packaging in `/Personal/marketing`.
 
 Move work to `/Frameworks` only when the user explicitly asks to create a reusable advisory model that is independent of personal positioning.
 

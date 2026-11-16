@@ -4,7 +4,6 @@
 
 ## Организационная управляемость
 
-- [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]
 - [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]
 - [[Frameworks/models/decision-systems|Decision Systems]]
 - [[Frameworks/models/systemic-management|Systemic Management]]

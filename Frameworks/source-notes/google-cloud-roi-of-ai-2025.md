@@ -114,7 +114,7 @@ Google Cloud определяет AI agents как специализирова�
 - управление рисками;
 - измерение эффекта AI.
 
-Это совпадает с рамкой [[Frameworks/models/architecture-of-manageability|architecture of manageability]]:
+Это совпадает с рамкой architecture of manageability:
 
 > AI agents масштабируются только там, где организация умеет давать им контекст, доступ, границы, метрики и владельца результата.
 
@@ -397,7 +397,6 @@ flowchart TD
 ## Связанные заметки
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|системы принятия решений]]
 - [[Frameworks/models/organizational-operating-model|организационная операционная модель]]
 - [[Frameworks/models/quality-and-risks|качество и риски]]

@@ -1,13 +1,13 @@
 # KnowledgeOS
 
-Стратегическая база знаний по AI-трансформации, инженерному менеджменту, организационному дизайну и архитектуре управляемости.
+Рабочая система менторской практики «Право управлять» и технологического advisory.
 
 ## Основные разделы
 
 - [[Clients/_index|Clients]] — клиентские контексты, встречи и рабочие материалы.
 - [[Frameworks/_index|Frameworks]] — переиспользуемые модели, карты, source notes и исходники.
 - [[Personal/_index|Personal]] — личная операционная система, позиционирование, профиль и кейсы.
-- [[Posts/_index|Posts]] — LinkedIn-контур: планирование, черновики, публикации и исследования.
+- [[Posts/_index|Posts]] — публикации в Instagram, LinkedIn, Threads и Telegram: идеи автора и архив постов.
 - [[Talks/_index|Talks]] — материалы выступлений.
 - [[Templates/_index|Templates]] — пользовательские шаблоны.
 
@@ -20,8 +20,7 @@
 
 ## Рабочие контуры
 
-- [[Personal/Context|Личное позиционирование]]
-- [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]]
-- [[Posts/content-calendar|Контентный календарь]]
-- [[Posts/themes-backlog|Backlog тем]]
-- [[Posts/content-index|Индекс контента]]
+- [[Personal/Context|Позиционирование и метод «Право управлять»]]
+- [[Personal/marketing/mentoring-practice/_index|Практика менторинга]]
+- [[Posts/ideas|Идеи постов]]
+- [[Posts/content-index|Индекс публикаций]]

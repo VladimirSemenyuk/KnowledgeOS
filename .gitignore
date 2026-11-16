@@ -24,11 +24,6 @@ node_modules/
 /exports/
 /tmp/
 
-# Telegram weekly digest secrets
-.telegram-weekly.env
-.telegram-weekly.session.txt
-.agents/skills/create-telegram-weekly-digest/.private/
-
 # Large binary attachments (optional)
 # Uncomment if you don't want binaries in git
 # *.png
@@ -44,11 +39,6 @@ node_modules/
 .obsidian/plugins/marp-slides/lib*/
 
 # Сторонние навыки и служебные файлы инструментов
-.agents/skills/design-taste-frontend/
-.agents/skills/impeccable/
-.codex/
-**/.impeccable/
-**/.taste-skill/
 .obsidian/plugins/marp-slides/data.json
 
 # Случайные фрагменты из буфера обмена macOS

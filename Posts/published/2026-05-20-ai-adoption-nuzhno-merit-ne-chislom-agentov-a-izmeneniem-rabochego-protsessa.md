@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
+funnel: "[[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#2 — MOFU|MOFU]]"
 status: published
 publish_date: 2026-05-20
 linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7462751513547825152/

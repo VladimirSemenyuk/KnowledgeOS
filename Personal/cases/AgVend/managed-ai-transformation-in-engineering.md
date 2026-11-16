@@ -133,6 +133,5 @@ Related:
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация инженерной организации]]
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
 - [[Frameworks/models/ai-native-pdlc|AI-native PDLC]]
-- [[Frameworks/models/architecture-of-manageability|Architecture of Manageability]]
 - [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]
 - [[Frameworks/models/decision-systems|Decision Systems]]

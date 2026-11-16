@@ -26,7 +26,6 @@ AI не заменяет operating model. Он увеличивает цену �
 ## Связанные рамки
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|decision systems]]
 - [[Frameworks/models/quality-and-risks|quality and risks]]
 

@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
+funnel: "[[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#1 — TOFU|TOFU]]"
 status: published
 publish_date: 2026-05-19
 linkedin_url: https://www.linkedin.com/feed/update/urn:li:activity:7462389134062444544/

@@ -1,101 +1,29 @@
-# LinkedIn Context
+# Публикации: контекст
 
-## Цель
+## Зачем
 
-- Регулярный экспертный контент в LinkedIn.
-- Входящие диалоги с CEO / founder, у которых AI уже стал стратегической ставкой, но еще не дает управляемого бизнес-эффекта.
-- Укрепление позиции в темах AI transformation, engineering management и organizational design.
-- Поддержка advisory-практики через системные инсайты, а не через прямой питч.
+Публикации ведут в менторскую практику по методу «Право управлять». Воронка — из [[Personal/Context#Каналы|Personal/Context.md]]: пост → сообщение → 15 минут знакомства → разбор «Трезвый взгляд» → программа «Право управлять».
 
-## Аудитория
+## Для кого
 
-Источник ICP: [[Personal/Context#ICP|Personal Context / ICP]].
+Основной клиент — руководитель в переходе. Описание, проблемы и язык клиентов — в [[Personal/Context#1. Клиенты|Personal/Context.md]]. При расхождении этот файл уступает `Personal/Context.md`.
 
-Главный ICP для LinkedIn-контента — CEO / founder B2B tech или tech-enabled компании, где AI уже стал вопросом выживаемости, эффективности или конкурентоспособности, но организация не умеет превращать AI-инвестиции в управляемый бизнес-эффект.
+## Каналы
 
-География клиентов: Кремниевая долина, ЕС, Израиль, ОАЭ, СНГ. В контенте, где упоминается опыт с клиентами, опираться на этот список, а не на устаревшее «США и Израиль» из ранних публикаций.
+Основные:
+- Instagram — материалы в `Posts/instagram/`;
+- LinkedIn.
 
-Покупательский мандат находится у CEO / founder. CTO / VP Engineering, product, engineering leadership и quality-контур важны как внутренние участники изменений, но не должны размывать headline, тему или вывод поста.
+Вспомогательные:
+- Threads;
+- Telegram.
 
-Контент должен попадать в одну из ситуаций ICP:
+## Как пишутся посты
 
-- Компания уже вкладывает время, деньги и внимание руководства в AI.
-- AI-инициативы распадаются на пилоты, инструменты и локальные эксперименты.
-- Эффект для бизнеса есть фрагментарно или не управляется как система.
-- CEO видит, что проблема лежит в операционной модели: ролях, ответственности, качестве решений, управленческом контуре, связи бизнеса и engineering.
-- Есть риск, что старая операционная модель не выдерживает давления AI, конкуренции, маржинальности или скорости изменений.
+Вручную, автором. Роль агента ограничена правилами из [[Posts/AGENTS|Posts/AGENTS.md]]: материал из встреч, архив, проверка по запросу.
 
-Не писать посты так, будто основной покупатель — CTO, Engineering Manager или широкий круг "руководителей". Эти роли могут быть героями примера, участниками системы или мостом к выводу, но главный вопрос должен оставаться CEO-level: как превратить AI из набора экспериментов в управляемую способность бизнеса.
+## Рабочие файлы
 
-## Основные темы
-
-- AI-native organization.
-- Architecture of manageability.
-- Decision systems.
-- Engineering management.
-- Organizational operating model.
-- Ownership clarity.
-- Quality and risks.
-- Systemic management.
-- CTO/CEO advisory.
-
-## Позиционирование
-
-Я помогаю CEO превращать AI из набора экспериментов в управляемую способность бизнеса.
-
-## Тон
-
-- Системный.
-- Аналитический.
-- Спокойный.
-- Executive-oriented.
-- Без мотивационного шума.
-- Без startup hype.
-- Без generic consulting language.
-- Без слова "разрыв" в постах.
-- Использовать "–" вместо длинного тире.
-
-## Контентная логика
-
-Источник правил: [[Personal/marketing/linkedin-gtm-playbook|LinkedIn GTM Playbook]].
-
-Описание этапов:
-- [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]]
-- [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]]
-- [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]
-
-## Ритм публикаций
-
-- Вторник: [[Personal/marketing/linkedin-gtm-playbook#1 — TOFU|TOFU]].
-- Среда: [[Personal/marketing/linkedin-gtm-playbook#2 — MOFU|MOFU]].
-- Четверг: [[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]].
-
-Минимальный ритм: 3 поста в неделю.
-
-## Источники тем
-
-- Клиентские `Context.md`.
-- `summary.md` и `transcript.md` после встреч.
-- `Frameworks/`.
-- Личные заметки из `Personal/`.
-- Повторяющиеся вопросы CEO/CTO/founders.
-- Слабые места operating model, decision systems и ownership.
-
-## Рабочие артефакты
-
-- [[Posts/content-calendar|content calendar]]
-- [[Posts/themes-backlog|themes backlog]]
-- [[Posts/series-map|series map]]
-- [[Posts/metrics|metrics]]
-- [[Posts/research/high-performing-posts|high-performing posts]]
-- [[Templates/posts/linkedin-post.template|LinkedIn post template]]
-
-## Критерии сильной темы
-
-- Есть управленческое напряжение.
-- Есть системный вывод.
-- Есть практическая применимость.
-- Тема связана с реальной болью CEO / founder из ICP.
-- Видно, почему проблема относится к операционной модели, ответственности, принятию решений, качеству, рискам или управленческому контуру.
-- Можно написать без раскрытия конфиденциальной клиентской информации.
-- Пост усиливает позиционирование, а не просто собирает охват.
+- [[Posts/ideas|Блокнот идей]]
+- [[Posts/content-index|Индекс публикаций]]
+- [[Templates/posts/post.template|Шаблон заметки поста]]

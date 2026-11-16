@@ -8,7 +8,7 @@ client-language: en
 # Материалы для продуктовой линейки — todo
 
 Связи:
-- [[Personal/marketing/offers/advisory-product-line|Advisory product line]]
+- [[Personal/marketing/archive/2026-11-16/offers/advisory-product-line|Advisory product line]]
 - [[Personal/marketing/website/new-website-wireframe|Content wireframe сайта]]
 - [[Personal/cases/_index|Кейсы]]
 
@@ -27,18 +27,18 @@ client-language: en
 ## 2. Подготовить минимальный комплект для продажи
 
 - [x] Создать англоязычный one-pager **AI Transformation Decision Sprint**.
-  - EN: [[Personal/marketing/offers/ai-transformation-decision-sprint-one-pager|AI Transformation Decision Sprint]].
-  - RU: [[Personal/marketing/offers/ai-transformation-decision-sprint-one-pager-ru|Спринт принятия решения по AI-трансформации]].
+  - EN: [[Personal/marketing/archive/2026-11-16/offers/ai-transformation-decision-sprint-one-pager|AI Transformation Decision Sprint]].
+  - RU: [[Personal/marketing/archive/2026-11-16/offers/ai-transformation-decision-sprint-one-pager-ru|Спринт принятия решения по AI-трансформации]].
 - [x] Переработать AutoDS one-pager в универсальный англоязычный one-pager **AI Delivery Transformation Program**.
-  - EN: [[Personal/marketing/offers/ai-delivery-transformation-program-one-pager|AI Delivery Transformation Program]].
-  - RU: [[Personal/marketing/offers/ai-delivery-transformation-program-one-pager-ru|Программа AI-трансформации поставки продукта]].
+  - EN: [[Personal/marketing/archive/2026-11-16/offers/ai-delivery-transformation-program-one-pager|AI Delivery Transformation Program]].
+  - RU: [[Personal/marketing/archive/2026-11-16/offers/ai-delivery-transformation-program-one-pager-ru|Программа AI-трансформации поставки продукта]].
 - [x] Преобразовать отдельный governance one-pager во внутренний коммерческий модуль продолжения Transformation Program.
-  - EN: [[Personal/marketing/offers/post-program-governance-retainer|Post-Program Governance Retainer]].
+  - EN: [[Personal/marketing/archive/2026-11-16/offers/post-program-governance-retainer|Post-Program Governance Retainer]].
 - [x] Создать отдельный англоязычный one-pager **Executive Technology Advisory** для работы с одним руководителем.
-  - EN: [[Personal/marketing/offers/executive-technology-advisory-one-pager|Executive Technology Advisory]].
-  - RU: [[Personal/marketing/offers/executive-technology-advisory-one-pager-ru|Адвайзинг технических лидеров]].
+  - EN: [[Personal/marketing/archive/2026-11-16/offers/executive-technology-advisory-one-pager|Executive Technology Advisory]].
+  - RU: [[Personal/marketing/archive/2026-11-16/offers/executive-technology-advisory-one-pager-ru|Адвайзинг технических лидеров]].
 - [x] Подготовить короткую англоязычную презентацию всей линейки на 7–10 слайдов.
-  - EN: [[Personal/marketing/offers/advisory-product-line-presentation|Advisory Product Line Presentation]].
+  - EN: [[Personal/marketing/archive/2026-11-16/offers/advisory-product-line-presentation|Advisory Product Line Presentation]].
 - [x] Подготовить канонический англоязычный обезличенный кейс AI-трансформации engineering с проверенными показателями и точным описанием роли Владимира.
 - [ ] Подготовить канонический англоязычный личный кейс **Anton / R&D leadership advisory**; компанию описывать обезличенно, AutoDS не называть клиентом.
 - [ ] Подготовить единый модульный шаблон коммерческого предложения / Statement of Work для трех продуктов и опционального post-program governance retainer.

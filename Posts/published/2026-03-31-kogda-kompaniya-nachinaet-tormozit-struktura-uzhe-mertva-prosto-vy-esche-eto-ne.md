@@ -1,6 +1,6 @@
 ---
 type: linkedin-post
-funnel: "[[Personal/marketing/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
+funnel: "[[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#3 — BOFU|BOFU]]"
 status: published
 publish_date: 2026-03-31
 source: LinkedIn analytics import 2026-05-14

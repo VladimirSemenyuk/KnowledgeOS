@@ -25,7 +25,7 @@ processed_date: 2026-07-07
 
 > AI coding уже стал инфраструктурой разработки. Конкурентное отличие смещается от доступа к генерации кода к способности организации объяснить происхождение, намерение, проверку, владельца и состояние AI-generated change на всем жизненном цикле.
 
-Это хорошо поддерживает рамки [[Frameworks/models/ai-native-pdlc|AI-native PDLC]], [[Frameworks/models/governance-mesh|Governance Mesh]], [[Frameworks/models/evidence-bundle|Evidence Bundle]] и [[Frameworks/models/architecture-of-manageability|architecture of manageability]].
+Это хорошо поддерживает рамки [[Frameworks/models/ai-native-pdlc|AI-native PDLC]], [[Frameworks/models/governance-mesh|Governance Mesh]], [[Frameworks/models/evidence-bundle|Evidence Bundle]] и architecture of manageability.
 
 ## Самое важное для моей базы знаний
 
@@ -272,7 +272,7 @@ flowchart LR
 - без платформенной перестройки AI создает очередь на проверку;
 - настоящая AI-трансформация начинается там, где ускоряется весь lifecycle, а не только code generation.
 
-Стадия воронки: [[Personal/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]].
+Стадия воронки: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]].
 
 ### Идея 2. "Следующий дефицит в engineering - не код, а доказуемость"
 
@@ -282,7 +282,7 @@ flowchart LR
 - организации должны отвечать: откуда изменение, зачем оно сделано, кто отвечает в production;
 - это превращает IDP, audit trail и governance mesh в стратегические capabilities.
 
-Стадия воронки: [[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
+Стадия воронки: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]].
 
 ### Идея 3. "Governance debt - новый technical debt AI-native разработки"
 
@@ -292,7 +292,7 @@ flowchart LR
 - долг возникает не только в коде, но и в отсутствии attribution, ownership, intent traceability и audit trail;
 - управляемость должна быть встроена в процесс, а не добавлена после инцидента.
 
-Стадия воронки: [[Personal/marketing/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
+Стадия воронки: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#BOFU нижний этап контентной воронки|BOFU]].
 
 ## Ограничения источника
 
@@ -307,7 +307,6 @@ flowchart LR
 - [[Frameworks/models/governance-mesh|Governance Mesh]]
 - [[Frameworks/models/evidence-bundle|Evidence Bundle]]
 - [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/quality-and-risks|quality and risks]]
 - [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
 - [[Frameworks/source-notes/ai-disrupt-pdlc-whitepaper-2026|AI-Disrupt PDLC Whitepaper 2026]]

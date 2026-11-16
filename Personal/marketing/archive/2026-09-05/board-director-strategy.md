@@ -2,7 +2,6 @@
 
 Связи:
 - [[Personal/Context|Позиционирование]]
-- [[Personal/operating-system/Life OS|Life OS]]
 - [[Personal/operating-system/Цели 2026|Цели 2026]]
 - [[Personal/cases/ai-transformatsiya-nishevogo-marketpleysa|AI-трансформация нишевого маркетплейса]]
 - [[Personal/cases/reorganizatsiya-rnd-v-ecom|Реорганизация RnD в E-Com]]
@@ -21,7 +20,7 @@
 
 Полная board-стратегия раньше не была описана. В vault уже есть опорные элементы:
 
-- в [[Personal/operating-system/Life OS|Life OS]] зафиксирован выход в роли strategic advisor / board advisor для AI-native компаний;
+- в Life OS зафиксирован выход в роли strategic advisor / board advisor для AI-native компаний;
 - в [[Personal/Context|Personal Context]] сформулировано позиционирование: архитектор управляемости для AI-эпохи;
 - есть завершенный proof: AI-трансформация нишевого маркетплейса, где инвесторский запрос, раунд C, агентная разработка и развитие управленческого слоя связались с операционной моделью;
 - есть второй proof: реорганизация RnD, где ручное управление заменялось системой ответственности, метрик и границ;

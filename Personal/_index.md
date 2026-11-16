@@ -3,9 +3,9 @@
 ## Текущий план практики
 
 - [[Personal/marketing/mentoring-practice/mentoring-practice-six-month-plan|План развития менторинга на шесть месяцев]]
-- [[Personal/marketing/archive/2026-09-05/_index|Архив прежних планов]]
+- [[Personal/marketing/archive/_index|Архив прежних планов]]
 
-Личная рабочая зона: операционная система, профессиональный профиль, позиционирование и доказательная база advisory-практики.
+Личная рабочая зона: операционная система, профессиональный профиль, позиционирование и доказательная база менторской практики.
 
 ## Контекст
 
@@ -15,17 +15,15 @@
 
 ## Личная операционная система
 
-- [[Personal/operating-system/Life OS|Life OS]]
 - [[Personal/operating-system/Цели 2026|Цели 2026]]
 
 ## Профессиональный профиль
 
-- [[Personal/profile/board-director-strategy|Стратегия входа в совет директоров]]
-- [[Personal/profile/vladimir-semenyuk-resume|Резюме]]
-- [[Personal/profile/vladimir-semenyuk-resume-sr-lat|Резюме — Senior Leadership]]
-- [[Personal/profile/vacancies/_index|Вакансии и статусы откликов]]
+- [[Personal/profile/vladimir-semenyuk-consulting-resume-ru|Резюме для консультационных партнёров]]
+- [[Personal/profile/vladimir-semenyuk-cv-accelerators-ru|CV для акселераторов]]
+- [[Personal/profile/archive/_index|Архив: поиск работы]]
 
-## Advisory-практика
+## Менторская практика
 
 - [[Personal/cases/_index|Кейсы и доказательные материалы]]
-- [[Personal/marketing/_index|Маркетинг, GTM и предложения]]
+- [[Personal/marketing/_index|Маркетинг менторской практики]]

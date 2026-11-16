@@ -60,7 +60,7 @@ processed_date: 2026-05-26
 - совершать действия в реальном мире;
 - работать с финансами, юридическими документами, логистикой, бронированием, производством или software delivery;
 
-то его нужно проектировать как часть [[Frameworks/models/architecture-of-manageability|architecture of manageability]], а не как автономного исполнителя.
+то его нужно проектировать как часть architecture of manageability, а не как автономного исполнителя.
 
 ## Ключевые рамки и формулы из документа
 
@@ -138,7 +138,7 @@ flowchart LR
 
 ### Пост 1: AI agent не должен быть своим аудитором
 
-Воронка: [[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
+Воронка: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
 
 Тезис:
 
@@ -146,7 +146,7 @@ flowchart LR
 
 ### Пост 2: Reasoning не заменяет governance
 
-Воронка: [[Personal/marketing/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
+Воронка: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#TOFU верхний этап контентной воронки|TOFU]]
 
 Тезис:
 
@@ -154,7 +154,7 @@ flowchart LR
 
 ### Пост 3: Автономия агента должна расти медленнее, чем контур контроля
 
-Воронка: [[Personal/marketing/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
+Воронка: [[Personal/marketing/archive/2026-11-16/linkedin-gtm-playbook#MOFU средний этап контентной воронки|MOFU]]
 
 Тезис:
 
@@ -164,7 +164,6 @@ flowchart LR
 
 - [[Frameworks/models/ai-native-organization|AI-native organization]]
 - [[Frameworks/models/internal-developer-platform|Internal Developer Platform]]
-- [[Frameworks/models/architecture-of-manageability|architecture of manageability]]
 - [[Frameworks/models/decision-systems|системы принятия решений]]
 - [[Frameworks/models/quality-and-risks|качество и риски]]
 - [[Frameworks/source-notes/google-cloud-roi-of-ai-2025|Google Cloud ROI of AI 2025]]
