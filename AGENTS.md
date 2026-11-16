@@ -7,7 +7,7 @@ This repository is the working system of Vladimir's mentoring practice and advis
 Main line — mentoring leaders by the method «Право управлять» (see `Personal/Context.md`):
 - client and mentee work: meetings, transcripts, summaries, growth observations;
 - positioning, brand, website, and leads;
-- public writing: Instagram and LinkedIn as primary channels, Threads and Telegram as supporting — written by the author manually.
+- public writing: Instagram, LinkedIn and Threads as primary channels, Telegram as supporting — written by the author manually.
 
 Second line — technology advisory (fractional CTO, AI transformation, delivery). It is a separate product, not part of the personal brand:
 - engineering management;

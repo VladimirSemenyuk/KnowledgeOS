@@ -6,8 +6,8 @@
 
 ## Каналы
 
-- Основные: Instagram, LinkedIn.
-- Вспомогательные: Threads, Telegram.
+- Основные: Instagram, LinkedIn, Threads.
+- Вспомогательный: Telegram.
 
 Контекст, аудитория и воронка — в [[Posts/Context|Posts/Context.md]]. Позиционирование и метод — только в [[Personal/Context|Personal/Context.md]].
 

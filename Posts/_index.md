@@ -1,6 +1,6 @@
 # Posts
 
-Публикации: основные каналы — Instagram и LinkedIn, вспомогательные — Threads и Telegram. Посты пишутся вручную; правила для агента — в [[Posts/AGENTS|Posts/AGENTS.md]].
+Публикации: основные каналы — Instagram, LinkedIn и Threads, вспомогательный — Telegram. Посты пишутся вручную; правила для агента — в [[Posts/AGENTS|Posts/AGENTS.md]].
 
 ## Контекст
 

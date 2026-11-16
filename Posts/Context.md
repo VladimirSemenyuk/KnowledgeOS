@@ -12,10 +12,10 @@
 
 Основные:
 - Instagram — материалы в `Posts/instagram/`;
-- LinkedIn.
+- LinkedIn;
+- Threads.
 
-Вспомогательные:
-- Threads;
+Вспомогательный:
 - Telegram.
 
 ## Как пишутся посты

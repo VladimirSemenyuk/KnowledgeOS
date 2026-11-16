@@ -4,7 +4,7 @@
 
 ## С 16 ноября 2026
 
-Посты пишутся вручную; основные каналы — Instagram и LinkedIn, вспомогательные — Threads и Telegram.
+Посты пишутся вручную; основные каналы — Instagram, LinkedIn и Threads, вспомогательный — Telegram.
 
 | Date | Platforms | Post |
 |---|---|---|
