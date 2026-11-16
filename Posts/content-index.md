@@ -8,6 +8,7 @@
 
 | Date | Platforms | Post |
 |---|---|---|
+| 2026-11-16 | LinkedIn, Threads, Telegram | [[2026-11-16-muzhskaya-initsiatsiya\|Мужская инициация]] |
 
 ## До 16 ноября 2026: LinkedIn
 
