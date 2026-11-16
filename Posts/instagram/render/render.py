@@ -10,7 +10,7 @@ PNG пишутся в папку `img/` рядом с файлом данных,
 сводный лист для проверки.
 
 Разметка в тексте:
-    [[o:текст]] — красный обвод, [[u:текст]] — красное подчёркивание,
+    [[o:текст]] — красный обвод, [[u:текст]] — красное подчёркивание (переносится по строкам),
     [[s:текст]] — зачёркивание чёрным, [[b:текст]] — полужирный.
 На поверхность — одна красная пометка.
 """
@@ -21,6 +21,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
@@ -53,6 +54,7 @@ h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02}
 .dark .pill{background:#F3F4F1;color:#16181A}
 .m{position:relative;white-space:nowrap}
 .m svg{position:absolute;overflow:visible}
+.u{padding:0 .01em .07em;margin:0 -.01em;background-repeat:no-repeat;background-position:0 100%;background-size:100% .14em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .s{text-decoration:line-through;text-decoration-thickness:3px;color:#5E6469}
 .panel{background:#F3F4F1;border-radius:6px;box-shadow:0 0 0 1px #D8DBD8,0 36px 80px -56px rgba(22,24,26,.35)}
 .st{display:flex;flex-direction:column;justify-content:space-between;gap:56px;padding:260px 88px 360px;background:#FAFAF8}
@@ -60,15 +62,20 @@ h1{margin:0;font-weight:600;letter-spacing:-.045em;line-height:1.02}
 """
 
 ARROW = '<svg width="44" height="20" viewBox="0 0 44 20" aria-hidden="true"><path d="M2 10 H38 M30 3 L40 10 L30 17" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-UNDER = '<svg viewBox="0 0 600 24" preserveAspectRatio="none" style="left:-1%;bottom:-0.06em;width:102%;height:0.14em" aria-hidden="true"><path d="M6 14 C 140 6, 320 20, 594 8" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
+# Подчёркивание — фон строки, а не SVG поверх: фраза переносится, каждая строка получает свою линию.
+UNDER = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 24" preserveAspectRatio="none"><path d="M6 14 C 140 6, 320 20, 594 8" fill="none" stroke="#D2302C" stroke-width="{w}" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>'
+
+
+def under_bg(w):
+    return "url(&quot;data:image/svg+xml," + urllib.parse.quote(UNDER.format(w=w)) + "&quot;)"
 CHECK = '<svg width="{s}" height="{h}" viewBox="0 0 14 10" aria-hidden="true"><path d="M1.5 6.5 L5 9 L12.5 1.5" fill="none" stroke="#D2302C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
 SHORT = r"(?:в|и|с|к|о|у|а|я|не|на|по|за|из|до|от|без|для|при|что|как|но|во|со|об|их|его|её|мы|вы|он|это|или|ли|же|бы|ни|раз)"
 
 
 def typo(t):
-    t = re.sub(r"(?i)(^|[\s(«])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
-    t = re.sub(r"(?i)(^|[\s(«])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
+    t = re.sub(r"(?i)(^|[\s(«:])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
+    t = re.sub(r"(?i)(^|[\s(«:])(" + SHORT + r") ", lambda m: m.group(1) + m.group(2) + "\u00a0", t)
     t = t.replace(" —", "\u00a0—")
     t = re.sub(r"(\d) (?=\S)", "\\1\u00a0", t)
     return t
@@ -83,7 +90,7 @@ def md(t, w=5):
         if kind == "o":
             return f'<span class="m o" data-w="{w}">{inner}</span>'  # контур рисует OVAL_JS
         if kind == "u":
-            return f'<span class="m">{inner}{UNDER.format(w=w + 2)}</span>'
+            return f'<span class="u" style="background-image:{under_bg(w + 2)}">{inner}</span>'
         if kind == "s":
             return f'<span class="s">{inner}</span>'
         if kind == "b":
@@ -257,7 +264,44 @@ def t_reel_cover(s):
             f'{bottom(handle=True)}</div></div>')
 
 
+def photo_src(p):
+    return "file://" + (p if os.path.isabs(p) else os.path.join(ROOT, p))
+
+
+def t_photo(s, h=1350, safe_top=0):
+    """Кадр с заголовком. Фото всегда ч/б.
+
+    layout="split" (по умолчанию) — фото сверху, заголовок на доске снизу: работает с любым кадром.
+    layout="dark" — белый заголовок прямо на тёмной части кадра (пиджак, тёмный фон). Без градиентов:
+    берём только кадры, где низ и так тёмный.
+    Поля: photo (путь от корня KnowledgeOS), pos (object-position), title, label, size, zoom.
+    """
+    pos, zoom = s.get("pos", "50% 30%"), s.get("zoom", 1)
+    im = (f'<img src="{photo_src(s["photo"])}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;'
+          f'object-position:{pos};filter:grayscale(1) contrast(1.05);transform:scale({zoom});transform-origin:{pos}">')
+    lab = f'<span class="lab" style="font-size:26px">{md(s["label"])}</span>' if s.get("label") else ""
+    safe = 1350  # смысловая зона 4:5 — её видно в сетке
+    pad_b = h - safe_top - safe  # что ниже смысловой зоны
+    if s.get("layout") == "dark":
+        return (f'<div class="dark" style="position:relative;width:1080px;height:{h}px;overflow:hidden">{im}'
+                f'<div style="position:absolute;left:96px;right:96px;bottom:{pad_b + 88}px;display:flex;flex-direction:column;gap:36px">'
+                f'{lab}<h1 style="font-size:{s.get("size", 112)}px;color:#F3F4F1">{md(s["title"], 7)}</h1>'
+                f'<div style="font-size:26px;opacity:.85">{SIGN_HANDLE}</div></div></div>')
+    board = s.get("board", 560)  # высота доски с заголовком внутри смысловой зоны
+    return (f'<div style="position:relative;width:1080px;height:{h}px;overflow:hidden;background:#F3F4F1">'
+            f'<div style="position:absolute;left:0;right:0;top:0;height:{h - pad_b - board}px;overflow:hidden">{im}</div>'
+            f'<div style="position:absolute;left:96px;right:96px;bottom:{pad_b + 80}px;height:{board - 80}px;display:flex;flex-direction:column;justify-content:space-between;padding-top:56px">'
+            f'<div style="display:flex;flex-direction:column;gap:28px">{lab}<h1 style="font-size:{s.get("size", 104)}px">{md(s["title"], 7)}</h1></div>'
+            f'{bottom(handle=True)}</div></div>')
+
+
+def t_reel_photo(s):
+    """Обложка Reels с кадром: 9:16, смысловая зона — центр 1080×1350."""
+    return t_photo(s, h=1920, safe_top=285)
+
+
 KINDS = {
+    "photo": (t_photo, 1080, 1350), "reel_photo": (t_reel_photo, 1080, 1920),
     "cover": (t_cover, 1080, 1350), "text": (t_text, 1080, 1350), "position": (t_position, 1080, 1350),
     "thesis": (t_thesis, 1080, 1350), "review": (t_review, 1080, 1350), "case": (t_case, 1080, 1350),
     "story": (t_story, 1080, 1920), "story_review": (t_story_review, 1080, 1920),
