@@ -14,7 +14,7 @@ visibility: private
 ## Состав
 
 - `index.html` — вся страница: разметка и стили в одном файле, немного JS для шапки и маркерных пометок.
-- `talks/index.html` — страница выступлений для организаторов: слайды, темы, форматы. Стили — подмножество `index.html`, без JS. Новое выступление: добавить `<article class="talk">`, PDF положить в `assets/files/`, обновить `llms.txt` и `lastmod` в `sitemap.xml`.
+- `talks/index.html` — страница выступлений для организаторов: слайды, темы, форматы. Стили — подмножество `index.html`, JS только для шапки (как на главной). Новое выступление: добавить `<article class="talk">`, PDF положить в `assets/files/`, обновить `llms.txt` и `lastmod` в `sitemap.xml`.
 - `assets/img/og-cover.jpg` — обложка для ссылок, 1200×630; исходник — [`../og-cover.html`](../og-cover.html). Пересборка из папки `website/`:
   `"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size=1200,630 --virtual-time-budget=5000 --screenshot=og.png "file://$PWD/og-cover.html"`, затем `sips -s format jpeg -s formatOptions 88 og.png --out site/assets/img/og-cover.jpg`.
 - `favicon.ico`, `site.webmanifest`, `assets/icons/` — фавикон «ВС» (Montserrat SemiBold, белое на #121212), иконки 32, 180, 192, 512.

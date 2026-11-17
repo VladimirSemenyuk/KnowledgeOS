@@ -76,7 +76,11 @@ a{color:inherit}
 .btn:active{transform:translateY(1px) scale(.985);transition-duration:.09s}
 
 /* шапка */
-.nav{position:fixed;inset:0 0 auto;z-index:20;background:rgba(243,244,241,.94);-webkit-backdrop-filter:saturate(1.2) blur(8px);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.nav{position:fixed;inset:0 0 auto;z-index:20;background:rgba(243,244,241,.94);-webkit-backdrop-filter:saturate(1.2) blur(8px);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent;transition:transform .25s var(--ease),border-color .25s var(--ease)}
+.nav.is-scrolled{border-bottom-color:var(--line)}
+.nav.is-hidden{transform:translateY(-100%)}
+.nav:focus-within{transform:none}
+@media (min-width:961px){.nav.is-hidden{transform:none}}
 .nav .btn{gap:0}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:var(--nav)}
 .who{display:flex;align-items:center;text-decoration:none;min-height:44px}
@@ -235,5 +239,20 @@ a{color:inherit}
     <p>©&nbsp;2026 Владимир Семенюк</p>
   </div>
 </footer>
+<script>
+// Шапка как на главной: линейка появляется после прокрутки, на мобильном шапка прячется при прокрутке вниз
+(function(){
+  var bar=document.querySelector('.nav'), last=window.scrollY;
+  function upd(){
+    var y=window.scrollY;
+    bar.classList.toggle('is-scrolled',y>8);
+    if(Math.abs(y-last)<6) return;
+    bar.classList.toggle('is-hidden',y>last&&y>120);
+    last=y;
+  }
+  window.addEventListener('scroll',upd,{passive:true});
+  upd();
+})();
+</script>
 </body>
 </html>
