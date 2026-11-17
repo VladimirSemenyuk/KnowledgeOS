@@ -28,7 +28,7 @@
  "@context": "https://schema.org",
  "@graph": [
   {"@type": "WebSite", "@id": "https://semenyuk.pro/#website", "url": "https://semenyuk.pro/", "name": "Владимир Семенюк", "inLanguage": "ru"},
-  {"@type": "ProfilePage", "@id": "https://semenyuk.pro/#page", "url": "https://semenyuk.pro/", "isPartOf": {"@id": "https://semenyuk.pro/#website"}, "inLanguage": "ru", "dateModified": "2026-11-14", "mainEntity": {"@id": "https://semenyuk.pro/#person"}},
+  {"@type": "ProfilePage", "@id": "https://semenyuk.pro/#page", "url": "https://semenyuk.pro/", "isPartOf": {"@id": "https://semenyuk.pro/#website"}, "inLanguage": "ru", "dateModified": "2026-11-17", "mainEntity": {"@id": "https://semenyuk.pro/#person"}},
   {
    "@type": "Person",
    "@id": "https://semenyuk.pro/#person",
@@ -237,6 +237,7 @@ main > section + section,.closing{border-top:1px solid var(--line)}
 .about-more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:var(--gutter);row-gap:24px;margin-top:clamp(32px,5vh,52px);padding-top:20px;border-top:1px solid var(--line)}
 .about-more > div{display:flex;flex-direction:column;gap:4px}
 .about-more p:not(.cap){color:var(--ink-2);font-size:16px;line-height:1.5}
+.about-more .link{color:var(--ink)}
 
 /* 6. отзывы */
 .lead-quote{grid-column:1 / span 10;display:flex;flex-direction:column;gap:20px;margin-bottom:clamp(32px,5vh,52px)}
@@ -520,7 +521,7 @@ main > section + section,.closing{border-top:1px solid var(--line)}
     <div class="about-more">
       <div><p class="cap">Ментор</p><p>Клиенты в&nbsp;Кремниевой долине, ЕС, Израиле, ОАЭ и&nbsp;СНГ: руководители нескольких команд, директора, исполнительные директора, CEO и&nbsp;основатели.</p></div>
       <div><p class="cap">Предприниматель</p><p>Запустил AI&#8209;стартап. 2,5&nbsp;года строил теннисный клуб и&nbsp;школу в&nbsp;Белграде, с&nbsp;нуля, в&nbsp;новой стране и&nbsp;отрасли. Оба бизнеса закрыл.</p></div>
-      <div><p class="cap">Образование</p><p>МГТУ им.&nbsp;Баумана, MBA ВШЭ</p></div>
+      <div><p class="cap">Спикер</p><p>Активно выступаю на&nbsp;конференциях и&nbsp;в&nbsp;профессиональных сообществах: об&nbsp;управлении, карьере руководителя и&nbsp;развитии команд.</p><p><a class="link" href="talks/">Выступления и&nbsp;слайды&nbsp;→</a></p></div>
     </div>
   </div>
 </section>
@@ -594,6 +595,7 @@ main > section + section,.closing{border-top:1px solid var(--line)}
         <li><a class="link" href="https://t.me/vladimirsemenyuk">Telegram</a></li>
         <li><a class="link" href="https://www.linkedin.com/in/vladimir-semenyuk/">LinkedIn</a></li>
         <li><a class="link" href="mailto:vladimir@semenyuk.pro">vladimir@semenyuk.pro</a></li>
+        <li><a class="link" href="talks/">Выступления</a></li>
       </ul>
       <p class="site-foot__channel">Пока не&nbsp;готовы писать, читайте канал <a class="link" href="https://t.me/management_and_happiness">«Управление и&nbsp;Счастье»</a></p>
       <p>©&nbsp;2026 Владимир Семенюк</p>
