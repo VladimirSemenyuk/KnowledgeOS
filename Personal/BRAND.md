@@ -329,6 +329,24 @@ type: master
 - Названия на русском, без англицизмов и слов «система», «формула», «код», «матрица».
 - Перед публичным использованием нового названия — согласование с Владимиром.
 
+### Контакты и имена профилей
+
+Основное имя — `vladimir.semenyuk`. На площадках, где точка запрещена, берётся ближайший допустимый вариант. Отображаемое имя везде одно: «Владимир Семенюк». Все контакты собраны на `semenyuk.pro`.
+
+| Площадка | Имя | Ссылка |
+|---|---|---|
+| Instagram | `@vladimir.semenyuk` | https://www.instagram.com/vladimir.semenyuk/ |
+| Threads | `@vladimir.semenyuk` | https://www.threads.com/@vladimir.semenyuk |
+| Telegram, личный | `@vladimirsemenyuk` — точки в Telegram запрещены | https://t.me/vladimirsemenyuk |
+| Telegram-канал | «Управление и Счастье», `management_and_happiness` | https://t.me/management_and_happiness |
+| LinkedIn | `in/vladimir-semenyuk` — точки в адресе запрещены | https://www.linkedin.com/in/vladimir-semenyuk/ |
+| Сайт | `semenyuk.pro` | https://semenyuk.pro |
+| Email | `vladimir@semenyuk.pro` | mailto:vladimir@semenyuk.pro |
+
+- Существующие адреса не переименовывать: на них ведут резюме, сайт, тесты и письма.
+- Новый профиль — сначала `vladimir.semenyuk`, затем `vladimirsemenyuk`, затем `vladimir_semenyuk`. Занятое имя записать в эту таблицу.
+- На картинках — только `@vladimir.semenyuk`.
+
 ### Claims
 
 **Подтверждены** — источник в скобках:
