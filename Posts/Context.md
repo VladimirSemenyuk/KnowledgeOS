@@ -13,10 +13,12 @@
 Основные:
 - Instagram — материалы недели в `Posts/weeks/<дата>/instagram/`;
 - LinkedIn — материалы недели в `Posts/weeks/<дата>/linkedin/`;
-- Threads.
+- Threads — материалы недели в `Posts/weeks/<дата>/threads/`.
 
 Вспомогательный:
-- Telegram.
+- Telegram — дублирует посты LinkedIn: тот же текст в тот же день (решение автора, 2026-11-19).
+
+Ритм: Reels — каждый будний день. Посты в Threads, LinkedIn и Telegram выходят в тот же день, что и соответствующий Reels в Instagram (решение автора, 2026-11-19).
 
 ## Как пишутся посты
 
