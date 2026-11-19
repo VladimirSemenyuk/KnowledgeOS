@@ -22,3 +22,7 @@
 - [[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-whitepaper-2026.pdf|AI-Disrupt PDLC Whitepaper 2026 PDF]]
 - [[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-whitepaper-2026-full-text.md|AI-Disrupt PDLC Whitepaper 2026 — оформленный полный текст]]
 - [[Frameworks/sources/ai-pdlc/ai-disrupt-pdlc-v3-7-2026.docx|AI-Disrupt PDLC v3.7 DOCX]]
+
+## Развитие руководителей
+
+- [[Frameworks/sources/leadership-development/skolkovo-executive-learning-2026.pdf|СКОЛКОВО: обучение руководителей 2026]]

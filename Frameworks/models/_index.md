@@ -2,6 +2,10 @@
 
 Переиспользуемые advisory-модели, управленческие рамки и элементы операционной архитектуры.
 
+## Позиция руководителя
+
+- [[Frameworks/models/management-positions|Пять позиций руководителя]]
+
 ## Организационная управляемость
 
 - [[Frameworks/models/organizational-operating-model|Organizational Operating Model]]

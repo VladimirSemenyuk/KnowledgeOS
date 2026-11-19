@@ -22,3 +22,4 @@
 
 - [[Frameworks/source-notes/dora-roi-of-ai-assisted-software-development-2026|DORA ROI of AI-assisted Software Development 2026]]
 - [[Frameworks/source-notes/hallucination-stations-limitations-of-transformer-based-language-models|Hallucination Stations: limitations of transformer-based language models]]
+- [[Frameworks/source-notes/skolkovo-executive-learning-2026|СКОЛКОВО: обучение руководителей 2026]]
