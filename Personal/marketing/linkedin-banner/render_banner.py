@@ -12,7 +12,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
-sys.path.insert(0, os.path.join(ROOT, "Posts/instagram/render"))
+sys.path.insert(0, os.path.join(ROOT, "Posts/render"))
 import render as R  # noqa: E402
 
 W, H = 1584, 396

@@ -11,8 +11,8 @@
 ## Каналы
 
 Основные:
-- Instagram — материалы в `Posts/instagram/`;
-- LinkedIn;
+- Instagram — материалы недели в `Posts/weeks/<дата>/instagram/`;
+- LinkedIn — материалы недели в `Posts/weeks/<дата>/linkedin/`;
 - Threads.
 
 Вспомогательный:

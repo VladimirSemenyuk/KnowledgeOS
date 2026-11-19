@@ -14,11 +14,13 @@
 - `drafts/` — черновики.
 - Шаблон: [[Templates/posts/post.template|post.template]]
 
-## Instagram
+## Недели: Instagram и LinkedIn
 
+Одна неделя — одна папка в `weeks/`: план, сценарии Reels и подпапки каналов `instagram/`, `linkedin/`.
+
+- [[Posts/weeks/2026-11-16-launch/_index|Неделя запуска, 16–22 ноября]]
 - [[Personal/marketing/instagram-plan|План Instagram на 90 дней]]
-- [[Posts/instagram/2026-11-16-launch/_index|Неделя запуска, 16–22 ноября]]
-- Рендер картинок: `Posts/instagram/render/render.py`
+- Рендер слайдов и монтаж Reels: `Posts/render/`
 
 ## Архив
 

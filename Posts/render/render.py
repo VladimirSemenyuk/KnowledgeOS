@@ -2,7 +2,7 @@
 """Рендер слайдов Instagram в PNG по визуальной системе «Доска после разбора».
 
 Запуск из корня KnowledgeOS:
-    python3 Posts/instagram/render/render.py Posts/instagram/2026-11-16-launch/slides.py
+    python3 Posts/render/render.py Posts/weeks/2026-11-16-launch/instagram/slides.py
 
 Файл данных объявляет список SLIDES: каждый элемент — dict с ключами
 `name` (имя PNG без расширения), `kind` (шаблон) и полями шаблона.
@@ -24,7 +24,7 @@ import tempfile
 import urllib.parse
 
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 IMG = os.path.join(ROOT, "Personal/marketing/website/site/assets/img")
 
 FONT = '<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">'
@@ -275,18 +275,27 @@ def t_photo(s, h=1350, safe_top=0):
     layout="dark" — белый заголовок прямо на тёмной части кадра (пиджак, тёмный фон). Без градиентов:
     берём только кадры, где низ и так тёмный.
     Поля: photo (путь от корня KnowledgeOS), pos (object-position), title, label, size, zoom.
+    color=True — кадр в цвете: для обложек Reels из самого ролика, где видео идёт в цвете.
     """
     pos, zoom = s.get("pos", "50% 30%"), s.get("zoom", 1)
+    flt = "none" if s.get("color") else "grayscale(1) contrast(1.05)"
     im = (f'<img src="{photo_src(s["photo"])}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;'
-          f'object-position:{pos};filter:grayscale(1) contrast(1.05);transform:scale({zoom});transform-origin:{pos}">')
+          f'object-position:{pos};filter:{flt};transform:scale({zoom});transform-origin:{pos}">')
     lab = f'<span class="lab" style="font-size:26px">{md(s["label"])}</span>' if s.get("label") else ""
     safe = 1350  # смысловая зона 4:5 — её видно в сетке
     pad_b = h - safe_top - safe  # что ниже смысловой зоны
     if s.get("layout") == "dark":
+        sign = f'<div style="font-size:26px;opacity:.85">{SIGN_HANDLE}</div>' if s.get("sign", True) else ""
+        title = md(s["title"], 7)
+        if s.get("plate"):  # тёмная плашка под каждой строкой, как у субтитров в ролике
+            pl = "background-color:rgba(22,24,26,.88);box-decoration-break:clone;-webkit-box-decoration-break:clone"
+            title = f'<span style="{pl};padding:2px 22px 10px;border-radius:14px;line-height:1.32">{title}</span>'
+            if lab:
+                lab = f'<span class="lab" style="font-size:26px;{pl};padding:10px 16px;border-radius:10px;align-self:flex-start">{md(s["label"])}</span>'
         return (f'<div class="dark" style="position:relative;width:1080px;height:{h}px;overflow:hidden">{im}'
-                f'<div style="position:absolute;left:96px;right:96px;bottom:{pad_b + 88}px;display:flex;flex-direction:column;gap:36px">'
-                f'{lab}<h1 style="font-size:{s.get("size", 112)}px;color:#F3F4F1">{md(s["title"], 7)}</h1>'
-                f'<div style="font-size:26px;opacity:.85">{SIGN_HANDLE}</div></div></div>')
+                f'<div style="position:absolute;left:{74 if s.get("plate") else 96}px;right:74px;bottom:{pad_b + 88}px;display:flex;flex-direction:column;gap:{20 if s.get("plate") else 36}px">'
+                f'{lab}<h1 style="font-size:{s.get("size", 112)}px;color:#F3F4F1">{title}</h1>'
+                f'{sign}</div></div>')
     board = s.get("board", 560)  # высота доски с заголовком внутри смысловой зоны
     return (f'<div style="position:relative;width:1080px;height:{h}px;overflow:hidden;background:#F3F4F1">'
             f'<div style="position:absolute;left:0;right:0;top:0;height:{h - pad_b - board}px;overflow:hidden">{im}</div>'
@@ -396,6 +405,11 @@ def main(data_path, only=None):
     spec = importlib.util.spec_from_file_location("slides", data_path)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
+    # Подпись под другой канал: HANDLE в файле данных, "" — только имя (LinkedIn).
+    global SIGN_HANDLE
+    if hasattr(mod, "HANDLE"):
+        SIGN_HANDLE = (f'<span style="font-weight:600">Владимир Семенюк <span class="mut" style="font-weight:400">· {mod.HANDLE}</span></span>'
+                       if mod.HANDLE else SIGN)
     out = os.path.join(os.path.dirname(os.path.abspath(data_path)), "img")
     os.makedirs(out, exist_ok=True)
     tmp = tempfile.mkdtemp(prefix="ig-render-")
@@ -417,6 +431,18 @@ def main(data_path, only=None):
         f.write(f'<!doctype html><body style="margin:0;padding:16px;background:#fff;display:flex;flex-wrap:wrap;gap:16px;width:1800px">{cells}</body>')
     rows = (len(names) + 5) // 6
     shot(hp, os.path.join(out, "_contact.png"), 1832, rows * 520 + 40)
+    # PDF-карусели для LinkedIn: PDFS = {"имя.pdf": "префикс слайдов"}, PDF кладётся рядом с файлом данных.
+    for pdf, prefix in getattr(mod, "PDFS", {}).items():
+        try:
+            from PIL import Image
+        except ImportError:
+            print("PDF пропущен: нет Pillow, запустите через Posts/render/.venv/bin/python")
+            break
+        pages = [Image.open(os.path.join(out, s["name"] + ".png")).convert("RGB")
+                 for s in mod.SLIDES if s["name"].startswith(prefix)]
+        dst = os.path.join(os.path.dirname(os.path.abspath(data_path)), pdf)
+        pages[0].save(dst, save_all=True, append_images=pages[1:], resolution=144)
+        print("pdf", pdf, len(pages))
 
 
 if __name__ == "__main__":
