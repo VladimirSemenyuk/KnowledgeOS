@@ -72,13 +72,14 @@ visibility: private
 
 ## Аналитика: Яндекс.Метрика
 
-Счётчик `114369053` стоит в `index.html` и `talks/index.html`: код в `<head>`, `<noscript>` сразу после `<body>`. Включены Вебвизор, карта кликов, точный показатель отказов и учёт внешних ссылок. Проверено локально 2026-11-19: просмотр и цели доходят.
+Счётчик `114369053` стоит в `index.html`, `talks/index.html` и на всех страницах `tests/` (на `tests/key/` — без Вебвизора и карты кликов, поля имени, контакта и ключа скрыты от Вебвизора классами `ym-disable-keys ym-hide-content`): код в `<head>`, `<noscript>` сразу после `<body>`. Включены Вебвизор, карта кликов, точный показатель отказов и учёт внешних ссылок. Проверено локально 2026-11-19: просмотр и цели доходят.
 
 Цели — JS-события. Ссылка с атрибутами `data-goal` и `data-place` при клике отправляет цель с параметром `place`:
 
 - `tg_write` — «Написать в Telegram»: `home-nav`, `home-hero`, `home-cases`, `home-final`, `home-footer`, `talks-nav`, `talks-final`, `talks-footer`;
 - `tg_channel` — переход в канал «Управление и Счастье»: `home-footer`;
 - `email_write` — письмо: `home-hero`, `home-footer`, `talks-footer`.
+- тесты: `tg_write` с местами `test-nav`, `result-nav`, `tests-nav`, `*-footer`; события из `tests.js` — `test_start`, `test_finish`, `tg_send`, `share`, `story_image`, `copy_link` (параметр `test` — идентификатор теста).
 
 **Новая страница** получает счётчик сразу: скопировать из `index.html` блок от комментария `<!-- Яндекс.Метрика ... -->` до `</script>` перед `</head>` и строку `<noscript>` сразу после `<body>`. Без этого `deploy-site.sh` остановит публикацию и назовёт страницу без счётчика.
 

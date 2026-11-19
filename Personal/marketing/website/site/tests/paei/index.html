@@ -93,18 +93,18 @@ document.addEventListener("click",function(e){var a=e.target.closest&&e.target.c
       <form class="form" id="form" novalidate>
         <div class="field">
           <label for="f-name">Имя</label>
-          <input id="f-name" name="name" autocomplete="given-name" maxlength="60" required>
+          <input class="ym-disable-keys ym-hide-content" id="f-name" name="name" autocomplete="given-name" maxlength="60" required>
           <p class="err" id="e-name" hidden>Напишите, как к&nbsp;вам обращаться</p>
         </div>
         <div class="field">
           <label for="f-tg">Telegram</label>
-          <input id="f-tg" name="tg" placeholder="@username" maxlength="40" autocomplete="off" autocapitalize="off" spellcheck="false">
+          <input class="ym-disable-keys ym-hide-content" id="f-tg" name="tg" placeholder="@username" maxlength="40" autocomplete="off" autocapitalize="off" spellcheck="false">
           <p class="err" id="e-tg" hidden>Имя в&nbsp;Telegram&nbsp;— латиница, цифры и&nbsp;_, от&nbsp;5&nbsp;символов</p>
         </div>
         <p class="or" aria-hidden="true">или</p>
         <div class="field">
           <label for="f-mail">Email</label>
-          <input id="f-mail" name="email" type="email" maxlength="100" inputmode="email" autocomplete="email" spellcheck="false">
+          <input class="ym-disable-keys ym-hide-content" id="f-mail" name="email" type="email" maxlength="100" inputmode="email" autocomplete="email" spellcheck="false">
           <p class="err" id="e-mail" hidden>Проверьте адрес: в&nbsp;нём должны быть @&nbsp;и&nbsp;домен</p>
         </div>
         <p class="err" id="e-contact" hidden>Укажите Telegram или email&nbsp;— хотя&nbsp;бы одно</p>
