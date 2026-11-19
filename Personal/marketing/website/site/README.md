@@ -63,6 +63,28 @@ visibility: private
 - Рекомендуется подтвердить домен: GitHub → Settings (профиль) → Pages → Add a domain → добавить выданную TXT-запись в GoDaddy.
 - Если старый сайт был в Framer, отвязать там кастомный домен.
 
+## Аналитика: Яндекс.Метрика
+
+Счётчик `114369053` стоит в `index.html` и `talks/index.html`: код в `<head>`, `<noscript>` сразу после `<body>`. Включены Вебвизор, карта кликов, точный показатель отказов и учёт внешних ссылок. Проверено локально 2026-11-19: просмотр и цели доходят.
+
+Цели — JS-события. Ссылка с атрибутами `data-goal` и `data-place` при клике отправляет цель с параметром `place`:
+
+- `tg_write` — «Написать в Telegram»: `home-nav`, `home-hero`, `home-cases`, `home-final`, `home-footer`, `talks-nav`, `talks-final`, `talks-footer`;
+- `tg_channel` — переход в канал «Управление и Счастье»: `home-footer`;
+- `email_write` — письмо: `home-hero`, `home-footer`, `talks-footer`.
+
+Новая кнопка связи получает те же атрибуты. В интерфейсе Метрики цели создаются вручную: «Цели → JavaScript-событие», идентификатор как выше.
+
+Ссылки для профилей (источник визита):
+
+- Instagram: `https://semenyuk.pro/?utm_source=instagram&utm_medium=profile`
+- LinkedIn: `https://semenyuk.pro/?utm_source=linkedin&utm_medium=profile`
+- Threads: `https://semenyuk.pro/?utm_source=threads&utm_medium=profile`
+- Telegram-канал: `https://semenyuk.pro/?utm_source=telegram&utm_medium=channel`
+- Ссылка в конкретном посте: добавить `&utm_campaign=<дата-тема>`, например `2026-11-23-delegirovanie`.
+
+Ссылка `t.me/vladimirsemenyuk` не передаёт источник, поэтому на вводном звонке спрашивать «откуда узнали» и записывать ответ в карточку лида.
+
 ## Открытые вопросы
 
 - EN-версия — позже.
