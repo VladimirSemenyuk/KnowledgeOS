@@ -6,6 +6,15 @@
 # Перед запуском закоммитьте изменения в KnowledgeOS.
 set -e
 cd "$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
+# Каждая страница сайта должна нести счётчик Яндекс.Метрики (код — в site/README.md, раздел «Аналитика»).
+# Служебные файлы подтверждения (yandex_*.html, google*.html) не проверяются.
+MISSING=$(find Personal/marketing/website/site -name '*.html' ! -name 'yandex_*.html' ! -name 'google*.html' \
+  -exec grep -L 'mc.yandex.ru/metrika/tag.js?id=114369053' {} +)
+if [ -n "$MISSING" ]; then
+  echo "На этих страницах нет счётчика Метрики. Вставьте код из site/README.md («Аналитика») и закоммитьте:"
+  echo "$MISSING"
+  exit 1
+fi
 git remote get-url site >/dev/null 2>&1 || git remote add site git@github.com:VladimirSemenyuk/semenyuk.pro.git
 # subtree split пишет прогресс через \r в тот же поток: берём только строку с SHA.
 SHA=$(git subtree split --prefix Personal/marketing/website/site HEAD 2>/dev/null | tr '\r' '\n' | grep -oE '^[0-9a-f]{40}$' | tail -1)
