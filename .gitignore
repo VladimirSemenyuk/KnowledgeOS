@@ -50,5 +50,3 @@ node_modules/
 # Окружение монтажа Reels
 Posts/render/.venv/
 
-# Закрытые ключи сайта: хранятся только локально в vault, не попадают ни в KnowledgeOS, ни в semenyuk.pro
-/Personal/marketing/website/keys/
