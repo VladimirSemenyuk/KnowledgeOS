@@ -226,12 +226,12 @@ function render(c,s,mode){
   if(mode==='own'){
     var full=location.href, pub=full.split('#')[0]+(s?'#s='+T.version+'.'+s.join('.'):'');
     $('send').href='https://t.me/'+T.telegram+'?text='+encodeURIComponent('Мой профиль PAEI — '+c+': '+full);
-    $('send').addEventListener('click',function(){goal('tg_send')});
-    $('copy').onclick=function(){goal('copy_link');copy(pub)};
-    $('share').onclick=function(){goal('share');
+    $('send').addEventListener('click',function(){goal('test_tg_send')});
+    $('copy').onclick=function(){goal('test_copy');copy(pub)};
+    $('share').onclick=function(){goal('test_share');
       if(navigator.share)navigator.share({title:T.title,text:'Мой профиль — '+c+(nm?', «'+nm+'»':''),url:pub}).catch(function(){});
       else copy(pub)};
-    $('story').onclick=function(){goal('story_image');storyShare(c,s,nm)};
+    $('story').onclick=function(){goal('test_story');storyShare(c,s,nm)};
   }
 }
 function renderOwner(d,s){

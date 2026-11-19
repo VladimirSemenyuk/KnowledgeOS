@@ -1,6 +1,6 @@
 """Общие куски страниц тестов: голова, счётчик Метрики, подвал. Пути относительные: depth — глубина от site/."""
 
-METRIKA = """<!-- Яндекс.Метрика: счётчик 114369053. Цели тестов: test_start, test_finish, tg_send, share, story_image, copy_link. -->
+METRIKA = """<!-- Яндекс.Метрика: счётчик 114369053. Цели тестов: test_start, test_finish, test_tg_send, test_share, test_story, test_copy. -->
 <script>
 (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js?id=114369053","ym");
 ym(114369053,"init",{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});
