@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ключ · Тесты</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<meta name="theme-color" content="#F3F4F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../tests/assets/tests.css">
+
+</head>
+<body data-page="key">
+<header class="nav">
+  <div class="wrap nav__in">
+    <a class="skip" href="#main">К&nbsp;содержанию</a>
+    <a class="who" href="../../"><b>Владимир Семенюк</b></a>
+    <a class="btn btn--sm" data-goal="tg_write" data-place="key-nav" href="https://t.me/vladimirsemenyuk">Написать<span class="btn-tail">&nbsp;в&nbsp;Telegram</span></a>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <div class="page-head">
+    <h1>Ключ для&nbsp;результатов</h1>
+    <p>Служебная страница. Вставьте закрытый ключ один раз&nbsp;— после этого ссылки на&nbsp;результаты тестов в&nbsp;этом браузере показывают имя, контакт и&nbsp;ответы. Ключ остаётся только в&nbsp;этом браузере и&nbsp;никуда не&nbsp;отправляется.</p>
+  </div>
+  <div class="keybox">
+    <p id="key-state" aria-live="polite"></p>
+    <label class="sr" for="key">Закрытый ключ</label>
+    <textarea id="key" spellcheck="false" autocomplete="off" placeholder="Закрытый ключ"></textarea>
+    <div class="row">
+      <button class="btn" id="key-save" type="button">Сохранить ключ</button>
+      <button class="btn btn--line" id="key-del" type="button" hidden>Удалить ключ</button>
+    </div>
+  </div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>window.TEST={};</script>
+<script src="../assets/tests.js"></script>
+</body>
+</html>
