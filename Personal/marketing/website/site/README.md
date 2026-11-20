@@ -78,7 +78,8 @@ visibility: private
 
 - `tg_write` — «Написать в Telegram»: `home-nav`, `home-hero`, `home-cases`, `home-final`, `home-footer`, `talks-nav`, `talks-final`, `talks-footer`;
 - `tg_channel` — переход в канал «Управление и Счастье»: `home-footer`;
-- `email_write` — письмо: `home-hero`, `home-footer`, `talks-footer`.
+- `email_write` — письмо: `home-hero`, `home-footer`, `talks-footer`;
+- `ig_profile` — переход в профиль Instagram: `home-footer`, `talks-footer`. Ссылка текстовая, без логотипа Instagram или Meta.
 - тесты: `tg_write` с местами `test-nav`, `result-nav`, `tests-nav`, `*-footer`; события из `tests.js` — `test_start`, `test_finish`, `test_tg_send`, `test_share`, `test_story`, `test_copy` (параметр `test` — идентификатор теста).
 
 **Новая страница** получает счётчик сразу: скопировать из `index.html` блок от комментария `<!-- Яндекс.Метрика ... -->` до `</script>` перед `</head>` и строку `<noscript>` сразу после `<body>`. Без этого `deploy-site.sh` остановит публикацию и назовёт страницу без счётчика.
