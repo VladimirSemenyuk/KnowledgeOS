@@ -10,9 +10,16 @@
     $R/.venv/bin/python $R/tg.py login                       # один раз, в своём терминале: телефон и код
     $R/.venv/bin/python $R/tg.py plan 2026-11-30-week-2      # что встанет в очередь, ничего не отправляет
     $R/.venv/bin/python $R/tg.py send 2026-11-30-week-2      # поставить в отложенные
+    $R/.venv/bin/python $R/tg.py update 2026-11-30-week-2 --only "Вт 1"  # заменить пост версией из _index.md
+    $R/.venv/bin/python $R/tg.py delete 2026-11-30-week-2 --only "Вт 1"  # убрать пост из отложенных
     $R/.venv/bin/python $R/tg.py queue                       # что уже стоит в отложенных канала
 
-`send` повторно не ставит пост, если в отложенных уже есть сообщение с тем же началом текста.
+Пост недели находится в отложенных по времени (из таблицы или ритма) или по первым 80 знакам текста.
+`send` повторно не ставит найденный пост. `update` удаляет найденные сообщения поста и ставит заново:
+так меняются текст, картинки и время. Время берётся из колонки «Время»; если она пуста, `update`
+оставляет время поста в очереди (могли выставить в приложении), а не ставит 10:00 по ритму. Если поменялись и время, и начало текста, старый пост
+не найдётся — сначала `delete` до правки или удалить вручную в приложении.
+`update` и `delete` показывают, что сделают, и спрашивают подтверждение; `--yes` — без вопроса.
 `--only "Вт 1"` — только один день.
 
 Откуда что берётся в `_index.md` недели:
@@ -179,8 +186,49 @@ async def scheduled(cl, channel):
 
 
 def same_post(msg_text, text):
-    a, b = (msg_text or "").strip()[:80], text.strip()[:80]
+    """Совпадают первые 80 знаков без учёта пробелов и переносов строк."""
+    a, b = (" ".join((s or "").split())[:80] for s in (msg_text, text))
     return bool(a) and a == b
+
+
+def find_in_queue(queue, p):
+    """Сообщения отложенной очереди, относящиеся к посту недели.
+
+    Совпадение по времени поста (картинка в when, текст в when + 1 мин) или по началу текста;
+    затем добавляются остальные картинки альбома и соседнее сообщение разнесённого поста.
+    """
+    slot = (p["when"], p["when"] + timedelta(minutes=1))
+    hit = {m.id: m for m in queue if m.date in slot or same_post(m.message, p["text"])}
+    groups = {m.grouped_id for m in hit.values() if m.grouped_id}
+    dates = {m.date for m in hit.values()}
+    for m in queue:
+        if m.grouped_id in groups or any(abs(m.date - d) <= timedelta(minutes=1) for d in dates):
+            hit[m.id] = m
+    return sorted(hit.values(), key=lambda m: (m.date, m.id))
+
+
+def describe_found(msgs):
+    d = msgs[0].date.astimezone(MSK)
+    text = next((m.message for m in msgs if m.message), "")
+    first = text.splitlines()[0][:80] if text else "без текста"
+    return f"{WEEKDAYS[d.weekday()]} {d:%d.%m %H:%M} МСК, сообщений {len(msgs)}: «{first}»"
+
+
+async def delete_scheduled(cl, channel, msgs):
+    from telethon import functions
+    await cl(functions.messages.DeleteScheduledMessagesRequest(peer=channel, id=[m.id for m in msgs]))
+
+
+async def post_one(cl, channel, p):
+    text, files, when = p["text"], [str(f) for f in p["media"]], p["when"]
+    if files and len(text) <= CAPTION_LIMIT:
+        await cl.send_file(channel, files if len(files) > 1 else files[0],
+                           caption=text, parse_mode=None, schedule=when)
+    else:
+        if files:
+            await cl.send_file(channel, files if len(files) > 1 else files[0], schedule=when)
+            when = when + timedelta(minutes=1)
+        await cl.send_message(channel, text, parse_mode=None, link_preview=False, schedule=when)
 
 
 async def cmd_send(env, posts):
@@ -188,19 +236,60 @@ async def cmd_send(env, posts):
         channel = await cl.get_entity(env["TG_CHANNEL"])
         queue = await scheduled(cl, channel)
         for p in posts:
-            if any(same_post(m.message, p["text"]) for m in queue):
-                print(f"уже в очереди  {p['title']}")
+            if find_in_queue(queue, p):
+                print(f"уже в очереди  {p['title']}  (заменить — команда update)")
                 continue
-            text, files, when = p["text"], [str(f) for f in p["media"]], p["when"]
-            if files and len(text) <= CAPTION_LIMIT:
-                await cl.send_file(channel, files if len(files) > 1 else files[0],
-                                   caption=text, parse_mode=None, schedule=when)
-            else:
-                if files:
-                    await cl.send_file(channel, files if len(files) > 1 else files[0], schedule=when)
-                    when = when + timedelta(minutes=1)
-                await cl.send_message(channel, text, parse_mode=None, link_preview=False, schedule=when)
+            await post_one(cl, channel, p)
             print(f"поставлено    {p['when']:%d.%m %H:%M} МСК  {p['title']}")
+
+
+def confirm(question, yes):
+    if yes:
+        return True
+    try:
+        return input(f"{question} [y/N] ").strip().lower() in ("y", "yes", "д", "да")
+    except EOFError:
+        return False
+
+
+async def cmd_update(env, posts, yes):
+    """Заменяет пост в отложенных версией из _index.md: старые сообщения удаляются, новые ставятся."""
+    async with client(env) as cl:
+        channel = await cl.get_entity(env["TG_CHANNEL"])
+        queue = await scheduled(cl, channel)
+        plan = [(p, find_in_queue(queue, p)) for p in posts]
+        for p, old in plan:
+            note = p["time_src"]
+            if old and p["time_src"] == "ритм":  # время, выставленное в приложении, не сбивать ритмом
+                p["when"], note = old[0].date.astimezone(MSK), "из очереди; другое — в колонке «Время»"
+            print(f"{p['title']}\n    было:  {describe_found(old) if old else 'в очереди не найдено, поставлю как новый'}"
+                  f"\n    будет: {p['when']:%d.%m %H:%M} МСК ({note})")
+        if not confirm("Заменить?", yes):
+            sys.exit("Ничего не изменено.")
+        for p, old in plan:
+            if old:
+                await delete_scheduled(cl, channel, old)
+            await post_one(cl, channel, p)
+            print(f"{'заменено' if old else 'поставлено'}   {p['when']:%d.%m %H:%M} МСК  {p['title']}")
+
+
+async def cmd_delete(env, posts, yes):
+    async with client(env) as cl:
+        channel = await cl.get_entity(env["TG_CHANNEL"])
+        queue = await scheduled(cl, channel)
+        plan = []
+        for p in posts:
+            old = find_in_queue(queue, p)
+            print(f"{p['title']}\n    {describe_found(old) if old else 'в очереди не найдено'}")
+            if old:
+                plan.append((p, old))
+        if not plan:
+            sys.exit("Удалять нечего.")
+        if not confirm(f"Удалить из отложенных постов: {len(plan)}?", yes):
+            sys.exit("Ничего не удалено.")
+        for p, old in plan:
+            await delete_scheduled(cl, channel, old)
+            print(f"удалено       {p['title']}")
 
 
 async def cmd_queue(env):
@@ -235,12 +324,22 @@ async def cmd_login(env):
 
 def main():
     ap = argparse.ArgumentParser(description="Отложенная публикация недели в Telegram-канал")
-    ap.add_argument("cmd", choices=["login", "plan", "send", "queue"])
+    ap.add_argument("cmd", choices=["login", "plan", "send", "update", "delete", "queue"])
     ap.add_argument("week", nargs="?", help="папка недели, например 2026-11-30-week-2")
     ap.add_argument("--only", help='один день, например "Вт 1"')
+    ap.add_argument("--yes", action="store_true", help="update/delete без вопроса")
     args = ap.parse_args()
 
-    if args.cmd in ("plan", "send"):
+    if args.cmd == "delete":
+        if not args.week:
+            sys.exit("Укажите папку недели.")
+        posts = parse_week(args.week)
+        if args.only:
+            posts = [p for p in posts if p["day"] == args.only]
+        if not posts:
+            sys.exit("Постов для Telegram в неделе не найдено.")
+        asyncio.run(cmd_delete(load_env(), posts, args.yes))
+    elif args.cmd in ("plan", "send", "update"):
         if not args.week:
             sys.exit("Укажите папку недели.")
         posts = parse_week(args.week)
@@ -258,7 +357,10 @@ def main():
             return
         if bad:
             sys.exit("Есть проблемы — ничего не отправлено. Исправьте или выберите день через --only.")
-        asyncio.run(cmd_send(load_env(), posts))
+        if args.cmd == "update":
+            asyncio.run(cmd_update(load_env(), posts, args.yes))
+        else:
+            asyncio.run(cmd_send(load_env(), posts))
     elif args.cmd == "queue":
         asyncio.run(cmd_queue(load_env()))
     else:
