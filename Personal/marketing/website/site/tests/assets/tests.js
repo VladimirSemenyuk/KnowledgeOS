@@ -260,7 +260,7 @@ function storyDraw(c,s,nm){
   function mark(d,vb,X,Y,w,h,col,lw){var p=new Path2D();p.addPath(new Path2D(d),new DOMMatrix([w/vb[0],0,0,h/vb[1],X,Y]));x.strokeStyle=col;x.lineWidth=lw;x.lineCap='round';x.lineJoin='round';x.stroke(p)}
   function rrect(X,Y,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(X,Y,w,h,r);else x.rect(X,Y,w,h)}
   var Lm=88,Rr=W-88;
-  x.fillStyle=C.paper;x.fillRect(0,0,W,H);
+  x.fillStyle=C.board;x.fillRect(0,0,W,H);
   txt('МОЙ ПРОФИЛЬ СКЛОННОСТЕЙ PAEI',28,600,C.muted,Lm,288,'left',2.2);
   var px=250,base=560,gap=10,cx=Lm;
   c.split('').forEach(function(ch){var hi=isHi(ch),g=ch==='-'?'–':ch;
@@ -270,17 +270,23 @@ function storyDraw(c,s,nm){
   var ln=c.split('').filter(isHi).map(function(ch){return R[ch].n});var sub=nm?'По Адизесу — «'+nm+'»':(ln.length?'Ведущие роли: '+ln.join(', '):'Явной ведущей роли нет');
   txt(sub,40,500,C.ink2,Lm,684,'left',-0.8);
   if(s){
-    var py=740,rh=130,ph=40+rh*4;
-    x.save();x.shadowColor='rgba(22,24,26,.14)';x.shadowBlur=70;x.shadowOffsetY=32;rrect(Lm,py,Rr-Lm,ph,6);x.fillStyle=C.board;x.fill();x.restore();
+    var py=730,rh=130,ph=84+rh*4,top=Math.max.apply(null,s),dm=Math.max(30,top);
+    x.save();x.shadowColor='rgba(22,24,26,.14)';x.shadowBlur=70;x.shadowOffsetY=32;rrect(Lm,py,Rr-Lm,ph,6);x.fillStyle='#FFFFFF';x.fill();x.restore();
     rrect(Lm+.5,py+.5,Rr-Lm-1,ph-1,6);x.strokeStyle=C.line;x.lineWidth=1;x.stroke();
-    var ix=Lm+52,ir=Rr-52,vx=ix+252,vw=ir-vx;
-    s.forEach(function(v,i){var y=py+20+i*rh,lead=v>=T.hi;
-      txt(L[i]+' · '+R[L[i]].n.toUpperCase(),24,600,C.muted,ix,y+56,'left',1.9);
-      txt(status(v),34,lead?600:500,lead?C.ink:C.ink2,vx,y+56,'left',-0.6);
-      txt(String(v),38,600,C.ink,ir,y+58,'right',-0.6);
-      var ty=y+80;x.fillStyle=C.line2;[T.lo,T.hi].forEach(function(t){x.fillRect(vx+vw*t/T.max-1,ty-6,2,30)});
-      mark('M1 8c25-2 60-3 98-1',[100,14],vx,ty,Math.max(vw*v/T.max,12),14,C.ink,7);
+    var ix=Lm+52,ir=Rr-52,vx=ix+252,vw=ir-vx,x1=vx+vw*T.lo/dm,x2=vx+vw*T.hi/dm;
+    s.forEach(function(v,i){var y=py+64+i*rh,st=v>=T.hi?'lead':(v>=T.lo?'mid':'weak'),ty=y+74,th=30;
+      txt(L[i]+' · '+R[L[i]].n.toUpperCase(),24,st==='lead'?700:600,st==='lead'?C.ink:C.muted,ix,y+56,'left',1.9);
+      txt(status(v),32,st==='lead'?700:500,st==='lead'?C.ink:(st==='weak'?C.muted:C.ink2),vx,y+56,'left',-0.6);
+      var sw=txt(String(v),52,600,st==='weak'?C.muted:C.ink,ir,y+62,'right',-1.5);
+      if(v===top&&st==='lead')mark(RING,[200,64],ir-sw-26,y+4,sw+52,76,C.red,4);
+      // зоны: штриховка слабой, тон ведущей
+      x.save();x.beginPath();x.rect(vx,ty,x1-vx,th);x.clip();x.strokeStyle='rgba(22,24,26,.14)';x.lineWidth=2;
+      for(var hx=vx-th;hx<x1;hx+=9){x.beginPath();x.moveTo(hx,ty+th);x.lineTo(hx+th,ty);x.stroke()}x.restore();
+      x.fillStyle='rgba(22,24,26,.04)';x.fillRect(x2,ty,ir-x2,th);
+      x.save();x.strokeStyle=C.line2;x.lineWidth=2;x.setLineDash([6,5]);[x1,x2].forEach(function(t){x.beginPath();x.moveTo(t,ty-8);x.lineTo(t,ty+th+8);x.stroke()});x.restore();
+      mark('M1 8c25-2 60-3 98-1',[100,14],vx,ty+12,Math.max(vw*v/dm,14),14,st==='weak'?C.ink2:C.ink,st==='lead'?11:(st==='weak'?6:8));
       x.fillStyle=C.line;x.fillRect(ix,y+rh-1,ir-ix,1)});
+    txt('СЛАБАЯ',20,600,C.muted,vx,py+56,'left',1.6);txt('РАБОЧАЯ',20,600,C.muted,x1+8,py+56,'left',1.6);txt('ВЕДУЩАЯ',20,600,C.muted,x2+8,py+56,'left',1.6);x.fillStyle=C.ink;x.fillRect(ix,py+74,ir-ix,2);
   }
   var by=1384,bh=120;rrect(Lm,by,Rr-Lm,bh,60);x.fillStyle=C.ink;x.fill();
   font(40,600,-0.4);var lw=x.measureText(T.short).width,ax=W/2-(lw+64)/2;
