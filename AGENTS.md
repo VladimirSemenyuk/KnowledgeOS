@@ -305,6 +305,17 @@ Avoid generic buzzwords.
 
 ---
 
+# Тесты кода
+
+У части скриптов есть автотесты. Меняешь код из таблицы — прогони его тесты до того, как сообщать о результате, и приложи итог прогона. Тест упал — сначала разобраться и починить код (или тест, если устарел он), не отключать проверку. Новое поведение в этих частях — добавить тест рядом с существующими.
+
+| Что меняешь | Тесты | Команда из корня KnowledgeOS |
+| --- | --- | --- |
+| `Posts/render/mdtext.py` (Markdown постов для Telegram и LinkedIn), `Posts/render/tg.py` (разбор недели, поиск поста в отложенных) | `Posts/render/tests/` | `Posts/render/.venv/bin/python -m unittest discover -s Posts/render/tests` |
+| Тесты на сайте: `site/tests/assets/scoring.js` (подсчёт), `crypto.js` (закрытая часть ссылки), `site/tests/*/data.js` (вопросы, пороги, ключ) | `Personal/marketing/website/test/` | `cd Personal/marketing/website && node --test 'test/*.test.mjs'` |
+
+Тесты на неделях из `Posts/weeks/` проверяют и сами файлы недель: правка `_index.md` (заголовки постов, таблица, блоки текста) — тоже повод прогнать Python-тесты. После изменения `scoring.js` или `data.js` сначала пересобрать страницы: `node tools/tests-build.mjs paei` из `Personal/marketing/website/`. `deploy-site.sh` прогоняет тесты сайта сам и не публикует при падении.
+
 # Safety Rules
 
 Never modify:
