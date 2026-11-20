@@ -182,7 +182,15 @@ def client(env):
 
 
 async def scheduled(cl, channel):
-    return [m async for m in cl.iter_messages(channel, scheduled=True)]
+    # Прямой запрос: iter_messages(scheduled=True) в Telethon 1.46 пропускает свежепоставленные сообщения.
+    from telethon import functions, types
+    r = await cl(functions.messages.GetScheduledHistoryRequest(peer=channel, hash=0))
+    return [m for m in getattr(r, "messages", []) if isinstance(m, types.Message)]
+
+
+def is_photo(m):
+    from telethon import types
+    return isinstance(m.media, types.MessageMediaPhoto)
 
 
 def same_post(msg_text, text):
@@ -305,7 +313,7 @@ async def cmd_queue(env):
                 posts[-1]["text"] = posts[-1]["text"] or m.message
                 continue
             posts.append({"group": m.grouped_id, "n": 1, "date": m.date, "text": m.message,
-                          "kind": "фото" if m.photo else ("файл" if m.media else "текст")})
+                          "kind": "фото" if is_photo(m) else ("файл" if m.media else "текст")})
         for p in posts:
             kind = f"альбом {p['n']}" if p["n"] > 1 else p["kind"]
             first = p["text"].splitlines()[0][:80] if p["text"] else ""
