@@ -15,6 +15,11 @@ if [ -n "$MISSING" ]; then
   echo "$MISSING"
   exit 1
 fi
+# Тесты сайта: подсчёт, шифрование ссылок, соответствие собранных страниц профилям.
+(cd Personal/marketing/website && node --test 'test/*.test.mjs' >/dev/null 2>&1) || {
+  echo "Тесты сайта не прошли. Подробности: cd Personal/marketing/website && node --test 'test/*.test.mjs'"; exit 1; }
+# Скрипты и стили подключаются с версией по содержимому (?v=…), иначе браузеры держат старые копии.
+node Personal/marketing/website/tools/stamp-assets.mjs --check || exit 1
 git remote get-url site >/dev/null 2>&1 || git remote add site git@github.com:VladimirSemenyuk/semenyuk.pro.git
 # subtree split пишет прогресс через \r в тот же поток: берём только строку с SHA.
 SHA=$(git subtree split --prefix Personal/marketing/website/site HEAD 2>/dev/null | tr '\r' '\n' | grep -oE '^[0-9a-f]{40}$' | tail -1)

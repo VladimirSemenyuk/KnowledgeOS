@@ -8,7 +8,6 @@
 var T=window.TEST, page=document.body.dataset.page;
 var $=function(id){return document.getElementById(id)};
 var KEY_STORE='tests-owner-key';
-var RING='M30 12C70 3 150 2 184 14c18 7 16 28-4 38-38 15-122 14-160 3C2 49 2 31 18 21c22-13 76-17 112-13';
 var UL='M3 6c30-2.5 64-3.5 94 .5';
 var ARROW='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
@@ -17,50 +16,19 @@ function store(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===n
 var tt;function toast(m,ms){var el=$('toast');if(!el)return;el.textContent=m;el.classList.add('is-on');clearTimeout(tt);tt=setTimeout(function(){el.classList.remove('is-on')},ms||2600)}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 
-/* ---------- подсчёт ---------- */
-var L=T?T.letters:'';
-function scoresOf(ans){var s=[0,0,0,0];ans.forEach(function(a){if(!a)return;if(a.m>=0)s[a.m]+=2;if(a.s>=0)s[a.s]+=1});return s}
-function codeOf(s){return s.map(function(v,i){return v>=T.hi?L[i]:(v>=T.lo?L[i].toLowerCase():'-')}).join('')}
-function slugOf(c){return c.split('').map(function(ch){return ch==='-'?'0':(ch===ch.toUpperCase()?ch.toLowerCase()+ch.toLowerCase():ch)}).join('')}
-function isHi(ch){return ch!=='-'&&ch===ch.toUpperCase()}
-function status(v){return v>=T.hi?'ведущая':(v>=T.lo?'рабочая':'слабая')}
-function validScores(s){return s.length===4&&s.every(function(v){return v>=0&&v<=T.max})&&s.reduce(function(a,b){return a+b},0)===T.questions.length*3}
+/* ---------- подсчёт и показ профиля: scoring.js и profile.js, их же использует сборка страниц ---------- */
+var SC=window.TestScoring,P=window.TestProfile,L=T?T.letters:'',RING=P.RING;
+var scoresOf=SC.scoresOf,slugOf=SC.slugOf;
+function codeOf(s){return SC.codeOf(T,s)}
+function validScores(s){return SC.validScores(T,s)}
+function status(v){return P.LEVEL[SC.levelOf(T,v)]}
 
-/* ---------- кодирование и шифрование ---------- */
-function b64u(buf){var b=new Uint8Array(buf),s='';for(var i=0;i<b.length;i++)s+=String.fromCharCode(b[i]);return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
-function unb64u(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';var s=atob(str),b=new Uint8Array(s.length);for(var i=0;i<s.length;i++)b[i]=s.charCodeAt(i);return b}
-var EPOCH=Date.UTC(2026,0,1);
-function pack(p){
-  var enc=new TextEncoder(),parts=[p.name,p.tg,p.mail].map(function(x){return enc.encode(x||'').slice(0,255)});
-  var n=Math.ceil(p.ans.length/2),head=new Uint8Array(3+n),days=Math.floor((Date.now()-EPOCH)/864e5);
-  head[0]=T.version;head[1]=days&255;head[2]=(days>>8)&255;
-  p.ans.forEach(function(a,i){var nib=(a.m<<2)|a.s;head[3+(i>>1)]|=(i&1)?nib:(nib<<4)});
-  var len=head.length+parts.reduce(function(a,b){return a+1+b.length},0),out=new Uint8Array(len),o=head.length;
-  out.set(head,0);parts.forEach(function(b){out[o++]=b.length;out.set(b,o);o+=b.length});
-  return out;
-}
-function unpack(b){
-  var dec=new TextDecoder(),n=T.questions.length,ans=[],o=3+Math.ceil(n/2);
-  for(var i=0;i<n;i++){var byte=b[3+(i>>1)],nib=(i&1)?byte&15:byte>>4;ans.push({m:nib>>2,s:nib&3})}
-  var f=[];for(var k=0;k<3;k++){var l=b[o++];f.push(dec.decode(b.slice(o,o+l)));o+=l}
-  return{version:b[0],date:new Date(EPOCH+((b[1]|(b[2]<<8))*864e5)),ans:ans,name:f[0],tg:f[1],mail:f[2]};
-}
-var EC={name:'ECDH',namedCurve:'P-256'};
-function encrypt(bytes){
-  var S=crypto.subtle,pub,eph;
-  return S.importKey('raw',unb64u(T.publicKey),EC,false,[]).then(function(k){pub=k;return S.generateKey(EC,true,['deriveKey'])})
-  .then(function(kp){eph=kp;return S.deriveKey({name:'ECDH',public:pub},kp.privateKey,{name:'AES-GCM',length:256},false,['encrypt'])})
-  .then(function(key){var iv=crypto.getRandomValues(new Uint8Array(12));
-    return Promise.all([S.exportKey('raw',eph.publicKey),S.encrypt({name:'AES-GCM',iv:iv},key,bytes)]).then(function(r){
-      var e=new Uint8Array(r[0]),c=new Uint8Array(r[1]),out=new Uint8Array(e.length+12+c.length);
-      out.set(e,0);out.set(iv,e.length);out.set(c,e.length+12);return b64u(out)})});
-}
-function decrypt(k,priv){
-  var S=crypto.subtle,b=unb64u(k),ep=b.slice(0,65),iv=b.slice(65,77),ct=b.slice(77),pk;
-  return S.importKey('pkcs8',unb64u(priv),EC,false,['deriveKey']).then(function(x){pk=x;return S.importKey('raw',ep,EC,false,[])})
-  .then(function(e){return S.deriveKey({name:'ECDH',public:e},pk,{name:'AES-GCM',length:256},false,['decrypt'])})
-  .then(function(key){return S.decrypt({name:'AES-GCM',iv:iv},key,ct)}).then(function(p){return unpack(new Uint8Array(p))});
-}
+/* ---------- закрытая часть ссылки: crypto.js ---------- */
+var CR=window.TestCrypto;
+function pack(p){return CR.pack(T,p)}
+function unpack(b){return CR.unpack(T,b)}
+function encrypt(bytes){return CR.encrypt(T,bytes)}
+function decrypt(k,priv){return CR.decrypt(T,k,priv)}
 
 /* ---------- ссылки ---------- */
 function rootURL(){return new URL(document.body.dataset.root||'./',location.href)}
@@ -182,25 +150,26 @@ function resultPage(){
 }
 function render(c,s,mode){
   var main=$('res'),R=T.roles,nm=T.names[c];
-  var top=s?s.indexOf(Math.max.apply(null,s)):L.indexOf(c.split('').find(isHi)||c[0].toUpperCase());
-  var letters=c.split('').map(function(ch){var cls=ch==='-'?'no':(isHi(ch)?'hi':'lo');return '<span class="'+cls+'">'+(ch==='-'?'–':ch)+'</span>'}).join('');
-  var lead=[],weak=[];c.split('').forEach(function(ch,i){if(isHi(ch))lead.push(L[i]);if(ch==='-')weak.push(L[i])});
+  var lead=P.leadLetters(c),weak=P.weakIndexes(c).map(function(i){return L[i]});
+  var top=s?s.indexOf(Math.max.apply(null,s)):L.indexOf(lead[0]||c[0].toUpperCase());
+  var CLS={lead:'hi',mid:'lo',weak:'no'};
+  var letters=P.glyphs(c).map(function(g){return '<span class="'+CLS[g.level]+'">'+g.g+'</span>'}).join('');
   var who=mode==='visitor'?'Профиль склонностей по&nbsp;модели PAEI':'Ваш профиль склонностей';
   var html='<div class="res__top">'+
     (mode==='visitor'?'<p class="res__flag">Это профиль другого человека. Пройдите тест, чтобы узнать свой.</p>':'')+
     '<h1 class="res__who" id="r-h">'+who+'</h1>'+
     '<p class="code" aria-hidden="true"><span class="m code__m">'+letters+'<svg class="mk mk--ring mk--red mk--draw" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" style="--d:.35s" d="'+RING+'"/></svg></span></p>'+
     '<p class="sr">Профиль '+c.split('').join(' ').replace(/-/g,'прочерк')+'</p>'+
-    '<p class="res__name">'+(nm?'По&nbsp;Адизесу такой профиль называется «'+nm+'».':(lead.length?'Ведущие роли: '+lead.map(function(r){return r+'&nbsp;·&nbsp;'+R[r].n}).join(', ')+'.':'Явной ведущей роли нет: все четыре роли рабочие.'))+'</p>'+
+    '<p class="res__name">'+esc(P.resultLine(T,c))+'</p>'+
     '<p class="res__note">Профиль показывает, к&nbsp;каким ролям вы&nbsp;тянетесь, а&nbsp;не&nbsp;насколько хорошо их&nbsp;исполняете.</p></div>';
   if(s){
     var top2=Math.max.apply(null,s),dm=Math.max(30,top2),z1=T.lo/dm*100,z2=T.hi/dm*100;
     var bars='<div class="bar bar--head" aria-hidden="true"><span class="bar__n"></span><div class="bar__z"><span style="left:0">Слабая</span><span style="left:'+z1+'%">Рабочая</span><span style="left:'+z2+'%">Ведущая</span></div><span class="bar__st"></span><span class="bar__s"></span></div>';
     s.forEach(function(v,i){
-      var w=Math.max(v/dm*100,2),st=v>=T.hi?'lead':(v>=T.lo?'mid':'weak'),key=v===top2&&v>=T.hi;
+      var w=Math.max(v/dm*100,2),st=SC.levelOf(T,v),key=v===top2&&v>=T.hi;
       bars+='<div class="bar bar--'+st+'"><p class="bar__n">'+L[i]+' · '+R[L[i]].n+'</p>'+
         '<div class="bar__track"><i class="bar__weak" style="width:'+z1+'%"></i><i class="bar__lead" style="left:'+z2+'%"></i><i class="bar__tick" style="left:'+z1+'%"></i><i class="bar__tick" style="left:'+z2+'%"></i>'+
-        '<span class="bar__line" style="width:'+w+'%"><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" class="mk mk--draw"><path pathLength="1" style="--d:'+(0.5+i*0.15)+'s" d="M1 8c25-2 60-3 98-1"/></svg></span></div>'+
+        '<span class="bar__line" style="width:'+w+'%"><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" class="mk mk--draw"><path pathLength="1" style="--d:'+(0.5+i*0.15)+'s" d="'+P.STROKE+'"/></svg></span></div>'+
         '<p class="bar__st">'+status(v)+'</p><p class="bar__s"><span class="m">'+v+(key?'<svg class="mk mk--ring mk--red mk--draw" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" style="--d:1.3s" d="'+RING+'"/></svg>':'')+'</span></p></div>';
     });
     html+='<div class="boardp"><div class="bars">'+bars+'</div><p class="legend">Всего 60&nbsp;баллов на&nbsp;четыре роли. Слабая зона&nbsp;— до&nbsp;'+(T.lo-1)+'&nbsp;баллов, ведущая роль&nbsp;— от&nbsp;'+T.hi+'.</p></div>';
@@ -211,7 +180,7 @@ function render(c,s,mode){
       '<a class="btn" id="send" target="_blank" rel="noopener" href="#">Отправить результат в&nbsp;Telegram '+ARROW+'</a>'+
       '<div class="share"><button class="btn btn--line btn--sm" id="share">Поделиться</button><button class="btn btn--line btn--sm" id="story">Картинка для&nbsp;сторис</button><button class="btn btn--line btn--sm" id="copy">Скопировать ссылку</button></div>';
   } else if(mode==='visitor'){
-    side='<h2>Узнайте свой профиль</h2><p>20&nbsp;рабочих ситуаций руководителя, 5&nbsp;минут, результат сразу.</p><a class="btn" href="'+rootURL().href+'">Пройти тест '+ARROW+'</a>';
+    side='<h2>Узнайте свой профиль</h2><p>'+esc(P.nb(T.pitch+', '+T.duration))+', результат сразу.</p><a class="btn" href="'+rootURL().href+'">Пройти тест '+ARROW+'</a>';
   }
   if(side)html+='<div class="side">'+side+'</div>';
   var rows=(lead.length?'<div class="read__row"><h2 class="read__k">Ведущие роли</h2><div class="read__v">'+lead.map(function(r){return '<p><b>'+r+' · '+R[r].n+'.</b> '+esc(R[r].lead)+' '+esc(R[r].over)+'</p>'}).join('')+'</div></div>':'')+
@@ -250,57 +219,10 @@ function renderOwner(d,s){
 function renderOwnerFail(){var el=$('own');if(el)el.innerHTML='<h2>Ответы</h2><p class="own__warn">Не&nbsp;удалось расшифровать: ссылка повреждена или ключ на&nbsp;этом устройстве не&nbsp;тот.</p>'}
 function copy(t){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){toast('Ссылка скопирована')},function(){window.prompt('Скопируйте ссылку',t)})}
 
-/* ---------- картинка для сторис: 1080×1920, сетка как у сторис в Instagram ---------- */
-function storyDraw(c,s,nm){
-  var W=1080,H=1920,cv=document.createElement('canvas');cv.width=W;cv.height=H;
-  var x=cv.getContext('2d'),F='Onest, system-ui, sans-serif',R=T.roles;
-  var C={paper:'#FAFAF8',board:'#F3F4F1',ink:'#16181A',ink2:'#3A3E42',muted:'#5E6469',line:'#D8DBD8',line2:'#BFC4C6',red:'#D2302C'};
-  function font(px,w,ls){x.font=w+' '+px+'px '+F;if('letterSpacing' in x)x.letterSpacing=(ls||0)+'px'}
-  function txt(str,px,w,col,X,Y,al,ls){font(px,w,ls);x.fillStyle=col;x.textAlign=al||'left';x.fillText(str,X,Y);return x.measureText(str).width}
-  function mark(d,vb,X,Y,w,h,col,lw){var p=new Path2D();p.addPath(new Path2D(d),new DOMMatrix([w/vb[0],0,0,h/vb[1],X,Y]));x.strokeStyle=col;x.lineWidth=lw;x.lineCap='round';x.lineJoin='round';x.stroke(p)}
-  function rrect(X,Y,w,h,r){x.beginPath();if(x.roundRect)x.roundRect(X,Y,w,h,r);else x.rect(X,Y,w,h)}
-  var Lm=88,Rr=W-88;
-  x.fillStyle=C.board;x.fillRect(0,0,W,H);
-  txt('МОЙ ПРОФИЛЬ СКЛОННОСТЕЙ PAEI',28,600,C.muted,Lm,288,'left',2.2);
-  var px=250,base=560,gap=10,cx=Lm;
-  c.split('').forEach(function(ch){var hi=isHi(ch),g=ch==='-'?'–':ch;
-    cx+=txt(g,px,hi?600:500,ch==='-'?C.line2:(hi?C.ink:C.ink2),cx,base,'left',-6)+gap});
-  var tw=cx-gap-Lm;
-  mark(RING,[200,64],Lm-40,base-226,tw+104,284,C.red,7);
-  var ln=c.split('').filter(isHi).map(function(ch){return R[ch].n});var sub=nm?'По Адизесу — «'+nm+'»':(ln.length?'Ведущие роли: '+ln.join(', '):'Явной ведущей роли нет');
-  txt(sub,40,500,C.ink2,Lm,684,'left',-0.8);
-  if(s){
-    var py=730,rh=130,ph=84+rh*4,top=Math.max.apply(null,s),dm=Math.max(30,top);
-    x.save();x.shadowColor='rgba(22,24,26,.14)';x.shadowBlur=70;x.shadowOffsetY=32;rrect(Lm,py,Rr-Lm,ph,6);x.fillStyle='#FFFFFF';x.fill();x.restore();
-    rrect(Lm+.5,py+.5,Rr-Lm-1,ph-1,6);x.strokeStyle=C.line;x.lineWidth=1;x.stroke();
-    var ix=Lm+52,ir=Rr-52,vx=ix+252,vw=ir-vx,x1=vx+vw*T.lo/dm,x2=vx+vw*T.hi/dm;
-    s.forEach(function(v,i){var y=py+64+i*rh,st=v>=T.hi?'lead':(v>=T.lo?'mid':'weak'),ty=y+74,th=30;
-      txt(L[i]+' · '+R[L[i]].n.toUpperCase(),24,st==='lead'?700:600,st==='lead'?C.ink:C.muted,ix,y+56,'left',1.9);
-      txt(status(v),32,st==='lead'?700:500,st==='lead'?C.ink:(st==='weak'?C.muted:C.ink2),vx,y+56,'left',-0.6);
-      var sw=txt(String(v),52,600,st==='weak'?C.muted:C.ink,ir,y+62,'right',-1.5);
-      if(v===top&&st==='lead')mark(RING,[200,64],ir-sw-26,y+4,sw+52,76,C.red,4);
-      // зоны: штриховка слабой, тон ведущей
-      x.save();x.beginPath();x.rect(vx,ty,x1-vx,th);x.clip();x.strokeStyle='rgba(22,24,26,.14)';x.lineWidth=2;
-      for(var hx=vx-th;hx<x1;hx+=9){x.beginPath();x.moveTo(hx,ty+th);x.lineTo(hx+th,ty);x.stroke()}x.restore();
-      x.fillStyle='rgba(22,24,26,.04)';x.fillRect(x2,ty,ir-x2,th);
-      x.save();x.strokeStyle=C.line2;x.lineWidth=2;x.setLineDash([6,5]);[x1,x2].forEach(function(t){x.beginPath();x.moveTo(t,ty-8);x.lineTo(t,ty+th+8);x.stroke()});x.restore();
-      mark('M1 8c25-2 60-3 98-1',[100,14],vx,ty+12,Math.max(vw*v/dm,14),14,st==='weak'?C.ink2:C.ink,st==='lead'?11:(st==='weak'?6:8));
-      x.fillStyle=C.line;x.fillRect(ix,y+rh-1,ir-ix,1)});
-    txt('СЛАБАЯ',20,600,C.muted,vx,py+56,'left',1.6);txt('РАБОЧАЯ',20,600,C.muted,x1+8,py+56,'left',1.6);txt('ВЕДУЩАЯ',20,600,C.muted,x2+8,py+56,'left',1.6);x.fillStyle=C.ink;x.fillRect(ix,py+74,ir-ix,2);
-  }
-  var by=1384,bh=120;rrect(Lm,by,Rr-Lm,bh,60);x.fillStyle=C.ink;x.fill();
-  font(40,600,-0.4);var lw=x.measureText(T.short).width,ax=W/2-(lw+64)/2;
-  txt(T.short,40,600,C.paper,ax,by+bh/2+14,'left',-0.4);
-  x.save();x.translate(ax+lw+20,by+bh/2-10);x.strokeStyle=C.paper;x.lineWidth=3;x.lineCap='round';x.lineJoin='round';
-  x.beginPath();x.moveTo(2,10);x.lineTo(38,10);x.moveTo(30,3);x.lineTo(40,10);x.lineTo(30,17);x.stroke();x.restore();
-  font(26,600,0);var n1='Владимир Семенюк',w1=x.measureText(n1).width;font(26,400,0);var n2=' · '+T.instagram,w2=x.measureText(n2).width,sx=W/2-(w1+w2)/2;
-  txt(n1,26,600,C.ink,sx,by+bh+54);txt(n2,26,400,C.muted,sx+w1,by+bh+54);
-  return cv;
-}
+/* ---------- картинка для сторис: рисует profile.js (drawStory) ---------- */
 function storyShare(c,s,nm){
   var hint='Добавьте в сторис стикер «Ссылка» с адресом '+T.short+' и отметьте '+T.instagram;
-  var fonts=document.fonts?Promise.all(['600 250px Onest','500 250px Onest','400 26px Onest'].map(function(f){return document.fonts.load(f)})):Promise.resolve();
-  fonts.then(function(){storyDraw(c,s,nm).toBlob(function(blob){
+  P.fontsReady().then(function(){P.drawStory(T,c,s).toBlob(function(blob){
     var file=new File([blob],'profil-paei-'+slugOf(c)+'.png',{type:'image/png'});
     if(navigator.canShare&&navigator.canShare({files:[file]})){navigator.share({files:[file]}).then(function(){toast(hint,7000)}).catch(function(){})}
     else{var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=file.name;document.body.appendChild(a);a.click();a.remove();
@@ -314,13 +236,13 @@ function keyPage(){
   function upd(){var has=!!store(KEY_STORE);st.textContent=has?'Ключ сохранён в этом браузере. Ссылки на результаты будут показывать имя, контакт и ответы.':'Ключа в этом браузере нет.';$('key-del').hidden=!has}
   $('key-save').addEventListener('click',function(){
     var v=ta.value.trim();if(!v){ta.focus();return}
-    crypto.subtle.importKey('pkcs8',unb64u(v),EC,false,['deriveKey']).then(function(){store(KEY_STORE,v);ta.value='';upd();toast('Ключ сохранён')},function(){toast('Это не похоже на ключ: проверьте, что скопирован целиком')});
+    CR.importPrivate(v).then(function(){store(KEY_STORE,v);ta.value='';upd();toast('Ключ сохранён')},function(){toast('Это не похоже на ключ: проверьте, что скопирован целиком')});
   });
   $('key-del').addEventListener('click',function(){store(KEY_STORE,null);upd();toast('Ключ удалён из этого браузера')});
   upd();
 }
 
-window.__tests={storyDraw:storyDraw,encrypt:encrypt,decrypt:decrypt,pack:pack,unpack:unpack,codeOf:codeOf,slugOf:slugOf,scoresOf:scoresOf};
+window.__tests={storyDraw:function(c,s){return P.drawStory(T,c,s)},encrypt:encrypt,decrypt:decrypt,pack:pack,unpack:unpack,codeOf:codeOf,slugOf:slugOf,scoresOf:scoresOf};
 if(page==='result')window.addEventListener('hashchange',function(){location.reload()});
 if(page==='test')testPage();else if(page==='result')resultPage();else if(page==='key')keyPage();
 })();

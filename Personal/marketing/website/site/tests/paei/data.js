@@ -1,4 +1,4 @@
-/* Данные теста PAEI. Формат — JSON после «window.TEST=»: его читает и страница, и скрипт сборки tools/tests-build.py. */
+/* Данные теста PAEI. Формат — JSON после «window.TEST=»: его читает и страница, и сборка tools/tests-build.mjs. */
 window.TEST={
  "id": "paei",
  "version": 1,
@@ -11,6 +11,9 @@ window.TEST={
  "short": "semenyuk.pro/tests/paei",
  "telegram": "vladimirsemenyuk",
  "instagram": "@vladimir.semenyuk",
+ "headline": "Какую роль вы\u00a0берёте на\u00a0себя, когда приходится выбирать",
+ "pitch": "20 рабочих ситуаций руководителя",
+ "duration": "5 минут",
  "publicKey": "BDpPnwINssDyfVBBpG9FGnUGEVtVdzoPQ3qQB_u82KWEpclLAecfeMuihgGmxEpJlTiOr_b1yDPNzGT1pDHgqVA",
  "questions": [
   {
