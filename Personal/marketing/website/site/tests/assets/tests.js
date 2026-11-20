@@ -194,14 +194,14 @@ function render(c,s,mode){
     '<p class="res__name">'+(nm?'По&nbsp;Адизесу такой профиль называется «'+nm+'».':(lead.length?'Ведущие роли: '+lead.map(function(r){return r+'&nbsp;·&nbsp;'+R[r].n}).join(', ')+'.':'Явной ведущей роли нет: все четыре роли рабочие.'))+'</p>'+
     '<p class="res__note">Профиль показывает, к&nbsp;каким ролям вы&nbsp;тянетесь, а&nbsp;не&nbsp;насколько хорошо их&nbsp;исполняете.</p></div>';
   if(s){
-    var z1=T.lo/T.max*100,z2=T.hi/T.max*100;
+    var top2=Math.max.apply(null,s),dm=Math.max(30,top2),z1=T.lo/dm*100,z2=T.hi/dm*100;
     var bars='<div class="bar bar--head" aria-hidden="true"><span class="bar__n"></span><div class="bar__z"><span style="left:0">Слабая</span><span style="left:'+z1+'%">Рабочая</span><span style="left:'+z2+'%">Ведущая</span></div><span class="bar__st"></span><span class="bar__s"></span></div>';
     s.forEach(function(v,i){
-      var w=Math.max(v/T.max*100,1.5);
-      bars+='<div class="bar"><p class="bar__n">'+L[i]+' · '+R[L[i]].n+'</p>'+
-        '<div class="bar__track"><i class="bar__tick" style="left:'+z1+'%"></i><i class="bar__tick" style="left:'+z2+'%"></i>'+
-        '<span class="bar__line" style="width:'+w+'%"><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" class="mk mk--draw"><path pathLength="1" style="--d:'+(0.5+i*0.15)+'s;--sw:3px" d="M1 8c25-2 60-3 98-1"/></svg></span></div>'+
-        '<p class="bar__st'+(v>=T.hi?' is-lead':'')+'">'+status(v)+'</p><p class="bar__s">'+v+'</p></div>';
+      var w=Math.max(v/dm*100,2),st=v>=T.hi?'lead':(v>=T.lo?'mid':'weak'),key=v===top2&&v>=T.hi;
+      bars+='<div class="bar bar--'+st+'"><p class="bar__n">'+L[i]+' · '+R[L[i]].n+'</p>'+
+        '<div class="bar__track"><i class="bar__weak" style="width:'+z1+'%"></i><i class="bar__lead" style="left:'+z2+'%"></i><i class="bar__tick" style="left:'+z1+'%"></i><i class="bar__tick" style="left:'+z2+'%"></i>'+
+        '<span class="bar__line" style="width:'+w+'%"><svg viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true" class="mk mk--draw"><path pathLength="1" style="--d:'+(0.5+i*0.15)+'s" d="M1 8c25-2 60-3 98-1"/></svg></span></div>'+
+        '<p class="bar__st">'+status(v)+'</p><p class="bar__s"><span class="m">'+v+(key?'<svg class="mk mk--ring mk--red mk--draw" viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" style="--d:1.3s" d="'+RING+'"/></svg>':'')+'</span></p></div>';
     });
     html+='<div class="boardp"><div class="bars">'+bars+'</div><p class="legend">Всего 60&nbsp;баллов на&nbsp;четыре роли. Слабая зона&nbsp;— до&nbsp;'+(T.lo-1)+'&nbsp;баллов, ведущая роль&nbsp;— от&nbsp;'+T.hi+'.</p></div>';
   }
