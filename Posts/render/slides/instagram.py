@@ -219,9 +219,25 @@ for i, c in enumerate(CASES):
     add(st)
 
 
+# Тестовая сторис: проверка, ставит ли Buffer стикер-ссылку сам (неделя 1). Ссылка — https://semenyuk.pro
+add(dict(name="s-test-link", kind="story", label="Привет", title="Здравствуйте, это Владимир", size=124,
+         sub="Работаю с руководителями, которые хотят управлять результатом и карьерой. Желаю вам карьеры, в которой вы [[u:сами решаете]], куда расти."))
+
+# Анонс Telegram-канала, сторис сб 28 (неделя 1). Текст автора дословно, разбит на три кадра.
+# На третьем кадре низ свободен: туда автор ставит стикер-ссылку на https://t.me/management_and_happiness
+add(dict(name="s-tg-1", kind="story", label="Telegram", title="Привет!", size=160,
+         sub="Если вам интересны темы карьеры и успеха руководителей, то приглашаю вас в свой канал в Telegram."))
+add(dict(name="s-tg-2", kind="story", label="Telegram", title="Будет полезно, если вы:", size=110,
+         lines=["руководитель и хотите расти дальше, а повышение уходит другим;",
+                "недавно получили новую роль, и прежний способ работы перестал давать результат;",
+                "готовитесь стать руководителем и хотите заранее понимать, по каким правилам растут дальше."]))
+add(dict(name="s-tg-3", kind="story", label="Telegram", title="«Управление и Счастье»", size=124,
+         sub="Там — полные тексты по темам моих роликов."))
+
 # ---------- Недели: всё, что не перечислено, — неделя запуска ----------
 WEEK = {**{n: W1 for n in ("t-piter", "t-talanty", "r1-cover", "r1-cover-photo", "r2-cover", "r2-cover-photo",
-                          "r3-cover", "r3-cover-photo", "r4-cover", "r4-cover-photo", "r5-cover-photo")},
+                          "r3-cover", "r3-cover-photo", "r4-cover", "r4-cover-photo", "r5-cover-photo", "s-test-link",
+                          "s-tg-1", "s-tg-2", "s-tg-3")},
         "r-kurs-cover": W2}
 for _s in SLIDES:
     _s.setdefault("week", WEEK.get(_s["name"], W0))

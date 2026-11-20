@@ -27,6 +27,9 @@
 - текст — первый блок ``` в разделе, переносится дословно, без разметки;
 - картинка — первая `![[…]]` в разделе; если её имя кончается на `-01.png`,
   уходит альбом из всех `-NN.png` рядом (карусель). Строка `Telegram: нет картинки` — пост без картинки;
+- видео — строка `Telegram: видео ~/Movies/reels-1-final.mp4`: уходит нативным видео, текст подписью;
+  обложка в ленте — первый кадр ролика;
+- ссылки `[текст](https://…)` в тексте становятся ссылками Telegram, остальное — без разметки;
 - время — колонка «Время» строки «LinkedIn, Telegram» в таблице недели, пусто — по ритму, 10:00 МСК.
 
 Подпись к картинке в Telegram — до 1024 знаков. Текст длиннее: сначала картинка, через минуту — текст.
@@ -36,8 +39,11 @@
 """
 import argparse
 import asyncio
+import os
 import re
+import subprocess
 import sys
+import tempfile
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
@@ -131,7 +137,10 @@ def parse_week(name):
         text = code.group(1).strip() if code else ""
 
         media = []
-        if not re.search(r"^Telegram:\s*нет картинки", body, flags=re.M | re.I):
+        video = re.search(r"^Telegram:\s*видео\s+(.+?)\s*$", body, flags=re.M | re.I)
+        if video:
+            media = [Path(os.path.expanduser(video.group(1).strip("`")))]
+        elif not re.search(r"^Telegram:\s*нет картинки", body, flags=re.M | re.I):
             emb = re.search(r"!\[\[([^\]|]+\.(?:png|jpe?g))", body)
             if emb:
                 first = ROOT / emb.group(1)
@@ -144,7 +153,7 @@ def parse_week(name):
         t = times.get(day) or DEFAULT_TIME
         hh, mi = map(int, t.split(":"))
         when = datetime.combine(day_to_date(start, int(m.group(2))), time(hh, mi), MSK)
-        posts.append({"day": day, "title": title.strip(), "text": text, "media": media,
+        posts.append({"day": day, "title": title.strip(), "text": text, "media": media, "video": bool(video),
                       "when": when, "time_src": "таблица" if times.get(day) else "ритм"})
     return posts
 
@@ -155,7 +164,7 @@ def check(p):
         problems.append("нет текста (блок ```)")
     for f in p["media"]:
         if not f.exists():
-            problems.append(f"нет файла {f.relative_to(ROOT)}")
+            problems.append(f"нет файла {show_path(f)}")
     if len(p["media"]) > 10:
         problems.append(f"альбом {len(p['media'])} картинок, в Telegram максимум 10")
     if p["when"] <= datetime.now(MSK) + timedelta(minutes=2):
@@ -165,13 +174,63 @@ def check(p):
 
 def describe(p):
     n = len(p["media"])
-    media = "без картинки" if not n else (p["media"][0].relative_to(ROOT).as_posix() if n == 1 else f"альбом {n}: {p['media'][0].name}…")
-    split = n and len(p["text"]) > CAPTION_LIMIT
+    media = "без картинки" if not n else (show_path(p["media"][0]) if n == 1 else f"альбом {n}: {p['media'][0].name}…")
+    if p.get("video"):
+        media = f"видео {media}"
+    split = n and len(plain_text(p["text"])) > CAPTION_LIMIT
     mode = "картинка, через минуту текст" if split else ("текст подписью" if n else "текст")
     first = p["text"].splitlines()[0] if p["text"] else "—"
     return (f"{WEEKDAYS[p['when'].weekday()]} {p['when']:%d.%m %H:%M} МСК ({p['time_src']})  {p['title']}\n"
             f"    {media}; {mode}; {len(p['text'])} знаков\n"
             f"    «{first[:90]}»")
+
+
+def show_path(f):
+    try:
+        return f.relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(f).replace(str(Path.home()), "~", 1)
+
+
+LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
+
+
+def plain_text(text):
+    return LINK.sub(r"\1", text)
+
+
+def with_links(text):
+    """Текст без разметки и ссылки Telegram для `[текст](url)`; смещения — в UTF-16, как требует API."""
+    from telethon import types
+    out, entities, pos, off = [], [], 0, 0
+    u16 = lambda s: len(s.encode("utf-16-le")) // 2
+    for m in LINK.finditer(text):
+        before = text[pos:m.start()]
+        out.append(before)
+        off += u16(before)
+        label = m.group(1)
+        entities.append(types.MessageEntityTextUrl(offset=off, length=u16(label), url=m.group(2)))
+        out.append(label)
+        off += u16(label)
+        pos = m.end()
+    out.append(text[pos:])
+    return "".join(out), entities
+
+
+def video_meta(f):
+    """Длительность, размер и первый кадр (обложка) через ffmpeg из imageio_ffmpeg."""
+    import imageio_ffmpeg
+    exe = imageio_ffmpeg.get_ffmpeg_exe()
+    info = subprocess.run([exe, "-hide_banner", "-i", str(f)], capture_output=True, text=True).stderr
+    d = re.search(r"Duration: (\d+):(\d+):([\d.]+)", info)
+    wh = re.search(r"Video: .*?, (\d{2,5})x(\d{2,5})", info)
+    if not d or not wh:
+        sys.exit(f"Не прочитал параметры видео {f}")
+    dur = int(d.group(1)) * 3600 + int(d.group(2)) * 60 + float(d.group(3))
+    thumb = Path(tempfile.mkdtemp()) / "thumb.jpg"
+    subprocess.run([exe, "-hide_banner", "-loglevel", "error", "-y", "-i", str(f), "-frames:v", "1",
+                    "-vf", "scale=320:320:force_original_aspect_ratio=decrease", "-q:v", "3", str(thumb)], check=True)
+    return dur, int(wh.group(1)), int(wh.group(2)), thumb
 
 
 # ---------- Telegram ----------
@@ -206,7 +265,7 @@ def find_in_queue(queue, p):
     затем добавляются остальные картинки альбома и соседнее сообщение разнесённого поста.
     """
     slot = (p["when"], p["when"] + timedelta(minutes=1))
-    hit = {m.id: m for m in queue if m.date in slot or same_post(m.message, p["text"])}
+    hit = {m.id: m for m in queue if m.date in slot or same_post(m.message, plain_text(p["text"]))}
     groups = {m.grouped_id for m in hit.values() if m.grouped_id}
     dates = {m.date for m in hit.values()}
     for m in queue:
@@ -228,15 +287,24 @@ async def delete_scheduled(cl, channel, msgs):
 
 
 async def post_one(cl, channel, p):
-    text, files, when = p["text"], [str(f) for f in p["media"]], p["when"]
+    text, entities = with_links(p["text"])
+    files, when = [str(f) for f in p["media"]], p["when"]
+    extra = {}
+    if p.get("video"):
+        from telethon import types
+        dur, w, h, thumb = video_meta(p["media"][0])
+        extra = dict(supports_streaming=True, thumb=str(thumb),
+                     attributes=[types.DocumentAttributeVideo(duration=dur, w=w, h=h, supports_streaming=True)])
     if files and len(text) <= CAPTION_LIMIT:
         await cl.send_file(channel, files if len(files) > 1 else files[0],
-                           caption=text, parse_mode=None, schedule=when)
+                           caption=text, formatting_entities=entities or None, parse_mode=None,
+                           schedule=when, **extra)
     else:
         if files:
-            await cl.send_file(channel, files if len(files) > 1 else files[0], schedule=when)
+            await cl.send_file(channel, files if len(files) > 1 else files[0], schedule=when, **extra)
             when = when + timedelta(minutes=1)
-        await cl.send_message(channel, text, parse_mode=None, link_preview=False, schedule=when)
+        await cl.send_message(channel, text, formatting_entities=entities or None, parse_mode=None,
+                              link_preview=False, schedule=when)
 
 
 async def cmd_send(env, posts):
