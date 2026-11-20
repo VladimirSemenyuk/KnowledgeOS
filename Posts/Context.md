@@ -11,14 +11,12 @@
 ## Каналы
 
 Основные:
-- Instagram — материалы недели в `Posts/weeks/<дата>/instagram/`;
-- LinkedIn — материалы недели в `Posts/weeks/<дата>/linkedin/`;
-- Threads — материалы недели в `Posts/weeks/<дата>/threads/`.
+- Instagram, LinkedIn, Threads — тексты и расписание в [[Posts/content-plan|контент-плане]].
 
 Вспомогательный:
 - Telegram — дублирует посты LinkedIn: тот же текст в тот же день (решение автора, 2026-11-19).
 
-Ритм: Reels — каждый будний день. Посты в Threads, LinkedIn и Telegram выходят в тот же день, что и соответствующий Reels в Instagram (решение автора, 2026-11-19).
+Ритм, рубрики и темы недель — в [[Posts/content-plan|контент-плане]].
 
 ## Как пишутся посты
 
@@ -26,6 +24,7 @@
 
 ## Рабочие файлы
 
+- [[Posts/content-plan|Контент-план]] — единственный источник по ритму и темам
 - [[Posts/ideas|Блокнот идей]]
 - [[Posts/content-index|Индекс публикаций]]
 - [[Templates/posts/post.template|Шаблон заметки поста]]

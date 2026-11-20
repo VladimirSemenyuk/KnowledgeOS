@@ -39,8 +39,8 @@ language: ru
 
 ## Где используется
 
-- Карусель «Позиции» и Актуальное в Instagram: `Posts/weeks/2026-11-16-launch/instagram/slides.py`.
-- Reels 3 «Почему повысят не вас: позиции» и пост LinkedIn по нему: [[Posts/weeks/2026-11-16-launch/linkedin/posts|linkedin.md]].
+- Карусель «Позиции» и Актуальное в Instagram: `Posts/render/slides/instagram.py`.
+- Reels 3 «Почему повысят не вас: позиции» и пост LinkedIn по нему: [[Posts/weeks/2026-11-23-week-1/_index#Ср 25. LinkedIn и Telegram. Пост 2, пять ролей|неделя 1]].
 
 Связи:
 - [[Frameworks/models/systemic-management|Systemic Management]]

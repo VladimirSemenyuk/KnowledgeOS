@@ -19,7 +19,7 @@
 - [[Personal/marketing/brand-launch-checklist|Чеклист запуска бренда]]
 - [[Personal/marketing/getmentor-profile|Профиль на getmentor.dev]]
 - [[Personal/marketing/instagram-profile|Профиль в Instagram]]
-- [[Personal/marketing/instagram-plan|План Instagram на 90 дней]]
+- [[Posts/content-plan|Контент-план всех каналов]] — включая цель теста Instagram
 - [[Personal/marketing/linkedin-profile|Профиль в LinkedIn]]
 - [[Personal/marketing/referral-brief|Бриф для рекомендаций]]
 - [[Personal/marketing/website/mentoring-one-page|Одностраничный сайт менторинга — структура и тексты]]

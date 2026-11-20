@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Монтаж Reels: вырезать паузы, выровнять звук, вжечь субтитры по визуальной системе.
 
-Два шага, запуск из корня KnowledgeOS через окружение `.venv` (установка — в `reels.md`):
+Два шага, запуск из корня KnowledgeOS через окружение `.venv` (установка — в `Posts/content-plan.md`, раздел «Монтаж»):
 
     R=Posts/render
     $R/.venv/bin/python $R/reel.py prep   ~/Movies/take.mov

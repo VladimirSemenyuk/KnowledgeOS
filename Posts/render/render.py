@@ -2,12 +2,12 @@
 """Рендер слайдов Instagram в PNG по визуальной системе «Доска после разбора».
 
 Запуск из корня KnowledgeOS:
-    python3 Posts/render/render.py Posts/weeks/2026-11-16-launch/instagram/slides.py
+    python3 Posts/render/render.py Posts/render/slides/instagram.py [префикс имени]
 
-Файл данных объявляет список SLIDES: каждый элемент — dict с ключами
-`name` (имя PNG без расширения), `kind` (шаблон) и полями шаблона.
-PNG пишутся в папку `img/` рядом с файлом данных, плюс `img/_contact.png` —
-сводный лист для проверки.
+Файл данных объявляет CHANNEL и список SLIDES: каждый элемент — dict с ключами
+`name` (имя PNG без расширения), `kind` (шаблон), `week` (папка недели) и полями шаблона.
+PNG пишутся в Posts/weeks/<week>/<CHANNEL>/img/. Сводный лист для проверки —
+во временной папке, путь печатается в конце.
 
 Разметка в тексте:
     [[o:текст]] — красный обвод, [[u:текст]] — красное подчёркивание (переносится по строкам),
@@ -410,8 +410,10 @@ def main(data_path, only=None):
     if hasattr(mod, "HANDLE"):
         SIGN_HANDLE = (f'<span style="font-weight:600">Владимир Семенюк <span class="mut" style="font-weight:400">· {mod.HANDLE}</span></span>'
                        if mod.HANDLE else SIGN)
-    out = os.path.join(os.path.dirname(os.path.abspath(data_path)), "img")
-    os.makedirs(out, exist_ok=True)
+    def out_dir(s):
+        if "week" not in s:
+            return os.path.join(os.path.dirname(os.path.abspath(data_path)), "img")
+        return os.path.join(ROOT, "Posts", "weeks", s["week"], mod.CHANNEL, "img")
     tmp = tempfile.mkdtemp(prefix="ig-render-")
     names = []
     for s in mod.SLIDES:
@@ -421,26 +423,29 @@ def main(data_path, only=None):
         hp = os.path.join(tmp, s["name"] + ".html")
         with open(hp, "w") as f:
             f.write(page(fn(s)))
+        out = out_dir(s)
+        os.makedirs(out, exist_ok=True)
         shot(hp, os.path.join(out, s["name"] + ".png"), w, h)
-        names.append((s["name"], h))
+        names.append((os.path.join(out, s["name"] + ".png"), h))
         print("ok", s["name"])
     # сводный лист для проверки
-    cells = "".join(f'<figure style="margin:0"><img src="file://{out}/{n}.png" style="width:270px;height:{h // 4}px;display:block;box-shadow:0 0 0 1px #ccc"><figcaption style="font:12px system-ui">{n}</figcaption></figure>' for n, h in names)
+    cells = "".join(f'<figure style="margin:0"><img src="file://{p}" style="width:270px;height:{h // 4}px;display:block;box-shadow:0 0 0 1px #ccc"><figcaption style="font:12px system-ui">{os.path.basename(p)[:-4]}</figcaption></figure>' for p, h in names)
     hp = os.path.join(tmp, "_contact.html")
     with open(hp, "w") as f:
         f.write(f'<!doctype html><body style="margin:0;padding:16px;background:#fff;display:flex;flex-wrap:wrap;gap:16px;width:1800px">{cells}</body>')
     rows = (len(names) + 5) // 6
-    shot(hp, os.path.join(out, "_contact.png"), 1832, rows * 520 + 40)
-    # PDF-карусели для LinkedIn: PDFS = {"имя.pdf": "префикс слайдов"}, PDF кладётся рядом с файлом данных.
+    shot(hp, os.path.join(tmp, "_contact.png"), 1832, rows * 520 + 40)
+    print("сводный лист:", os.path.join(tmp, "_contact.png"))
+    # PDF-карусели для LinkedIn: PDFS = {"имя.pdf": "префикс слайдов"}, PDF кладётся в папку канала недели.
     for pdf, prefix in getattr(mod, "PDFS", {}).items():
         try:
             from PIL import Image
         except ImportError:
             print("PDF пропущен: нет Pillow, запустите через Posts/render/.venv/bin/python")
             break
-        pages = [Image.open(os.path.join(out, s["name"] + ".png")).convert("RGB")
-                 for s in mod.SLIDES if s["name"].startswith(prefix)]
-        dst = os.path.join(os.path.dirname(os.path.abspath(data_path)), pdf)
+        part = [s for s in mod.SLIDES if s["name"].startswith(prefix)]
+        pages = [Image.open(os.path.join(out_dir(s), s["name"] + ".png")).convert("RGB") for s in part]
+        dst = os.path.join(os.path.dirname(out_dir(part[0])), pdf)
         pages[0].save(dst, save_all=True, append_images=pages[1:], resolution=144)
         print("pdf", pdf, len(pages))
 

@@ -1,15 +1,17 @@
-# Карусели LinkedIn по Reels 3 и 5, серия «Почему повысят не вас». Тексты постов — в posts.md.
+# Карусели LinkedIn по Reels 3 и 5, серия «Почему повысят не вас». Тексты постов — в файлах недель Posts/weeks/*/_index.md.
+# Картинки — в Posts/weeks/<week>/linkedin/img/, PDF — в Posts/weeks/<week>/linkedin/.
 # Рендер и PDF из корня KnowledgeOS (PDF нужен Pillow из окружения рендера):
-#   Posts/render/.venv/bin/python Posts/render/render.py Posts/weeks/2026-11-16-launch/linkedin/slides.py
-# Формулировки — из расшифровок роликов и уже опубликованной карусели «Позиции» (POSITIONS из ../instagram/slides.py).
+#   Posts/render/.venv/bin/python Posts/render/render.py Posts/render/slides/linkedin.py
+# Формулировки — из расшифровок роликов и уже опубликованной карусели «Позиции» (POSITIONS из instagram.py).
 import importlib.util
 import os
 
-_spec = importlib.util.spec_from_file_location("ig", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "instagram", "slides.py"))
+_spec = importlib.util.spec_from_file_location("ig", os.path.join(os.path.dirname(os.path.abspath(__file__)), "instagram.py"))
 _ig = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_ig)
 POSITIONS = _ig.POSITIONS
 
+CHANNEL = "linkedin"
 HANDLE = "semenyuk.pro"  # в LinkedIn ник Instagram не нужен
 PDFS = {"li-roli.pdf": "li2-", "li-pomoglo.pdf": "li4-"}
 CTA = "«Разбор» в личные сообщения"
@@ -71,3 +73,7 @@ add(dict(name="li4-07", kind="text", label="Истинная задача", coun
          title="Найти место, где вы [[u:раскроетесь]]",
          body=["И будете получать от своей работы удовольствие."],
          pill=CTA))
+
+
+for _s in SLIDES:
+    _s.setdefault("week", "2026-11-23-week-1")

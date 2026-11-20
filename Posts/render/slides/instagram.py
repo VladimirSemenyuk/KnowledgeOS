@@ -1,6 +1,9 @@
-# Слайды недели запуска Instagram, 16–22 ноября 2026.
-# Рендер: python3 Posts/render/render.py Posts/weeks/2026-11-16-launch/instagram/slides.py
-# Тексты подписей — в Markdown-файлах этой папки.
+# Слайды Instagram всех недель. Картинка уходит в Posts/weeks/<week>/instagram/img/ — неделя задаётся полем week.
+# Рендер из корня KnowledgeOS: python3 Posts/render/render.py Posts/render/slides/instagram.py [префикс имени]
+# Тексты подписей — в файлах недель Posts/weeks/*/_index.md.
+
+CHANNEL = "instagram"
+W0, W1, W2 = "2026-11-16-launch", "2026-11-23-week-1", "2026-11-30-week-2"
 
 POSITIONS = [
     dict(title="Герой", quote="«Решаю сам, потому что так быстрее»",
@@ -121,7 +124,7 @@ add(dict(name="p4", kind="thesis", label="Право управлять", counte
          title="Право управлять [[u:не выдают]] вместе с должностью",
          sub="Должность даёт ответственность. Право управлять руководитель берёт сам. Пока его нет, остаётся просить, тянуть на себе или подстраиваться."))
 add(dict(name="p5", kind="review", **REVIEWS[0]))
-# Тезисы-отбивки между Reels, каждый сразу после своего ролика. Без названия серии — самостоятельные мысли, как p4 (решение автора, 2026-11-19). В LinkedIn — с названием серии (linkedin/slides.py).
+# Тезисы-отбивки между Reels, каждый сразу после своего ролика. Без названия серии — самостоятельные мысли, как p4 (решение автора, 2026-11-19). В LinkedIn — с названием серии (linkedin.py).
 add(dict(name="t-piter", kind="thesis", label="Право управлять", counter="Тезис", size=104,
          title="В иерархиях человек поднимается до уровня своей [[u:некомпетентности]]",
          sub="Лоуренс Питер, 1969. Если вас перестали повышать, скорее всего, ваши навыки остались на прошлом уровне."))
@@ -132,21 +135,21 @@ add(dict(name="p6", kind="case", label="Кейс", counter=CASES[0]["sub"], **{k
 
 # ---------- Обложки Reels ----------
 add(dict(name="r1-cover", kind="reel_cover", label="Кто я", title="Меня [[u:разнесли]] на собеседовании на CTO", size=100))
-add(dict(name="r1-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-16-launch/instagram/frames/r1-17s.jpg", pos="50% 100%", zoom=1.15,
+add(dict(name="r1-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-23-week-1/instagram/frames/r1-17s.jpg", pos="50% 100%", zoom=1.15,
          label="Кто я", title="Меня [[u:разнесли]] на собеседовании", size=96, plate=True, sign=False))
 add(dict(name="r2-cover", kind="reel_cover", label="Причина 1", title="Почему повысят [[o:не вас]], а кого-то другого?", size=100))
-add(dict(name="r2-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-16-launch/instagram/frames/r2-82s.jpg", pos="50% 100%", zoom=1.2,
+add(dict(name="r2-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-23-week-1/instagram/frames/r2-82s.jpg", pos="50% 100%", zoom=1.2,
          label="Причина 1", title="Почему повысят [[u:не вас]], а кого-то другого?", size=92, plate=True, sign=False))
 add(dict(name="r3-cover", kind="reel_cover", label="Причина 2", title="Почему повысят [[o:не вас]], а кого-то другого?", size=100))
-add(dict(name="r3-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-16-launch/instagram/frames/r3-125s.jpg", pos="50% 100%", zoom=1.2,
+add(dict(name="r3-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-23-week-1/instagram/frames/r3-125s.jpg", pos="50% 100%", zoom=1.2,
          label="Причина 2", title="Почему повысят [[u:не вас]], а кого-то другого?", size=92, plate=True, sign=False))
 add(dict(name="r4-cover", kind="reel_cover", label="Причина 3", title="Почему повысят [[o:не вас]], а кого-то другого?", size=100))
-add(dict(name="r4-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-16-launch/instagram/frames/r4-49s.jpg", pos="50% 100%", zoom=1.2,
+add(dict(name="r4-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-23-week-1/instagram/frames/r4-49s.jpg", pos="50% 100%", zoom=1.2,
          label="Причина 3", title="Почему повысят [[u:не вас]], а кого-то другого?", size=92, plate=True, sign=False))
 # Кадр r5-106s.png уже кадрирован, увеличен и откорректирован в ffmpeg (снята голубая дымка, кожа без оранжевого, резкость) — zoom=1, чтобы браузер не размывал.
-add(dict(name="r5-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-16-launch/instagram/frames/r5-106s.png", pos="50% 100%", zoom=1,
+add(dict(name="r5-cover-photo", kind="reel_photo", layout="dark", color=True, photo="Posts/weeks/2026-11-23-week-1/instagram/frames/r5-106s.png", pos="50% 100%", zoom=1,
          label="Личная история", title="Мне дважды [[u:отказали]] в повышении. Что помогло", size=92, plate=True, sign=False))
-add(dict(name="r-kurs-cover", kind="reel_cover", label="Право управлять", title="Вам [[u:не нужен]] ещё один курс по менеджменту", size=108))  # отложен на неделю 1
+add(dict(name="r-kurs-cover", kind="reel_cover", label="Право управлять", title="Вам [[u:не нужен]] ещё один курс по менеджменту", size=108))  # неделя 2
 
 # ---------- Актуальное: обложки ----------
 for slug, word, size in [("kto-ya", "Кто я", 190), ("pozicii", "Позиции", 172), ("razbor", "Разбор", 180),
@@ -214,3 +217,11 @@ for i, c in enumerate(CASES):
     if i == len(CASES) - 1:
         st["pill"] = "Напишите «разбор» в директ"
     add(st)
+
+
+# ---------- Недели: всё, что не перечислено, — неделя запуска ----------
+WEEK = {**{n: W1 for n in ("t-piter", "t-talanty", "r1-cover", "r1-cover-photo", "r2-cover", "r2-cover-photo",
+                          "r3-cover", "r3-cover-photo", "r4-cover", "r4-cover-photo", "r5-cover-photo")},
+        "r-kurs-cover": W2}
+for _s in SLIDES:
+    _s.setdefault("week", WEEK.get(_s["name"], W0))
