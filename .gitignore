@@ -50,3 +50,10 @@ node_modules/
 # Окружение монтажа Reels
 Posts/render/.venv/
 
+
+# Ключи Cloudflare R2 для выгрузки медиа
+Posts/render/.env.r2
+
+# Telegram: ключи и сессия аккаунта для tg.py
+Posts/render/.env.tg
+Posts/render/.tg.session*
