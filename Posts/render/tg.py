@@ -29,7 +29,8 @@
   уходит альбом из всех `-NN.png` рядом (карусель). Строка `Telegram: нет картинки` — пост без картинки;
 - видео — строка `Telegram: видео ~/Movies/reels-1-final.mp4`: уходит нативным видео, текст подписью;
   обложка в ленте — первый кадр ролика;
-- ссылки `[текст](https://…)` в тексте становятся ссылками Telegram, остальное — без разметки;
+- текст в Markdown: жирный, курсив, зачёркнутый, код и ссылки уходят форматированием Telegram (`mdtext.py`);
+  в LinkedIn тот же текст идёт без разметки — `mdtext.py linkedin <неделя>`;
 - время — колонка «Время» строки «LinkedIn, Telegram» в таблице недели, пусто — по ритму, 10:00 МСК.
 
 Подпись к картинке в Telegram — до 1024 знаков. Текст длиннее: сначала картинка, через минуту — текст.
@@ -44,6 +45,8 @@ import re
 import subprocess
 import sys
 import tempfile
+
+from mdtext import parse as md_parse, to_telegram
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
@@ -177,7 +180,7 @@ def describe(p):
     media = "без картинки" if not n else (show_path(p["media"][0]) if n == 1 else f"альбом {n}: {p['media'][0].name}…")
     if p.get("video"):
         media = f"видео {media}"
-    split = n and len(plain_text(p["text"])) > CAPTION_LIMIT
+    split = n and len(md_parse(p["text"])[0]) > CAPTION_LIMIT
     mode = "картинка, через минуту текст" if split else ("текст подписью" if n else "текст")
     first = p["text"].splitlines()[0] if p["text"] else "—"
     return (f"{WEEKDAYS[p['when'].weekday()]} {p['when']:%d.%m %H:%M} МСК ({p['time_src']})  {p['title']}\n"
@@ -190,31 +193,6 @@ def show_path(f):
         return f.relative_to(ROOT).as_posix()
     except ValueError:
         return str(f).replace(str(Path.home()), "~", 1)
-
-
-LINK = re.compile(r"\[([^\]]+)\]\((https?://[^)\s]+)\)")
-
-
-def plain_text(text):
-    return LINK.sub(r"\1", text)
-
-
-def with_links(text):
-    """Текст без разметки и ссылки Telegram для `[текст](url)`; смещения — в UTF-16, как требует API."""
-    from telethon import types
-    out, entities, pos, off = [], [], 0, 0
-    u16 = lambda s: len(s.encode("utf-16-le")) // 2
-    for m in LINK.finditer(text):
-        before = text[pos:m.start()]
-        out.append(before)
-        off += u16(before)
-        label = m.group(1)
-        entities.append(types.MessageEntityTextUrl(offset=off, length=u16(label), url=m.group(2)))
-        out.append(label)
-        off += u16(label)
-        pos = m.end()
-    out.append(text[pos:])
-    return "".join(out), entities
 
 
 def video_meta(f):
@@ -265,7 +243,7 @@ def find_in_queue(queue, p):
     затем добавляются остальные картинки альбома и соседнее сообщение разнесённого поста.
     """
     slot = (p["when"], p["when"] + timedelta(minutes=1))
-    hit = {m.id: m for m in queue if m.date in slot or same_post(m.message, plain_text(p["text"]))}
+    hit = {m.id: m for m in queue if m.date in slot or same_post(m.message, md_parse(p["text"])[0])}
     groups = {m.grouped_id for m in hit.values() if m.grouped_id}
     dates = {m.date for m in hit.values()}
     for m in queue:
@@ -287,7 +265,7 @@ async def delete_scheduled(cl, channel, msgs):
 
 
 async def post_one(cl, channel, p):
-    text, entities = with_links(p["text"])
+    text, entities = to_telegram(p["text"])
     files, when = [str(f) for f in p["media"]], p["when"]
     extra = {}
     if p.get("video"):
